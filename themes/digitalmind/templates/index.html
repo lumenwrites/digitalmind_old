@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<section id="content">
+  
+  <div id="page"  class="blogPage">
+    <div class="row">
+      <div class="large-12 columns">
+
+	{% for article in articles_page.object_list %}
+	<article>
+          <a href="{{ SITEURL }}/{{ article.url }}"><h1>{{ article.title }}</h1></a>
+	  <hr/>
+	  <p>
+	    {{ article.summary }}
+	  </p>
+          <a href="{{ SITEURL }}/{{ article.url }}" id="readmore">>>> readmore</span></a> 
+	</article>
+	{% endfor %}
+	
+	{% include 'pagination.html' %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

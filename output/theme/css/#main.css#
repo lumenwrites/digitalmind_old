@@ -1,0 +1,156 @@
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:200');
+@import url('http://fonts.googleapis.com/css?family=Lato');
+
+* {
+	font-family: "Titillium Web";
+	color: #3d454b;
+}
+
+html {
+    font-size: 20px;    
+}
+
+.row {
+    max-width: 50em;
+}
+
+a {
+	color: #f76300;
+}
+
+h1, h2, h3, h4 {
+    font-family: Lato;
+    font-weight: normal;    
+    color: #3d454b;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 22px;
+    color: #666;
+}
+
+
+/* Header */
+#orange-line {
+	background-color: #f66303;
+	height:4px;
+	width:100%;
+}
+
+
+header {
+	height: 130;
+	padding: 40px;
+}
+
+#mainMenu {
+	margin-top: 15px;
+	font-family: "Titillium Web";
+	font-size: 16px;
+	text-transform: uppercase;
+	color: black;
+	text-align: right;	
+}
+
+.selected a {
+	color: #f76300;
+}
+
+#mainMenu ul {
+	margin: 0;
+	padding: 0;
+}
+
+#mainMenu ul li{
+	list-style-type:none;
+	display: inline-block;
+}
+
+
+/* Page */
+#page {
+    background-color: #f6f3ea;
+    padding-top: 20px;
+}
+
+article {
+	margin-bottom: 80px;
+}
+
+#readmore {
+    float:right;
+    
+}
+
+/* Article */
+
+/* Footer */
+footer {
+    height: 40px;
+}
+
+footer, footer li, footer p {
+    background-color: #333a42;
+    color: #babfc2;
+}
+
+footer a {
+	color: #babfc2;
+}
+
+footer h4 {
+	color: #babfc2;
+	text-transform: uppercase;
+	font-size: medium;
+	font-weight: normal;
+}
+
+/* Elements */
+.button {
+	background-color: #f76301;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 0 5px #d05301;
+}
+
+.button:hover {
+	background-color: #f76301;
+	box-shadow: 0 4px #d05301;
+	 position:relative;
+    top:1px;
+}
+
+.button.small {
+	background-color: #f76300;
+	box-shadow: none;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: normal;
+	color: #fff;
+	
+}
+
+.button.small:hover {
+	background-color: #f76300;
+	box-shadow: none;
+	font-family: Lato;
+	font-size: 16px;
+	font-weight: normal;
+	color: #fff;
+	top:0px;
+	
+}

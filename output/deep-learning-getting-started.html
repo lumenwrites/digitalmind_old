@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8" />
+  
+  <title>digitalmind</title>
+
+  <!-- Import css and scripts  -->
+  <link rel="stylesheet" href="/theme/css/foundation.css" />
+  <link rel="stylesheet" href="/theme/css/main.css" />
+  <script src="/theme/js/vendor/jquery.js" type="text/javascript"></script>
+    
+</head>
+  
+<body>
+<div id="orange-line"></div>
+  <header>
+      <div class="row" >
+        <div class="large-6 columns" >
+          <a href="/"><img src="/theme/img/logo_notagline.png" /></a>
+        </div>
+        <div class="large-6 columns" id="mainMenu">
+	  Home Articles About
+	</div>
+      </div>
+  </header>
+  
+<div id="page"  class="postPage">
+    <div class="row">
+      <div class="large-12 columns">
+        <h1 id="blogTitle"> Deep Learning - Getting Started </h1>
+        <hr />
+	<p>This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.</p>
+<h2>Resources</h2>
+<h4>General Machine Learning introduction</h4>
+<ul>
+<li>
+<p>Andrew Ng <a href="https://www.coursera.org/course/ml">Machine Learning course</a> on Coursera.<br />
+  And his <a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl">course on Deep learning </a></p>
+</li>
+<li>
+<p><a href="https://class.coursera.org/machlearning-001/lecture/preview">Pedro Domingos ML course</a> </p>
+</li>
+<li>
+<p>Book "<a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325">Programming Collective Intelligence</a>" </p>
+</li>
+<li>
+<p>TutsPlus course "<a href="http://code.tutsplus.com/courses/machine-learning-distilled">Machine Learning Distilled</a>"</p>
+</li>
+</ul>
+<h4>Deep Learning Basics</h4>
+<ul>
+<li>
+<p>Geoffrey Hinton's coursera course "<a href="https://class.coursera.org/neuralnets-2012-001/lecture">Neural Networks for Machine Learning</a>"</p>
+</li>
+<li>
+<p>MIT Book on <a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">Deep Learning</a></p>
+</li>
+<li>
+<p><a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial">UFLDL tutorial by Stanford</a> (alternative <a href="http://deeplearning.stanford.edu/tutorial/">link</a>)</p>
+</li>
+<li>
+<p><a href="http://deeplearning.net/tutorial/">deeplearning.net tutorials</a></p>
+</li>
+</ul>
+<h4>Other</h4>
+<ul>
+<li>
+<p>NYU Course on <a href="http://techtalks.tv/deep_learning_nyu_spring_2014/">Deep Learning</a></p>
+</li>
+<li>
+<p>Book "<a href="http://neuralnetworksanddeeplearning.com">Neural Networks and Deep Learning</a>" by Michael Nielsen</p>
+</li>
+<li>
+<p>Book Neural "<a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392">Networks and Learning Machines</a>" by Simon O. Haykin</p>
+</li>
+<li>
+<p><a href="http://deeplearning.net/reading-list/">deeplearning.net reading list</a></p>
+</li>
+<li>
+<p><a href="http://www.metacademy.org">Metacademy</a></p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/user/khanacademy/playlists">Khan Academy math videos</a>.</p>
+</li>
+</ul>
+<!--
+## Topics
+
+- General overview, terms, into, background.
+    - What is ML? Applications of ML
+        - Types of Learning: supervised/unsupervised learning
+    - classification/regression(difference)
+- ML Algorithms
+    - Supervised Learning
+      - Linear Regression with one variable
+          - Model Representation
+          - Cost function
+          - Gradient Descent
+      - Linear Regression with multiple variables
+          - Gradient descent for multiple vectors
+          - Features and polynomial regression
+          - Normal Equation
+      - Logistic Reression
+      - k-Nearest Neighbor
+      - Decision Tree
+      - Naive Bayesian Classifiers
+
+      - Support Vector Machines
+      - Random Forests
+    - Unsupervised Learning
+      - k-Means Clustering
+      - Hierarchical Clustering
+      - Self-Organizing Maps
+      - Apriori Association
+- Deep Learning
+  - Perceptron
+    - Linear Regression
+  - Gradient Descent
+  - Stochastic Gradient descent
+  - Multilayer Perceptrons
+  - Backpropogation
+  - Hidden Layer Representations
+
+  - Neural Networks: Representation and learning
+      - Neurons
+      - Model representation
+      - Cost function
+      - Backpropogation algorithm
+      - Gradient checking
+      - Random Initialization
+
+  - Perceptron
+
+  - Artificial Neural Networks Representation
+  - General Regression Neural Networks
+  - Feed-Forward Neural Networks
+- Other/General ML
+  - ML Systems design
+    - Error  Analysis
+  - Dimensionality Reduction
+  - Anomaly Detection
+  - Recommender Systems
+-->
+
+<!-- To Sort, other topics
+- Neural networks:
+  - Types of neurons,
+  - Learning rules for binary,
+  - linear and logistic neurons,
+  - FeedForward Neural Networks (FFNN)
+  - Backpropagation (BP),
+  - BP with weight constraints.
+  - Recurrent Neural Networks (RNN),
+  - FFNN interpretation for RNN,
+  - BP through time,
+  - Exploding/Vanishing gradients.
+- Energy-based models:
+  - Hopfield Nets (HN),
+  - Learning & unlearning in HN,
+  - HN with hidden units,
+  - Simulated annealing,
+  - Boltzmann machines (BM),
+  - BM Learning algorithm.
+- Deep Neural Networks:
+  - Deep Boltzmann Machines (DBM),
+  - Restricted Boltzmann Machines (RBM),
+  - Contrastive Divergence and variants (PCD, CD_k),
+  - Stacked RBMs for pre-training,
+  - Discriminative finetuning using BP.
+- Nonlinear Dimensionality Reduction:
+  - Autoencoders (AE),
+  - AE for document retrieval/visualization,
+  - AE for semantic hashing
+- Other:
+  - Minibatch gradient descent,
+  - Momentum method,
+  - Adaptive Learning rates,
+  - Limiting size of weights,
+  - Weight decay,
+  - Early stopping,
+  - Noise as regularizer,
+  - Dropouts,
+  - Bagging/Averaging and Boosting,
+  - Bias-variance tradeoff,
+  - Implementation on GPGPUs. 
+-->
+
+<h2>Roadmap</h2>
+<p>First of all - the general overview of all the major topics, and the order in which to study them
+(made based on the overview of the Deep Learning from <a href="http://metacademy.org/roadmaps/rgrosse/deep_learning">metacademy</a>)</p>
+<p><a href="/images/deep-learning/deep-learning-roadmap.png"><img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /></a></p>
+<p>Now - the list of resources and projects, in order of learning:</p>
+<h3>Basic Math</h3>
+<ul>
+<li><a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449">Calculus</a></li>
+<li><a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0">Linear Algebra</a></li>
+<li><a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19">Probability</a> &amp; <a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566">Statistics</a></li>
+</ul>
+<h3>Andrew Ng course</h3>
+<p>Andrew Ng <a href="https://www.coursera.org/course/ml">Machine Learning course</a>,<br />
+supplemented with his <a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl">course on Deep learning </a>, and Neural Networks explanation from <a href="https://class.coursera.org/machlearning-001/lecture/preview">Pedro Domingos ML course</a>(for things that are unclear).</p>
+<p>Projects:</p>
+<ul>
+<li>Linear Regression</li>
+<li>Logistic Regression</li>
+<li>Feed Forward Neural Network</li>
+<li>Backpropagation</li>
+</ul>
+<h2>Neural Networks for Machine Learning</h2>
+<p>Geoffrey Hinton's coursera course "<a href="https://class.coursera.org/neuralnets-2012-001/lecture">Neural Networks for Machine Learning</a>", supplemented with  MIT Book on <a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">Deep Learning</a> and <a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial">UFLDL tutorial by Stanford</a> (alternative <a href="http://deeplearning.stanford.edu/tutorial/">link</a>)</p>
+<p>Projects:</p>
+<ul>
+<li>Use neural network to recognize hand-written digits from MNIST database.</li>
+<li>Use Restricted Boltzmann machines to create Deep Belief nets.</li>
+</ul>
+<div style="clear: both;"></div>
+
+<script>
+function prepareList() {
+  $('body').find('li:has(ul)')
+    .click( function(event) {
+        if (this == event.target) {
+            $(this).toggleClass('expanded');
+            $(this).children('ul').toggle('medium');
+        }
+        return false;
+    })
+    .addClass('collapsed');
+    //.children('ul').hide();
+  };
+
+  $(document).ready( function() {
+      prepareList();
+  });
+</script>
+
+<style>
+.collapsed {
+    cursor: pointer;
+    <!-- content:' ►';  -->
+
+    <!-- background: url({{ site.baseurl }}/images/small_right_arrow.gif) no-repeat left top; -->
+    <!-- padding: 3px 0px 3px 20px; -->
+    <!-- list-style: none; -->
+    }
+
+.collapsed {
+cursor: pointer;
+    <!-- content:' ►';  -->
+    <!-- background: url({{ site.baseurl }}/images/small_right_arrow.gif) no-repeat left top;p -->
+    <!-- padding: 3px 0px 3px 20px; -->
+    <!-- list-style: none; -->
+    }
+
+.entry img {
+float:left;
+}
+<!-- max-width: 400px;
+max-height: 400px; -->
+
+
+</style>
+
+<!--
+list-style-image: url({{ site.baseurl }}/images/small_right_arrow.gif);
+ -->	
+      </div>
+    </div>      
+</div>    
+    
+  
+  <footer>
+  </footer>
+</body>
+</html>

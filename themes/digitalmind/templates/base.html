@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="{{ DEFAULT_LANG }}">
+  
+<head>
+  {% block head %}
+  <meta charset="utf-8" />
+  
+  <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+
+  <!-- Import css and scripts  -->
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation.css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" />
+  <script src="/theme/js/vendor/jquery.js" type="text/javascript"></script>
+  {% endblock %}    
+</head>
+  
+<body>
+<div id="orange-line"></div>
+  <header>
+      <div class="row" >
+        <div class="large-6 columns" >
+          <a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/theme/img/logo_notagline.png" /></a>
+        </div>
+        <div class="large-6 columns" id="mainMenu">
+	  Home Articles About
+	  {% for title, link in MENUITEMS %}	  
+	  <ul>
+	    <a href="{{ link }}">{{ title }}</a>	    
+	  </ul>
+	  {% endfor %}
+	</div>
+      </div>
+  </header>
+  
+  {% block content %}
+  {% endblock %}    
+  
+  <footer>
+  </footer>
+</body>
+</html>
