@@ -9,6 +9,7 @@ SITEURL = ''
 PATH = 'content'
 STATIC_PATHS = [
     'static/.htaccess',
+    'static/CNAME',    
     ]
 
 
@@ -37,10 +38,10 @@ DEFAULT_PAGINATION = 8
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-# ARTICLE_URL = 'post/{slug}'
-# ARTICLE_SAVE_AS = 'post/{slug}.html'
-# PAGE_URL = '{slug}' 
-# PAGE_SAVE_AS = '{slug}.html'
+ARTICLE_URL = 'post/{slug}'
+ARTICLE_SAVE_AS = 'post/{slug}.html'
+PAGE_URL = '{slug}' 
+PAGE_SAVE_AS = '{slug}.html'
 
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
