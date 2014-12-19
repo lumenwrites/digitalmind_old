@@ -59,12 +59,21 @@ header {
 }
 
 #mainMenu {
-	margin-top: 15px;
+	margin-top: 10px;
 	font-family: "Titillium Web";
 	font-size: 16px;
 	text-transform: uppercase;
 	color: black;
-	text-align: right;	
+	text-align: right;
+}
+
+#mainMenu a {
+    color: black;
+}
+
+#mainMenu ul li{
+	list-style-type:none;
+	display: inline-block;
 }
 
 .selected a {
@@ -74,6 +83,8 @@ header {
 #mainMenu ul {
 	margin: 0;
 	padding: 0;
+	float: left;
+	margin-right: 10px;
 }
 
 #mainMenu ul li{
