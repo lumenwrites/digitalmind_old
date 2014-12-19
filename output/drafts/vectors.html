@@ -1742,20 +1742,186 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> Great books </h1>
+        <h1 id="blogTitle"> Introduction to Linear Algebra: Vectors </h1>
         <hr />
-	<h3>Catch Me If You Can by Frank Abagnale</h3>
-<p>I remember disliking the movie, but the book is brilliant and hilarious. Autobiography of one of the boldest, horniest, and most brilliant con artists.</p>
-<h3>Ghost In The Wires by Kevin Mitnick</h3>
-<p>On the same topic, autobiography of a great hacker. Extremely clever and awesome. I bet people here will love it.</p>
-<h3>Zero to One by Peter Thiel</h3>
-<p>Very intelligent and inspiring book about startups and new technologies. A lot of new and great ideas, I've enjoyed it a lot.</p>
-<h3>iWoz</h3>
-<p>Autobiography of Steve Wozniak. Also wonderful and super positive and inspiring story.</p>
-<h3>Trust me, I'm lying.</h3>
-<p>Book about how modern social media is being manipulated. Short and interesting. Makes you think differently about what you read on the internet.</p>
-<h3>On Intelligence by Jeff Hawkins</h3>
-<p>Theory of how human mind works. Must read for everyone who is into AI, but also a great book for everyone else.</p>	
+	<p>Vector is something that has both magnitude and direction.</p>
+<p>For example, wind has both a direction(North, South-West, etc) and a magnitude (10 km/hour) and could be represented as a vector (10 km/hour South-West).</p>
+<p>In algebra vectors can represent many things, often vectors represent points in a coordinate system.</p>
+<p>You can write vectors like this:
+$$\vec{v}_1 = (4,4)$$</p>
+<p>or like this:</p>
+<p>$$
+\vec{v}_2 =
+\begin{bmatrix}
+4 \ 1
+\end{bmatrix}
+$$</p>
+<p>And if you plot them, it would look like so:
+
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[50]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb"><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>  
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="o">%</span><span class="k">matplotlib</span> <span class="n">inline</span>
+
+<span class="c"># v1 =np.array( [ [0,0,4,4], ]) </span>
+<span class="c"># X,Y,U,V = zip(*v1)</span>
+<span class="c"># plt.figure()</span>
+<span class="n">plot</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">aspect</span><span class="o">=</span><span class="s">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="n">angles</span><span class="o">=</span><span class="s">&#39;xy&#39;</span><span class="p">,</span><span class="n">scale_units</span><span class="o">=</span><span class="s">&#39;xy&#39;</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">&#39;v1&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+<span class="n">v1</span> <span class="o">=</span> <span class="n">plot</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="n">angles</span><span class="o">=</span><span class="s">&#39;xy&#39;</span><span class="p">,</span><span class="n">scale_units</span><span class="o">=</span><span class="s">&#39;xy&#39;</span><span class="p">,</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plot</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s">&#39;v2&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+qNc5+Z/WZZoZ8mq6YPpQr1+/vhrq22+//YprNkNDQ5w8eZKOjo4QoweTi9tavZrevGrZ1F8MdTOI
+4o+aWtObi6GuTRR/1NSaHreZ1G8lk+lNbk2Pj5u6vnJd163pcTDU6cp1Xbem55P1O3syucmt6fnh
+pg4rl3Xdmp5thjpbclnXrenZYv3Ov0xtcmt6eG7qfMlVXbemh2Go8y1Xdd2a3hjW7+aTiU1uTU+P
+mzpuuajr1vT6MtTNJRd13Zo+M9ZvTSfoJrem185NrYkyXdet6ckYak0l03Xdmj4567fqLcgmt6Zf
+5qbWTGSyrjd7TTfUqqdM1vVmq+nWb4XW0E3eDDXdTa1GylRdj7WmG2qFlKm6HktNt34rbxqyyfNc
+093UyrJM1PW81XRDrTzJRF3Pek23fit2qW7yLNZ0N7ViErSuZ6WmG2rFLGhdD1XTrd/SlVLZ5I2s
+6W5qNbMgdT3tmm6opcuC1PV613TrtzQzdd3k9ajpbmopuYbW9aut6YZaunr1quurgOeBWcAPgL+b
+7KCkNd36LWXLLOBDYAlwLXAc+N0vHFPav39/CSj19PSUxsfHSxOdO3eutG/fvlJvb29p6dKlJaD6
+1t7eXlq/fn2pv7+/dOLEiS99bVreeeedhvycesrbzHmbt1TK58yVLE1puk1+TyXkH1We/wPwJ8Cv
+Jh60detW5s+fz86dOxkbG8v8pi4WixQKhYb/3JnI28x5mxfyOXMS04V8EfCfE55/DPzBFw86e/Ys
+DzzwAN3d3ZkMtdTMpgt54r+87eDBg4ZayqDpEviHQB/li28A24Fxrrz49iHQWffJJCVxCvjmTL7B
+NZVvsgSYzeQX3iTlXDfwH5Q39vbAs0iSpHpaBZwEPgD+OvAsSfwQOAu8F3qQhBYD7wDvA78EesOO
+k8j1wFHKp3YngO+HHSexWcAx4EDoQRL6CBiiPPO/pfVDktwokzX3Ab9HfkL+DWBZ5fFcyqdNWf93
+DDCn8v4a4F+B5QFnSeovgR8Bb4QeJKHTwE1JDmydwQ+ZeKPMRS7fKJNlR4BPQw9RgzOUf3kCnKd8
+E1L2/qK8L/tN5f1systgLOAsSXQAqynftp2n13wTzTqTkE92o8yiGXw/TW0J5RZyNPAcSbRS/uV0
+lvLpxomw40zrOeB7lF8ezosS8FPg58B3pzpwJiGv/X9Krqs1F9gLbKO80bNunPJpRgfwHaAQdJqp
+PQyMUD63zdMW/yPKv/S7gT+nfCo6qZmE/L8oXxi6ZDHlba76uhZ4HXgFGAw8S61+DfwY+HboQaZw
+L7CG8jnuq8BK4O+DTpTMcOX9J8B+yqfPdZfXG2WWkJ8Lby2U/4N7LvQgNfg6ML/y+AbgMPDH4cap
+yQrycXV9DvC1yuMbgX8BHkzrh+XtRplXgf8GLlC+nvBnYceZ1nLK1fc45Tp5jMu3GGfVt4BfUJ55
+iPK5bl6sIB9X13+H8r/f45RfWs1D9iRJkiRJkiRJkiRJkqSZ+38755E4dtHDXQAAAABJRU5ErkJg
+gg==
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">
+In&nbsp;[]:
+</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class="highlight-ipynb"><pre class="ipynb">
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></p>
+<h2>Vector addition</h2>
+<h2>Scalar multiplication</h2>
+<h2>Linear combination</h2>
+<style>
+div.input {
+    display: none;
+}
+</style>
+
+<!--
+Python code:
+
+    :::python
+    import numpy as np
+    import matplotlib.pyplot as plt  
+    import math
+
+    soa =np.array( [ [0,0,4,4], [0,0,4,1],]) 
+    X,Y,U,V = zip(*soa)
+    plt.figure()
+    ax = plt.gca()
+    ax.quiver(X,Y,U,V,angles='xy',scale_units='xy',scale=1)
+    ax.set_xlim([-1,8])
+    ax.set_ylim([-1,8])
+    plt.draw()
+    plt.show()
+
+Another graph notebook:
+{% notebook vectors/another-graph.ipynb %}
+
+-->	
       </div>
     </div>      
 </div>    

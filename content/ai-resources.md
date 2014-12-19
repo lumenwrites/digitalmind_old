@@ -1,5 +1,6 @@
 Title: List of the best resources to learn the foundations of Artificial Intelligence
 Date: 2014-12-01
+Slug: artificial-intelligence-resources
 
 This is a list of the best resources about AI that I could find on the web.
 It will be the most useful for beginners, people who want to learn this field, but don't

@@ -1,5 +1,6 @@
 Title: Deep Learning - Getting Started
-Date: 2014-12-17
+Slug: deep-learning
+Date: 2014-12-19
 
 This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.
 
@@ -42,6 +43,8 @@ This post lists a collection of the best resources for getting into Machine Lear
 - [Metacademy](http://www.metacademy.org)
 
 - [Khan Academy math videos](http://www.youtube.com/user/khanacademy/playlists).
+
+- [Coding the Matrix](https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2) - Brown University course on Linear Algebra for CS. 
 
 <!--
 ## Topics

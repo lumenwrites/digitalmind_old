@@ -31,7 +31,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Menu
-MENUITEMS = [('Home', '/'), ('Articles', '/')]
+MENUITEMS = [('Home', '/'), ('Articles', '/articles')]
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
@@ -51,3 +51,9 @@ AUTHOR_SAVE_AS = ''
 
 THEME = "/home/ray/projects/digitalmind/themes/digitalmind"
 
+# Plugins
+PLUGIN_PATHS = ['/home/ray/projects/digitalmind/pelican-plugins']
+PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
+           'liquid_tags.include_code', 'liquid_tags.notebook']
+
+EXTRA_HEADER = open('_nb_header.html').read() #.encode('utf-8')

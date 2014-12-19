@@ -1,17 +1,29 @@
 Title: Linear regression
-//Date: 2014-12-18
-
+Date: 2014-12-18 12:00
+Status: draft
 ## Math
-- Vectors
-- Dot Product
+
+#### General Machine Learning introduction
+
+- Vectors  
+
+- Dot Product  
+
 - Linear systems as matrices
+
 - Matrix Multiplication
+
 - Matrix Inverse
 
+
 - Functions of several variables
+
 - Partial derivatives
+
 - Limits and continuity in R^n
+
 - Linear Approximation
+
 - Gradient
 
 - Loss function

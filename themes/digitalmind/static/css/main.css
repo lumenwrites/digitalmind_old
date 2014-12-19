@@ -2,6 +2,12 @@
 @import url('http://fonts.googleapis.com/css?family=Titillium+Web:200');
 @import url('http://fonts.googleapis.com/css?family=Lato');
 
+/* For code */
+@import url('http://fonts.googleapis.com/css?family=Crimson+Text');
+@import url('http://fonts.googleapis.com/css?family=Kameron');
+@import url('http://fonts.googleapis.com/css?family=Lato:200,300,400');
+@import url('http://fonts.googleapis.com/css?family=Source+Code+Pro');
+
 * {
 	font-family: "Titillium Web";
 	color: #3d454b;
@@ -165,4 +171,31 @@ footer h4 {
 	color: #fff;
 	top:0px;
 	
+}
+
+/* Hide IPython in/out */
+div.prompt:empty {
+    display: none;
+}
+
+div.input_prompt {
+    display: none;
+}
+
+div.output_prompt {
+    color: #8B0000;
+    display: none;
+}
+
+
+/* Syntax highlighting change font */
+.highlight span {
+    font-family: "Source Code Pro";
+    font-family: "Inconsolata";
+}
+
+/* Fix the list changes */
+
+ul, ol {
+    margin-left: 18px;
 }
