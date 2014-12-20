@@ -277,3 +277,7 @@ ul, ol {
 #isso-root {
     /* margin:20px; */
 }
+
+#isso-thread > h4 {
+    display: none;
+}
