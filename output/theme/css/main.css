@@ -14,7 +14,7 @@
 }
 
 html {
-    font-size: 19px;    
+    font-size: 19px;
 }
 
 .row {
@@ -27,7 +27,7 @@ a {
 
 h1, h2, h3, h4 {
     font-family: Lato;
-    font-weight: normal;    
+    font-weight: normal;
     color: #3d454b;
 }
 
@@ -159,7 +159,7 @@ footer h4 {
 	font-size: 16px;
 	font-weight: normal;
 	color: #fff;
-	
+
 }
 
 .button.small:hover {
@@ -170,7 +170,7 @@ footer h4 {
 	font-weight: normal;
 	color: #fff;
 	top:0px;
-	
+
 }
 
 /* Hide IPython in/out */
@@ -198,4 +198,82 @@ div.output_prompt {
 
 ul, ol {
     margin-left: 18px;
+}
+
+
+/* Subscribe */
+.post-footer-signup {
+    border: 1px solid white;
+    border-radius: 2px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffffff;
+    margin-bottom: 1.25em;
+    padding: 13px;
+    background: rgba(240, 249, 255, 0.32);
+    background: #f2f2f2;
+    height: 70px
+    margin-top: 40px;
+}
+
+.post-footer-signup {
+    margin-top: 40px;
+    height: 70px;
+}
+
+.post-footer-signup p {
+    float: left;
+    margin-top: 4px!important;
+}
+
+.post-footer-signup .mc-field-group {
+    margin-top: -20px;
+}
+
+.post-footer-signup #mce-EMAIL {
+    width:200px;
+    height:40px;
+    border: 0px;
+    padding: 10px;
+    margin: 0 0 0 20px;
+    float:right;
+    box-shadow: none;
+}
+
+.post-footer-signup #subscribeButton {
+	/* width: 200; */
+    height: 40px;
+    float:right;
+	/* margin: 0 0 0 0; */
+	/* cursor: pointer; */
+	/* font-size: 16; */
+
+	/* padding: 0; */
+	/* border-radius: 0; */
+}
+
+#rss-icon {
+    float:right;
+    margin: 0 0 0 10px;
+}
+
+#rss-icon i {
+    color: #666;
+}
+
+.large {
+    font-size: 40px;
+}
+
+/* Comments */
+.comments {
+    margin: 20px;
+}
+
+.isso-postbox {
+    margin: 0!important;
+}
+
+#isso-root {
+    /* margin:20px; */
 }

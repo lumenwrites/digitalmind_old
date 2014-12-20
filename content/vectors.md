@@ -1,4 +1,4 @@
-Title: Introduction to Linear Algebra: Vectors
+Title: Vectors
 Date: 2014-12-18 20:30
 Slug: vectors
 Category: math
@@ -26,8 +26,10 @@ And if you plot them, it would look like so:
 {% notebook vectors/vectors.ipynb %}
 
 
-## Vector addition
-## Scalar multiplication
+## Adding and subtracting vectors
+## Multiplying vectors by a scalar(number)
+## Unit vectors
+i, j
 ## Linear combination
 
 

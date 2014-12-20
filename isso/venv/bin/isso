@@ -1,0 +1,10 @@
+#!/home/ray/projects/digitalmind/isso/venv/bin/python3.4
+# EASY-INSTALL-ENTRY-SCRIPT: 'isso==0.9.8','console_scripts','isso'
+__requires__ = 'isso==0.9.8'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('isso==0.9.8', 'console_scripts', 'isso')()
+    )

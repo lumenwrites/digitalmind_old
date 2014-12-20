@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-19T00:00:00+01:00</updated><entry><title>Deep Learning - Getting Started</title><link href="/post/deep-learning" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;h4&gt;General Machine Learning introduction&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt; on Coursera.&lt;br /&gt;
+  And his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325"&gt;Programming Collective Intelligence&lt;/a&gt;" &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TutsPlus course "&lt;a href="http://code.tutsplus.com/courses/machine-learning-distilled"&gt;Machine Learning Distilled&lt;/a&gt;"&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Deep Learning Basics&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/tutorial/"&gt;deeplearning.net tutorials&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Other&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NYU Course on &lt;a href="http://techtalks.tv/deep_learning_nyu_spring_2014/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://neuralnetworksanddeeplearning.com"&gt;Neural Networks and Deep Learning&lt;/a&gt;" by Michael Nielsen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book Neural "&lt;a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392"&gt;Networks and Learning Machines&lt;/a&gt;" by Simon O. Haykin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/reading-list/"&gt;deeplearning.net reading list&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.metacademy.org"&gt;Metacademy&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/user/khanacademy/playlists"&gt;Khan Academy math videos&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2"&gt;Coding the Matrix&lt;/a&gt; - Brown University course on Linear Algebra for CS. &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+## Topics
+
+- General overview, terms, into, background.
+    - What is ML? Applications of ML
+        - Types of Learning: supervised/unsupervised learning
+    - classification/regression(difference)
+- ML Algorithms
+    - Supervised Learning
+      - Linear Regression with one variable
+          - Model Representation
+          - Cost function
+          - Gradient Descent
+      - Linear Regression with multiple variables
+          - Gradient descent for multiple vectors
+          - Features and polynomial regression
+          - Normal Equation
+      - Logistic Reression
+      - k-Nearest Neighbor
+      - Decision Tree
+      - Naive Bayesian Classifiers
+
+      - Support Vector Machines
+      - Random Forests
+    - Unsupervised Learning
+      - k-Means Clustering
+      - Hierarchical Clustering
+      - Self-Organizing Maps
+      - Apriori Association
+- Deep Learning
+  - Perceptron
+    - Linear Regression
+  - Gradient Descent
+  - Stochastic Gradient descent
+  - Multilayer Perceptrons
+  - Backpropogation
+  - Hidden Layer Representations
+
+  - Neural Networks: Representation and learning
+      - Neurons
+      - Model representation
+      - Cost function
+      - Backpropogation algorithm
+      - Gradient checking
+      - Random Initialization
+
+  - Perceptron
+
+  - Artificial Neural Networks Representation
+  - General Regression Neural Networks
+  - Feed-Forward Neural Networks
+- Other/General ML
+  - ML Systems design
+    - Error  Analysis
+  - Dimensionality Reduction
+  - Anomaly Detection
+  - Recommender Systems
+--&gt;
+
+&lt;!-- To Sort, other topics
+- Neural networks:
+  - Types of neurons,
+  - Learning rules for binary,
+  - linear and logistic neurons,
+  - FeedForward Neural Networks (FFNN)
+  - Backpropagation (BP),
+  - BP with weight constraints.
+  - Recurrent Neural Networks (RNN),
+  - FFNN interpretation for RNN,
+  - BP through time,
+  - Exploding/Vanishing gradients.
+- Energy-based models:
+  - Hopfield Nets (HN),
+  - Learning &amp; unlearning in HN,
+  - HN with hidden units,
+  - Simulated annealing,
+  - Boltzmann machines (BM),
+  - BM Learning algorithm.
+- Deep Neural Networks:
+  - Deep Boltzmann Machines (DBM),
+  - Restricted Boltzmann Machines (RBM),
+  - Contrastive Divergence and variants (PCD, CD_k),
+  - Stacked RBMs for pre-training,
+  - Discriminative finetuning using BP.
+- Nonlinear Dimensionality Reduction:
+  - Autoencoders (AE),
+  - AE for document retrieval/visualization,
+  - AE for semantic hashing
+- Other:
+  - Minibatch gradient descent,
+  - Momentum method,
+  - Adaptive Learning rates,
+  - Limiting size of weights,
+  - Weight decay,
+  - Early stopping,
+  - Noise as regularizer,
+  - Dropouts,
+  - Bagging/Averaging and Boosting,
+  - Bias-variance tradeoff,
+  - Implementation on GPGPUs. 
+--&gt;
+
+&lt;h2&gt;Roadmap&lt;/h2&gt;
+&lt;p&gt;First of all - the general overview of all the major topics, and the order in which to study them
+(made based on the overview of the Deep Learning from &lt;a href="http://metacademy.org/roadmaps/rgrosse/deep_learning"&gt;metacademy&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="/images/deep-learning/deep-learning-roadmap.png"&gt;&lt;img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now - the list of resources and projects, in order of learning:&lt;/p&gt;
+&lt;h3&gt;Basic Math&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Andrew Ng course&lt;/h3&gt;
+&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt;,&lt;br /&gt;
+supplemented with his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;, and Neural Networks explanation from &lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt;(for things that are unclear).&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linear Regression&lt;/li&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;Feed Forward Neural Network&lt;/li&gt;
+&lt;li&gt;Backpropagation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Neural Networks for Machine Learning&lt;/h2&gt;
+&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;", supplemented with  MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt; and &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use neural network to recognize hand-written digits from MNIST database.&lt;/li&gt;
+&lt;li&gt;Use Restricted Boltzmann machines to create Deep Belief nets.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div style="clear: both;"&gt;&lt;/div&gt;
+
+&lt;script&gt;
+function prepareList() {
+  $('body').find('li:has(ul)')
+    .click( function(event) {
+        if (this == event.target) {
+            $(this).toggleClass('expanded');
+            $(this).children('ul').toggle('medium');
+        }
+        return false;
+    })
+    .addClass('collapsed');
+    //.children('ul').hide();
+  };
+
+  $(document).ready( function() {
+      prepareList();
+  });
+&lt;/script&gt;
+
+&lt;style&gt;
+.collapsed {
+    cursor: pointer;
+    &lt;!-- content:' ►';  --&gt;
+
+    &lt;!-- background: url({{ site.baseurl }}/images/small_right_arrow.gif) no-repeat left top; --&gt;
+    &lt;!-- padding: 3px 0px 3px 20px; --&gt;
+    &lt;!-- list-style: none; --&gt;
+    }
+
+.collapsed {
+cursor: pointer;
+    &lt;!-- content:' ►';  --&gt;
+    &lt;!-- background: url({{ site.baseurl }}/images/small_right_arrow.gif) no-repeat left top;p --&gt;
+    &lt;!-- padding: 3px 0px 3px 20px; --&gt;
+    &lt;!-- list-style: none; --&gt;
+    }
+
+.entry img {
+float:left;
+}
+&lt;!-- max-width: 400px;
+max-height: 400px; --&gt;
+
+
+&lt;/style&gt;
+
+&lt;!--
+list-style-image: url({{ site.baseurl }}/images/small_right_arrow.gif);
+ --&gt;</summary></entry><entry><title>Introduction to Linear Algebra:</title><link href="/post/introduction-to-linear-algebra" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/introduction-to-linear-algebra</id><summary type="html">&lt;h2&gt;Sets.&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Set&lt;/strong&gt; is an unordered collection of objects, for example:&lt;br /&gt;
+$$ \{♠,♥,♦,♣\} $$&lt;/p&gt;
+&lt;p&gt;$\boldsymbol \in$ - this symbol means that an object belongs to a set(equivalently, that set contains an object). For example:&lt;br /&gt;
+$$ ♥ \in \{ ♠,♥,♦,♣ \} $$&lt;/p&gt;</summary></entry><entry><title>List of the best resources to learn the foundations of Artificial Intelligence</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;This is a list of the best resources about AI that I could find on the web.
+It will be the most useful for beginners, people who want to learn this field, but don't
+know where to start.&lt;/p&gt;
+&lt;p&gt;I have developed a strategy for myself, for learning the basics of AI in the
+fastest and most practical way, and I'm sure it will be useful to you as well.&lt;/p&gt;
+&lt;p&gt;Here's the list of the best resources to begin learning AI with:&lt;/p&gt;
+&lt;h2&gt;Prerequisites&lt;/h2&gt;
+&lt;h3&gt;Lisp and Python - best programming languages for AI:&lt;/h3&gt;
+&lt;p&gt;Of all the programming languages you can choose to practice AI there are 2 best
+options: Lisp and Python. Lisp was created specifically for creating AI, and it
+is widely considered to be the most elegant and brilliant programming language
+ever.  &lt;/p&gt;
+&lt;p&gt;Here's the best way to learn it:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Land-Lisp-Learn-Program-Game/dp/1593272812/"&gt;Land of Lisp&lt;/a&gt;"
+  (Book about lisp with some AI algorithms)&lt;br /&gt;
+  This is an excellent and very fun introduction to lisp, makes learning very
+  enjoyable, understandable, and includes a lot of algorithms and basic principles
+  that will be very useful when you will be going throuhg AIMA.  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Paul Graham &lt;a href="http://www.amazon.com/ANSI-Common-LISP-Paul-Graham/dp/0133708756"&gt;ANSI Common Lisp&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;And here's my favorite book on python:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;General Coputer Science&lt;/h3&gt;
+&lt;p&gt;(algorithms, data structures, complexity)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;
+(based on &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;SICP book&lt;/a&gt;)&lt;br /&gt;
+  This is a course on lisp and basics of computer science, based on one of the most influential and seminal books in CS - "Structure and Interpretation of Computer Programs".&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Math&lt;/h3&gt;
+&lt;p&gt;My favorite resource for learning the basics of math is Khan Academy.
+Here's the very basics of math that you need to begin learning AI:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.khanacademy.org/math/algebra2"&gt;Algebra 2&lt;/a&gt;(logarithms, complex numbers)  &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD6DA74C1DBF770E7"&gt;Trigonometry&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt;
+&amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;  &lt;/li&gt;
+&lt;li&gt;Introductory logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;General overview of the field, most important topics:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;"&lt;br /&gt;
+  This is the best book about AI, and one of the best books written on any topic. Ever. It may be challenging for a complete beginner, but it covers most of the topics and fields of AI, and if you will read it - you will have a very solid foundations of the field. This is definitely a best place to start.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course&lt;/a&gt; from UC Berkeley(CS 188)&lt;br /&gt;
+  (link above leads to the youtube channel with my favorite version of the course, here's the &lt;a href="http://www.cs.berkeley.edu/~russell/classes/cs188/f14/lecture_videos.html"&gt;alternative list of lectures&lt;/a&gt;, which is the official course page that lists all the recordings of this course)&lt;br /&gt;
+  This is an excellent course from Berkeley, series of video lectures, a lot of them are based on AIMA, it is a perfect complement to the book, it will make it much more understandable and enjoyable to read. Plus there's great practical projects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Machine Learning.:&lt;/h3&gt;
+&lt;p&gt;Machine learning is the most "practical" and immediately useful subfield of AI,
+which is great because focusing on learning it will allow you immediately
+benefit from, and apply your knowledge on practical projects.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Andrew Ng:&lt;/strong&gt;&lt;br /&gt;
+&lt;a href="https://www.coursera.org/course/"&gt;https://www.coursera.org/course/&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Pedro Domingos:&lt;/strong&gt;&lt;br /&gt;
+&lt;a href="https://www.coursera.org/course/machlearning"&gt;https://www.coursera.org/course/machlearning&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Programming Collective Intelligence&lt;/strong&gt;&lt;br /&gt;
+&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/05965293"&gt;http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/05965293&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;How mind works:&lt;/h3&gt;
+&lt;p&gt;On the opposite end of a spectrum - here's some fantastic(and very entertaining)
+books about how human mind works. It is not necessary very practical, but they
+are very exciting and fun to read, and obviously understanding of human brain
+can be very useful. At the very least - you will be inspired and enjoy reading
+them a lot.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jeff Hawkins - On Intelligence&lt;br /&gt;
+&lt;a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533"&gt;http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533&lt;/a&gt;&lt;br /&gt;
+  Audiobook: &lt;a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK"&gt;http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ray Kurzweil - How to Create a Mind:&lt;br /&gt;
+&lt;a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/"&gt;http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/&lt;/a&gt;&lt;br /&gt;
+  Audiobook: &lt;a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJ"&gt;http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJ&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Principles of Neural Science&lt;br /&gt;
+&lt;a href="http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901"&gt;http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901&lt;/a&gt;&lt;br /&gt;
+    This is the best book I could find that goes in depth into NS. 2 books above presented the general theories how mind works, this one talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Gettin started with Web Development</title><link href="/post/gettin-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/gettin-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Where did you learn web development? What is the best way to get started in web development?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's my response:&lt;/p&gt;
+&lt;p&gt;I've learned everything from books, video courses and by creating my own projects.
+And I think that it is the absolutely best way to go about it.
+All the information that you need is available for free on the internet, so you can learn everything just by using free(or very cheap) resources and practicing.&lt;/p&gt;
+&lt;p&gt;If you are starting from the absolute zero - I would suggest to just create a wordpress website and mess around with it, make and customize a blog for yourself or whatever you like, go from there. It is extremely easy to do, you will get your first experiences, and learn the basics of web development by osmosis.&lt;/p&gt;
+&lt;p&gt;Once you have done that - set out to learn and understand some basic skills.
+Here's the skills that you will need:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt; Learn html and css&lt;/strong&gt;
+It is the easiest thing to understand, you will learn it quickly, and enjoy the instant satisfaction of being able to create some pretty web pages.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt; Learn the basics of javascript&lt;/strong&gt;
+Simply put, javascript is what lets you to create all the animations and moving objects on the web pages(and much, much more). Learn and understand the basics first, to be able to manipulate simple elements.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt; Learn some backend programming language, and a framework.&lt;/strong&gt;
+Backend programming language is what lets you to create things like blogs and forums, this is what automatically generates pages on the "server side"(as opposed to the "client side" - in your browser).&lt;/p&gt;
+&lt;p&gt;I suggest to learn &lt;strong&gt;Python and Django&lt;/strong&gt;.
+There are alternatives to that - like Ruby and Ruby on Rails, or a sad old php.
+But python is considered to be the best programming language for beginners, and it is used everywhere(even bitvid is created with it), it has a huge amount of tutorials and information, and you can apply it in any field.
+It is easy to learn and understand, it is elegant, beautiful, and it is awesome. So you can't go wrong with it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&amp;gt; Learn the basics of database administration and sql.&lt;/strong&gt;
+Just to understand what that is and what you can use it for.&lt;/p&gt;
+&lt;p&gt;Once you've done that - you will have a very solid foundation, and the kind of things that you are capable of creating will depend only on your experience. You will be able to start freelancing or making some projects for yourself and your friends, building portfolio, gaining some experience, and becoming more advanced.&lt;/p&gt;
+&lt;p&gt;It may seem like a lot - but don't worry about it, it will be much easier than it seems, and it is &lt;strong&gt;extremely&lt;/strong&gt; fun.&lt;/p&gt;
+&lt;p&gt;You will also need to learn to use a bunch of tools, like a good text editor(start with sublime, move on to emacs or vim), git, vagrant, apache, etc - but don't worry about these things for now, you will naturally learn them when you will need to.&lt;/p&gt;
+&lt;p&gt;Here's some great resources for you to get started:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Code School&lt;/strong&gt; (codeschool.com)&lt;/p&gt;
+&lt;p&gt;It is not free, but it is relatively cheap, and it is the fastest and easiest way to learn the basics of HTML, CSS, and Javascript that I know. Of course you can find plenty of free courses on the youtube and on torrents.
+&lt;strong&gt;Bucky Roberts&lt;/strong&gt; - Here's a fantastic youtube channel created by a great guy, who will teach you most of it for free:
+https://www.youtube.com/user/thenewboston/&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Python&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You can learn the basics of python from Bucky Roberts as well, or - you can go through the course "Learn Python the Hard Way" - despite it's name it is the easiest way to learn python that I'm aware of.
+Or you could just google and find enormous amount of information and free courses, and pick whichever one you like the most.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tuts+ and Django Documentation&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;(go into this only after learning html/css/js)
+http://courses.tutsplus.com/courses/django-unchained
+Again, not free, but they have my favorite introductory course to django. You will learn it from the basics by creating your own hackernews clone - it is awesome and easy to follow.
+Or you can star with the official documentation - it is written extremely well, and contains a great tutorial for beginners (docs.djangoproject.com)
+After that you can read a great book "2 Scoops of Django".&lt;/p&gt;
+&lt;p&gt;That's pretty much it) This is the best way(that I'm aware of) for going from absolute zero to a solid intermediate(of course if you will practice and gain experience by making your own projects in the process).&lt;/p&gt;
+&lt;p&gt;I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)&lt;/p&gt;</summary></entry><entry><title>Great books</title><link href="/post/great-books" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/great-books</id><summary type="html">&lt;h3&gt;Catch Me If You Can by Frank Abagnale&lt;/h3&gt;
+&lt;p&gt;I remember disliking the movie, but the book is brilliant and hilarious. Autobiography of one of the boldest, horniest, and most brilliant con artists.&lt;/p&gt;
+&lt;h3&gt;Ghost In The Wires by Kevin Mitnick&lt;/h3&gt;
+&lt;p&gt;On the same topic, autobiography of a great hacker. Extremely clever and awesome. I bet people here will love it.&lt;/p&gt;
+&lt;h3&gt;Zero to One by Peter Thiel&lt;/h3&gt;
+&lt;p&gt;Very intelligent and inspiring book about startups and new technologies. A lot of new and great ideas, I've enjoyed it a lot.&lt;/p&gt;
+&lt;h3&gt;iWoz&lt;/h3&gt;
+&lt;p&gt;Autobiography of Steve Wozniak. Also wonderful and super positive and inspiring story.&lt;/p&gt;
+&lt;h3&gt;Trust me, I'm lying.&lt;/h3&gt;
+&lt;p&gt;Book about how modern social media is being manipulated. Short and interesting. Makes you think differently about what you read on the internet.&lt;/p&gt;
+&lt;h3&gt;On Intelligence by Jeff Hawkins&lt;/h3&gt;
+&lt;p&gt;Theory of how human mind works. Must read for everyone who is into AI, but also a great book for everyone else.&lt;/p&gt;</summary></entry></feed>

@@ -29,6 +29,18 @@ Status: draft
 - Loss function
 
 ## Linear Regression
+### Model representation
+housing prices - better example
+[graph]
+
+supervised learnong, regression.
+[table] size vsprice
+
+m - number of training examples
+x - "input" variable - features
+y - output"("target") variable
+(x,y) - one raining example
+(x^(i), y^(i)) - i'th training example. i'th row of the table.
 
 ![linreg](/theme/images/linear-regression/linear-regression-gradient-descent.png)
 ## Gradient descent

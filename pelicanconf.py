@@ -9,7 +9,7 @@ SITEURL = ''
 PATH = 'content'
 STATIC_PATHS = [
     'static/.htaccess',
-    'static/CNAME',    
+    'static/CNAME',
     ]
 
 
@@ -18,7 +18,7 @@ TIMEZONE = 'Europe/Paris'
 DEFAULT_LANG = 'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
+FEED_ALL_ATOM = 'feeds/all.atom.xml' #None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
@@ -43,7 +43,7 @@ DEFAULT_PAGINATION = 8
 #RELATIVE_URLS = True
 ARTICLE_URL = 'post/{slug}'
 ARTICLE_SAVE_AS = 'post/{slug}.html'
-PAGE_URL = '{slug}' 
+PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
 TAG_SAVE_AS = ''

@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
-  
+
 <head>
   {% block head %}
   <meta charset="utf-8" />
-  
+
   <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
 
   <!-- Extra header for ipython -->
   {% if EXTRA_HEADER %}
   {{ EXTRA_HEADER }}
-  {% endif %}  
-  {% endblock %}    
+  {% endif %}
+  {% endblock %}
 
 
   <!-- Import css and scripts  -->
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation.css" />
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/foundation-icons/foundation-icons.css" />
   <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css" />
   <script src="/theme/js/vendor/jquery.js" type="text/javascript"></script>
 
 </head>
-  
+
 <body>
 <div id="orange-line"></div>
   <header>
@@ -29,18 +30,18 @@
           <a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/theme/img/logo_notagline.png" /></a>
         </div>
         <div class="large-3 columns" id="mainMenu">
-	  {% for title, link in MENUITEMS %}	  
+	  {% for title, link in MENUITEMS %}
 	  <ul>
-	    <a href="{{ link }}">{{ title }}</a>	    
+	    <a href="{{ link }}">{{ title }}</a>
 	  </ul>
 	  {% endfor %}
 	</div>
       </div>
   </header>
-  
+
   {% block content %}
-  {% endblock %}    
-  
+  {% endblock %}
+
   <footer>
   </footer>
 </body>
