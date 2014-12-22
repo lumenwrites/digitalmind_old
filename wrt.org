@@ -1,0 +1,890 @@
+* DM
+** ML/DL
+**** Getting Started
+- How to get started in AI/Best resources     
+- What is deep learning  
+- What is machine learning?  
+- how to get started in ML  
+- Where to start
+  http://datascienceinterview.quora.com/Where-to-Start
+- What's the easiest way to learn machine learning?
+  https://www.quora.com/Whats-the-easiest-way-to-learn-machine-learning
+- What's the most effective way to get started with Deep Learning?
+  https://www.quora.com/Whats-the-most-effective-way-to-get-started-with-Deep-Learning
+
+**** List of skills and algorithms
+- What skills are needed for machine learning jobs?
+  https://www.quora.com/What-skills-are-needed-for-machine-learning-jobs
+- What are some Machine Learning algorithms that you should always have a
+  strong understanding of, and why?
+  https://www.quora.com/What-are-some-Machine-Learning-algorithms-that-you-should-always-have-a-strong-understanding-of-and-why
+- What are the top 10 data mining or machine learning algorithms?
+  https://www.quora.com/What-are-the-top-10-data-mining-or-machine-learning-algorithms
+- What are the best interview questions to evaluate a machine learning researcher?
+  https://www.quora.com/What-are-the-best-interview-questions-to-evaluate-a-machine-learning-researcher
+- What are the advantages of different classification algorithms?
+  https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms
+- list of ML algorithms 
+**** Resources
+- Best talks/lectures
+  https://www.quora.com/What-are-the-best-talks-lectures-related-to-big-data-algorithms-machine-learning
+- Must read papers
+  https://www.quora.com/What-are-the-must-read-papers-on-data-mining-and-machine-learning
+- What are the best blogs for data miners and data scientists to read?
+  https://www.quora.com/What-are-the-best-blogs-for-data-miners-and-data-scientists-to-read
+- What are some good resources to learn about machine learning?
+  https://www.quora.com/What-are-some-good-resources-to-learn-about-machine-learning
+- CV resources  
+
+**** Math
+- The Only Probability Cheatsheet You'll Ever Need
+  http://datastories.quora.com/The-Only-Probability-Cheatsheet-Youll-Ever-Need
+- How can you learn Mathematics for machine learning?
+  https://www.quora.com/How-can-you-learn-Mathematics-for-machine-learning
+- What are the core Linear Algebra topics I'd need to complete Stanford's online AI course?
+  https://www.quora.com/What-are-the-core-Linear-Algebra-topics-Id-need-to-complete-Stanfords-online-AI-course
+- Basic math for CS. Which subjects to study and in what order  
+- list of math topics you need for CS
+- imaginary numbers
+- derivative
+- limits(value for ME, in writing)
+- logarithms (algebra2)
+- imaginary/complex numbers (algebra2)
+- sin/cos/etc. trig identities.
+
+**** Project Ideas
+- Small Project ideas     
+- Programming small projects to learn math  
+- What are some simple games which can be coupled with machine learning?
+  https://www.quora.com/What-are-some-simple-games-which-can-be-coupled-with-machine-learning
+- What are basic artificial intelligence projects for beginners?
+  https://www.quora.com/What-are-basic-artificial-intelligence-projects-for-beginners
+- What are some good toy problems in data science?
+  https://www.quora.com/What-are-some-good-toy-problems-in-data-science
+- TWSS
+
+**** Explanation of algorithms     
+- Classificarion/regression/clustering     
+- What is an intuitive explanation of overfitting?
+  https://www.quora.com/What-is-an-intuitive-explanation-of-overfitting
+- What is an intuitive explanation of singular value decomposition (SVD)?
+  https://www.quora.com/What-is-an-intuitive-explanation-of-singular-value-decomposition-SVD
+- How do artificial neural networks learn?
+  https://www.quora.com/How-do-artificial-neural-networks-learn
+- What is the curse of dimensionality?
+  https://www.quora.com/What-is-the-curse-of-dimensionality
+- What is a good explanation of Latent Dirichlet Allocation?
+  https://www.quora.com/What-is-a-good-explanation-of-Latent-Dirichlet-Allocation
+- How do I become a data scientist?
+  https://www.quora.com/How-do-I-become-a-data-scientist
+- How do RBMs work?
+  https://www.quora.com/How-do-RBMs-work
+- Research and describe the best practices for configuring and applying the logistic
+regression algorithm (at least 10 bullet points).
+- Research and describe the standard backpropagation algorithm using pseudocode (may
+require reading one or more open source implementations).
+- Research and describe the information processing objectives of the naive bayes
+algorithm.
+- Write a tutorial on how to use stacked autoencoders in pylearn to to address the
+Wisconsin Breast Cancer dataset.
+
+- Perceptron. Artificial model of a neuron.
+- Univariate Linear Regression with Gradient descent
+- Multivariate Linear Regression with Gradient descent  
+- Artificial Neural Networks Representation  
+- Backpropogation
+- Training ANN
+- Implementing simple ANN in hy
+
+**** General/Essays
+- summary of the best advice from self study guide.     
+- Small Projects methodology idea   
+- What will be the next big thing in artificial intelligence in the next 10 to 20 years?
+  https://www.quora.com/What-will-be-the-next-big-thing-in-artificial-intelligence-in-the-next-10-to-20-years
+- What is the best way to improve one's ability to read scientific articles?
+  https://www.quora.com/What-is-the-best-way-to-improve-ones-ability-to-read-scientific-articles
+- What is consciousness?
+  https://www.quora.com/What-is-consciousness
+
+- Theory of mind. What is intelligence.  
+  Kurzweil. Pattern Recognition Theory of Mind
+  On Intelligence
+  
+- Singularity[idea]
+- Singularity - gameXb  
+
+**** Practical applications
+- Practical applications of ML
+- Practical applications of computer vision and image recognition
+- applications of machine learning  
+- areas/applications(image recognition, etc, etc)
+**** Programming languages  
+- lisp - manipulating the code, code as data, taking a derivative of a function.(SICP)
+     
+**** Tools
+- list ML tools     
+- ipython
+- matplotlib
+- Latex
+- List 10 benefits of using scikit-learn for machine learning
+- Create a list and summary of 10 popular Python machine learning frameworks.  
+- What is orange python?  
+
+- scipy
+- scikitlearn
+- Theano
+//matlab?
+//octave?
+//weka??
+**** Other
+- Supervised/Unsupervised, Classificarion/regression/clustering
+- intro to Deep Learning and ANNs.
+k- algorithms to learn(supervised vs, classificstion vs)
+- terms. supervised/unsupervised, classification, regression…
+- //essay what it is? Why? How? Components(representation, evaluation, optimization)
+
+- Math for AI/ML. What you need to know and resources.
+ applications of ML for mobile and web.
+
+- Best way to visualize high-dimentional data
+  https://www.quora.com/Whats-the-best-way-to-visualize-high-dimensional-data
+
+- What is the difference between statistics and machine learning?
+  https://www.quora.com/What-is-the-difference-between-statistics-and-machine-learning
+
+- Why are GPUs well-suited to deep learning?
+  https://www.quora.com/Why-are-GPUs-well-suited-to-deep-learning
+
+- What is the best language to use while learning machine learning for the first time?
+  https://www.quora.com/What-is-the-best-language-to-use-while-learning-machine-learning-for-the-first-time
+
+****** Datasets?
+- Locate and describe 5 standard experimental multi-class classification datasets.
+- something about listing datasets to apply and test things on(once I know more about thouse)
+** Computer Science
+SICP
+recursion
+fibbonachi
+** AI
+AIMA
+*** NS
+- Brain lobes
+- Anatomy of a neuron
+   
+*** AI essays
+- 4 aproaches to AI
+- Turing Test
+- The cognitive modelling. Cognitive science.
+- Thinking rationally, "the laws of thought", logic.
+- Acting rationally. Rational Agent.
+- Foundations of AI, philosophy.
+- Math in AI.
+- Use of AI in economics.
+- Neuroscience. EEGs and such.
+- Control theory, cybernetics, robotics.
+- Linguistics, how does language relate to thought.
+- The history of AI.
+- Modern state of the art AI.
+- Robotic vehicles
+- Speech recognition
+- Autonomous planning and scheduling.
+- Game playing. AI in games!!
+- Spam fighting and AI research.
+- Machine translation.
+- Logistics planning.
+- Discuss that turing's paper.
+- Chinese room
+- Rationality in AI
+- Agents and environments
+- materialism vs dualism
+- Applications of AI
+
+
+
+***** edx
+- BFS, DFS, A*, etc.
+
+** ML distilled
+* //Later
+** Tutorials
+*** Tutorials <32>
+***** Emacs
+******** [essay] About emacs
+******** [Essay] Best way to learn emacs.
+******** Download and install
+******** First thing to do(.emacs, control-caps)
+******** Terminology/interface
+******** Basic actions - open/save, Move, Undo, help
+******** Editing text(delete, prefix, regions)
+******** Buffers, windows, modes
+******** Customization basics. Emacs lisp, .emacs, installing packages.
+******** Macros
+******** Org mode
+******** Dired mode
+******** Slime mode
+******** Paredit mode
+******** Bookmarks and registers
+******** Other commands and tricks.
+******** Other
+- [ ] emacs config	
+- paredit mode, org mode  
+********** [later] [essay] About Emacs.
+       	   Why should I learn/use it, what it is?
+       	   - customization
+       	   - lisp
+       	   - jokes.
+       	   //after all vids, when I'm ready to make a fun essay about it.
+       	   don't use starter kits!! Customize it yourself.
+       	   editor lego
+********** [later] Download and Install
+
+********** [later] First thing to do after installing emacs
+************ Intro
+       	     Hi! In this video I will show you what to do right after you've installed emacs.
+************ .emacs
+       	     my basic .emacs file
+************ Control/Caps swap.
+       	     #jok If you are using linux - it's like so,
+       	     if you're using mac - it's like so.[screenshot]
+       	     If you're still using windows - what's wrong with you, man?
+       	     [funny windows durr image]
+       	     Seriously, cmon buddy, get it together.
+************ Outro
+
+
+********** Getting started.
+************ Terminology.
+       	     Window = frame.
+       	     Buffer
+************ Interface
+       	     Drop the silly UI, you won't need it.
+       	     Name of the buffer.
+       	     Name of the mode.
+       	     other symbols - ??
+       	     Minibuffer
+************ Meta, Command.
+       	     M - alt
+       	     C - control
+************ Opening tutorial shortcut
+       	     if you get lost.
+
+********** Basic Shortcuts and Moving within the file.
+************ Basic operations
+       	     C-x C-f - Open/Create(find)
+       	     C-x C-s - Save
+       	     C-g     - Cancel
+       	     C-x C-c - Exit
+       	     C-h t - Open the tutorial
+       	     C-h r - Read manual
+************ Move
+       	     C-n - Next line
+       	     C-p - Previous line
+       	     C-f - One character forward
+       	     C-b - One character backward
+
+       	     M-f - One word forward
+       	     M-b - One word backward
+
+       	     C-e - End of the string
+       	     C-a - Beginning of the string
+
+       	     C-v - Page Down
+       	     M-v - Page Up
+
+       	     M-> - End of the file
+       	     M-< - Beginning of the file
+       	     C-l - Center
+************ Other
+       	     C-_ - Undo
+       	     C-j - Next line with indentation
+
+
+********** Editing text
+************ Delete
+       	     C-d - delete forward.
+       	     C-; - delete backward.
+       	     M-d - Delete Word
+       	     C-k - Delete text until the end of the line.
+************ Paste. Kiljl ring.
+************ Prefix command. C-u [number]; C-u C-u
+       	     Move/type
+************ M-x (some basic simplest command)
+************ C-SPC - set mark
+************ Macros
+
+********** More hotkeys
+************ Buffers
+       	     Split
+       	     Switch
+
+********** Regions and kill ring
+********** Buffers and windos
+********** Modes
+
+********** //
+********** Basics of emacs lisp
+       	   (tool-bar-mode -1) C-e
+********** [Essay] Best way to learn emacs.
+       	   #q
+********** Org Mode
+********** Installing packages
+********** Customization, elisp
+************ Hotkeys
+********** Slime
+********** paredit
+
+********** Dired
+	    
+***** Hy
+******** installaiton
+******** pip.
+******** emacs?
+******** Numbers.
+******** Basic math operations, numbers, calculator - super simple!!
+******** Comments
+******** Strings.
+******** Lists
+******** if else
+******** for
+******** functions
+******** args/kwargs
+******** modules. os and whatevr
+******** read/write files
+******** Classes. Object-oriented.
+******** comprehensions
+******** Macros
+******** Closures, generators
+******** Iterators
+******** Other
+dive into hy,
+sicp in hy
+PG book in Hy	
+data types
+install/use with emacs
+Hy comprehensions
+
+- [ ] graphs/server in hy	
+- installaiton
+  pip.
+  emacs?
+- Numbers.
+  Basic math operations, numbers, calculator - super simple!!
+- Comments
+- Strings.
+- Lists
+- if else
+- for
+- functions
+- args/kwargs
+- modules. os and whatevr
+- read/write files
+- Classes. Object-oriented.
+- ....
+- comprehensions	
+***** Other
+******** Linux
+- [ ] //vbox installation	
+- [ ] Linux backup
+  Tar + cron jobs.
+	
+- find/locate files in linux
+- vpn- vpn
+	
+- using tar? cron?
+- xrandr command
+	
+- [X] tar
+- [ ] basic linux commands
+- [ ] find/locate
+- [ ] grep and pipe
+- [ ] apt-get?
+- [ ] terminal shortcuts
+
+- [-] Navigate:
+  - [X] pwd/cd/ls
+    - [X] ls
+      list directory contents
+      -l  long listing.
+      -a include hidden files
+    - [X] cd
+  - [ ] find/locate
+- [ ] Files and folders:
+  - [ ] touch
+    make file
+  - [ ] mkdir
+    make directory
+  - [ ] cp
+    copy
+  - [ ] mv
+  - [ ] rm
+    remove file/directory
+  - [ ] chmod
+    change premissions
+  - [ ] ln
+    symbolic link
+- [ ] Maintenance:
+  - [ ] sudo
+    super user do
+  - [ ] apt
+    advanced package tool
+- [ ] tar
+- [ ] ssh
+- [ ] scp
+- [ ] Weird stuff:
+  - [ ] cat
+  - [ ] grep
+  - [ ] pipe
+  - [ ] pwd (print working directory)
+  - [ ] ssh
+  - [ ] scp
+  - [ ] kill
+  - [ ] loout
+  - [ ] clear
+  - [ ] man
+  - [ ] commands you didn't know or use
+    df - check disk space
+	
+******** Git
+- [ ] git installation	
+- [ ] git basics  
+******** i3 wm
+- [ ] i3 basics?
+- named workspaces in i3  
+******** Django/webdev
+- [ ] What django developer needs to know	
+deployment 2SoD
+- [ ] django installation(in vm?)
+- [ ] 2 Scoops of Django,   
+- [ ] Recursion(from sicp)
+- [ ] Creating template for wagtail
+- [ ] Django Wagtail Setup  
+- [ ] Django + sass
+- [ ] Docker + Django on ubuntu
+- [ ] Django, markdown, git.  
+*********  html/css/sass??
+******** Docker
+******** vagrant
+******** UT/QML/PyQt
+Singularity game with PyQt/QML.	
+******** venv
+******** ipython
+******** PostgreSQL
+******** 2SoD, SICP, edx
+******** Python(dive into python) course
+******** Other
+- gogle search tricks
+- best laptop?
+** Startups/Entrepreneurship/Internet Marketing
+   MBA books
+   Why it SUP the best thing to do ever.
+   VCs
+   Founders
+   Ideas
+*** Internet Marketing
+    Main(Online Video Income framework? Tips? Bribe? PLF?):
+      - [ ] Overall online business strategy
+       	Traffic > ML > Webinar/PLF > Sell
+      - [ ] How to get traffic? Options. Video SEO - the perfect way.
+      - [ ] Building a mailing list. Perfect subscribers. CTA.
+       	Why and how
+      - [ ] Monetization methods.
+       	First 4:
+      - [ ] 500 true fans
+      - [ ] To come up with ideas - solve a problem.
+       	How to make a product/startup idea video. Walk path, set challenges.
+      - [ ] Most profitable online business niches.
+      - [ ] Ways to make money online.
+       	Freelance. Affiliate. Info products. Software. Ads. Etc.
+       	Types of products.
+      >8 over time:
+       	- [ ] Becker's mailing list building.
+          Ads.
+          Make it pay for itself with affiliates.
+          Scale it to the moon.
+          //best tools for mailing list with links?
+       	- [ ] Product quality + word of mouth.
+       	- [ ] SEO basics.
+          KeywordResearch(niche down)+Onpage(Imple)+Backlinking(PBN, keyword
+          ratio)
+       	- [ ] Top books.
+       	- [ ] google+ groups? easiest way to get 100-150 views. from zero.
+          within an hour.
+          stumble, reddit, google groups.
+       	- [ ] Test your idea with landing page before creating a product.
+          Landing page + Ad traffic.
+      - [ ] Get more subscribers:
+       	ask for it. Call to action.
+       	//annotations?
+       	//from blog
+       	//ads
+       	//featured channels + networking
+       	//interacting
+       	//pay-off for subscriber limits
+      - [ ] MVP and steering
+
+
+
+** High-lvl-Hacking(startups/technology/programming related essays)
+*** Top Essays
+***** 5 AI resources to start with
+***** Best entrepreneurship books.
+***** Best audiobooks for hackers/entrepreneurs. Autobiographies?
+***** What django developer needs to know.
+
+***** Biases
+***** Arguments, straw man and such.
+
+***** What is the best way to get started in web development?
+      http://forum.bitvid.tv/t/ask-me-anything-online-business-video-marketing-animation-web-development/46/3
+
+
+***** broken windows theory
+***** Small Projects methodology!!
+
+***** Learning to program.
+      How to become a hacker.
+      Open source, micro contributions, understanding code.
+
+***** How to participate in github open source project
+
+
+
+
+***** Poms
+***** Deliberate practice
+***** Info under action. Don't read>code. But Code>Read
+***** Pretty much all of the debono, coming up with new ideas/solutions
+      - Jump and move
+      - Creative pause
+      - Breakdown
+      - Penetrate(MVP, EP) + CI > Pivot-steer
+***** Do what's important, not what' urgent.
+*** [BIF] - Best ideas from. <16>
+***** Pragmatic Programmer
+******** Stone Soup and Boiled Frogs
+******** Tracer Bullets
+******** Programming by Coincidence
+******** DRY
+***** Start Small Stay Small
+******** Niches     
+*** Other  
+1. 5 games for a beginner programmer to create
+2. 5 AI resources to start with
+3. Best entrepreneurship books.
+4. Best audiobooks for hackers/entrepreneurs. Autobiographies?
+5. What is the best way to get started in web development?
+   http://forum.bitvid.tv/t/ask-me-anything-online-business-video-marketing-animation-web-development/46/3
+6. What django developer needs to know.
+7. Small Projects methodology!!
+8. Learning ro program.
+   How to become a hacker.
+   Open source, micro contributions, understanding code.
+
+9. Biases
+10. Arguments, straw man nad such.
+11. Poms
+12. Info under action. Don't read>code. But Code>Read
+13. Pretty much all of the debono, coming up with new ideas/solutions
+    - Jump and move
+    - Creative pause
+    - Breakdown
+    - Penetrate(MVP, EP) + CI > Pivot-steer
+14. Deliberate practice
+15. broken window theory
+16. Do what's important, not what' urgent.
+17. How to participate in github open source project
+
+18.Simple exercise to improve your hacking skills.
+
+
+1. Coming up with app ideas
+2. Why are hackers funny and good at comedy?
+   //breaking the thing, unexpected, etc.
+3. How to participate in github open source project
+4. Best django resources.
+
+5. List of small project ideas to create while learning AI/ML
+6. My favorite/beautiful UIs.
+   Most elegant and awesome software I know about!!
+7. best programming languages
+8. Inventing new solutions instead of relying on the way things are.
+   Try to come up with a way to do a thing before googling.
+9. Lean. Strip away everything unnecessary. Limitations breed creativity.
+   Value in knowing things, and value in UNknowing things.
+   Value in minimalism and elegance.
+10. Most inspiring hackers
+11. Hacking is the most badass game ever.
+12. How curiosity works.n
+13. Flow in Hacking. Immediate response.
+14. Writing.(coding horror example, express ideas and such).
+    Use HN and stackoverflow to practice.
+    Commt to writing a comment to the every link you check out.
+15. Setting goals.
+16. Valuing peace of mind and focus, ignoring petty human drama.
+17. Why UT is the future.
+18. Blogging: You create ideas by solving challenges and answering questions
+19. Mind maps
+20. Imaine. Visualize to understand.
+21. Scrum
+22. Self teaching vs education
+23. Niching down to make ideas
+24. Massive actoin. Best way to learn.
+25. Willpoer vs making it work.
+26. Overall online business strategy.
+27. How to get traffic
+28. Building a mailing list
+29. Monetization methods
+30. 500 tu\re fans
+31. Solve a prblem to come up with a product/stattup.
+    Your own problem.
+    Live at the edge in the future.
+32. Most profitable IM niches
+33. Ways to make moey online.
+    Freelance. Affiliate. Info products. Software. Ads. Etc.
+    Types of products.
+34. Product quality + word of mouth
+35. Best books to read.
+36. Landing page. Why, testing idea, how needs to look like.
+37. Setting up a blog.
+    //later - with git/markdown
+
+38. broken window theory
+39. Code Combat. Review/tutorial. Best programming games.
+40. Analyze that dude's great ML website, explain how it works - passive income for a developer.
+41. Best django resources
+42. Best startup books, duh, this time - finally doable!! Short, simple, no render required))
+43. coworking is aweslme
+44. //review websites and comment. not really now but yeah.
+45. list of surprising things google offers that you didnt know about from quora.
+46. About me
+47. Recommended reading for developers
+48. Blogging software
+49. Why you should leanr emacs
+50. Write a postmortem, analyze what went wrong.
+51. Design patterns - research, explain
+52. List of small project ideas to create while learning AI/ML
+53. No talent
+54. list of projects to practice webdev
+55. How to find a great opensource project to contribute to.
+56. Time management. Poms.
+********* Gadgets    
+*** High-lvl-Hacking
+  PP, PD under hacking.
+  Broken window theory
+
+- 5 games for a beginner programmer to create
+- 5 AI resources to start with
+
+- How to participate in github open source project
+
+- Something about code combat fits!! Not necessarily a tutoriao but yeah.
+- Analyze that dude's great ML website, explain how it works - passive income for a developer.
+- Best django resources
+- Best startup books, duh, this time - finally doable!! Short, simple, no render required))
+- coworking is aweslme
+- //review websites and comment. not really now but yeah.
+- list of surprising things google offers that you didnt know about from quora.
+
+
+- About me
+- Recommended reading for developers
+- Blogging software
+- Notepad2 - cool text editor that I love
+  (remember, TA is people who know nothing about hacking, for me it's obvious,
+  for them it's value)
+- You should get several monitors
+- Just say no.
+  Innovation is not about saying yes to everything. It's about saying NO to all but the most crucial features.
+- Good programming get off their butts. Just start writing code and iterate.
+- Revenue ways for your blog
+- Is programming for lonely misantrops?
+- Make it lean and simple
+- Write articles, not blog posts, don't be a commodity blogger
+- Write a postmortem, analyze what went wrong.
+- Design patterns - research, explain
+******** Hacking/Programming
+********* Programming tools
+	  Laptops
+	  Text editors
+********* Programming life
+********* Programmers
+********* Hackers subculture
+     
+** //Other
+*** Creativity
+***** DeBono Creativity Inventions
+****** Creative pause.
+****** Jump
+****** Move
+****** Breakdown
+****** Penetrate(MVP, EP) + CI > Pivot-Steer
+****** Drop expectations, list of 5.
+****** Strip away everything unnecessary. Get to the core. Minimal thing.
+****** Paradox of choice, good enough principle.
+****** Reverse enineering.
+****** No rules just tools.
+****** Comedy
+       Joke structure.
+       AIMA epiphany dean's book. Defeat expectations.
+****** Imagination.
+****** Jump-unfold.
+       Get into the world and explore.
+****** Get most of the ideas in the process of writing.      
+****** Niching down to make ideas
+****** Curiosity. How it works.
+****** Ideas of value. Not about typing/expression.
+       Substance, story. Fuck grammar. 
+
+****** How I want to write - concise, simple, etc.
+
+****** Reasons we enjoy movies. Comedy. Mastery. Etc.
+       Avatar. Association.
+       Value. Closer/farther from goal.
+       Conflict. That makes sense.
+       Event - moving closer to or away from the goal.
+*** Philosophy/Personal Development
+    penetrate and expand
+   Setting goals
+   You create ideas by solving challenges and answering questions
+   Small Projects
+   Poms
+   Mind Maps.
+   Imagine. Tesla. While walking around - turn in your head. Audiobooks.
+   Understand > Automate. Don't rely on subconsciousness.
+   Thinking patterns. Pattern recognition theory.
+   ?
+   Scrum
+   Deliberate practive.
+   Self teaching vs education.
+     Setting goals?
+     Niche to guide you?
+     Do what's important not what's urgent.
+     Biases?
+     Arguments? (straw man)
+     Breaking patterns
+     Lessons learned from art/cg/programming
+     on reading books
+     How to learn. Incremental improvement.
+     Source
+     Quality(comedy)
+
+
+   
+   Fuck mediocrity
+   Fuck the odds
+   Best way to learn
+   Do you have what it takes?
+   
+   Ruthlessly sacrifice everything irrelevant.
+   Deliberate practice
+   Make stuff
+   Cleverness vs knowledge
+   Principles of learning.
+   Core principles of personal development.
+   Flow.
+   Psychologists
+   Internet communities
+   Coffee addiction
+   Pick Up.
+**** Main. This is what I am about, this is what I live for.
+***** HC. Burning. Flow.
+Burning/HighConsciousness/lucidity/Ultimate life - reason, worth living and doing anything for. Highest form of life.
+***** Path. Purpose. Goal.
+Walking path towards the goal(to have direction) - ultimate way to acquire that.
+***** Mind. Mastery. Will. Extreme. Virtues.
+> Mind/Will/Power/guiltlessness - internal results and means towars that.
+Virtues. things you want for themselves, things that you need to walk you path
+and acquire by doing it. Virtues??!!
+***** Identity. Transformation. Result of path.
+>Transformation/Identity/BeingPrimeMover/lucid/J/Tyler/Galt - side effect of
+living this life in its complete, ultimate form. 100%, no betrayal, no
+compromise, purity. This is what you become when you choose to do that and never
+comply with evil.
+Galt/Atlantis/tyler/what else? - ultimate result of the good?
+***** Evil.
+****** Stupidity. Laziness. Compromise. Evil.
+> Stupidity/laziness/weakness/betrayal/compromise/ IndulgenceOfEmotionAtTheExpenseOfReason - evil, things to fight, things to win over and burn away.
+****** The point. Mediocrity. Result of evil.
+ThePoint. I dont give a shit, I will win HC or die trying. ThePoint - is place after which you don’t care to, don’t care to win, to be your best, to achieve your dreams, and can’t pull yourself back out of, no return. Apathy/Mediocrity/gray - ultimate terrifying result of evil.
+***** //
+> Burning/HighConsciousness/lucidity/Ultimate life - reason, worth living and doing anything for.
+> Walking path towards the goal(to have direction) - ultimate way to acquire that.
+>Transformation/Identity/BeingPrimeMover/lucid/J/Tyler/Galt - side effect of
+living this life in its complete, ultimate form. 100%, no betrayal, no
+compromise, purity. This is what you become when you choose to do that and never
+comply with evil.
+Galt/Atlantis/tyler/what else? - ultimate result of the good?
+>Transformation is what happens to you when you walk the path, galt is who you are when you own it 100%.
+> Mind/Will/Power/guiltlessness - internal results and means towars that.
+Virtues. things you want for themselves, things that you need to walk you path
+and acquire by doing it. Virtues??!!
+> Stupidity/laziness/weakness/betrayal/compromise/ IndulgenceOfEmotionAtTheExpenseOfReason - evil, things to fight, things to win over and burn away.
+> ThePoint. I dont give a shit, I will win HC or die trying. ThePoint - is place after which you don’t care to, don’t care to win, to be your best, to achieve your dreams, and can’t pull yourself back out of, no return. Apathy/Mediocrity/gray - ultimate terrifying result of evil.
+> Girl is the reward for winning. Her love is the response to values you’ve acquired. Game rearden style, attractive qualities on all levels as a result of walking the path. SelfEsteem/Confidende/etc.
+
+
+***** don't try to enjoy computer game without playing it
+*****  I do not have any problem with cheating or stealing or killing.
+Interesting. I do not have any problem with cheating or stealing or killing.
+I don't do this just because it is not elegant or creative, because not
+playing by LG rules makes your mind weak and you pathetic. It has nothing to
+do with morality, it just doesn't need to be done, when I don't cheat I'm
+forced to be strong and clever. That gives me the things you can't purchase -
+love, self esteem, mind.
+***** Avoiding making decisions is just pathetic and annoying.
+Don't be a James taggart! Maybe we could possibly do that if you would maybe
+consider the other the thing but I guess another option is also jot entirely
+impossible. WTF is that! Make up your mind and tell them what you need! It has
+nothing to do with politeness, it is about knowing what you want. If you don't
+know - figure it out. Avoiding making decisions is just pathetic and annoying.
+***** Top core concepts.
+***** HC. More than life. Burning. HC.
+intensity. more than life. amplify. basic pleasure, flow, strong associations. being emptied out at the end of the day.//fighting pain.
+basic flow/joy > amplify.
+not separate from life - bigger than life, higher form of existence - more
+present, more aware, more switched on.
+It's not life vs work. This IS the best form of life. //this is the best
+within us.
+***** Why I will win or die trying.
+Wiy I will become one of these people or die rying. Glimpses of the state of
+glory - sharp, alert, aware, crystal clarity of consciousness, laser beam of
+focus.
+***** WOrld is awesome enough without magic. Fuch harry potter, science is the REAL magic.
+why my kids won't believe in santa. Wonders of science vs bs of superstition.
+***** Egoism vs altruism. AR vs eebn pegan.
+***** no excuse for negative emotions, they're counterproductie
+(unless it's healthy version, calculated to be the leverage).
+*****  tipping point, pain outweights the effort.
+       guiltless joy of acting like a man, having principles and integrity.
+***** Flow.
+***** How I choose the business and everythingn I’ve learned about it at this point.
+      Time to start making these vids/blog.
+
+***** Emotions are irrelevant. mind over emotions.
+***** Shortcommings are irrelevant.
+***** You CAN compare cities and people.
+***** Why lev is wrong.
+How the fuck can he talk even about the good stuff about humanity and
+sound so freakin depressing! I know it's appealing to some people..
+And hey, I love his videos for the wit, and I can do better!
+***** Why I'm against anti drug people.(+anti gay)
+***** At some point say something about religion. It's hard to do in a right way, but I can. not in a obvious boring way, but...
+***** On trusting your judgement.
+***** love. expression of our highest values. settling for anything less is
+betrayal. fuck unconditional love. You gotta deserve each other every fucking
+day. you find your best option, and make your value as high as you can to be
+her best option, to deserve it. and that way you exchange value.
+and you forced to grow by the way too) because once one person gets better - he
+starts to have better options, so you gotta up your value as well)
+***** Intensity. Extreme. No compromise.
+***** No joy vs hardwork debate. BTFA.
+***** EP(/basic mvp)+direction(/perfect vision)+action(get on with it)+steering.
+***** Willpower. Marshmellow experiment.
+***** Info under practice.
+***** Thinking tools.
+***** //All my orange-insight blog plus not posted ideas.
+***** Meditation.
+***** LG
+***** Social engineering.
+      Breakdown.     
+

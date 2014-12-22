@@ -1,5 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-19T00:00:00+01:00</updated><entry><title>Deep Learning - Getting Started</title><link href="/post/deep-learning" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-20T12:00:00+01:00</updated><entry><title>Linear regression</title><link href="/post/linear-regression" rel="alternate"></link><updated>2014-12-20T12:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-20:post/linear-regression</id><summary type="html">&lt;p&gt;Linear regression.&lt;br /&gt;
+Fitting line through the data&lt;br /&gt;
+Supervised learning(as opposed to unsupervised) - given the "right answer" for each example in the data.&lt;br /&gt;
+Regression(as oppoed to classification) - predict real-valued output.&lt;br /&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;h2&gt;Model Representation&lt;/h2&gt;
+&lt;p&gt;[house size vs prices graph]&lt;br /&gt;
+&lt;br/&gt;&lt;/p&gt;
+&lt;p&gt;[beautiful tutsplus-like data table size/prices]  &lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Size (x)&lt;/th&gt;
+&lt;th&gt;Price(y)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;2104&lt;/td&gt;
+&lt;td&gt;460&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1416&lt;/td&gt;
+&lt;td&gt;232&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1534&lt;/td&gt;
+&lt;td&gt;315&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;852&lt;/td&gt;
+&lt;td&gt;178&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Notation:&lt;br /&gt;
+$\textbf m$ - number of training examples&lt;br /&gt;
+$\textbf x$'s - "input" variable/features&lt;br /&gt;
+$\textbf y$'s - "output" variable/"target" variable&lt;br /&gt;
+$(x,y)$ - one training example&lt;br /&gt;
+$(x^{(i)},y^{(i)})$ - $i^{th}$ training example(not exponentiation)  &lt;/p&gt;
+&lt;p&gt;for example:&lt;br /&gt;
+$x^{(2)} = 1416$&lt;br /&gt;
+$y^{(3)} = 315$  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="linear-regression-hypothesis" src="/images/linear-regression/linear-regression-hypothesis.png" /&gt;&lt;/p&gt;
+&lt;p&gt;h maps from x's to y's.&lt;/p&gt;
+&lt;p&gt;$h_\theta(x) = \theta_0 + \theta_1x $&lt;br /&gt;
+shorthand - $h(x)$, without the $_\theta$ subscript.&lt;/p&gt;
+&lt;p&gt;This is a linear regression with one variable, it's called univariate linear regression.&lt;/p&gt;
+&lt;p&gt;The goal is to choose the right parameters of $\theta_0$ and $\theta_1$, these parameters define the position of a line that goes throug the data.&lt;/p&gt;
+&lt;p&gt;3 graphs.
+1.5;0
+0; 0.5;
+1; 0.5&lt;/p&gt;
+&lt;p&gt;The goal is to come up with parameters that produce the straight line that fits the data well.&lt;/p&gt;
+&lt;p&gt;Idea: Choose $\theta_0$ and $\theta_1$ so that $h(x)$ is close to $y$ for our taining examples $(x, y)$&lt;/p&gt;
+&lt;h2&gt;Cost function&lt;/h2&gt;
+&lt;p&gt;$\underset{\theta_0 \theta_1}{minimize} \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.&lt;br /&gt;
+Explanation:
+Minimize the difference between what our hypothesis function predicts($h(x)$), and the values of $y$ from the training examples.&lt;br /&gt;
+//why squared?&lt;br /&gt;
+$\frac{1}{2m}$ - "to make math easier for later" - ??  &lt;/p&gt;
+&lt;p&gt;$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.&lt;br /&gt;
+$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.&lt;br /&gt;
+$J(\theta_0 \theta_1)$ - Cost function(squared error function).&lt;/p&gt;
+&lt;h2&gt;Cost funcion - intuition&lt;/h2&gt;
+&lt;p&gt;Hypothesis:&lt;/p&gt;
+&lt;p&gt;$h_\theta(x) = \theta_0 + \theta_1x $&lt;/p&gt;
+&lt;p&gt;Parameters:&lt;/p&gt;
+&lt;p&gt;$\theta_0, \theta_1$&lt;/p&gt;
+&lt;p&gt;Cost function:&lt;/p&gt;
+&lt;p&gt;$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.  &lt;/p&gt;
+&lt;p&gt;Goal:&lt;/p&gt;
+&lt;p&gt;$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.&lt;/p&gt;
+&lt;h3&gt;Simplified&lt;/h3&gt;
+&lt;p&gt;$h(x)=\theta_1x$&lt;br /&gt;
+$\theta_0=0$&lt;br /&gt;
+Looking for $\theta_1$
+$\underset{\theta_1}{minimize} J(\theta_1)$.  &lt;/p&gt;
+&lt;p&gt;$\theta_0$   controls the slope.&lt;/p&gt;
+&lt;p&gt;[graph with theta = 1]&lt;/p&gt;
+&lt;p&gt;Plotting cost function.
+cost - amount of error.&lt;/p&gt;
+&lt;p&gt;j plot
+3d theta 0,1 plot&lt;/p&gt;
+&lt;p&gt;contow plots&lt;/p&gt;
+&lt;p&gt;do both in matplotlib&lt;/p&gt;
+&lt;!--
+&lt;div class="wrapper"&gt;
+&lt;div class="bg"&gt;
+This is your div with the specified aspect ratio.
+sadfs
+asdfsf j
+sadf
+sadf
+
+&lt;/div&gt;
+&lt;/div&gt;
+--&gt;
+
+&lt;!-- &lt;div class="mermaid"&gt; --&gt;
+
+&lt;!-- graph TD; --&gt;
+
+&lt;!--    A(Training Set)-\-&gt;B(Learning Algorithm); --&gt;
+
+&lt;!--    B-\-&gt;C;  --&gt;
+
+&lt;!-- &lt;/div&gt; --&gt;
+
+&lt;!-- &lt;div class="mermaid"&gt; --&gt;
+
+&lt;!-- graph LR; --&gt;
+
+&lt;!--    I(Input)-\-&gt;H(h); --&gt;
+
+&lt;!--    H-\-&gt;O(Output); --&gt;
+
+&lt;!-- &lt;/div&gt;  --&gt;
+
+&lt;!-- I(input)-\-&gt;C; --&gt;
+
+&lt;!-- C-\-&gt;O(output); --&gt;
+
+&lt;!-- C-\-&gt;|One|D[Result one]; --&gt;
+
+&lt;!-- C-\-&gt;|Two|E[Result two]; --&gt;
+
+&lt;h2&gt;Math&lt;/h2&gt;
+&lt;h4&gt;General Machine Learning introduction&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vectors&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dot Product&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Linear systems as matrices&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Matrix Multiplication&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Matrix Inverse&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Functions of several variables&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Partial derivatives&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Limits and continuity in R^n&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Linear Approximation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gradient&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Loss function&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Linear Regression&lt;/h2&gt;
+&lt;h3&gt;Model representation&lt;/h3&gt;
+&lt;p&gt;housing prices - better example
+[graph]&lt;/p&gt;
+&lt;p&gt;supervised learnong, regression.
+[table] size vsprice&lt;/p&gt;
+&lt;p&gt;m - number of training examples
+x - "input" variable - features
+y - output"("target") variable
+(x,y) - one raining example
+(x^(i), y^(i)) - i'th training example. i'th row of the table.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="linreg" src="/theme/images/linear-regression/linear-regression-gradient-descent.png" /&gt;&lt;/p&gt;
+&lt;h2&gt;Gradient descent&lt;/h2&gt;</summary></entry><entry><title>Deep Learning - Getting Started</title><link href="/post/deep-learning" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
 &lt;h2&gt;Resources&lt;/h2&gt;
 &lt;h4&gt;General Machine Learning introduction&lt;/h4&gt;
 &lt;ul&gt;

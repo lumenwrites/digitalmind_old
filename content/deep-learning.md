@@ -11,6 +11,7 @@ This post lists a collection of the best resources for getting into Machine Lear
 
 - Andrew Ng [Machine Learning course](https://www.coursera.org/course/ml) on Coursera.  
   And his [course on Deep learning ](http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl)
+  And here's is the link to the [full course](http://see.stanford.edu/see/lecturelist.aspx?coll=348ca38a-3a6d-4052-937d-cb017338d7b1) Ng taught at Stanford that his coursera course is based upon.
 
 - [Pedro Domingos ML course](https://class.coursera.org/machlearning-001/lecture/preview) 
 
@@ -34,6 +35,8 @@ This post lists a collection of the best resources for getting into Machine Lear
 
 - NYU Course on [Deep Learning](http://techtalks.tv/deep_learning_nyu_spring_2014/)
 
+<!-- - [Anothre course on ML](http://www.cs.cmu.edu/~tom/10701_sp11/lectures.shtml) taught at Carnegie Mellon University by Tom Mitchell. -->
+
 - Book "[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com)" by Michael Nielsen
 
 - Book Neural "[Networks and Learning Machines](http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392)" by Simon O. Haykin
@@ -46,6 +49,7 @@ This post lists a collection of the best resources for getting into Machine Lear
 
 - [Coding the Matrix](https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2) - Brown University course on Linear Algebra for CS. 
 
+- [kaggle - ML competitions](http://www.kaggle.com/)
 <!--
 ## Topics
 

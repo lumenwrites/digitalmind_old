@@ -1744,50 +1744,186 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> Gettin started with Web Development </h1>
+        <h1 id="blogTitle"> Linear regression </h1>
         <hr />
-	<p>Recently I've got a question:</p>
-<blockquote>
-<p>Where did you learn web development? What is the best way to get started in web development?</p>
-</blockquote>
-<p>Here's my response:</p>
-<p>I've learned everything from books, video courses and by creating my own projects.
-And I think that it is the absolutely best way to go about it.
-All the information that you need is available for free on the internet, so you can learn everything just by using free(or very cheap) resources and practicing.</p>
-<p>If you are starting from the absolute zero - I would suggest to just create a wordpress website and mess around with it, make and customize a blog for yourself or whatever you like, go from there. It is extremely easy to do, you will get your first experiences, and learn the basics of web development by osmosis.</p>
-<p>Once you have done that - set out to learn and understand some basic skills.
-Here's the skills that you will need:</p>
-<p><strong>&gt; Learn html and css</strong>
-It is the easiest thing to understand, you will learn it quickly, and enjoy the instant satisfaction of being able to create some pretty web pages.</p>
-<p><strong>&gt; Learn the basics of javascript</strong>
-Simply put, javascript is what lets you to create all the animations and moving objects on the web pages(and much, much more). Learn and understand the basics first, to be able to manipulate simple elements.</p>
-<p><strong>&gt; Learn some backend programming language, and a framework.</strong>
-Backend programming language is what lets you to create things like blogs and forums, this is what automatically generates pages on the "server side"(as opposed to the "client side" - in your browser).</p>
-<p>I suggest to learn <strong>Python and Django</strong>.
-There are alternatives to that - like Ruby and Ruby on Rails, or a sad old php.
-But python is considered to be the best programming language for beginners, and it is used everywhere(even bitvid is created with it), it has a huge amount of tutorials and information, and you can apply it in any field.
-It is easy to learn and understand, it is elegant, beautiful, and it is awesome. So you can't go wrong with it.</p>
-<p><strong>&gt; Learn the basics of database administration and sql.</strong>
-Just to understand what that is and what you can use it for.</p>
-<p>Once you've done that - you will have a very solid foundation, and the kind of things that you are capable of creating will depend only on your experience. You will be able to start freelancing or making some projects for yourself and your friends, building portfolio, gaining some experience, and becoming more advanced.</p>
-<p>It may seem like a lot - but don't worry about it, it will be much easier than it seems, and it is <strong>extremely</strong> fun.</p>
-<p>You will also need to learn to use a bunch of tools, like a good text editor(start with sublime, move on to emacs or vim), git, vagrant, apache, etc - but don't worry about these things for now, you will naturally learn them when you will need to.</p>
-<p>Here's some great resources for you to get started:</p>
-<p><strong>Code School</strong> (codeschool.com)</p>
-<p>It is not free, but it is relatively cheap, and it is the fastest and easiest way to learn the basics of HTML, CSS, and Javascript that I know. Of course you can find plenty of free courses on the youtube and on torrents.
-<strong>Bucky Roberts</strong> - Here's a fantastic youtube channel created by a great guy, who will teach you most of it for free:
-https://www.youtube.com/user/thenewboston/</p>
-<p><strong>Python</strong></p>
-<p>You can learn the basics of python from Bucky Roberts as well, or - you can go through the course "Learn Python the Hard Way" - despite it's name it is the easiest way to learn python that I'm aware of.
-Or you could just google and find enormous amount of information and free courses, and pick whichever one you like the most.</p>
-<p><strong>Tuts+ and Django Documentation</strong></p>
-<p>(go into this only after learning html/css/js)
-http://courses.tutsplus.com/courses/django-unchained
-Again, not free, but they have my favorite introductory course to django. You will learn it from the basics by creating your own hackernews clone - it is awesome and easy to follow.
-Or you can star with the official documentation - it is written extremely well, and contains a great tutorial for beginners (docs.djangoproject.com)
-After that you can read a great book "2 Scoops of Django".</p>
-<p>That's pretty much it) This is the best way(that I'm aware of) for going from absolute zero to a solid intermediate(of course if you will practice and gain experience by making your own projects in the process).</p>
-<p>I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)</p>
+	<p>Linear regression.<br />
+Fitting line through the data<br />
+Supervised learning(as opposed to unsupervised) - given the "right answer" for each example in the data.<br />
+Regression(as oppoed to classification) - predict real-valued output.<br />
+<br/></p>
+<h2>Model Representation</h2>
+<p>[house size vs prices graph]<br />
+<br/></p>
+<p>[beautiful tutsplus-like data table size/prices]  </p>
+<table>
+<thead>
+<tr>
+<th>Size (x)</th>
+<th>Price(y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2104</td>
+<td>460</td>
+</tr>
+<tr>
+<td>1416</td>
+<td>232</td>
+</tr>
+<tr>
+<td>1534</td>
+<td>315</td>
+</tr>
+<tr>
+<td>852</td>
+<td>178</td>
+</tr>
+</tbody>
+</table>
+<p>Notation:<br />
+$\textbf m$ - number of training examples<br />
+$\textbf x$'s - "input" variable/features<br />
+$\textbf y$'s - "output" variable/"target" variable<br />
+$(x,y)$ - one training example<br />
+$(x^{(i)},y^{(i)})$ - $i^{th}$ training example(not exponentiation)  </p>
+<p>for example:<br />
+$x^{(2)} = 1416$<br />
+$y^{(3)} = 315$  </p>
+<p><img alt="linear-regression-hypothesis" src="/images/linear-regression/linear-regression-hypothesis.png" /></p>
+<p>h maps from x's to y's.</p>
+<p>$h_\theta(x) = \theta_0 + \theta_1x $<br />
+shorthand - $h(x)$, without the $_\theta$ subscript.</p>
+<p>This is a linear regression with one variable, it's called univariate linear regression.</p>
+<p>The goal is to choose the right parameters of $\theta_0$ and $\theta_1$, these parameters define the position of a line that goes throug the data.</p>
+<p>3 graphs.
+1.5;0
+0; 0.5;
+1; 0.5</p>
+<p>The goal is to come up with parameters that produce the straight line that fits the data well.</p>
+<p>Idea: Choose $\theta_0$ and $\theta_1$ so that $h(x)$ is close to $y$ for our taining examples $(x, y)$</p>
+<h2>Cost function</h2>
+<p>$\underset{\theta_0 \theta_1}{minimize} \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.<br />
+Explanation:
+Minimize the difference between what our hypothesis function predicts($h(x)$), and the values of $y$ from the training examples.<br />
+//why squared?<br />
+$\frac{1}{2m}$ - "to make math easier for later" - ??  </p>
+<p>$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.<br />
+$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.<br />
+$J(\theta_0 \theta_1)$ - Cost function(squared error function).</p>
+<h2>Cost funcion - intuition</h2>
+<p>Hypothesis:</p>
+<p>$h_\theta(x) = \theta_0 + \theta_1x $</p>
+<p>Parameters:</p>
+<p>$\theta_0, \theta_1$</p>
+<p>Cost function:</p>
+<p>$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.  </p>
+<p>Goal:</p>
+<p>$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.</p>
+<h3>Simplified</h3>
+<p>$h(x)=\theta_1x$<br />
+$\theta_0=0$<br />
+Looking for $\theta_1$
+$\underset{\theta_1}{minimize} J(\theta_1)$.  </p>
+<p>$\theta_0$   controls the slope.</p>
+<p>[graph with theta = 1]</p>
+<p>Plotting cost function.
+cost - amount of error.</p>
+<p>j plot
+3d theta 0,1 plot</p>
+<p>contow plots</p>
+<p>do both in matplotlib</p>
+<!--
+<div class="wrapper">
+<div class="bg">
+This is your div with the specified aspect ratio.
+sadfs
+asdfsf j
+sadf
+sadf
+
+</div>
+</div>
+-->
+
+<!-- <div class="mermaid"> -->
+
+<!-- graph TD; -->
+
+<!--    A(Training Set)-\->B(Learning Algorithm); -->
+
+<!--    B-\->C;  -->
+
+<!-- </div> -->
+
+<!-- <div class="mermaid"> -->
+
+<!-- graph LR; -->
+
+<!--    I(Input)-\->H(h); -->
+
+<!--    H-\->O(Output); -->
+
+<!-- </div>  -->
+
+<!-- I(input)-\->C; -->
+
+<!-- C-\->O(output); -->
+
+<!-- C-\->|One|D[Result one]; -->
+
+<!-- C-\->|Two|E[Result two]; -->
+
+<h2>Math</h2>
+<h4>General Machine Learning introduction</h4>
+<ul>
+<li>
+<p>Vectors</p>
+</li>
+<li>
+<p>Dot Product</p>
+</li>
+<li>
+<p>Linear systems as matrices</p>
+</li>
+<li>
+<p>Matrix Multiplication</p>
+</li>
+<li>
+<p>Matrix Inverse</p>
+</li>
+<li>
+<p>Functions of several variables</p>
+</li>
+<li>
+<p>Partial derivatives</p>
+</li>
+<li>
+<p>Limits and continuity in R^n</p>
+</li>
+<li>
+<p>Linear Approximation</p>
+</li>
+<li>
+<p>Gradient</p>
+</li>
+<li>
+<p>Loss function</p>
+</li>
+</ul>
+<h2>Linear Regression</h2>
+<h3>Model representation</h3>
+<p>housing prices - better example
+[graph]</p>
+<p>supervised learnong, regression.
+[table] size vsprice</p>
+<p>m - number of training examples
+x - "input" variable - features
+y - output"("target") variable
+(x,y) - one raining example
+(x^(i), y^(i)) - i'th training example. i'th row of the table.</p>
+<p><img alt="linreg" src="/theme/images/linear-regression/linear-regression-gradient-descent.png" /></p>
+<h2>Gradient descent</h2>
       </div>
 </div>
 

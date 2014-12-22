@@ -277,3 +277,52 @@ ul, ol {
 #isso-root {
     /* margin:20px; */
 }
+
+
+/* Tables */
+
+table td, table th {
+    border-right: 1px solid #DDD;
+}
+
+table tr td:first-child,
+table tr th:first-child {
+  border-left: 0;
+}
+table tr td:last-child,
+table tr th:last-child {
+  border-right: 0;
+}
+
+thead th {
+    border: 0;
+    border-bottom: 1px solid #DDD;
+}
+
+
+.wrapper {
+  width: 100%;
+  /* whatever width you want */
+  display: inline-block;
+  position: relative;
+}
+.wrapper:after {
+  padding-top: 56.25%;
+  /* 16:9 ratio */
+  display: block;
+  content: '';
+}
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  /* fill parent */
+  background-color: deepskyblue;
+    background: url("/theme/img/bg.png") no-repeat center;
+    background-size: 100% 100%;
+    padding: 64px;
+    min-width: 450px;
+}
+  

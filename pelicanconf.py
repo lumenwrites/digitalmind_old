@@ -10,6 +10,7 @@ PATH = 'content'
 STATIC_PATHS = [
     'static/.htaccess',
     'static/CNAME',
+    'images',
     ]
 
 
