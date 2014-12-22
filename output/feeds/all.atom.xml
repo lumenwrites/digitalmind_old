@@ -193,11 +193,7 @@
   - Bagging/Averaging and Boosting,
   - Bias-variance tradeoff,
   - Implementation on GPGPUs. 
---&gt;</summary></entry><entry><title>Small Project Ideas for studying Machine Learning</title><link href="/post/ml-project-ideas" rel="alternate"></link><updated>2014-12-22T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/ml-project-ideas</id><summary type="html">&lt;p&gt;Supervised
-Unsupervised
-classification
-Regression
-clustering&lt;/p&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Resources</title><link href="/post/deep-learning-resources" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning-resources</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
+--&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Resources</title><link href="/post/deep-learning-resources" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning-resources</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
 &lt;h3&gt;Relationship between deep learning and other fields&lt;/h3&gt;
 &lt;p&gt;&lt;a href="/images/deep-learning/ai-ml-dl.png"&gt;&lt;img alt="ai-ml-dl" src="/images/deep-learning/ai-ml-dl.png" /&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;Resources&lt;/h2&gt;
