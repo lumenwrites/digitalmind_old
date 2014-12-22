@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>digitalmind</title>
+  <title>Digital Mind</title> <!-- digitalmind -->
 
   <!-- Extra header for ipython -->
   
@@ -1714,8 +1714,13 @@ jQuery(document).ready(function($) {
   <link rel="stylesheet" href="/theme/css/foundation.css" />
   <link rel="stylesheet" href="/theme/css/foundation-icons/foundation-icons.css" />
   <link rel="stylesheet" href="/theme/css/main.css" />
+
+  <!-- jQuery -->
   <script src="/theme/js/vendor/jquery.js" type="text/javascript"></script>
 
+  <!-- Mermaid for diagrams -->
+  <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>  
+  
 </head>
 
 <body>
@@ -1741,14 +1746,142 @@ jQuery(document).ready(function($) {
       <div class="large-12 columns">
         <h1 id="blogTitle"> Linear regression </h1>
         <hr />
-	<h2>Math</h2>
+	<p>Linear regression.<br />
+Fitting line through the data<br />
+Supervised learning(as opposed to unsupervised) - given the "right answer" for each example in the data.<br />
+Regression(as oppoed to classification) - predict real-valued output.<br />
+<br/></p>
+<h2>Model Representation</h2>
+<p>[house size vs prices graph]<br />
+<br/></p>
+<p>[beautiful tutsplus-like data table size/prices]  </p>
+<table>
+<thead>
+<tr>
+<th>Size (x)</th>
+<th>Price(y)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2104</td>
+<td>460</td>
+</tr>
+<tr>
+<td>1416</td>
+<td>232</td>
+</tr>
+<tr>
+<td>1534</td>
+<td>315</td>
+</tr>
+<tr>
+<td>852</td>
+<td>178</td>
+</tr>
+</tbody>
+</table>
+<p>Notation:<br />
+$\textbf m$ - number of training examples<br />
+$\textbf x$'s - "input" variable/features<br />
+$\textbf y$'s - "output" variable/"target" variable<br />
+$(x,y)$ - one training example<br />
+$(x^{(i)},y^{(i)})$ - $i^{th}$ training example(not exponentiation)  </p>
+<p>for example:<br />
+$x^{(2)} = 1416$<br />
+$y^{(3)} = 315$  </p>
+<p><img alt="linear-regression-hypothesis" src="/images/linear-regression/linear-regression-hypothesis.png" /></p>
+<p>h maps from x's to y's.</p>
+<p>$h_\theta(x) = \theta_0 + \theta_1x $<br />
+shorthand - $h(x)$, without the $_\theta$ subscript.</p>
+<p>This is a linear regression with one variable, it's called univariate linear regression.</p>
+<p>The goal is to choose the right parameters of $\theta_0$ and $\theta_1$, these parameters define the position of a line that goes throug the data.</p>
+<p>3 graphs.
+1.5;0
+0; 0.5;
+1; 0.5</p>
+<p>The goal is to come up with parameters that produce the straight line that fits the data well.</p>
+<p>Idea: Choose $\theta_0$ and $\theta_1$ so that $h(x)$ is close to $y$ for our taining examples $(x, y)$</p>
+<h2>Cost function</h2>
+<p>$\underset{\theta_0 \theta_1}{minimize} \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.<br />
+Explanation:
+Minimize the difference between what our hypothesis function predicts($h(x)$), and the values of $y$ from the training examples.<br />
+//why squared?<br />
+$\frac{1}{2m}$ - "to make math easier for later" - ??  </p>
+<p>$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.<br />
+$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.<br />
+$J(\theta_0 \theta_1)$ - Cost function(squared error function).</p>
+<h2>Cost funcion - intuition</h2>
+<p>Hypothesis:</p>
+<p>$h_\theta(x) = \theta_0 + \theta_1x $</p>
+<p>Parameters:</p>
+<p>$\theta_0, \theta_1$</p>
+<p>Cost function:</p>
+<p>$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.  </p>
+<p>Goal:</p>
+<p>$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.</p>
+<h3>Simplified</h3>
+<p>$h(x)=\theta_1x$<br />
+$\theta_0=0$<br />
+Looking for $\theta_1$
+$\underset{\theta_1}{minimize} J(\theta_1)$.  </p>
+<p>$\theta_0$   controls the slope.</p>
+<p>[graph with theta = 1]</p>
+<p>Plotting cost function.
+cost - amount of error.</p>
+<p>j plot
+3d theta 0,1 plot</p>
+<p>contow plots</p>
+<p>do both in matplotlib</p>
+<!--
+<div class="wrapper">
+<div class="bg">
+This is your div with the specified aspect ratio.
+sadfs
+asdfsf j
+sadf
+sadf
+
+</div>
+</div>
+-->
+
+<!-- <div class="mermaid"> -->
+
+<!-- graph TD; -->
+
+<!--    A(Training Set)-\->B(Learning Algorithm); -->
+
+<!--    B-\->C;  -->
+
+<!-- </div> -->
+
+<!-- <div class="mermaid"> -->
+
+<!-- graph LR; -->
+
+<!--    I(Input)-\->H(h); -->
+
+<!--    H-\->O(Output); -->
+
+<!-- </div>  -->
+
+<!-- I(input)-\->C; -->
+
+<!-- C-\->O(output); -->
+
+<!-- C-\->|One|D[Result one]; -->
+
+<!-- C-\->|Two|E[Result two]; -->
+
+<h2>Math</h2>
 <h4>General Machine Learning introduction</h4>
 <ul>
 <li>
-<p>Vectors  </p>
+<p>Vectors</p>
 </li>
 <li>
-<p>Dot Product  </p>
+<p>Dot Product</p>
 </li>
 <li>
 <p>Linear systems as matrices</p>

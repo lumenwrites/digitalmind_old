@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="utf-8" />
-  
-  <title>digitalmind</title>
+
+  <title>Digital Mind</title> <!-- digitalmind -->
 
   <!-- Extra header for ipython -->
   
@@ -1708,17 +1708,21 @@ jQuery(document).ready(function($) {
 </script>
 
 
-  
-    
 
 
   <!-- Import css and scripts  -->
   <link rel="stylesheet" href="/theme/css/foundation.css" />
+  <link rel="stylesheet" href="/theme/css/foundation-icons/foundation-icons.css" />
   <link rel="stylesheet" href="/theme/css/main.css" />
+
+  <!-- jQuery -->
   <script src="/theme/js/vendor/jquery.js" type="text/javascript"></script>
 
-</head>
+  <!-- Mermaid for diagrams -->
+  <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>  
   
+</head>
+
 <body>
 <div id="orange-line"></div>
   <header>
@@ -1727,18 +1731,16 @@ jQuery(document).ready(function($) {
           <a href="/"><img src="/theme/img/logo_notagline.png" /></a>
         </div>
         <div class="large-3 columns" id="mainMenu">
-	  
 	  <ul>
-	    <a href="/">Home</a>	    
+	    <a href="/">Home</a>
 	  </ul>
-	  
 	  <ul>
-	    <a href="/articles">Articles</a>	    
+	    <a href="/articles">Articles</a>
 	  </ul>
 	</div>
       </div>
   </header>
-  
+
 <section id="content">
   
   <div id="page"  class="blogPage">
@@ -1746,14 +1748,16 @@ jQuery(document).ready(function($) {
       <div class="large-12 columns">
 
 	<article>
-          <a href="/post/vectors"><h1>Introduction to Linear Algebra: Vectors</h1></a>
+          <a href="/post/introduction-to-linear-algebra"><h1>Introduction to Linear Algebra:</h1></a>
 	  <hr/>
 	  <p>
-	    <p>Vector is something that has both magnitude and direction.</p>
-<p>For example, wind has both a direction(North, South-West, etc) and a magnitude (10 km/hour) and could be represented as a vector (10 km/hour South-West).</p>
-<p>In algebra vectors can represent many things, often vectors represent points in a coordinate ...</p>
+	    <h2>Sets.</h2>
+<p><strong>Set</strong> is an unordered collection of objects, for example:<br />
+$$ \{♠,♥,♦,♣\} $$</p>
+<p>$\boldsymbol \in$ - this symbol means that an object belongs to a set(equivalently, that set contains an object). For example:<br />
+$$ ♥ \in \{ ♠,♥,♦,♣ \} $$</p>
 	  </p>
-          <a href="/post/vectors" id="readmore">>>> readmore</span></a> 
+          <a href="/post/introduction-to-linear-algebra" id="readmore">>>> readmore</span></a> 
 	</article>
 	
 <p class="paginator">
@@ -1762,8 +1766,7 @@ jQuery(document).ready(function($) {
         </div>
     </div>
 </section>
-    
-  
+
   <footer>
   </footer>
 </body>

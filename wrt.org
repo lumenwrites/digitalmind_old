@@ -1,4 +1,32 @@
 * DM
+To Create:
+1. What is Machine Learning
+2. Practical Applications of Machine Learning
+   Deep Learning for CV and image recognition
+   Mobile and Web
+3. summary of the best advice from self study guide.     
+  Small Projects methodology idea   
+  Advice on learning ml. +Small projects methodology. [essay]
+4. Key Concepts of Machine Learning
+   Supervised/Unsupervised, Classificarion/regression/clustering
+5. Deep Learning Resources 
+6. Deep Learning Roadmap
+7. Machine learning algorithms [/tools/skills] With short descriptions.
+8. Small Project Ideas
+
+9. Latex basics. [tools]
+10. matplotlib basics. [tools]
+11. ipython basics  [tools]
+
+7. Linear regression. [algorithms]
+
+12. intro to linear algebra [math]
+
+13. Calculating derivatives in lisp, SICP [cs, programming]
+
+//math topics you need to learn and order?
+
+
 ** ML/DL
 **** Getting Started
 - How to get started in AI/Best resources     
@@ -11,6 +39,16 @@
   https://www.quora.com/Whats-the-easiest-way-to-learn-machine-learning
 - What's the most effective way to get started with Deep Learning?
   https://www.quora.com/Whats-the-most-effective-way-to-get-started-with-Deep-Learning
+**** Resources
+- Best talks/lectures
+  https://www.quora.com/What-are-the-best-talks-lectures-related-to-big-data-algorithms-machine-learning
+- Must read papers
+  https://www.quora.com/What-are-the-must-read-papers-on-data-mining-and-machine-learning
+- What are the best blogs for data miners and data scientists to read?
+  https://www.quora.com/What-are-the-best-blogs-for-data-miners-and-data-scientists-to-read
+- What are some good resources to learn about machine learning?
+  https://www.quora.com/What-are-some-good-resources-to-learn-about-machine-learning
+- CV resources  
 
 **** List of skills and algorithms
 - What skills are needed for machine learning jobs?
@@ -24,18 +62,8 @@
   https://www.quora.com/What-are-the-best-interview-questions-to-evaluate-a-machine-learning-researcher
 - What are the advantages of different classification algorithms?
   https://www.quora.com/What-are-the-advantages-of-different-classification-algorithms
-- list of ML algorithms 
-**** Resources
-- Best talks/lectures
-  https://www.quora.com/What-are-the-best-talks-lectures-related-to-big-data-algorithms-machine-learning
-- Must read papers
-  https://www.quora.com/What-are-the-must-read-papers-on-data-mining-and-machine-learning
-- What are the best blogs for data miners and data scientists to read?
-  https://www.quora.com/What-are-the-best-blogs-for-data-miners-and-data-scientists-to-read
-- What are some good resources to learn about machine learning?
-  https://www.quora.com/What-are-some-good-resources-to-learn-about-machine-learning
-- CV resources  
-
+- list of ML algorithms
+**** Key concepts and terms
 **** Math
 - The Only Probability Cheatsheet You'll Ever Need
   http://datastories.quora.com/The-Only-Probability-Cheatsheet-Youll-Ever-Need
@@ -99,17 +127,16 @@ Wisconsin Breast Cancer dataset.
 **** General/Essays
 - summary of the best advice from self study guide.     
 - Small Projects methodology idea   
+
 - What will be the next big thing in artificial intelligence in the next 10 to 20 years?
   https://www.quora.com/What-will-be-the-next-big-thing-in-artificial-intelligence-in-the-next-10-to-20-years
 - What is the best way to improve one's ability to read scientific articles?
   https://www.quora.com/What-is-the-best-way-to-improve-ones-ability-to-read-scientific-articles
 - What is consciousness?
   https://www.quora.com/What-is-consciousness
-
 - Theory of mind. What is intelligence.  
   Kurzweil. Pattern Recognition Theory of Mind
   On Intelligence
-  
 - Singularity[idea]
 - Singularity - gameXb  
 
@@ -121,7 +148,7 @@ Wisconsin Breast Cancer dataset.
 **** Programming languages  
 - lisp - manipulating the code, code as data, taking a derivative of a function.(SICP)
      
-**** Tools
+**** gTools
 - list ML tools     
 - ipython
 - matplotlib
@@ -136,6 +163,10 @@ Wisconsin Breast Cancer dataset.
 //matlab?
 //octave?
 //weka??
+
+- Latex basics.
+- matplotlib basics.
+
 **** Other
 - Supervised/Unsupervised, Classificarion/regression/clustering
 - intro to Deep Learning and ANNs.

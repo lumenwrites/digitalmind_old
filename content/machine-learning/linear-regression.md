@@ -1,5 +1,6 @@
 Title: Linear regression
 Date: 2014-12-20 12:00
+Status: draft
 
 Linear regression.  
 Fitting line through the data  

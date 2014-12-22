@@ -1744,50 +1744,193 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> Gettin started with Web Development </h1>
+        <h1 id="blogTitle"> Getting Started with Deep Learning - Resources </h1>
         <hr />
-	<p>Recently I've got a question:</p>
-<blockquote>
-<p>Where did you learn web development? What is the best way to get started in web development?</p>
-</blockquote>
-<p>Here's my response:</p>
-<p>I've learned everything from books, video courses and by creating my own projects.
-And I think that it is the absolutely best way to go about it.
-All the information that you need is available for free on the internet, so you can learn everything just by using free(or very cheap) resources and practicing.</p>
-<p>If you are starting from the absolute zero - I would suggest to just create a wordpress website and mess around with it, make and customize a blog for yourself or whatever you like, go from there. It is extremely easy to do, you will get your first experiences, and learn the basics of web development by osmosis.</p>
-<p>Once you have done that - set out to learn and understand some basic skills.
-Here's the skills that you will need:</p>
-<p><strong>&gt; Learn html and css</strong>
-It is the easiest thing to understand, you will learn it quickly, and enjoy the instant satisfaction of being able to create some pretty web pages.</p>
-<p><strong>&gt; Learn the basics of javascript</strong>
-Simply put, javascript is what lets you to create all the animations and moving objects on the web pages(and much, much more). Learn and understand the basics first, to be able to manipulate simple elements.</p>
-<p><strong>&gt; Learn some backend programming language, and a framework.</strong>
-Backend programming language is what lets you to create things like blogs and forums, this is what automatically generates pages on the "server side"(as opposed to the "client side" - in your browser).</p>
-<p>I suggest to learn <strong>Python and Django</strong>.
-There are alternatives to that - like Ruby and Ruby on Rails, or a sad old php.
-But python is considered to be the best programming language for beginners, and it is used everywhere(even bitvid is created with it), it has a huge amount of tutorials and information, and you can apply it in any field.
-It is easy to learn and understand, it is elegant, beautiful, and it is awesome. So you can't go wrong with it.</p>
-<p><strong>&gt; Learn the basics of database administration and sql.</strong>
-Just to understand what that is and what you can use it for.</p>
-<p>Once you've done that - you will have a very solid foundation, and the kind of things that you are capable of creating will depend only on your experience. You will be able to start freelancing or making some projects for yourself and your friends, building portfolio, gaining some experience, and becoming more advanced.</p>
-<p>It may seem like a lot - but don't worry about it, it will be much easier than it seems, and it is <strong>extremely</strong> fun.</p>
-<p>You will also need to learn to use a bunch of tools, like a good text editor(start with sublime, move on to emacs or vim), git, vagrant, apache, etc - but don't worry about these things for now, you will naturally learn them when you will need to.</p>
-<p>Here's some great resources for you to get started:</p>
-<p><strong>Code School</strong> (codeschool.com)</p>
-<p>It is not free, but it is relatively cheap, and it is the fastest and easiest way to learn the basics of HTML, CSS, and Javascript that I know. Of course you can find plenty of free courses on the youtube and on torrents.
-<strong>Bucky Roberts</strong> - Here's a fantastic youtube channel created by a great guy, who will teach you most of it for free:
-https://www.youtube.com/user/thenewboston/</p>
-<p><strong>Python</strong></p>
-<p>You can learn the basics of python from Bucky Roberts as well, or - you can go through the course "Learn Python the Hard Way" - despite it's name it is the easiest way to learn python that I'm aware of.
-Or you could just google and find enormous amount of information and free courses, and pick whichever one you like the most.</p>
-<p><strong>Tuts+ and Django Documentation</strong></p>
-<p>(go into this only after learning html/css/js)
-http://courses.tutsplus.com/courses/django-unchained
-Again, not free, but they have my favorite introductory course to django. You will learn it from the basics by creating your own hackernews clone - it is awesome and easy to follow.
-Or you can star with the official documentation - it is written extremely well, and contains a great tutorial for beginners (docs.djangoproject.com)
-After that you can read a great book "2 Scoops of Django".</p>
-<p>That's pretty much it) This is the best way(that I'm aware of) for going from absolute zero to a solid intermediate(of course if you will practice and gain experience by making your own projects in the process).</p>
-<p>I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)</p>
+	<p>This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.</p>
+<h3>Relationship between deep learning and other fields</h3>
+<p><a href="/images/deep-learning/ai-ml-dl.png"><img alt="ai-ml-dl" src="/images/deep-learning/ai-ml-dl.png" /></a></p>
+<h2>Resources</h2>
+<h3>Basic Math</h3>
+<h4>Calculus</h4>
+<ul>
+<li>
+<p><a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449">Khan Academy Calculus videos</a>  </p>
+</li>
+<li>
+<p><a href="https://www.coursera.org/course/m2o2c2">Coursera Calculus course</a></p>
+</li>
+<li>
+<p>MIT lectures on <a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm">Multivariable Calculus</a></p>
+</li>
+</ul>
+<h4>Linear Algebra</h4>
+<ul>
+<li>
+<p><a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0">Khan Academy Linear Algebra videos</a></p>
+</li>
+<li>
+<p><a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">MIT linear algebra videos</a> by Gilbert Strang</p>
+</li>
+<li>
+<p><a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2">Coding the Matrix</a> - Brown University course on Linear Algebra for CS. </p>
+</li>
+</ul>
+<h4>Probability and statistics</h4>
+<ul>
+<li>
+<p>Khan Academy <a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19">Probability</a> &amp; <a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566">Statistics</a> videos  </p>
+</li>
+<li>
+<p><a href="https://www.edx.org/course/introduction-probability-science-mitx-6-041x#.VJfS2LQAKc">edx probability course</a></p>
+</li>
+</ul>
+<h3>General Computer Science</h3>
+<ul>
+<li>
+<p>Algorithms coursera course <a href="https://www.coursera.org/course/algo">part 1</a> and <a href="https://www.coursera.org/course/algo2">part 2</a></p>
+</li>
+<li>
+<p>MIT course <a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;list=PLE18841CABEA24090#t=253">Structure and Interpretation of Computer Programs</a>
+(based on <a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871">SICP book</a>)</p>
+</li>
+</ul>
+<h3>Artificial Intelligence introduction</h3>
+<ul>
+<li>
+<p>Book "<a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597">Artificial Intelligence: A Modern Approach (AIMA)</a>"  </p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos">Artificial Intelligence course</a> from UC Berkeley(CS 188)  </p>
+</li>
+</ul>
+<h3>General Machine Learning introduction</h3>
+<ul>
+<li>
+<p>Andrew Ng <a href="https://www.coursera.org/course/ml">Machine Learning course</a> on Coursera.<br />
+  And his <a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl">course on Deep learning </a>
+  And here's is the link to the <a href="http://see.stanford.edu/see/lecturelist.aspx?coll=348ca38a-3a6d-4052-937d-cb017338d7b1">full course</a> Ng taught at Stanford that his coursera course is based upon.</p>
+</li>
+<li>
+<p><a href="https://class.coursera.org/machlearning-001/lecture/preview">Pedro Domingos ML course</a> </p>
+</li>
+<li>
+<p><a href="https://www.udacity.com/course/cs271">Udacity Course on ML</a> by Perer Norvig</p>
+</li>
+<li>
+<p>Book "<a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325">Programming Collective Intelligence</a>" </p>
+</li>
+<li>
+<p>TutsPlus course "<a href="http://code.tutsplus.com/courses/machine-learning-distilled">Machine Learning Distilled</a>"</p>
+</li>
+</ul>
+<h3>Deep Learning Basics</h3>
+<ul>
+<li>
+<p>Geoffrey Hinton's coursera course "<a href="https://class.coursera.org/neuralnets-2012-001/lecture">Neural Networks for Machine Learning</a>"</p>
+</li>
+<li>
+<p>MIT Book on <a href="http://www.iro.umontreal.ca/~bengioy/dlbook/">Deep Learning</a></p>
+</li>
+<li>
+<p><a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial">UFLDL tutorial by Stanford</a> (alternative <a href="http://deeplearning.stanford.edu/tutorial/">link</a>)</p>
+</li>
+<li>
+<p><a href="http://deeplearning.net/tutorial/">deeplearning.net tutorials</a></p>
+</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li>
+<p><a href="http://www.metacademy.org">Metacademy</a> - "package manager" for Machine Learning knowledge</p>
+</li>
+<li>
+<p><a href="http://www.kaggle.com/">kaggle</a> - Machine Learning competitions</p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA">mathematicalmonk</a> - Machine Learning youtube tutorials</p>
+</li>
+</ul>
+<h4>More DL and ML courses</h4>
+<ul>
+<li>
+<p>NYU Course on <a href="http://techtalks.tv/deep_learning_nyu_spring_2014/">Deep Learning</a></p>
+</li>
+<li>
+<p><a href="http://www.cs.cmu.edu/~tom/10701_sp11/lectures.shtml">Anothre course on ML</a> taught at Carnegie Mellon University by Tom Mitchell.</p>
+</li>
+</ul>
+<h4>Books about Deep Learning</h4>
+<ul>
+<li>
+<p>Book "<a href="http://neuralnetworksanddeeplearning.com">Neural Networks and Deep Learning</a>" by Michael Nielsen</p>
+</li>
+<li>
+<p>Book Neural "<a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392">Networks and Learning Machines</a>" by Simon O. Haykin</p>
+</li>
+<li>
+<p><a href="http://deeplearning.net/reading-list/">deeplearning.net reading list</a></p>
+</li>
+</ul>
+<h4>Books on "how mind works"</h4>
+<ul>
+<li>
+<p>Jeff Hawkins - <a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533&gt;">On Intelligence</a> (<a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK">Audiobook</a>)</p>
+</li>
+<li>
+<p>Ray Kurzweil - <a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/">How to Create a Mind</a> (<a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJ">Audiobook</a>)</p>
+</li>
+</ul>
+<div style="clear: both;"></div>
+
+<script>
+function prepareList() {
+  $('body').find('li:has(ul)')
+    .click( function(event) {
+        if (this == event.target) {
+            $(this).toggleClass('expanded');
+            $(this).children('ul').toggle('medium');
+        }
+        return false;
+    })
+    .addClass('collapsed');
+    //.children('ul').hide();
+  };
+
+  $(document).ready( function() {
+      prepareList();
+  });
+</script>
+
+<style>
+.collapsed {
+    cursor: pointer;
+    <!-- content:' ►';  -->
+
+    <!-- background: url({{ site.baseurl }}/images/small_right_arrow.gif) no-repeat left top; -->
+    <!-- padding: 3px 0px 3px 20px; -->
+    <!-- list-style: none; -->
+    }
+
+.collapsed {
+cursor: pointer;
+    <!-- content:' ►';  -->
+    <!-- background: url({{ site.baseurl }}/images/small_right_arrow.gif) no-repeat left top;p -->
+    <!-- padding: 3px 0px 3px 20px; -->
+    <!-- list-style: none; -->
+    }
+
+.entry img {
+float:left;
+}
+<!-- max-width: 400px;
+max-height: 400px; -->
+
+
+</style>
+
+<!--
+list-style-image: url({{ site.baseurl }}/images/small_right_arrow.gif);
+ -->
       </div>
 </div>
 

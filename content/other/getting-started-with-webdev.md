@@ -1,4 +1,4 @@
-Title: Gettin started with Web Development
+Title: Getting started with Web Development
 Date: 2014-11-01
 
 Recently I've got a question:

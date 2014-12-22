@@ -1,238 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-20T12:00:00+01:00</updated><entry><title>Linear regression</title><link href="/post/linear-regression" rel="alternate"></link><updated>2014-12-20T12:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-20:post/linear-regression</id><summary type="html">&lt;p&gt;Linear regression.&lt;br /&gt;
-Fitting line through the data&lt;br /&gt;
-Supervised learning(as opposed to unsupervised) - given the "right answer" for each example in the data.&lt;br /&gt;
-Regression(as oppoed to classification) - predict real-valued output.&lt;br /&gt;
-&lt;br/&gt;&lt;/p&gt;
-&lt;h2&gt;Model Representation&lt;/h2&gt;
-&lt;p&gt;[house size vs prices graph]&lt;br /&gt;
-&lt;br/&gt;&lt;/p&gt;
-&lt;p&gt;[beautiful tutsplus-like data table size/prices]  &lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Size (x)&lt;/th&gt;
-&lt;th&gt;Price(y)&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;2104&lt;/td&gt;
-&lt;td&gt;460&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1416&lt;/td&gt;
-&lt;td&gt;232&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;1534&lt;/td&gt;
-&lt;td&gt;315&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;852&lt;/td&gt;
-&lt;td&gt;178&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;Notation:&lt;br /&gt;
-$\textbf m$ - number of training examples&lt;br /&gt;
-$\textbf x$'s - "input" variable/features&lt;br /&gt;
-$\textbf y$'s - "output" variable/"target" variable&lt;br /&gt;
-$(x,y)$ - one training example&lt;br /&gt;
-$(x^{(i)},y^{(i)})$ - $i^{th}$ training example(not exponentiation)  &lt;/p&gt;
-&lt;p&gt;for example:&lt;br /&gt;
-$x^{(2)} = 1416$&lt;br /&gt;
-$y^{(3)} = 315$  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="linear-regression-hypothesis" src="/images/linear-regression/linear-regression-hypothesis.png" /&gt;&lt;/p&gt;
-&lt;p&gt;h maps from x's to y's.&lt;/p&gt;
-&lt;p&gt;$h_\theta(x) = \theta_0 + \theta_1x $&lt;br /&gt;
-shorthand - $h(x)$, without the $_\theta$ subscript.&lt;/p&gt;
-&lt;p&gt;This is a linear regression with one variable, it's called univariate linear regression.&lt;/p&gt;
-&lt;p&gt;The goal is to choose the right parameters of $\theta_0$ and $\theta_1$, these parameters define the position of a line that goes throug the data.&lt;/p&gt;
-&lt;p&gt;3 graphs.
-1.5;0
-0; 0.5;
-1; 0.5&lt;/p&gt;
-&lt;p&gt;The goal is to come up with parameters that produce the straight line that fits the data well.&lt;/p&gt;
-&lt;p&gt;Idea: Choose $\theta_0$ and $\theta_1$ so that $h(x)$ is close to $y$ for our taining examples $(x, y)$&lt;/p&gt;
-&lt;h2&gt;Cost function&lt;/h2&gt;
-&lt;p&gt;$\underset{\theta_0 \theta_1}{minimize} \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.&lt;br /&gt;
-Explanation:
-Minimize the difference between what our hypothesis function predicts($h(x)$), and the values of $y$ from the training examples.&lt;br /&gt;
-//why squared?&lt;br /&gt;
-$\frac{1}{2m}$ - "to make math easier for later" - ??  &lt;/p&gt;
-&lt;p&gt;$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.&lt;br /&gt;
-$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.&lt;br /&gt;
-$J(\theta_0 \theta_1)$ - Cost function(squared error function).&lt;/p&gt;
-&lt;h2&gt;Cost funcion - intuition&lt;/h2&gt;
-&lt;p&gt;Hypothesis:&lt;/p&gt;
-&lt;p&gt;$h_\theta(x) = \theta_0 + \theta_1x $&lt;/p&gt;
-&lt;p&gt;Parameters:&lt;/p&gt;
-&lt;p&gt;$\theta_0, \theta_1$&lt;/p&gt;
-&lt;p&gt;Cost function:&lt;/p&gt;
-&lt;p&gt;$J(\theta_0 \theta_1) = \frac{1}{2m} \sum\limits_{i=1}^m (h(x^{(i)}) - y^{(i)})^2$.  &lt;/p&gt;
-&lt;p&gt;Goal:&lt;/p&gt;
-&lt;p&gt;$\underset{\theta_0 \theta_1}{minimize} J(\theta_0 \theta_1)$.&lt;/p&gt;
-&lt;h3&gt;Simplified&lt;/h3&gt;
-&lt;p&gt;$h(x)=\theta_1x$&lt;br /&gt;
-$\theta_0=0$&lt;br /&gt;
-Looking for $\theta_1$
-$\underset{\theta_1}{minimize} J(\theta_1)$.  &lt;/p&gt;
-&lt;p&gt;$\theta_0$   controls the slope.&lt;/p&gt;
-&lt;p&gt;[graph with theta = 1]&lt;/p&gt;
-&lt;p&gt;Plotting cost function.
-cost - amount of error.&lt;/p&gt;
-&lt;p&gt;j plot
-3d theta 0,1 plot&lt;/p&gt;
-&lt;p&gt;contow plots&lt;/p&gt;
-&lt;p&gt;do both in matplotlib&lt;/p&gt;
-&lt;!--
-&lt;div class="wrapper"&gt;
-&lt;div class="bg"&gt;
-This is your div with the specified aspect ratio.
-sadfs
-asdfsf j
-sadf
-sadf
-
-&lt;/div&gt;
-&lt;/div&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-22T00:00:00+01:00</updated><entry><title>List of ML algorithms</title><link href="/post/machine-learning-algorithms" rel="alternate"></link><updated>2014-12-22T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/machine-learning-algorithms</id><summary type="html">&lt;!--
+[TODO] Add brief descriptions/classification to each of the algorithms.
+[TODO]Check out distilled as well
 --&gt;
 
-&lt;!-- &lt;div class="mermaid"&gt; --&gt;
-
-&lt;!-- graph TD; --&gt;
-
-&lt;!--    A(Training Set)-\-&gt;B(Learning Algorithm); --&gt;
-
-&lt;!--    B-\-&gt;C;  --&gt;
-
-&lt;!-- &lt;/div&gt; --&gt;
-
-&lt;!-- &lt;div class="mermaid"&gt; --&gt;
-
-&lt;!-- graph LR; --&gt;
-
-&lt;!--    I(Input)-\-&gt;H(h); --&gt;
-
-&lt;!--    H-\-&gt;O(Output); --&gt;
-
-&lt;!-- &lt;/div&gt;  --&gt;
-
-&lt;!-- I(input)-\-&gt;C; --&gt;
-
-&lt;!-- C-\-&gt;O(output); --&gt;
-
-&lt;!-- C-\-&gt;|One|D[Result one]; --&gt;
-
-&lt;!-- C-\-&gt;|Two|E[Result two]; --&gt;
-
-&lt;h2&gt;Math&lt;/h2&gt;
-&lt;h4&gt;General Machine Learning introduction&lt;/h4&gt;
+&lt;p&gt;This is the list of the most important things to learn first in ML and DL:&lt;/p&gt;
+&lt;h2&gt;Algorithms&lt;/h2&gt;
+&lt;h3&gt;Supervised&lt;/h3&gt;
+&lt;p&gt;List of the most important machine learning algorithms to learn first:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Vectors&lt;/p&gt;
+&lt;p&gt;Univariate and multivariate Linear regression with Gradient Descent&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Dot Product&lt;/p&gt;
+&lt;p&gt;Logistic regression&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Linear systems as matrices&lt;/p&gt;
+&lt;p&gt;Neural Networks (Perceptron &amp;gt; feedforward &amp;gt; with back propagation)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Matrix Multiplication&lt;/p&gt;
+&lt;p&gt;Naive Bayes&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Matrix Inverse&lt;/p&gt;
+&lt;p&gt;Support Vector Machines(= Kernel Methods)
+  (Maximum Margin Classifier &amp;gt; Support Vector Classifier &amp;gt; SVMs)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Functions of several variables&lt;/p&gt;
+&lt;p&gt;Decision Trees &amp;gt; Random Forests //Boosting AdaBoost //C4.5&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Partial derivatives&lt;/p&gt;
+&lt;p&gt;K-Nearest Neighbors&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Limits and continuity in R^n&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Linear Approximation&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Gradient&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Loss function&lt;/p&gt;
+&lt;p&gt;Linear Discriminant Analysis&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Linear Regression&lt;/h2&gt;
-&lt;h3&gt;Model representation&lt;/h3&gt;
-&lt;p&gt;housing prices - better example
-[graph]&lt;/p&gt;
-&lt;p&gt;supervised learnong, regression.
-[table] size vsprice&lt;/p&gt;
-&lt;p&gt;m - number of training examples
-x - "input" variable - features
-y - output"("target") variable
-(x,y) - one raining example
-(x^(i), y^(i)) - i'th training example. i'th row of the table.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="linreg" src="/theme/images/linear-regression/linear-regression-gradient-descent.png" /&gt;&lt;/p&gt;
-&lt;h2&gt;Gradient descent&lt;/h2&gt;</summary></entry><entry><title>Deep Learning - Getting Started</title><link href="/post/deep-learning" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
-&lt;h2&gt;Resources&lt;/h2&gt;
-&lt;h4&gt;General Machine Learning introduction&lt;/h4&gt;
+&lt;h3&gt;Unsupervised&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt; on Coursera.&lt;br /&gt;
-  And his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Principal Component Analysis&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt; &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325"&gt;Programming Collective Intelligence&lt;/a&gt;" &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;TutsPlus course "&lt;a href="http://code.tutsplus.com/courses/machine-learning-distilled"&gt;Machine Learning Distilled&lt;/a&gt;"&lt;/p&gt;
+&lt;p&gt;k-means clustering&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;Deep Learning Basics&lt;/h4&gt;
+&lt;h3&gt;Deep Learning&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;"&lt;/p&gt;
+&lt;p&gt;Stacked Auto-encoders&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Restricted Boltzmann machines&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Deep Convolutional Neural Networks&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://deeplearning.net/tutorial/"&gt;deeplearning.net tutorials&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Deep Recurrent neural networks&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Deep Belief Networks (DBN)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;Other&lt;/h4&gt;
+&lt;!-- 
+- singular value decomposition
+- Locally Weighted Regression
+- Q learning
+- EM Expectation maximization
+- Apriori
+- First-Order Inductive Learning
+--&gt;
+
+&lt;h2&gt;Tools&lt;/h2&gt;
+&lt;p&gt;Python:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;NYU Course on &lt;a href="http://techtalks.tv/deep_learning_nyu_spring_2014/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Book "&lt;a href="http://neuralnetworksanddeeplearning.com"&gt;Neural Networks and Deep Learning&lt;/a&gt;" by Michael Nielsen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Book Neural "&lt;a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392"&gt;Networks and Learning Machines&lt;/a&gt;" by Simon O. Haykin&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://deeplearning.net/reading-list/"&gt;deeplearning.net reading list&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.metacademy.org"&gt;Metacademy&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.youtube.com/user/khanacademy/playlists"&gt;Khan Academy math videos&lt;/a&gt;.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2"&gt;Coding the Matrix&lt;/a&gt; - Brown University course on Linear Algebra for CS. &lt;/p&gt;
-&lt;/li&gt;
+&lt;li&gt;numpy&lt;/li&gt;
+&lt;li&gt;scipy&lt;/li&gt;
+&lt;li&gt;scikitlearn&lt;/li&gt;
+&lt;li&gt;Theano&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Other:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ipython&lt;/li&gt;
+&lt;li&gt;matplotlib&lt;/li&gt;
+&lt;li&gt;Latex&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+//Orange python?  
+//matlab?  
+//octave?  
+//weka??  
+--&gt;
+
 &lt;!--
 ## Topics
 
@@ -257,6 +116,7 @@ y - output"("target") variable
 
       - Support Vector Machines
       - Random Forests
+
     - Unsupervised Learning
       - k-Means Clustering
       - Hierarchical Clustering
@@ -333,35 +193,143 @@ y - output"("target") variable
   - Bagging/Averaging and Boosting,
   - Bias-variance tradeoff,
   - Implementation on GPGPUs. 
---&gt;
-
-&lt;h2&gt;Roadmap&lt;/h2&gt;
-&lt;p&gt;First of all - the general overview of all the major topics, and the order in which to study them
-(made based on the overview of the Deep Learning from &lt;a href="http://metacademy.org/roadmaps/rgrosse/deep_learning"&gt;metacademy&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="/images/deep-learning/deep-learning-roadmap.png"&gt;&lt;img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Now - the list of resources and projects, in order of learning:&lt;/p&gt;
+--&gt;</summary></entry><entry><title>Small Project Ideas for studying Machine Learning</title><link href="/post/ml-project-ideas" rel="alternate"></link><updated>2014-12-22T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/ml-project-ideas</id><summary type="html">&lt;p&gt;Supervised
+Unsupervised
+classification
+Regression
+clustering&lt;/p&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Resources</title><link href="/post/deep-learning-resources" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning-resources</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
+&lt;h3&gt;Relationship between deep learning and other fields&lt;/h3&gt;
+&lt;p&gt;&lt;a href="/images/deep-learning/ai-ml-dl.png"&gt;&lt;img alt="ai-ml-dl" src="/images/deep-learning/ai-ml-dl.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
 &lt;h3&gt;Basic Math&lt;/h3&gt;
+&lt;h4&gt;Calculus&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Khan Academy Calculus videos&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.coursera.org/course/m2o2c2"&gt;Coursera Calculus course&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT lectures on &lt;a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm"&gt;Multivariable Calculus&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Andrew Ng course&lt;/h3&gt;
-&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt;,&lt;br /&gt;
-supplemented with his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;, and Neural Networks explanation from &lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt;(for things that are unclear).&lt;/p&gt;
-&lt;p&gt;Projects:&lt;/p&gt;
+&lt;h4&gt;Linear Algebra&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Linear Regression&lt;/li&gt;
-&lt;li&gt;Logistic Regression&lt;/li&gt;
-&lt;li&gt;Feed Forward Neural Network&lt;/li&gt;
-&lt;li&gt;Backpropagation&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Khan Academy Linear Algebra videos&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/"&gt;MIT linear algebra videos&lt;/a&gt; by Gilbert Strang&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2"&gt;Coding the Matrix&lt;/a&gt; - Brown University course on Linear Algebra for CS. &lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Neural Networks for Machine Learning&lt;/h2&gt;
-&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;", supplemented with  MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt; and &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Projects:&lt;/p&gt;
+&lt;h4&gt;Probability and statistics&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;Use neural network to recognize hand-written digits from MNIST database.&lt;/li&gt;
-&lt;li&gt;Use Restricted Boltzmann machines to create Deep Belief nets.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt; videos  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.edx.org/course/introduction-probability-science-mitx-6-041x#.VJfS2LQAKc"&gt;edx probability course&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;General Computer Science&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Algorithms coursera course &lt;a href="https://www.coursera.org/course/algo"&gt;part 1&lt;/a&gt; and &lt;a href="https://www.coursera.org/course/algo2"&gt;part 2&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT course &lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;
+(based on &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;SICP book&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Artificial Intelligence introduction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;"  &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course&lt;/a&gt; from UC Berkeley(CS 188)  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;General Machine Learning introduction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt; on Coursera.&lt;br /&gt;
+  And his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;
+  And here's is the link to the &lt;a href="http://see.stanford.edu/see/lecturelist.aspx?coll=348ca38a-3a6d-4052-937d-cb017338d7b1"&gt;full course&lt;/a&gt; Ng taught at Stanford that his coursera course is based upon.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.udacity.com/course/cs271"&gt;Udacity Course on ML&lt;/a&gt; by Perer Norvig&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325"&gt;Programming Collective Intelligence&lt;/a&gt;" &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TutsPlus course "&lt;a href="http://code.tutsplus.com/courses/machine-learning-distilled"&gt;Machine Learning Distilled&lt;/a&gt;"&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Deep Learning Basics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;"&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/tutorial/"&gt;deeplearning.net tutorials&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.metacademy.org"&gt;Metacademy&lt;/a&gt; - "package manager" for Machine Learning knowledge&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.kaggle.com/"&gt;kaggle&lt;/a&gt; - Machine Learning competitions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;mathematicalmonk&lt;/a&gt; - Machine Learning youtube tutorials&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;More DL and ML courses&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;NYU Course on &lt;a href="http://techtalks.tv/deep_learning_nyu_spring_2014/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.cs.cmu.edu/~tom/10701_sp11/lectures.shtml"&gt;Anothre course on ML&lt;/a&gt; taught at Carnegie Mellon University by Tom Mitchell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Books about Deep Learning&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Book "&lt;a href="http://neuralnetworksanddeeplearning.com"&gt;Neural Networks and Deep Learning&lt;/a&gt;" by Michael Nielsen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book Neural "&lt;a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392"&gt;Networks and Learning Machines&lt;/a&gt;" by Simon O. Haykin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/reading-list/"&gt;deeplearning.net reading list&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Books on "how mind works"&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Jeff Hawkins - &lt;a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533&amp;gt;"&gt;On Intelligence&lt;/a&gt; (&lt;a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK"&gt;Audiobook&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ray Kurzweil - &lt;a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/"&gt;How to Create a Mind&lt;/a&gt; (&lt;a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJ"&gt;Audiobook&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div style="clear: both;"&gt;&lt;/div&gt;
 
@@ -413,11 +381,35 @@ max-height: 400px; --&gt;
 
 &lt;!--
 list-style-image: url({{ site.baseurl }}/images/small_right_arrow.gif);
- --&gt;</summary></entry><entry><title>Introduction to Linear Algebra:</title><link href="/post/introduction-to-linear-algebra" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/introduction-to-linear-algebra</id><summary type="html">&lt;h2&gt;Sets.&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Set&lt;/strong&gt; is an unordered collection of objects, for example:&lt;br /&gt;
-$$ \{♠,♥,♦,♣\} $$&lt;/p&gt;
-&lt;p&gt;$\boldsymbol \in$ - this symbol means that an object belongs to a set(equivalently, that set contains an object). For example:&lt;br /&gt;
-$$ ♥ \in \{ ♠,♥,♦,♣ \} $$&lt;/p&gt;</summary></entry><entry><title>List of the best resources to learn the foundations of Artificial Intelligence</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;This is a list of the best resources about AI that I could find on the web.
+ --&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Roadmap</title><link href="/post/deep-learning-roadmap" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning-roadmap</id><summary type="html">&lt;p&gt;First of all - the general overview of all the major topics, and the order in which to study them
+(made based on the overview of the Deep Learning from &lt;a href="http://metacademy.org/roadmaps/rgrosse/deep_learning"&gt;metacademy&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="/images/deep-learning/deep-learning-roadmap.png"&gt;&lt;img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now - the list of resources and projects, in order of learning:&lt;/p&gt;
+&lt;h3&gt;1. Andrew Ng course&lt;/h3&gt;
+&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt;,&lt;br /&gt;
+supplemented with his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;, and Neural Networks explanation from &lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt;(for things that are unclear).&lt;/p&gt;
+&lt;p&gt;Learn the basics of math in the process, as needed from Khan Academy(&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;, &lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;, &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linear Regression&lt;/li&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;Feed Forward Neural Network&lt;/li&gt;
+&lt;li&gt;Backpropagation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. Neural Networks for Machine Learning&lt;/h2&gt;
+&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;", supplemented with  MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt; and &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement neural network with back-propagation to recognize hand-written digits from MNIST database:&lt;br /&gt;
+&lt;a href="http://www.kaggle.com/c/digit-recognizer"&gt;Digit Recognizer Kaggle contest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. UFLD Tutorial&lt;/h2&gt;
+&lt;p&gt;After understaning gradient descent and neural networks with back-propagation go through the &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And read MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand autoencoders, Restricted Boltzmann machines, create Deep Belief nets.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>List of the best resources to learn the foundations of Artificial Intelligence</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;This is a list of the best resources about AI that I could find on the web.
 It will be the most useful for beginners, people who want to learn this field, but don't
 know where to start.&lt;/p&gt;
 &lt;p&gt;I have developed a strategy for myself, for learning the basics of AI in the
@@ -517,7 +509,7 @@ them a lot.&lt;/p&gt;
 &lt;a href="http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901"&gt;http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901&lt;/a&gt;&lt;br /&gt;
     This is the best book I could find that goes in depth into NS. 2 books above presented the general theories how mind works, this one talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Gettin started with Web Development</title><link href="/post/gettin-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/gettin-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Where did you learn web development? What is the best way to get started in web development?&lt;/p&gt;
 &lt;/blockquote&gt;
