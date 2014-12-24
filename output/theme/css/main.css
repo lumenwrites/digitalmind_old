@@ -25,6 +25,10 @@ a {
 	color: #f76300;
 }
 
+p {
+    margin-top: 19px!important;
+}
+
 h1, h2, h3, h4 {
     font-family: Lato;
     font-weight: normal;
@@ -50,6 +54,13 @@ h4 {
     margin-top:10px;
 }
 
+#page li {
+    margin-top: 10px;
+}
+
+li p {
+    margin: 0px;
+}
 
 /* Header */
 #orange-line {
@@ -197,7 +208,7 @@ div.output_prompt {
 /* Fix the list changes */
 
 ul, ol {
-    margin-left: 18px;
+    margin-left: 18px!important;
 }
 
 

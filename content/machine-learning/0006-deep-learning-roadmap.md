@@ -1,6 +1,6 @@
 Title: Getting Started with Deep Learning - Roadmap
 Slug: deep-learning-roadmap
-Date: 2014-12-19
+Date: 2014-12-22 06:00
 
 First of all - the general overview of all the major topics, and the order in which to study them
 (made based on the overview of the Deep Learning from [metacademy](http://metacademy.org/roadmaps/rgrosse/deep_learning))

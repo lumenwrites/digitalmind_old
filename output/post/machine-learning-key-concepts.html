@@ -1719,7 +1719,7 @@ jQuery(document).ready(function($) {
   <script src="/theme/js/vendor/jquery.js" type="text/javascript"></script>
 
   <!-- Mermaid for diagrams -->
-  <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>  
+  <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
   
 </head>
 
@@ -1746,12 +1746,94 @@ jQuery(document).ready(function($) {
       <div class="large-12 columns">
         <h1 id="blogTitle"> List of the key terms and concepts of ML </h1>
         <hr />
-	<p>Supervised
-Unsupervised
-classification
-Regression
-clustering</p>
-<p>Overfiting</p>
+	<p>This is a list of the key terms and concepts in Machine Learning.</p>
+<h3>Model</h3>
+<p>Our goal in ML is to create a good model. You take the input data and try to find underlying patterns in it, and the model is the output of your learning algorithms, it represents the patterns in data that you could find.</p>
+<!-- TODO what is the difference between the model and a Target Variable/Function? -->
+
+<h3>Dataset</h3>
+<p>When you start with a machine learning problem the first thing you need is data.
+All the data you have is your dataset.</p>
+<p>Imagine it like a table with rows and columns.</p>
+<p>Dataset contains <strong>instances</strong>, also called <strong>vectors</strong>, or <strong>training examples</strong>.
+These are the specific entries in your data, <em>rows</em> of your table.</p>
+<p>And <strong>features</strong> (also called <strong>attributes</strong> of the instances) are the <em>columns</em> of your table.</p>
+<p>What you do is you split your data into 2 parts: a training set and a test set.<br />
+<strong>Training set</strong> you will use as an input, you will run learning algorithms on it to train your model.<br />
+<strong>Test set</strong> is the part of your dataset that you put aside, so that when your model is created you can test it and make sure that it predicts things correctly.</p>
+<h2>Types of machine learning</h2>
+<h3>Supervised Learning</h3>
+<p>The goal of supervised learning is prediction.<br />
+You are given a set of labeled data, that contains inputs and outputs, so you know what you are looking for, what the right answers are, and you are trying to understand the mapping between inputs and outputs.</p>
+<p>Process:  </p>
+<p><img alt="supervised learning" src="/images/machine-learning-intro/supervised-learning.png" /></p>
+<p>Model here is a mapping between inputs and outputs.<br />
+You run learning algorithms on the data to find a model, and once we have that model, we can feed it new inputs, and it will correctly predict new outputs. So now we can make new predictions on data that wasn't in the dataset.</p>
+<p>Types:</p>
+<h3>Regression</h3>
+<p>The output is continuous, it can be any real number.  </p>
+<p>Example: predicting house prices based on house size.</p>
+<h3>Classification</h3>
+<p>The output is discrete. Yes/no,  or red/blue/green. You are taking the input and trying to classify it into groups.</p>
+<p>Example: Classify emails as spam or not spam.</p>
+<!-- Example:  
+Housing prices.
+price/size in feet.
+fit a straight line through the data. or a quadratic/polynomial functio
+prive/size in feet - graph in matplotlib!!
+(regression - fitting a line) -->
+
+<h2>Unsupervised Learning</h2>
+<p>In unsupervised learning you don't know what you're looking for, you're just trying to find patterns in the unlabeled data, and group this data according to it.</p>
+<p>Process:<br />
+<img alt="unsupervised learning clustering" src="/images/machine-learning-intro/unsupervised-learning-clustering.png" /></p>
+<p>Types: Clustering and Association.</p>
+<p>Example: Figure out types of items that are frequently bought together.</p>
+<h2>Overfitting. Approximation vs Generalization</h2>
+<p><strong>Approximation</strong> is how well your model fits into the training data, <strong>generalization</strong> is how well your model can make predictions about new data that isn't in the training set.</p>
+<p>There is a fundamental tradeoff in machine learning, between how well the training data can be approximated, and how well model generalizes to new data.</p>
+<!-- Example: [Graph. Linear function vs parabola] -->
+
+<p><strong>Overfitting</strong> is too much approximation with bad generalization.
+It happens  when the function we've predicted fits great with a training set, but can't generalize and predict the actual new inpits.</p>
+<p><img style="width:320px; float:right;" src="/images/machine-learning-intro/overfitting.jpg" /></p>
+<p>For example in the graph to the right the green line represents the actual underlying function that created the data, and blue line represents the model made by a machine learning algorithm that suffers from overfitting. </p>
+<p>So it is always important to remember that the goal is not to fit the training data, but to fit the underlying model that created the data, and make the best predictions on new examples.</p>
+<!--
+### Classification
+//clustering
+Breast cancer malignant/benign.
+Estimate probability of that.
+
+Features/attributes.
+
+Examples
+
+## Unsupervised learning
+Unlabeled data, without knowing what data means, find the patterns.
+Find some structure in data.
+CLustering.
+Example - google news.
+
+Group peoply by genes. find structure in genes.
+social vetwork analysis
+market segmentation
+astronomical data analysis
+
+coctail party problem.
+
+- definition
+- examples
+
+## Other
+Reinforcement learning, recommender systems
+
+## Cross-validation
+## Generalization
+## Dimensionality
+the curse of dimensionality
+
+-->
       </div>
 </div>
 

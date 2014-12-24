@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-22T00:00:00+01:00</updated><entry><title>List of ML algorithms</title><link href="/post/machine-learning-algorithms" rel="alternate"></link><updated>2014-12-22T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/machine-learning-algorithms</id><summary type="html">&lt;!--
+<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2014-12-22T07:00:00+01:00</updated><entry><title>List of ML algorithms</title><link href="/post/machine-learning-algorithms" rel="alternate"></link><updated>2014-12-22T07:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/machine-learning-algorithms</id><summary type="html">&lt;!--
 [TODO] Add brief descriptions/classification to each of the algorithms.
 [TODO]Check out distilled as well
 --&gt;
@@ -193,9 +193,35 @@
   - Bagging/Averaging and Boosting,
   - Bias-variance tradeoff,
   - Implementation on GPGPUs. 
---&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Resources</title><link href="/post/deep-learning-resources" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning-resources</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
-&lt;h3&gt;Relationship between deep learning and other fields&lt;/h3&gt;
-&lt;p&gt;&lt;a href="/images/deep-learning/ai-ml-dl.png"&gt;&lt;img alt="ai-ml-dl" src="/images/deep-learning/ai-ml-dl.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+--&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Roadmap</title><link href="/post/deep-learning-roadmap" rel="alternate"></link><updated>2014-12-22T06:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/deep-learning-roadmap</id><summary type="html">&lt;p&gt;First of all - the general overview of all the major topics, and the order in which to study them
+(made based on the overview of the Deep Learning from &lt;a href="http://metacademy.org/roadmaps/rgrosse/deep_learning"&gt;metacademy&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;a href="/images/deep-learning/deep-learning-roadmap.png"&gt;&lt;img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Now - the list of resources and projects, in order of learning:&lt;/p&gt;
+&lt;h3&gt;1. Andrew Ng course&lt;/h3&gt;
+&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt;,&lt;br /&gt;
+supplemented with his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;, and Neural Networks explanation from &lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt;(for things that are unclear).&lt;/p&gt;
+&lt;p&gt;Learn the basics of math in the process, as needed from Khan Academy(&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;, &lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;, &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;.)&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linear Regression&lt;/li&gt;
+&lt;li&gt;Logistic Regression&lt;/li&gt;
+&lt;li&gt;Feed Forward Neural Network&lt;/li&gt;
+&lt;li&gt;Backpropagation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;2. Neural Networks for Machine Learning&lt;/h2&gt;
+&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;", supplemented with  MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt; and &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Implement neural network with back-propagation to recognize hand-written digits from MNIST database:&lt;br /&gt;
+&lt;a href="http://www.kaggle.com/c/digit-recognizer"&gt;Digit Recognizer Kaggle contest&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;3. UFLD Tutorial&lt;/h2&gt;
+&lt;p&gt;After understaning gradient descent and neural networks with back-propagation go through the &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;And read MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Projects:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Understand autoencoders, Restricted Boltzmann machines, create Deep Belief nets.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Resources</title><link href="/post/deep-learning-resources" rel="alternate"></link><updated>2014-12-22T05:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/deep-learning-resources</id><summary type="html">&lt;p&gt;This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.&lt;/p&gt;
 &lt;h2&gt;Resources&lt;/h2&gt;
 &lt;h3&gt;Basic Math&lt;/h3&gt;
 &lt;h4&gt;Calculus&lt;/h4&gt;
@@ -377,34 +403,182 @@ max-height: 400px; --&gt;
 
 &lt;!--
 list-style-image: url({{ site.baseurl }}/images/small_right_arrow.gif);
- --&gt;</summary></entry><entry><title>Getting Started with Deep Learning - Roadmap</title><link href="/post/deep-learning-roadmap" rel="alternate"></link><updated>2014-12-19T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-19:post/deep-learning-roadmap</id><summary type="html">&lt;p&gt;First of all - the general overview of all the major topics, and the order in which to study them
-(made based on the overview of the Deep Learning from &lt;a href="http://metacademy.org/roadmaps/rgrosse/deep_learning"&gt;metacademy&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;&lt;a href="/images/deep-learning/deep-learning-roadmap.png"&gt;&lt;img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Now - the list of resources and projects, in order of learning:&lt;/p&gt;
-&lt;h3&gt;1. Andrew Ng course&lt;/h3&gt;
-&lt;p&gt;Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt;,&lt;br /&gt;
-supplemented with his &lt;a href="http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl"&gt;course on Deep learning &lt;/a&gt;, and Neural Networks explanation from &lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt;(for things that are unclear).&lt;/p&gt;
-&lt;p&gt;Learn the basics of math in the process, as needed from Khan Academy(&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;, &lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;, &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;.)&lt;/p&gt;
-&lt;p&gt;Projects:&lt;/p&gt;
+ --&gt;</summary></entry><entry><title>List of the key terms and concepts of ML</title><link href="/post/machine-learning-key-concepts" rel="alternate"></link><updated>2014-12-22T04:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/machine-learning-key-concepts</id><summary type="html">&lt;p&gt;This is a list of the key terms and concepts in Machine Learning.&lt;/p&gt;
+&lt;h3&gt;Model&lt;/h3&gt;
+&lt;p&gt;Our goal in ML is to create a good model. You take the input data and try to find underlying patterns in it, and the model is the output of your learning algorithms, it represents the patterns in data that you could find.&lt;/p&gt;
+&lt;!-- TODO what is the difference between the model and a Target Variable/Function? --&gt;
+
+&lt;h3&gt;Dataset&lt;/h3&gt;
+&lt;p&gt;When you start with a machine learning problem the first thing you need is data.
+All the data you have is your dataset.&lt;/p&gt;
+&lt;p&gt;Imagine it like a table with rows and columns.&lt;/p&gt;
+&lt;p&gt;Dataset contains &lt;strong&gt;instances&lt;/strong&gt;, also called &lt;strong&gt;vectors&lt;/strong&gt;, or &lt;strong&gt;training examples&lt;/strong&gt;.
+These are the specific entries in your data, &lt;em&gt;rows&lt;/em&gt; of your table.&lt;/p&gt;
+&lt;p&gt;And &lt;strong&gt;features&lt;/strong&gt; (also called &lt;strong&gt;attributes&lt;/strong&gt; of the instances) are the &lt;em&gt;columns&lt;/em&gt; of your table.&lt;/p&gt;
+&lt;p&gt;What you do is you split your data into 2 parts: a training set and a test set.&lt;br /&gt;
+&lt;strong&gt;Training set&lt;/strong&gt; you will use as an input, you will run learning algorithms on it to train your model.&lt;br /&gt;
+&lt;strong&gt;Test set&lt;/strong&gt; is the part of your dataset that you put aside, so that when your model is created you can test it and make sure that it predicts things correctly.&lt;/p&gt;
+&lt;h2&gt;Types of machine learning&lt;/h2&gt;
+&lt;h3&gt;Supervised Learning&lt;/h3&gt;
+&lt;p&gt;The goal of supervised learning is prediction.&lt;br /&gt;
+You are given a set of labeled data, that contains inputs and outputs, so you know what you are looking for, what the right answers are, and you are trying to understand the mapping between inputs and outputs.&lt;/p&gt;
+&lt;p&gt;Process:  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="supervised learning" src="/images/machine-learning-intro/supervised-learning.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Model here is a mapping between inputs and outputs.&lt;br /&gt;
+You run learning algorithms on the data to find a model, and once we have that model, we can feed it new inputs, and it will correctly predict new outputs. So now we can make new predictions on data that wasn't in the dataset.&lt;/p&gt;
+&lt;p&gt;Types:&lt;/p&gt;
+&lt;h3&gt;Regression&lt;/h3&gt;
+&lt;p&gt;The output is continuous, it can be any real number.  &lt;/p&gt;
+&lt;p&gt;Example: predicting house prices based on house size.&lt;/p&gt;
+&lt;h3&gt;Classification&lt;/h3&gt;
+&lt;p&gt;The output is discrete. Yes/no,  or red/blue/green. You are taking the input and trying to classify it into groups.&lt;/p&gt;
+&lt;p&gt;Example: Classify emails as spam or not spam.&lt;/p&gt;
+&lt;!-- Example:  
+Housing prices.
+price/size in feet.
+fit a straight line through the data. or a quadratic/polynomial functio
+prive/size in feet - graph in matplotlib!!
+(regression - fitting a line) --&gt;
+
+&lt;h2&gt;Unsupervised Learning&lt;/h2&gt;
+&lt;p&gt;In unsupervised learning you don't know what you're looking for, you're just trying to find patterns in the unlabeled data, and group this data according to it.&lt;/p&gt;
+&lt;p&gt;Process:&lt;br /&gt;
+&lt;img alt="unsupervised learning clustering" src="/images/machine-learning-intro/unsupervised-learning-clustering.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Types: Clustering and Association.&lt;/p&gt;
+&lt;p&gt;Example: Figure out types of items that are frequently bought together.&lt;/p&gt;
+&lt;h2&gt;Overfitting. Approximation vs Generalization&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Approximation&lt;/strong&gt; is how well your model fits into the training data, &lt;strong&gt;generalization&lt;/strong&gt; is how well your model can make predictions about new data that isn't in the training set.&lt;/p&gt;
+&lt;p&gt;There is a fundamental tradeoff in machine learning, between how well the training data can be approximated, and how well model generalizes to new data.&lt;/p&gt;
+&lt;!-- Example: [Graph. Linear function vs parabola] --&gt;
+
+&lt;p&gt;&lt;strong&gt;Overfitting&lt;/strong&gt; is too much approximation with bad generalization.
+It happens  when the function we've predicted fits great with a training set, but can't generalize and predict the actual new inpits.&lt;/p&gt;
+&lt;p&gt;&lt;img style="width:320px; float:right;" src="/images/machine-learning-intro/overfitting.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;For example in the graph to the right the green line represents the actual underlying function that created the data, and blue line represents the model made by a machine learning algorithm that suffers from overfitting. &lt;/p&gt;
+&lt;p&gt;So it is always important to remember that the goal is not to fit the training data, but to fit the underlying model that created the data, and make the best predictions on new examples.&lt;/p&gt;
+&lt;!--
+### Classification
+//clustering
+Breast cancer malignant/benign.
+Estimate probability of that.
+
+Features/attributes.
+
+Examples
+
+## Unsupervised learning
+Unlabeled data, without knowing what data means, find the patterns.
+Find some structure in data.
+CLustering.
+Example - google news.
+
+Group peoply by genes. find structure in genes.
+social vetwork analysis
+market segmentation
+astronomical data analysis
+
+coctail party problem.
+
+- definition
+- examples
+
+## Other
+Reinforcement learning, recommender systems
+
+## Cross-validation
+## Generalization
+## Dimensionality
+the curse of dimensionality
+
+--&gt;</summary></entry><entry><title>Introduction to Machine Learning</title><link href="/post/introduction-to-machine-learning" rel="alternate"></link><updated>2014-12-22T01:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/introduction-to-machine-learning</id><summary type="html">&lt;p&gt;This article is a general overview of Machine Learning and the surrounding fields.&lt;/p&gt;
+&lt;h2&gt;What is Machine Learning?&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The field of study that gives computers the ability to &lt;strong&gt;learn&lt;/strong&gt; without being explicitly programmed.&lt;br /&gt;
+- Arthur Samuel.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Machine Learbing is a field that studies algorithms that can learn from data. These algorithms take a dataset as an input, and build a &lt;strong&gt;model&lt;/strong&gt; based on it. And then they make predictions or decisions based on that model, as opposed to following explicit instructions, like the usual programs do.&lt;/p&gt;
+&lt;p&gt;Often it is impossible to create programms just by writing the code, becaue that would take too long, or you just don't know how to do that.
+For example you can not write millions of programs for every one of amazon users that would suggest books this particular person would like, because it would just take too much effort, and you couldn't program a quadcopter to do some complex trick while it's flying, because you don't know how to express the commands it would need as a series of if-else statements.&lt;/p&gt;
+&lt;p&gt;That is where ML comes in. With ML you can analyze a lot of data, find patterns in it, and use these patterns to allow computer to "learn" to perform certain tasks.&lt;/p&gt;
+&lt;p&gt;Especially now, as more data becomes available, you can solve more and more complex problems by using ML, and now ML is used in &lt;a href="/post/practical-applications-of-machine-learning"&gt;a lot of fields&lt;/a&gt;. Availability of Big Data made machine learning much more valuavle.&lt;/p&gt;
+&lt;p&gt;So Machine Learning analyzes the data, finds patterns in it, extracts knowledge from it, and uses it to predicts the output.&lt;/p&gt;
+&lt;p&gt;It also allows us to discover new relationships and connections in the large sets of data, it allows us to "predict the future", and it allows computers to program themselves.&lt;/p&gt;
+&lt;h2&gt;Machine Learning process&lt;/h2&gt;
+&lt;div class="mermaid"&gt;
+graph LR;
+    UR(Unknown Relatioinship &lt;br/&gt;Target Function)--&gt;D(Data);
+    D --&gt; LA(Learning Algorithm &lt;br/&gt;&lt;br/&gt; Model &gt; Evaluate &gt; Results &gt; &lt;br/&gt; &gt; Optimize &gt; New Model &gt; Repeat);
+    M(Models) --&gt; LA;
+    LA --&gt; FM(Final Model);
+&lt;/div&gt;
+
+&lt;p&gt;ML process begins with data(also called "training examples"), data contains examples of how some system operates, inputs and outputs. This data was produced by some process(also called "target function"), unknown to us, some pattern which we are trying to find out.&lt;/p&gt;
+&lt;p&gt;We create models(representations) that present mappings from inputs to outputs, possible functions that produce this model. And then we will use our learning algorithm to find the final model(hypothesis) that represents the target function as close as possible. The best model will be the one that best explains the underlying pattern of data, that is most accurate at mapping inputs to the outputs.&lt;/p&gt;
+&lt;p&gt;Learning algorithm is usuall y an iterative process, that takes a model evaluates it to find out how good the model is(how much errors doe it have), uses these results to  optimize the model to get a new one, that produces better results. It repeats until we get a final model that is good enough for our purposes.&lt;/p&gt;
+&lt;p&gt;This means that for Machine Learning it requires data with a predictable underlying pattern, usually it works best when this pattern is complex, otherwise we could use simpler algorithms.&lt;/p&gt;
+&lt;h2&gt;Components of machine learning&lt;/h2&gt;
+&lt;p&gt;These are the 3 main components of machine learning:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;Representation&lt;br /&gt;
+  This is how we mathimatically/algorithmically represent our model.&lt;br /&gt;
+  Examples:  &lt;ul&gt;
+&lt;li&gt;K-Nearest Neighbor&lt;/li&gt;
+&lt;li&gt;Decision Trees&lt;/li&gt;
+&lt;li&gt;Naive Bayes&lt;/li&gt;
 &lt;li&gt;Linear Regression&lt;/li&gt;
-&lt;li&gt;Logistic Regression&lt;/li&gt;
-&lt;li&gt;Feed Forward Neural Network&lt;/li&gt;
-&lt;li&gt;Backpropagation&lt;/li&gt;
+&lt;li&gt;Neural Networks&lt;/li&gt;
+&lt;li&gt;Support Vector Machines &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;2. Neural Networks for Machine Learning&lt;/h2&gt;
-&lt;p&gt;Geoffrey Hinton's coursera course "&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;", supplemented with  MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt; and &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;Projects:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Implement neural network with back-propagation to recognize hand-written digits from MNIST database:&lt;br /&gt;
-&lt;a href="http://www.kaggle.com/c/digit-recognizer"&gt;Digit Recognizer Kaggle contest&lt;/a&gt;&lt;/li&gt;
+&lt;/li&gt;
+&lt;li&gt;Evaluation  n
+    This is how we find the errors in our model and decide how good it is.&lt;br /&gt;
+    Examples:  &lt;ul&gt;
+&lt;li&gt;Accuracy&lt;/li&gt;
+&lt;li&gt;Error Rate&lt;/li&gt;
+&lt;li&gt;Squared Error&lt;/li&gt;
+&lt;li&gt;Info Gain&lt;/li&gt;
+&lt;li&gt;Cost&lt;/li&gt;
+&lt;li&gt;Margin&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;3. UFLD Tutorial&lt;/h2&gt;
-&lt;p&gt;After understaning gradient descent and neural networks with back-propagation go through the &lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;And read MIT Book on &lt;a href="http://www.iro.umontreal.ca/~bengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Projects:&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;Optimization
+  It is a way to search among many models and choose the one that's best.&lt;br /&gt;
+  Examples:  &lt;ul&gt;
+&lt;li&gt;Greedy Search&lt;/li&gt;
+&lt;li&gt;Gradient Descent&lt;/li&gt;
+&lt;li&gt;Newton's Method&lt;/li&gt;
+&lt;li&gt;Linear Programming&lt;/li&gt;
+&lt;li&gt;Quadratic Programming&lt;/li&gt;
+&lt;li&gt;Evolutionary Computation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+### Relationship between deep learning and other fields
+[![ai-ml-dl](/images/deep-learning/ai-ml-dl.png)](/images/deep-learning/ai-ml-dl.png)
+
+So Deep Learning(DL) is a subfield of Machine Learning(ML) which is a subfield Artificial Intelligence which is a subfield Computer Science.
+
+## Deep Learning
+&lt;img src="/images/deep-learning/artificial_neural_network.png"
+style="width: 300px; float: right;"/&gt;
+
+&gt; "Deep learning" is the new big trend in Machine Learning. It promises general, powerful, and fast machine learning, moving us one step closer to AI.
+
+Deep Learning is a part of Machine Learning that focuses on creating multilayer Artificial Neural Networks(ANN). "Deep" means that the algorithm has several hidden layers of "neurons".
+
+ANNs are inspired by the theories of how biologial brain works, which in itself is awesome, and turns out that DL algorithms are extremely good at performing a lot of tasks, and in the past years they are making huge improvements upon other ML algorithms.
+
+DL allows to find patterns in unlabeled data, for example it can look at a lot of youtube videos, extract concepts from them, and to learn to recognize a cat, without initially knowing what it is.
+
+In the following years DL will be a huge driver of innovation, because it can be applied almost everywhere, and it can change the way we do things dramatically.
+
+At this point a lot of [resources](/post/deep-learning-resources/) are available on the subject, so it's a grat time to get into this awesome field.
+--&gt;
+
+&lt;h3&gt;Related Posts:&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Understand autoencoders, Restricted Boltzmann machines, create Deep Belief nets.&lt;/li&gt;
+&lt;li&gt;&lt;a href="/post/machine-learning-key-concepts"&gt;Key Concepts in Machine Learning&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</summary></entry><entry><title>List of the best resources to learn the foundations of Artificial Intelligence</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;This is a list of the best resources about AI that I could find on the web.
 It will be the most useful for beginners, people who want to learn this field, but don't
 know where to start.&lt;/p&gt;

@@ -47,6 +47,17 @@ ARTICLE_SAVE_AS = 'post/{slug}.html'
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
+# TAG_URL = 'tag/{slug}/'
+# TAG_SAVE_AS = 'tag/{slug}/index.html'
+# TAGS_URL = 'tags/'
+# TAGS_SAVE_AS = 'tags/index.html'
+
+# PAGINATION_PATTERNS = (
+#     (1, '{base_name}/posts/', '{base_name}/index.html'),
+#     (2, '{base_name}/posts/{number}/', '{base_name}/posts/{number}/index.html'),
+#)
+
+
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 

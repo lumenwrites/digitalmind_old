@@ -1,6 +1,6 @@
 Title: Small Project Ideas
 Slug: small-project-ideas
-Date: 2014-12-19
+Date: 2014-12-22 08:00
 Status: draft
 
 Complete the Generalized Linear Models tutorials for scikit-learn.

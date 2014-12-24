@@ -26,6 +26,8 @@ To Create:
 
 //math topics you need to learn and order?
 
+#pst ANN. What it is, what is it for, etc.
+#pst about kaggle
 
 ** ML/DL
 **** Getting Started

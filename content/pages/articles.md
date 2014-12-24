@@ -7,13 +7,13 @@ Slug: articles
 ## Machine Learning
 ### General ideas and introduction
 
-- What is machine learning?
+- [What is machine learning?](/post/introduction-to-machine-learning)
 
 - Practical applications of machine learning
 
 - General Advice on studying machine learning
 
-- Key concepts in Machine Learning
+- [Key concepts in Machine Learning](/post/machine-learning-key-concepts)
 
 - [Deep Learning- Best Resources](/post/deep-learning-resources)  
   Best resources for studying Deep Learning

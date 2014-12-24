@@ -1,11 +1,8 @@
 Title: Getting Started with Deep Learning - Resources
 Slug: deep-learning-resources
-Date: 2014-12-19
+Date: 2014-12-22 05:00
 
 This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.
-
-### Relationship between deep learning and other fields
-[![ai-ml-dl](/images/deep-learning/ai-ml-dl.png)](/images/deep-learning/ai-ml-dl.png)
 
 ## Resources
 

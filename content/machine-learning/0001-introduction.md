@@ -1,83 +1,101 @@
 Title: Introduction to Machine Learning
-Date: 2014-12-18
-Status: draft
+Slug: introduction-to-machine-learning
+Date: 2014-12-22 01:00
+
+This article is a general overview of Machine Learning and the surrounding fields.
+
+## What is Machine Learning?
+
+> The field of study that gives computers the ability to **learn** without being explicitly programmed.  
+- Arthur Samuel.
+
+Machine Learbing is a field that studies algorithms that can learn from data. These algorithms take a dataset as an input, and build a **model** based on it. And then they make predictions or decisions based on that model, as opposed to following explicit instructions, like the usual programs do.
+
+Often it is impossible to create programms just by writing the code, becaue that would take too long, or you just don't know how to do that.
+For example you can not write millions of programs for every one of amazon users that would suggest books this particular person would like, because it would just take too much effort, and you couldn't program a quadcopter to do some complex trick while it's flying, because you don't know how to express the commands it would need as a series of if-else statements.
+
+That is where ML comes in. With ML you can analyze a lot of data, find patterns in it, and use these patterns to allow computer to "learn" to perform certain tasks.
+
+Especially now, as more data becomes available, you can solve more and more complex problems by using ML, and now ML is used in [a lot of fields](/post/practical-applications-of-machine-learning). Availability of Big Data made machine learning much more valuavle.
+
+So Machine Learning analyzes the data, finds patterns in it, extracts knowledge from it, and uses it to predicts the output.
+
+It also allows us to discover new relationships and connections in the large sets of data, it allows us to "predict the future", and it allows computers to program themselves.
+
+## Machine Learning process
+
+<div class="mermaid">
+graph LR;
+	UR(Unknown Relatioinship <br/>Target Function)-->D(Data);
+	D --> LA(Learning Algorithm <br/><br/> Model > Evaluate > Results > <br/> > Optimize > New Model > Repeat);
+	M(Models) --> LA;
+	LA --> FM(Final Model);
+</div>
 
 
-Subfield of AI
+ML process begins with data(also called "training examples"), data contains examples of how some system operates, inputs and outputs. This data was produced by some process(also called "target function"), unknown to us, some pattern which we are trying to find out.
 
-Sometimes it is extremely difficult or impossible to  write a program as a set of instructions
+We create models(representations) that present mappings from inputs to outputs, possible functions that produce this model. And then we will use our learning algorithm to find the final model(hypothesis) that represents the target function as close as possible. The best model will be the one that best explains the underlying pattern of data, that is most accurate at mapping inputs to the outputs.
 
-## Applications of machine learning
-Search - google works based on ML algorithm
-Computer vision and object recognition - like in robotic cars, or face recognition in photos
-Spam filtering
+Learning algorithm is usuall y an iterative process, that takes a model evaluates it to find out how good the model is(how much errors doe it have), uses these results to  optimize the model to get a new one, that produces better results. It repeats until we get a final model that is good enough for our purposes.
 
-It is in every field.
-Autonomous robotics,
+This means that for Machine Learning it requires data with a predictable underlying pattern, usually it works best when this pattern is complex, otherwise we could use simpler algorithms.
 
-Analyzing data:
-computational biology(understanding genes sequences or recognizing diseases) , web and startups and analyzing data for business, finance, medicine, engineering.
+## Components of machine learning
 
-Applications you can't program by hand:
-Autonomous helicopters(teaching it to fly),
-handwriting recognition(for example routing letters),
-natural language processing(siri, google now), Computer Vision(robotic cars)
+These are the 3 main components of machine learning:
 
-Recommender systems. Amazon/Netflix
+- Representation  
+  This is how we mathimatically/algorithmically represent our model.  
+  Examples:  
+	  - K-Nearest Neighbor
+	  - Decision Trees
+	  - Naive Bayes
+	  - Linear Regression
+	  - Neural Networks
+	  - Support Vector Machines 
+- Evaluation  n
+	This is how we find the errors in our model and decide how good it is.  
+	Examples:  
+    - Accuracy
+    - Error Rate
+    - Squared Error
+    - Info Gain
+    - Cost
+    - Margin
+- Optimization
+  It is a way to search among many models and choose the one that's best.  
+  Examples:  
+	  - Greedy Search
+	  - Gradient Descent
+	  - Newton's Method
+	  - Linear Programming
+	  - Quadratic Programming
+	  - Evolutionary Computation
 
-Computational neuroscience.
+<!--
+### Relationship between deep learning and other fields
+[![ai-ml-dl](/images/deep-learning/ai-ml-dl.png)](/images/deep-learning/ai-ml-dl.png)
 
-## What is machine learning?
-Field that gives computers ability to learn without being explicitly programmed
+So Deep Learning(DL) is a subfield of Machine Learning(ML) which is a subfield Artificial Intelligence which is a subfield Computer Science.
 
-Arthur Samuel. Checkers playing programm that is better than he is at checkers.
-It played with itself thousands/millions of times, learning which board positions are good and which are bad, and eventually learned to play checkers better than he himself.
+## Deep Learning
+<img src="/images/deep-learning/artificial_neural_network.png"
+style="width: 300px; float: right;"/>
 
-Tom Mitchell:
-A computer program is said to learn from experience E, with respect to some task T, and some perfomance measure P, if it's perfomance on T,as measured by P, improves with experience E.
-(it is so dumb, obviously there's so much more clear and understandable way of writing this!!)
-Explain on game of checkers.
-He still keeps saying "experience E"! that means E does nothing to make it shorter, just adds to the confusion =)
+> "Deep learning" is the new big trend in Machine Learning. It promises general, powerful, and fast machine learning, moving us one step closer to AI.
 
-Types of Machine Learning algorithms:
-- Supervised learnin
-- Unsupervised learning0
-Other: Reinforcement learning, recommender systems
-//pracical advice about applying learning algorithms
-giving set of tools and teaching how to use it.
+Deep Learning is a part of Machine Learning that focuses on creating multilayer Artificial Neural Networks(ANN). "Deep" means that the algorithm has several hidden layers of "neurons".
 
-## Supervised Learning
-### Regression
-Example. Housing prices.
-price/size in feet.
-fit a straight line through the data. or a quadratic/polynomial functio
-prive/size in feet - graph in matplotlib!!
-(regression - fitting a line)
+ANNs are inspired by the theories of how biologial brain works, which in itself is awesome, and turns out that DL algorithms are extremely good at performing a lot of tasks, and in the past years they are making huge improvements upon other ML algorithms.
 
-#### Classification
-//clustering
-Breast cancer malignant/benign.
-Estimate probability of that.
+DL allows to find patterns in unlabeled data, for example it can look at a lot of youtube videos, extract concepts from them, and to learn to recognize a cat, without initially knowing what it is.
 
-Features/attributes.
+In the following years DL will be a huge driver of innovation, because it can be applied almost everywhere, and it can change the way we do things dramatically.
 
-Examples
+At this point a lot of [resources](/post/deep-learning-resources/) are available on the subject, so it's a grat time to get into this awesome field.
+-->
 
-## Unsupervised learning
-Unlabeled data, without knowing what data means, find the patterns.
-Find some structure in data.
-CLustering.
-Example - google news.
-
-Group peoply by genes. find structure in genes.
-social vetwork analysis
-market segmentation
-astronomical data analysis
-
-coctail party problem.
-
-- definition
-- examples
-
-
+### Related Posts:
+- [Key Concepts in Machine Learning](/post/machine-learning-key-concepts)
 
