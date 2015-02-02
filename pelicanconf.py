@@ -57,6 +57,7 @@ PAGE_SAVE_AS = '{slug}.html'
 #     (2, '{base_name}/posts/{number}/', '{base_name}/posts/{number}/index.html'),
 #)
 
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', 'about')
 
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
