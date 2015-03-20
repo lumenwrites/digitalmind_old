@@ -1720,6 +1720,17 @@ jQuery(document).ready(function($) {
 
   <!-- Mermaid for diagrams -->
   <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
+
+  <!-- Mathjax for latex -->
+  <!-- Enable $ $ inline latex. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'],['\\(','\\)']]}
+    });
+  </script>
+  <script src="/theme/js/MathJax.js" type="text/javascript"></script>
+  <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
+
   
 </head>
 
@@ -1744,9 +1755,10 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> Getting started with Web Development </h1>
-        <hr />
-	<p>Recently I've got a question:</p>
+	<article>
+          <h1 id="blogTitle"> Getting started with Web Development </h1>
+          <hr />
+	  <p>Recently I've got a question:</p>
 <blockquote>
 <p>Where did you learn web development? What is the best way to get started in web development?</p>
 </blockquote>
@@ -1788,6 +1800,7 @@ Or you can star with the official documentation - it is written extremely well, 
 After that you can read a great book "2 Scoops of Django".</p>
 <p>That's pretty much it) This is the best way(that I'm aware of) for going from absolute zero to a solid intermediate(of course if you will practice and gain experience by making your own projects in the process).</p>
 <p>I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)</p>
+	</article>
       </div>
 </div>
 

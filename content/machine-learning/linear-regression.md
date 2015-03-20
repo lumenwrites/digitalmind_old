@@ -8,6 +8,8 @@ Supervised learning(as opposed to unsupervised) - given the "right answer" for e
 Regression(as oppoed to classification) - predict real-valued output.  
 <br/>
 
+Univariate linreg using batch gradient descent.
+
 ## Model Representation
 
 [house size vs prices graph]  
@@ -104,6 +106,38 @@ contow plots
 
 do both in matplotlib
 
+# Gradient descent
+
+Initialize thetas to zero
+
+Change them to reduce the function.
+![gradient descent](/images/linear-regression/gradient-descent.png)
+
+alpha - learning rate.(how big of a step we take)
+multiplied by a derivative term.
+
+need to simulatneously update thetas.
+
+we have a function, we want to minimize the error(cost function), we use gradient descent for that.
+
+gradient descent + cost function = learning algorithm
+
+![gradient descent](/images/linear-regression/gradient-descent-cost-function.png)
+
+apply gd to minimize cost function.
+
+
+Take derivative of cost function for theta-0 and theta-one, and plug it into gradient descent, and we get Gradient descent algorithm:  
+![gradient descent algorithm](/images/linear-regression/gradient-descent-algorithm.png)
+
+Boom. That's it.
+Then just:
+
+# Implementation in python
+
+
+
+
 <!--
 <div class="wrapper">
 <div class="bg">
@@ -177,3 +211,5 @@ y - output"("target") variable
 
 ![linreg](/theme/images/linear-regression/linear-regression-gradient-descent.png)
 ## Gradient descent
+
+

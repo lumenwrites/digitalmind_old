@@ -13,40 +13,26 @@ This is the list of the most important things to learn first in ML and DL:
 List of the most important machine learning algorithms to learn first:
 
 - Univariate and multivariate Linear regression with Gradient Descent
-
 - Logistic regression
-
-
 - Neural Networks (Perceptron > feedforward > with back propagation)
-
-
 - Naive Bayes
-
 - Support Vector Machines(= Kernel Methods)
   (Maximum Margin Classifier > Support Vector Classifier > SVMs)
-
 - Decision Trees > Random Forests //Boosting AdaBoost //C4.5
-
 - K-Nearest Neighbors
-
 - Linear Discriminant Analysis
 
 ### Unsupervised
 
 - Principal Component Analysis
-
 - k-means clustering
 
 ### Deep Learning
 
 - Stacked Auto-encoders
-
 - Restricted Boltzmann machines
-
 - Deep Convolutional Neural Networks
-
 - Deep Recurrent neural networks
-
 - Deep Belief Networks (DBN)
 
 <!-- 

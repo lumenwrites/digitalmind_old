@@ -1720,6 +1720,17 @@ jQuery(document).ready(function($) {
 
   <!-- Mermaid for diagrams -->
   <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
+
+  <!-- Mathjax for latex -->
+  <!-- Enable $ $ inline latex. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'],['\\(','\\)']]}
+    });
+  </script>
+  <script src="/theme/js/MathJax.js" type="text/javascript"></script>
+  <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
+
   
 </head>
 
@@ -1744,9 +1755,10 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> List of ML algorithms </h1>
-        <hr />
-	<!--
+	<article>
+          <h1 id="blogTitle"> List of ML algorithms </h1>
+          <hr />
+	  <!--
 [TODO] Add brief descriptions/classification to each of the algorithms.
 [TODO]Check out distilled as well
 -->
@@ -1756,58 +1768,28 @@ jQuery(document).ready(function($) {
 <h3>Supervised</h3>
 <p>List of the most important machine learning algorithms to learn first:</p>
 <ul>
-<li>
-<p>Univariate and multivariate Linear regression with Gradient Descent</p>
-</li>
-<li>
-<p>Logistic regression</p>
-</li>
-<li>
-<p>Neural Networks (Perceptron &gt; feedforward &gt; with back propagation)</p>
-</li>
-<li>
-<p>Naive Bayes</p>
-</li>
-<li>
-<p>Support Vector Machines(= Kernel Methods)
-  (Maximum Margin Classifier &gt; Support Vector Classifier &gt; SVMs)</p>
-</li>
-<li>
-<p>Decision Trees &gt; Random Forests //Boosting AdaBoost //C4.5</p>
-</li>
-<li>
-<p>K-Nearest Neighbors</p>
-</li>
-<li>
-<p>Linear Discriminant Analysis</p>
-</li>
+<li>Univariate and multivariate Linear regression with Gradient Descent</li>
+<li>Logistic regression</li>
+<li>Neural Networks (Perceptron &gt; feedforward &gt; with back propagation)</li>
+<li>Naive Bayes</li>
+<li>Support Vector Machines(= Kernel Methods)
+  (Maximum Margin Classifier &gt; Support Vector Classifier &gt; SVMs)</li>
+<li>Decision Trees &gt; Random Forests //Boosting AdaBoost //C4.5</li>
+<li>K-Nearest Neighbors</li>
+<li>Linear Discriminant Analysis</li>
 </ul>
 <h3>Unsupervised</h3>
 <ul>
-<li>
-<p>Principal Component Analysis</p>
-</li>
-<li>
-<p>k-means clustering</p>
-</li>
+<li>Principal Component Analysis</li>
+<li>k-means clustering</li>
 </ul>
 <h3>Deep Learning</h3>
 <ul>
-<li>
-<p>Stacked Auto-encoders</p>
-</li>
-<li>
-<p>Restricted Boltzmann machines</p>
-</li>
-<li>
-<p>Deep Convolutional Neural Networks</p>
-</li>
-<li>
-<p>Deep Recurrent neural networks</p>
-</li>
-<li>
-<p>Deep Belief Networks (DBN)</p>
-</li>
+<li>Stacked Auto-encoders</li>
+<li>Restricted Boltzmann machines</li>
+<li>Deep Convolutional Neural Networks</li>
+<li>Deep Recurrent neural networks</li>
+<li>Deep Belief Networks (DBN)</li>
 </ul>
 <!-- 
 - singular value decomposition
@@ -1941,6 +1923,7 @@ jQuery(document).ready(function($) {
   - Bias-variance tradeoff,
   - Implementation on GPGPUs. 
 -->
+	</article>
       </div>
 </div>
 

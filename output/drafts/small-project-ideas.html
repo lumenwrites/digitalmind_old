@@ -1720,6 +1720,17 @@ jQuery(document).ready(function($) {
 
   <!-- Mermaid for diagrams -->
   <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
+
+  <!-- Mathjax for latex -->
+  <!-- Enable $ $ inline latex. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'],['\\(','\\)']]}
+    });
+  </script>
+  <script src="/theme/js/MathJax.js" type="text/javascript"></script>
+  <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
+
   
 </head>
 
@@ -1744,13 +1755,15 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> Small Project Ideas </h1>
-        <hr />
-	<p>Complete the Generalized Linear Models tutorials for scikit-learn.</p>
+	<article>
+          <h1 id="blogTitle"> Small Project Ideas </h1>
+          <hr />
+	  <p>Complete the Generalized Linear Models tutorials for scikit-learn.</p>
 <p>Complete the Orange python tutorial for classification.</p>
 <p>Complete tutorials for running convolutional networks on the MNIST dataset using pylearn2.</p>
 <p>Implement the Perceptron algorithm for the Orange machine learning platform.</p>
 <p>Implement a Support Vector Machine algorithm for scikit-learn.</p>
+	</article>
       </div>
 </div>
 
@@ -1790,9 +1803,9 @@ jQuery(document).ready(function($) {
   <div class="large-12 columns">
     <div class="comments">
       <hr />
-      <script data-isso="//comments.digitalmind.io/"
+      <script data-isso="//comments.digitalmind.io/dm/"
 	      data-isso-avatar="false"
-              src="//comments.digitalmind.io/js/embed.dev.js"></script>
+              src="//comments.digitalmind.io/dm/js/embed.dev.js"></script>
       <section id="isso-thread"></section>
       <hr />
     </div>

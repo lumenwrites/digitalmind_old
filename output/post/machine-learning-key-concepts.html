@@ -1720,6 +1720,17 @@ jQuery(document).ready(function($) {
 
   <!-- Mermaid for diagrams -->
   <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
+
+  <!-- Mathjax for latex -->
+  <!-- Enable $ $ inline latex. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'],['\\(','\\)']]}
+    });
+  </script>
+  <script src="/theme/js/MathJax.js" type="text/javascript"></script>
+  <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
+
   
 </head>
 
@@ -1744,9 +1755,10 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> List of the key terms and concepts of ML </h1>
-        <hr />
-	<p>This is a list of the key terms and concepts in Machine Learning.</p>
+	<article>
+          <h1 id="blogTitle"> List of the key terms and concepts of ML </h1>
+          <hr />
+	  <p>This is a list of the key terms and concepts in Machine Learning.</p>
 <h3>Model</h3>
 <p>Our goal in ML is to create a good model. You take the input data and try to find underlying patterns in it, and the model is the output of your learning algorithms, it represents the patterns in data that you could find.</p>
 <!-- TODO what is the difference between the model and a Target Variable/Function? -->
@@ -1834,6 +1846,7 @@ Reinforcement learning, recommender systems
 the curse of dimensionality
 
 -->
+	</article>
       </div>
 </div>
 

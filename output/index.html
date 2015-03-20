@@ -1720,6 +1720,17 @@ jQuery(document).ready(function($) {
 
   <!-- Mermaid for diagrams -->
   <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
+
+  <!-- Mathjax for latex -->
+  <!-- Enable $ $ inline latex. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'],['\\(','\\)']]}
+    });
+  </script>
+  <script src="/theme/js/MathJax.js" type="text/javascript"></script>
+  <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
+
   
 </head>
 
@@ -1761,52 +1772,29 @@ jQuery(document).ready(function($) {
 <h3>Supervised</h3>
 <p>List of the most important machine learning algorithms to learn first:</p>
 <ul>
-<li>
-<p>Univariate and multivariate Linear regression ...</p></li></ul>
+<li>Univariate and multivariate Linear regression ...</li></ul>
 	  </p>
           <a href="/post/machine-learning-algorithms" id="readmore">>>> readmore</span></a> 
 	</article>
 	<article>
-          <a href="/post/deep-learning-roadmap"><h1>Getting Started with Deep Learning - Roadmap</h1></a>
+          <a href="/post/deep-learning"><h1>Getting Started with Deep Learning - resources and roadmap</h1></a>
 	  <hr/>
 	  <p>
-	    <p>First of all - the general overview of all the major topics, and the order in which to study them
-(made based on the overview of the Deep Learning from <a href="http://metacademy.org/roadmaps/rgrosse/deep_learning">metacademy</a>)</p>
-<p><a href="/images/deep-learning/deep-learning-roadmap.png"><img alt="deep learning roadmap" src="/images/deep-learning/deep-learning-roadmap.png" /></a></p>
-<p>Now - the list of resources and projects, in order of learning:</p>
-<h3>1. Andrew Ng course</h3>
-<p>Andrew Ng <a href="https://www.coursera.org/course/ml">Machine Learning course ...</a></p>
-	  </p>
-          <a href="/post/deep-learning-roadmap" id="readmore">>>> readmore</span></a> 
-	</article>
-	<article>
-          <a href="/post/deep-learning-resources"><h1>Getting Started with Deep Learning - Resources</h1></a>
-	  <hr/>
-	  <p>
-	    <p>This post lists a collection of the best resources for getting into Machine Learning (specifically - Deep Learning for Computer Vision), and the roadmap for studying it.</p>
+	    <p>This post is a collection of the best resources for getting into Deep Learning, <!-- Machine Learning (specifically - Deep Learning for Computer Vision) -->and the roadmap for studying it.</p>
 <h2>Resources</h2>
 <h3>Basic Math</h3>
 <h4>Calculus</h4>
 <ul>
-<li>
-<p><a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449">Khan Academy Calculus videos</a>  </p>
-</li>
-<li>
-<p><a href="https://www.coursera.org/course/m2o2c2">Coursera Calculus course</a></p>
-</li>
-<li>
-<p>MIT lectures on <a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm">Multivariable Calculus</a></p>
-</li>
+<li><a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449">Khan Academy Calculus videos</a>  </li>
+<li><a href="https://www.coursera.org/course/m2o2c2">Coursera Calculus course</a></li>
+<li>MIT lectures on <a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm">Multivariable Calculus</a></li>
 </ul>
 <h4>Linear Algebra</h4>
 <ul>
-<li>
-<p><a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0">Khan Academy Linear Algebra videos</a></p>
-</li>
-<li>
-<p><a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">MIT ...</a></p></li></ul>
+<li><a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0">Khan Academy Linear Algebra videos</a></li>
+<li><a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/">MIT linear algebra videos</a> by Gilbert Strang ...</li></ul>
 	  </p>
-          <a href="/post/deep-learning-resources" id="readmore">>>> readmore</span></a> 
+          <a href="/post/deep-learning" id="readmore">>>> readmore</span></a> 
 	</article>
 	<article>
           <a href="/post/machine-learning-key-concepts"><h1>List of the key terms and concepts of ML</h1></a>

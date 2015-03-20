@@ -1720,6 +1720,17 @@ jQuery(document).ready(function($) {
 
   <!-- Mermaid for diagrams -->
   <script src="/theme/js/mermaid.full.min.js" type="text/javascript"></script>
+
+  <!-- Mathjax for latex -->
+  <!-- Enable $ $ inline latex. -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     tex2jax: {inlineMath: [['$','$'],['\\(','\\)']]}
+    });
+  </script>
+  <script src="/theme/js/MathJax.js" type="text/javascript"></script>
+  <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
+
   
 </head>
 
@@ -1744,9 +1755,10 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> Introduction to Machine Learning </h1>
-        <hr />
-	<p>This article is a general overview of Machine Learning and the surrounding fields.</p>
+	<article>
+          <h1 id="blogTitle"> Introduction to Machine Learning </h1>
+          <hr />
+	  <p>This article is a general overview of Machine Learning and the surrounding fields.</p>
 <h2>What is Machine Learning?</h2>
 <blockquote>
 <p>The field of study that gives computers the ability to <strong>learn</strong> without being explicitly programmed.<br />
@@ -1836,6 +1848,7 @@ At this point a lot of [resources](/post/deep-learning-resources/) are available
 <ul>
 <li><a href="/post/machine-learning-key-concepts">Key Concepts in Machine Learning</a></li>
 </ul>
+	</article>
       </div>
 </div>
 

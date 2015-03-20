@@ -1,6 +1,7 @@
 Title: Getting Started with Deep Learning - Roadmap
 Slug: deep-learning-roadmap
 Date: 2014-12-22 06:00
+Status: draft
 
 First of all - the general overview of all the major topics, and the order in which to study them
 (made based on the overview of the Deep Learning from [metacademy](http://metacademy.org/roadmaps/rgrosse/deep_learning))
@@ -10,7 +11,7 @@ First of all - the general overview of all the major topics, and the order in wh
 Now - the list of resources and projects, in order of learning:
 
 
-###  1. Andrew Ng course
+##  1. Andrew Ng course
 Andrew Ng [Machine Learning course](https://www.coursera.org/course/ml),  
 supplemented with his [course on Deep learning ](http://openclassroom.stanford.edu/MainFolder/CoursePage.php?course=ufldl), and Neural Networks explanation from [Pedro Domingos ML course](https://class.coursera.org/machlearning-001/lecture/preview)(for things that are unclear).
 
