@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Digital Mind</title> <!-- digitalmind -->
+  <title>Hy Lisp - Introduction - Digital Mind</title> <!-- digitalmind -->
 
   <!-- Extra header for ipython -->
   
@@ -1671,6 +1671,7 @@ div.collapseheader {
 </style>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
 <script type="text/javascript">
 init_mathjax = function() {
     if (window.MathJax) {
@@ -1758,17 +1759,162 @@ jQuery(document).ready(function($) {
 	<article>
           <h1 id="blogTitle"> Hy Lisp - Introduction </h1>
           <hr />
-	  <p>wHy?
-test </p>
-<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="o">+</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
-<span class="mi">5</span>
-
-<span class="o">&gt;</span> <span class="p">(</span><span class="o">+</span> <span class="p">(</span><span class="o">+</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="o">+</span> <span class="mi">3</span> <span class="p">(</span><span class="o">+</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">)))</span>
-<span class="mi">15</span>
+	  <h2>wHy?</h2>
+<p>Lisp is considered to be the most powerful and elegant programming language,
+and python is considered to be the best first language to learn for the beginners,
+and also an amazing and powerful choice for Machine Learning(because of a lot of fantastic libraries).</p>
+<p>Hy is a lisp written on top of python, and compatible with it in both directions, so by learning it you get the best parts of both.</p>
+<p>That's why I think that Hy is the best programming language for:</p>
+<ul>
+<li>learning ML and AI,</li>
+<li>for getting into general Computer Science,</li>
+<li>and just for the sake of having the most fun out of hacking.</li>
+</ul>
+<p>And for people who already know python, Hy is an excellent opportunity to start learning lisp
+from the comfortable world of python.</p>
+<p>This series of tutorials will introducing Hy as a programming language,
+and then will use this as a foundation for learning the basic concepts of CS and AI,
+At the conclusion of this series of posts,  we will develop an artificial neural network(ANN).</p>
+<p>It will be awesome and exciting, you will learn a lot, have fun, and even solve some hacking puzzles and challenges.</p>
+<h2>Installation</h2>
+<p>To install hy you can simply type</p>
+<div class="highlight"><pre>pip install hy
 </pre></div>
 
 
-<p>Exercises</p>
+<p>After that you can just type</p>
+<div class="highlight"><pre>hy
+</pre></div>
+
+
+<p>And you will get a prompt of a REPL(read-eval-print loop where you type hy's commands).</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="k">print</span> <span class="s">&quot;Hello world!!&quot;</span><span class="p">)</span>
+<span class="n">Hello</span> <span class="n">world</span><span class="err">!!</span>
+</pre></div>
+
+
+<p>Alternatiely you can type this in your favorite text editor(I recommend emacs), save it as hello-world.hy, and then launch it with</p>
+<div class="highlight"><pre>hy hello-world.hy
+</pre></div>
+
+
+<h2>Basic math operations</h2>
+<p>Hy programs consist of expressions. For example a number or a string is an expression that simply returns itself:</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="mi">16</span>
+<span class="mi">16</span>
+
+<span class="o">&gt;</span> <span class="s">&quot;My string&quot;</span>
+<span class="s">&quot;My string&quot;</span>
+</pre></div>
+
+
+<p>To build more interesting expressions you can enclose simple ones in parentheses.</p>
+<p>Expressions in parentheses are lists. The first element of a list is usually a function, and the rest are the arguments.</p>
+<p>Each of the elements are evaluated from left to right, and return the value that they compute.</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="o">+</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">)</span>
+<span class="mi">5</span>
+</pre></div>
+
+
+<p>In thi example "=" is a function which, as you can guess, adds together the elements that you pass to it It may seem unusual to write the "+" sign before the numbers, instead of just writing "2 + 3", but it has it's advantages, and once you'll get used to it you will like it. By the way, that is called "prefix notation".</p>
+<p>One of the advantages is that you can pass as many elements as you want to the plus function:</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="o">+</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">7</span> <span class="mi">10</span><span class="p">)</span>
+<span class="mi">22</span>
+</pre></div>
+
+
+<p>Because lists(expressions enclosed in parentheses) themseles are expressions, you can write the nested expressions like so:</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="o">+</span> <span class="p">(</span><span class="o">*</span> <span class="mi">3</span> <span class="mi">2</span><span class="p">)</span> <span class="p">(</span><span class="o">+</span> <span class="mi">3</span> <span class="p">(</span><span class="o">/</span> <span class="mi">8</span> <span class="mi">2</span><span class="p">)))</span>
+<span class="mi">13</span>
+</pre></div>
+
+
+<p>In this example, expressions are evaluated in turn, and the results they return are passed to the higher level expression.</p>
+<ul>
+<li>(* 3 2) = 6</li>
+<li>(/ 8 2) = 4</li>
+<li>(+ 3 4) = 7</li>
+<li>(+ 6 7) = 13</li>
+</ul>
+<p>That is essentially how you write Hy programs, by creating nested lists of expressions.
+That turns out to be an extremely powerful and elegant way to code.</p>
+<h2>Variables</h2>
+<p>To define a variable in hy you use setv:</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="n">setv</span> <span class="n">result</span> <span class="p">(</span><span class="o">+</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">))</span>
+<span class="o">&gt;</span> <span class="p">(</span><span class="o">*</span> <span class="n">result</span> <span class="mi">2</span><span class="p">)</span>
+<span class="mi">10</span>
+</pre></div>
+
+
+<h2>Conditionals</h2>
+<p>The standard conditional operator is if. Like = and ssetv, it doesn't evaluate all of it's arguments. When given three arguments, it evaluates the first, and if that returns true, it returns the value of the second, otherwise the value of the third</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">odd</span> <span class="mi">1</span><span class="p">)</span> <span class="s">&#39;a &#39;</span><span class="n">b</span><span class="p">)</span>
+<span class="n">a</span>
+<span class="o">&gt;</span> <span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">odd</span> <span class="mi">2</span><span class="p">)</span> <span class="s">&#39;a &#39;</span><span class="n">b</span><span class="p">)</span>    
+<span class="n">b</span>
+</pre></div>
+
+
+<p>Returning true means returning anything except nil. Nil is conventionally used to represent falsity as well as the empty list. The symbol t(which like nil evaluates to itself) is often used to represent truth, but any value other than nil would serve just as well.</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="n">odd</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">t</span>
+<span class="o">&gt;</span> <span class="p">(</span><span class="n">odd</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">nil</span>
+</pre></div>
+
+
+<p>It sometimes causes confusion to use the same thing for falsity and the empty list, but many years of Lisp programming have convinced me it's a net win, because the empty list is set-theoretic false, and many Lisp programs think in sets.</p>
+<p>If the third argument is missing, it defaults to nil.</p>
+<div class="highlight"><pre><span class="p">(</span><span class="k">if</span> <span class="p">(</span><span class="n">odd</span> <span class="mi">2</span><span class="p">)</span> <span class="s">&#39;a)</span>
+<span class="n">nil</span>
+</pre></div>
+
+
+<p>An if with more than three arguments is equivalent to a nested if.</p>
+<div class="highlight"><pre><span class="p">(</span><span class="k">if</span> <span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span><span class="p">)</span>
+</pre></div>
+
+
+<p>is equivalent to</p>
+<div class="highlight"><pre><span class="p">(</span><span class="k">if</span> <span class="n">a</span>
+<span class="n">b</span>
+<span class="p">(</span><span class="k">if</span> <span class="n">c</span>
+    <span class="n">d</span>
+    <span class="n">e</span><span class="p">))</span>
+</pre></div>
+
+
+<p>If you're used to languages with elseif, this pattern will be familiar.</p>
+<h2>Loops</h2>
+<p>Hy has a variety of iteration operators. For a range of numbers use for.</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="k">for</span> <span class="p">[</span><span class="n">i</span> <span class="p">(</span><span class="nb">range</span> <span class="mi">10</span><span class="p">)]</span>
+    <span class="p">(</span><span class="k">print</span> <span class="n">i</span> <span class="s">&quot; &quot;</span><span class="p">))</span>
+<span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="mi">6</span> <span class="mi">7</span> <span class="mi">8</span> <span class="mi">9</span> <span class="mi">0</span> <span class="n">nil</span>
+</pre></div>
+
+
+<p>To iterate through the elements of a list or string just pass it to the for(?)</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">setv</span> <span class="n">mylist</span> <span class="p">[</span><span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span><span class="p">])</span>
+<span class="o">&gt;</span> <span class="p">(</span><span class="k">for</span> <span class="p">[</span><span class="n">i</span> <span class="n">mylist</span><span class="p">]</span>
+    <span class="p">(</span><span class="k">print</span> <span class="n">i</span> <span class="s">&quot; &quot;</span><span class="p">))</span>  
+<span class="n">a</span> <span class="n">b</span> <span class="n">c</span> <span class="n">d</span> <span class="n">e</span>
+</pre></div>
+
+
+<p>There's also a more general loop operator that's similar to the C for operator and tends to be rarely used in practice, and a simple repeat operator for doing something n times</p>
+<div class="highlight"><pre><span class="p">(</span><span class="n">repeat</span> <span class="mi">5</span> <span class="p">(</span><span class="k">print</span> <span class="s">&quot;la &quot;</span><span class="p">))</span>
+<span class="n">la</span> <span class="n">la</span> <span class="n">la</span> <span class="n">la</span> <span class="n">la</span> <span class="n">nil</span>
+</pre></div>
+
+
+<p>The map function takes a function and a list and returns the result of applying function to successive elements.</p>
+<div class="highlight"><pre><span class="o">&gt;</span> <span class="p">(</span><span class="nb">map</span> <span class="p">(</span><span class="n">fn</span> <span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="p">(</span><span class="o">+</span> <span class="n">x</span> <span class="mi">10</span><span class="p">)</span> <span class="s">&#39;(1 2 3))</span>
+<span class="p">(</span><span class="mi">11</span> <span class="mi">12</span> <span class="mi">13</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Actually it can take any number of sequences and keeps going till the shortest runs out.</p>
+<h2>Exercises</h2>
 	</article>
       </div>
 </div>

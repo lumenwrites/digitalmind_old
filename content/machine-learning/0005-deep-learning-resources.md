@@ -123,7 +123,8 @@ Projects:
 - Understand autoencoders, Restricted Boltzmann machines, create Deep Belief nets.
 
 
- 
+<!-- *[You can help to improve this article by [editing](https://github.com/raymestalez/dm/blob/master/content/machine-learning/0005-deep-learning-resources.md) it on github]* -->
+
 <!-- *[to be continued ....]* -->
 
 

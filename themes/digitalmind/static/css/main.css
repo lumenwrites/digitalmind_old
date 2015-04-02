@@ -339,7 +339,14 @@ thead th {
     min-width: 450px;
 }
 
+.bg-no-frame {
+    background: url("/theme/img/bg-no-frame.png") no-repeat center;
+    padding: 20px;
+}
 
+.bg-no-frame .MathJax span {
+    color: lightsteelblue;
+}
 
 /* Tweaks after OM */
 
@@ -422,3 +429,10 @@ blockquote strong {
 /* } */
 
 
+/* Other tweaks */
+
+/* Align mathjax to the left optionally */
+/* <div class="mathjax-align-left"> */
+.mathjax-align-left .MathJax_Display {
+  text-align: left !important;
+}

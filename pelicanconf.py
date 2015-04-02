@@ -11,7 +11,7 @@ STATIC_PATHS = [
     'static/.htaccess',
     'static/CNAME',
     'images',
-    ]
+     ]
 
 
 TIMEZONE = 'Europe/Paris'
@@ -47,6 +47,11 @@ ARTICLE_SAVE_AS = 'post/{slug}.html'
 PAGE_URL = '{slug}'
 PAGE_SAVE_AS = '{slug}.html'
 
+# Index as sub page.
+# Looks like only index lists posts, so I need to save another template as index. Weird.
+# INDEX_SAVE_AS = 'posts.html'
+# HOME_SAVE_AS = 'index.html'
+
 # TAG_URL = 'tag/{slug}/'
 # TAG_SAVE_AS = 'tag/{slug}/index.html'
 # TAGS_URL = 'tags/'
@@ -57,7 +62,8 @@ PAGE_SAVE_AS = '{slug}.html'
 #     (2, '{base_name}/posts/{number}/', '{base_name}/posts/{number}/index.html'),
 #)
 
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', ) #'about'
+# List a template here to generate it.
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', ) #'about' #'home',
 
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''

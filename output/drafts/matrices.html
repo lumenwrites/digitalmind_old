@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Digital Mind</title> <!-- digitalmind -->
+  <title>Matrices and vectors - Digital Mind</title> <!-- digitalmind -->
 
   <!-- Extra header for ipython -->
   
@@ -1671,6 +1671,7 @@ div.collapseheader {
 </style>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
+
 <script type="text/javascript">
 init_mathjax = function() {
     if (window.MathJax) {
@@ -1758,24 +1759,45 @@ jQuery(document).ready(function($) {
 	<article>
           <h1 id="blogTitle"> Matrices and vectors </h1>
           <hr />
-	  <p>This article is about the basics of matrices and operations on them.</p>
-<p>Matrices are a convention to represent data, they are very convenient for solving all kinds of problems. A lot of these problems are often encountered in Machine Learning, and that is why it is so useful.</p>
-<p>Matrix is a rectangular array of numbers within square brackets.</p>
-<p>A matrix looks like that:</p>
+	  <p>This is an introduction to matrices and vectors and basic operations on them.
+<!-- If you wanted to read about the enslavement of a human race by the malevolent machines - wait 20-30 years and read /r/worldnews. --></p>
+<h3>Matrices</h3>
+<p><strong>Matrix</strong> is just a convention for representing the data that is very useful for solving all kinds of problems. Yes, just that. If you wanted to read about the virtual reality built by the malevolent machines for the purposes of enslaving the human race - wait 20-30 years and read /r/worldnews.</p>
+<!-- **Matrices** are just a convention for representing the data that is very useful for solving all kinds of problems. -->
+
+<!-- If you're disappointed that it isn't a virtual reality built by machines to enslave human race... -->
+
+<p>For example, matrices can be used to represent:</p>
+<ul>
+<li>Linear equations.</li>
+<li>Pixels on a screen (useful for computer graphics)</li>
+<li>Points in a coordinate space.</li>
+<li>The training data for a Machine Learning problem.</li>
+<li>Many other things.</li>
+</ul>
+<p>A matrix looks like a table of numbers within square brackets. For example this is a matrix:</p>
 <p>$$
+A
+=
 \begin{bmatrix}
-1 &amp; 2 \cr
-3 &amp; 4 \cr
-5 &amp; 6
+1 &amp; 42  &amp; 6 \cr
+0 &amp; 13  &amp; 4 \cr
+2 &amp; 8 &amp; 15 \cr
+16 &amp; 23 &amp; 32 \cr
 \end{bmatrix}
 $$</p>
-<p>This matrix has 3 rows and 2 columns, therefore it is 3x2 ("3 by 2") matrix.
-This is called a dimension of matrix.</p>
-<p>$ A_{ij} $ is an element(entry) of a matrix, in the $ i^{th} $ row, $ j^{th} $ column.</p>
-<p>For example $A_{21}$ is 3.</p>
-<h2>Vector</h2>
-<p>Vector is a matrix with only one column(nx1 matrix).</p>
-<p>This is a 3-dimensional vector:</p>
+<p>This matrix has 4 <strong>rows</strong> and 3 <strong>columns</strong>, therefore it is called 4x3 ("4 by 3") matrix.
+The number of rows/columns a matrix as is called it's "<strong>dimensions</strong>".</p>
+<p>If you want to refer to a specific <strong>element</strong>("entry") of a matrix, for example a number in a 3rd row, 2nd column, you can do it like this:</p>
+<p>$$
+A_{3,2} = 8
+$$</p>
+<p>$ A_{ij} $ is an element of a matrix , in the $ i^{th} $ row, $ j^{th} $ column.</p>
+<h3>Vectors</h3>
+<p>Vector is a special case of a matrix, a matrix that has only one row or one column(nx1, or 1xn matrix).
+<!-- vector is one-dimensional matrix --></p>
+<p>Matrices with only one row are called <strong>row vectors</strong>, and the ones that have only one column are called <strong>column vectors</strong>.</p>
+<p>This is a 3-dimensional column vector:</p>
 <p>$$
 \vec{y} =
 \begin{bmatrix}
@@ -1784,9 +1806,9 @@ This is called a dimension of matrix.</p>
 42
 \end{bmatrix}
 $$</p>
-<p>$ \vec{y}_i $ is an $ i^{th} $ element of a vector.</p>
-<p>For example $ \vec{y}_2 = 31 $.</p>
-<p>Sometimes vectors are 1-indexed(numbers of elements start with 1):
+<p>$ \vec{y}_i $ is an $ i^{th} $ element of a vector. For example $ \vec{y}_2 = 31 $.</p>
+<!--
+Sometimes vectors are 1-indexed(numbers of elements start with 1):
 $$
 \vec{y} =
 \begin{bmatrix}
@@ -1795,8 +1817,9 @@ y_2 \cr
 y_3 \cr
 y_4
 \end{bmatrix}
-$$</p>
-<p>and sometimes they're 0-indexed:
+$$
+
+and sometimes they're 0-indexed:
 $$
 \vec{y} =
 \begin{bmatrix}
@@ -1805,34 +1828,52 @@ y_1 \cr
 y_2 \cr
 y_3
 \end{bmatrix}
-$$</p>
-<p>In math 1-indexed vectors are more common, but in ML 0-indexed are more convenient.</p>
-<p>In my math articles I'll use 1-indexed vectors.</p>
+$$
+
+In math 1-indexed vectors are more common, but in ML 0-indexed are more convenient.
+
+In my math articles I'll use 1-indexed vectors.
+-->
+
 <p>By convention, capital letters usually refer to matrices, and lowercase letters are used for vectors.</p>
-<h2>Matrix addition</h2>
-<p>To add matrices you just add up the corresponding elements one at a time.</p>
+<h2>Basic operations  <!-- on matrices --></h2>
+<h3>Addition and subtraction</h3>
+<p>To add matrices together you simply add up the corresponding elements one at a time.</p>
+<!-- <div class="bg-no-frame"> -->
+
 <p>$$
 \begin{bmatrix}
 1 &amp; 0 \cr
-2 &amp; 5 \cr
-3 &amp; 1
+2 &amp; 13 \cr
+3 &amp; 6
 \end{bmatrix}
 +
 \begin{bmatrix}
-4 &amp; 0.5 \cr
-2 &amp; 5 \cr
-0 &amp; 1 \cr
+4 &amp; 7 \cr
+8 &amp; 0.5 \cr
+22 &amp; -1 \cr
 \end{bmatrix}
 =
 \begin{bmatrix}
-5 &amp; 0.5 \cr
-4 &amp; 10 \cr
-3 &amp; 2 \cr
+(1 + 4) &amp; (0 + 7) \cr
+(2 + 8) &amp; (13 + 0.5) \cr
+(3 + 22) &amp; (6 - 1) \cr
 \end{bmatrix}
-$$</p>
-<p>You can only add matrices of the same dimension.</p>
-<h2>Scalar multiplication and division</h2>
-<p>To multiply a matrix by a number(scalar) you multiply each of it's elements by this number.</p>
+=
+\begin{bmatrix}
+5 &amp; 7 \cr
+10 &amp; 13.5 \cr
+25 &amp; 5 \cr
+\end{bmatrix}
+$$
+<!-- </div> --></p>
+<p>Because vectors are just special cases of matrices, the same applies to them.</p>
+<p>Subtraction is the same, you simply subtract the corresponding elements.</p>
+<p>You can only add/subtract matrices of the same dimension.</p>
+<!-- Just like with numbers, matrix addition/subtraction has the property of /??, A+B = B+A -->
+
+<h3>Scalar multiplication and division</h3>
+<p>To multiply a matrix by a number(scalar) you multiply each of it's elements by that number.</p>
 <p>$$
 3 *
 \begin{bmatrix}
@@ -1861,15 +1902,274 @@ $$
 \end{bmatrix}
 $$</p>
 <p>(because dividing by a number is the same as multiplying by 1 divided by a number.)</p>
-<h2>Matrix vector multiplication</h2>
-<p>Multiplying matrix by a vector is a little more elaborate.</p>
-<p>When you multiply matrix by a vector you get a vector as a result.
-To get the first element of a vector you to take elements from the first <strong>row</strong> of a matrix and multiply them with corresponding elements from the vector <strong>column</strong>, and then add the results together. Then you repeat that process for each of the rows to get each of the elements of a vector.</p>
+<h3>Dot product</h3>
+<p>Let's say we have 2 vectors:</p>
 <p>$$
+\vec{a} =
 \begin{bmatrix}
-1 &amp; 3 \cr
-4 &amp; 0 \cr
-2 &amp; 1
+3 &amp; 2 \cr
+\end{bmatrix}
+$$</p>
+<p>$$
+\vec{b} =
+\begin{bmatrix}
+7 \cr
+9 \cr
+\end{bmatrix}
+$$</p>
+<p>To find the dot product, you need to multiply the corresponding elements, and then add the results together:</p>
+<p>$$
+3 * 7 + 2 * 9 = 39
+$$</p>
+<h3>Matrix multiplication</h3>
+<p>Matrix multiplication is a little more elaborate than addition.</p>
+<p>Let's say we want to multiply matrices $A$ and $B$ to get the resulting matrix $C$.</p>
+<div class="mathjax-align-left">
+$$
+A =
+\begin{bmatrix}
+\color{Lightseagreen}1 & \color{Lightseagreen}2 \cr
+\color{Purple}3 & \color{Purple}4 \cr
+\end{bmatrix}
+$$
+
+$$
+B =
+\begin{bmatrix}
+\color{#CD5F5F}5 & \color{Green}6 \cr
+\color{#CD5F5F}7 & \color{Green}8 \cr
+\end{bmatrix}
+$$
+
+$$
+C =
+\begin{bmatrix}
+c_{11} & c_{12} \cr
+c_{21} & c_{22} \cr
+\end{bmatrix}
+=
+?
+$$
+</div>
+
+<!-- End align -->
+
+<p>To get the resulting elements of a matrix $C$ you need to find a dot product of a corresponding <em>row</em> from the matrix $A$ and the <em>column</em> from the matrix $B$.</p>
+<p>For example to find $c_{11}$, you calculate a dot product of the <em>first</em> row of a matrix $A$ and a <em>first</em> column of a matrix $B$.</p>
+<div class="mathjax-align-left">
+$$
+c_{11} =
+\color{Lightseagreen}1 * \color{#CD5F5F}5 + \color{Lightseagreen}2 * \color{#CD5F5F}7
+= 19
+$$
+
+You can do the same for the rest of the elements:
+
+$$
+c_{12} =
+\color{Lightseagreen}1 * \color{Green}6 + \color{Lightseagreen}2 * \color{Green}8
+= 22
+$$
+
+$$
+c_{21} =
+\color{Purple}3 * \color{#CD5F5F}5 + \color{Purple}4 * \color{#CD5F5F}7 
+= 43
+$$
+
+$$
+c_{22} =
+\color{Purple}3 * \color{Green}6 + \color{Purple}4 * \color{Green}8
+= 50
+$$
+
+Now we put them together in a result:
+
+$$
+C =
+\begin{bmatrix}
+c_{11} & c_{12} \cr
+c_{21} & c_{22} \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+19 & 22 \cr
+43 & 50 \cr
+\end{bmatrix}
+$$
+
+Here it all together, for clarity:
+
+$$
+\begin{bmatrix}
+\color{Lightseagreen}1 & \color{Lightseagreen}2 \cr
+\color{Purple}3 & \color{Purple}4 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+\color{#CD5F5F}5 & \color{Green}6 \cr
+\color{#CD5F5F}7 & \color{Green}8 \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+(\color{Lightseagreen}1 * \color{#CD5F5F}5 + \color{Lightseagreen}2 * \color{#CD5F5F}7) & (\color{Lightseagreen}1 * \color{Green}6 + \color{Lightseagreen}2 * \color{Green}8) \cr
+(\color{Purple}3 * \color{#CD5F5F}5 + \color{Purple}4 * \color{#CD5F5F}7) & (\color{Purple}3 * \color{Green}6 + \color{Purple}4 * \color{Green}8) \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+19 & 22 \cr
+43 & 50 \cr
+\end{bmatrix}
+$$
+
+</div>
+
+<!-- end align -->
+
+<p>Properties of matrix multiplication:</p>
+<ul>
+<li>
+<p>You can only multiply matrices when the number of columns of the first one equals the number of rows of the second one.</p>
+</li>
+<li>
+<p>Multiplying m x n matrix (m rows, n columns) by n x o matrix(n rows, o columns) will result in m x o matrix.</p>
+</li>
+<li>
+<p>Unlike with addition, $A * B != B * A$, multiplication order matters.</p>
+</li>
+</ul>
+<!-- unlike with addition, multiplication order matters. -->
+
+<ul>
+<li>
+<p><strong>Exercise</strong> multiply these 2 matrices:<br />
+  <div class="mathjax-align-left">
+    $$
+    A =
+    \begin{bmatrix}
+    2 &amp; -3 \cr
+    7 &amp; 5 \cr
+    \end{bmatrix}
+    $$
+    $$
+    B =
+    \begin{bmatrix}
+    10 &amp; -8 \cr
+    12 &amp; -2 \cr
+    \end{bmatrix}
+    $$</p>
+<p><!-- $$ -->
+<!-- C = -->
+<!-- \begin{bmatrix} -->
+<!-- c_{11} & c_{12} \cr -->
+<!-- c_{21} & c_{22} \cr -->
+<!-- \end{bmatrix} -->
+<!-- = -->
+<!-- ? -->
+<!-- $$ -->
+</div> <!-- end align --></p>
+</li>
+</ul>
+<p><span class="expand">[Show the Answer]</span><br />
+<div class="description">
+<div class="mathjax-align-left">
+$$
+c_{11} =
+\begin{bmatrix}
+2 &amp; -3 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+10 \cr
+12 \cr
+\end{bmatrix}
+=
+(2 * 10) + (-3 * 12)
+=
+20 - 36
+=
+-16
+$$</p>
+<p>$$
+c_{12} =
+\begin{bmatrix}
+2 &amp; -3 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+-8 \cr
+-2 \cr
+\end{bmatrix}
+=
+(2 * -8) + (-3 * -2)
+=
+-16 + 6 
+=
+-10
+$$</p>
+<p>$$
+c_{21} =
+\begin{bmatrix}
+7 &amp; 5 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+10 \cr
+12 \cr
+\end{bmatrix}
+=
+(7 * 10) + (5 * 12)
+=
+70 + 60
+=
+130
+$$</p>
+<p>$$
+c_{22} =
+\begin{bmatrix}
+7 &amp; 5 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+-8 \cr
+-2 \cr
+\end{bmatrix}
+=
+(7 * -8) + (5 * -2)
+=
+-56 -10
+=
+-66
+$$
+$$
+C =
+\begin{bmatrix}
+c_{11} &amp; c_{12} \cr
+c_{21} &amp; c_{22} \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+-16 &amp; -10 \cr
+130 &amp; -66 \cr
+\end{bmatrix}
+$$
+</div> <!-- End align -->
+</div> <!-- End description --></p>
+<!-- End Exercise  -->
+
+<!--
+## Matrix vector multiplication
+
+Multiplying matrix by a vector is a little more elaborate.
+
+When you multiply matrix by a vector you get a vector as a result.
+To get the first element of a vector you to take elements from the first **row** of a matrix and multiply them with corresponding elements from the vector **column**, and then add the results together. Then you repeat that process for each of the rows to get each of the elements of a vector.
+
+$$
+\begin{bmatrix}
+1 & 3 \cr
+4 & 0 \cr
+2 & 1
 \end{bmatrix}
 *
 \begin{bmatrix}
@@ -1882,31 +2182,42 @@ To get the first element of a vector you to take elements from the first <strong
 4 \cr
 7 
 \end{bmatrix}
-$$</p>
-<p>1 * 1 + 3 * 5 = 16<br />
-4 * 1 + 0 * 5 = 4<br />
-2 * 1 + 1 * 5 = 7  </p>
-<p>$$
+$$
+
+1 * 1 + 3 * 5 = 16  
+4 * 1 + 0 * 5 = 4  
+2 * 1 + 1 * 5 = 7  
+
+
+$$
 A * \vec{x} = \vec{y}
-$$</p>
-<p>To get $\vec{y}_{i}$, you multiply $A$'s $i^{th}$ row with elements of vector x, and add them up.</p>
-<h2>Applying function to several features</h2>
-<p>Features:<br />
-2104<br />
-1416<br />
-1534<br />
-852</p>
-<p>Function:</p>
-<p>$$
+$$
+
+To get $\vec{y}_{i}$, you multiply $A$'s $i^{th}$ row with elements of vector x, and add them up.
+-->
+
+<!--
+## Applying function to several features
+
+Features:  
+2104  
+1416  
+1534  
+852
+
+Function:
+
+$$
 h_\theta(x) = -40 + 0.25x
-$$</p>
-<p>Applying it to all the features at the same time:
+$$
+
+Applying it to all the features at the same time:
 $$
 \begin{bmatrix}
-1 &amp; 2104 \cr
-1 &amp; 1416 \cr
-1 &amp; 1534 \cr
-1 &amp; 852
+1 & 2104 \cr
+1 & 1416 \cr
+1 & 1534 \cr
+1 & 852
 \end{bmatrix}
 *
 \begin{bmatrix}
@@ -1914,67 +2225,171 @@ $$
 0.25
 \end{bmatrix}
 $$
-The result of this multiplication will be a vector of $h_\theta()$ applied to all the features.</p>
-<h2>Matrix matrix multiplication</h2>
-<p>$$
+The result of this multiplication will be a vector of $h_\theta()$ applied to all the features.
+
+## Matrix matrix multiplication
+$$
 \begin{bmatrix}
-1 &amp; 3 &amp; 2 \cr
-4 &amp; 0 &amp; 1
+1 & 3 & 2 \cr
+4 & 0 & 1
 \end{bmatrix}
 *
 \begin{bmatrix}
-1 &amp; 3 \cr
-0 &amp; 1 \cr
-5 &amp; 2
+1 & 3 \cr
+0 & 1 \cr
+5 & 2
 \end{bmatrix}
 =
 \begin{bmatrix}
-11 &amp; 10 \cr
-9  &amp;  14
+11 & 10 \cr
+9  &  14
 \end{bmatrix}
-$$</p>
-<p>Number of columns in the first matrix must equal to number of rows in the 2nd matrix.</p>
-<p>Ith column of mmatrix C is obtained by multiplying A with the ith column of vector B.</p>
-<h2>Applying several hypotheses to features</h2>
-<p><a href="/images/math/applying-hypotheses-with-matrix-multiplication.png"><img alt="Applying several hypotheses to features" src="/images/math/applying-hypotheses-with-matrix-multiplication.png" /></a></p>
-<h2>Properties of matrix multiplication</h2>
-<p>not commutative - order matters</p>
-<p>order of multiplication matters too<br />
-3x5x2<br />
-(is associative)</p>
-<h3>Identity matrix</h3>
-<p>When you multiply a matrix by it you get the same matrix.</p>
-<p>$I_{n*n}$</p>
-<p>AI = IA</p>
-<p>$$
+$$
+
+Number of columns in the first matrix must equal to number of rows in the 2nd matrix.
+
+Ith column of mmatrix C is obtained by multiplying A with the ith column of vector B.
+
+## Applying several hypotheses to features
+
+[![Applying several hypotheses to features]
+(/images/math/applying-hypotheses-with-matrix-multiplication.png)](/images/math/applying-hypotheses-with-matrix-multiplication.png)
+
+
+## Properties of matrix multiplication
+
+not commutative - order matters
+
+order of multiplication matters too  
+3x5x2  
+(is associative)
+
+### Identity matrix
+
+When you multiply a matrix by it you get the same matrix.
+
+$I_{n*n}$
+
+AI = IA
+
+$$
 \begin{bmatrix}
-1 &amp; 0 &amp; 0 \cr
-0 &amp; 1 &amp; 0 \cr
-0 &amp; 0 &amp; 1 
+1 & 0 & 0 \cr
+0 & 1 & 0 \cr
+0 & 0 & 1 
 \end{bmatrix}
-$$</p>
-<h2>Inverting matrices</h2>
-<p>1 = "Identity" for real numbers.</p>
-<p>Inverse of a number - when you multiply a number by it you get 1.</p>
-<p>Inverse of a matrix - when you multiply a matrix by it's inverse you get an identity matrix.</p>
-<p>$A^{-1}$</p>
-<p>A*A^-1=A^-1A=I</p>
-<h2>Transposing matrices</h2>
-<p><a href="/images/math/matrix-transpose.png"><img alt="matrix-transpose" src="/images/math/matrix-transpose.png" /></a></p>
-<p>$B_{ij} = A_{ji}$</p>
-<h2>Inverting matrices</h2>
-<p>A^-1 = (1/|A|)*Adj(A)</p>
-<p>You get |A| of 3x3 matrix by multiplying each of it's elements by it's corresponding cofactor(thing in the same place in Adj(A))(?)</p>
-<h3>Determinant</h3>
-<p>a b
-c d </p>
-<p>|a d| - c - b</p>
-<h3>Adjegate</h3>
-<p>flip accross the diagonal</p>
+$$
+-->
+
+<!--
+## Inverting matrices
+
+1 = "Identity" for real numbers.
+
+Inverse of a number - when you multiply a number by it you get 1.
+
+Inverse of a matrix - when you multiply a matrix by it's inverse you get an identity matrix.
+
+$A^{-1}$
+
+
+A*A^-1=A^-1A=I
+
+## Transposing matrices
+
+[![matrix-transpose]
+(/images/math/matrix-transpose.png)](/images/math/matrix-transpose.png)
+
+$B_{ij} = A_{ji}$
+
+
+## Inverting matrices
+A^-1 = (1/|A|)*Adj(A)
+
+You get |A| of 3x3 matrix by multiplying each of it's elements by it's corresponding cofactor(thing in the same place in Adj(A))(?)
+### Determinant
+
+a b
+c d 
+
+|a d| - c - b
+
+### Adjegate
+flip accross the diagonal
+-->
+
 <!-- matrix -->
 
 <p>$$ \matrix{1&amp;2\cr
          3&amp;4} $$</p>
+<!-- <style> -->
+
+<!-- img { -->
+
+<!-- width: 100%; -->
+
+<!-- padding: 40px; -->
+
+<!-- height: 40px; -->
+
+<!-- background: url("/theme/img/bg.png"); -->
+
+<!-- background-size:100%; -->
+
+<!-- } -->
+
+<!-- </style> -->
+
+<!-- Scripts -->
+
+<!-- Expanding List -->
+
+<script>
+function prepareList() {
+  $('body').find('li:has(ul)')
+    .click( function(event) {
+        if (this == event.target) {
+            $(this).toggleClass('expanded');
+            $(this).children('ul').toggle('medium');
+        }
+        return false;
+    })
+    .addClass('collapsed');
+    //.children('ul').hide();
+  };
+
+function prepareExpand() {
+  $('.expand').click( function(event) {
+        if (this == event.target) {
+            $(this).parent().parent().find('.description').toggle('fast');
+        }
+        return false;
+    }).parent().parent().find('.description').hide();
+    //.addClass('collapsed');
+    //.children('ul').hide();
+};
+
+$(document).ready( function() {
+  //prepareList();
+  prepareExpand();
+  });
+</script>
+
+<style>
+.expand {
+color: gray;
+cursor: pointer;
+}
+<!-- font-size: 12px;-->
+</style>
+
+<!-- Align mathjax to the left -->
+
+<style>
+.mathjax-align-left .MathJax_Display {
+  text-align: left !important;
+}
+</style>
 	</article>
       </div>
 </div>

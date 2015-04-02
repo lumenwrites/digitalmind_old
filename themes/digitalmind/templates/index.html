@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+
 <section id="content">
   
   <div id="page"  class="blogPage">
@@ -13,7 +14,7 @@
 	  <p>
 	    {{ article.summary }}
 	  </p>
-          <a href="{{ SITEURL }}/{{ article.url }}" id="readmore">>>> readmore</span></a> 
+          <a href="{{ SITEURL }}/{{ article.url }}" id="readmore">>>> readmore</span></a>
 	</article>
 	{% endfor %}
 	
@@ -21,4 +22,9 @@
         </div>
     </div>
 </section>
+
 {% endblock content %}
+
+
+
+ 

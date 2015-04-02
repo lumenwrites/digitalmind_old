@@ -4,35 +4,58 @@ Slug: matrices
 Category: math
 Status: draft
 
-This article is about the basics of matrices and operations on them.
+This is an introduction to matrices and vectors and basic operations on them.
+<!-- If you wanted to read about the enslavement of a human race by the malevolent machines - wait 20-30 years and read /r/worldnews. -->
 
-Matrices are a convention to represent data, they are very convenient for solving all kinds of problems. A lot of these problems are often encountered in Machine Learning, and that is why it is so useful.
 
-Matrix is a rectangular array of numbers within square brackets.
+### Matrices
+**Matrix** is just a convention for representing the data that is very useful for solving all kinds of problems. Yes, just that. If you wanted to read about the virtual reality built by the malevolent machines for the purposes of enslaving the human race - wait 20-30 years and read /r/worldnews.
 
-A matrix looks like that:
+<!-- **Matrices** are just a convention for representing the data that is very useful for solving all kinds of problems. -->
+<!-- If you're disappointed that it isn't a virtual reality built by machines to enslave human race... -->
+
+For example, matrices can be used to represent:
+
+- Linear equations.
+- Pixels on a screen (useful for computer graphics)
+- Points in a coordinate space.
+- The training data for a Machine Learning problem.
+- Many other things.
+
+A matrix looks like a table of numbers within square brackets. For example this is a matrix:
 
 $$
+A
+=
 \begin{bmatrix}
-1 & 2 \cr
-3 & 4 \cr
-5 & 6
+1 & 42  & 6 \cr
+0 & 13  & 4 \cr
+2 & 8 & 15 \cr
+16 & 23 & 32 \cr
 \end{bmatrix}
 $$
 
 
-This matrix has 3 rows and 2 columns, therefore it is 3x2 ("3 by 2") matrix.
-This is called a dimension of matrix.
+This matrix has 4 **rows** and 3 **columns**, therefore it is called 4x3 ("4 by 3") matrix.
+The number of rows/columns a matrix as is called it's "**dimensions**".
 
-$ A_{ij} $ is an element(entry) of a matrix, in the $ i^{th} $ row, $ j^{th} $ column.
+If you want to refer to a specific **element**("entry") of a matrix, for example a number in a 3rd row, 2nd column, you can do it like this:
 
-For example $A_{21}$ is 3.
+$$
+A_{3,2} = 8
+$$
 
-## Vector
+$ A_{ij} $ is an element of a matrix , in the $ i^{th} $ row, $ j^{th} $ column.
 
-Vector is a matrix with only one column(nx1 matrix).
 
-This is a 3-dimensional vector:
+### Vectors
+
+Vector is a special case of a matrix, a matrix that has only one row or one column(nx1, or 1xn matrix).
+<!-- vector is one-dimensional matrix -->
+
+Matrices with only one row are called **row vectors**, and the ones that have only one column are called **column vectors**.
+
+This is a 3-dimensional column vector:
 
 $$
 \vec{y} =
@@ -44,10 +67,9 @@ $$
 $$
 
 
-$ \vec{y}_i $ is an $ i^{th} $ element of a vector.
+$ \vec{y}_i $ is an $ i^{th} $ element of a vector. For example $ \vec{y}_2 = 31 $.
 
-For example $ \vec{y}_2 = 31 $.
-
+<!--
 Sometimes vectors are 1-indexed(numbers of elements start with 1):
 $$
 \vec{y} =
@@ -73,40 +95,59 @@ $$
 In math 1-indexed vectors are more common, but in ML 0-indexed are more convenient.
 
 In my math articles I'll use 1-indexed vectors.
-
+-->
 
 By convention, capital letters usually refer to matrices, and lowercase letters are used for vectors.
 
 
-## Matrix addition
 
-To add matrices you just add up the corresponding elements one at a time.
+## Basic operations  <!-- on matrices -->
 
+### Addition and subtraction
+
+To add matrices together you simply add up the corresponding elements one at a time.
+
+
+<!-- <div class="bg-no-frame"> -->
 $$
 \begin{bmatrix}
 1 & 0 \cr
-2 & 5 \cr
-3 & 1
+2 & 13 \cr
+3 & 6
 \end{bmatrix}
 +
 \begin{bmatrix}
-4 & 0.5 \cr
-2 & 5 \cr
-0 & 1 \cr
+4 & 7 \cr
+8 & 0.5 \cr
+22 & -1 \cr
 \end{bmatrix}
 =
 \begin{bmatrix}
-5 & 0.5 \cr
-4 & 10 \cr
-3 & 2 \cr
+(1 + 4) & (0 + 7) \cr
+(2 + 8) & (13 + 0.5) \cr
+(3 + 22) & (6 - 1) \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+5 & 7 \cr
+10 & 13.5 \cr
+25 & 5 \cr
 \end{bmatrix}
 $$
+<!-- </div> -->
 
-You can only add matrices of the same dimension.
+Because vectors are just special cases of matrices, the same applies to them.
 
-## Scalar multiplication and division
+Subtraction is the same, you simply subtract the corresponding elements.
 
-To multiply a matrix by a number(scalar) you multiply each of it's elements by this number.
+You can only add/subtract matrices of the same dimension.
+
+<!-- Just like with numbers, matrix addition/subtraction has the property of /??, A+B = B+A -->
+
+
+### Scalar multiplication and division
+
+To multiply a matrix by a number(scalar) you multiply each of it's elements by that number.
 
 $$
 3 *
@@ -139,6 +180,269 @@ $$
 
 (because dividing by a number is the same as multiplying by 1 divided by a number.)
 
+### Dot product
+
+Let's say we have 2 vectors:
+
+$$
+\vec{a} =
+\begin{bmatrix}
+3 & 2 \cr
+\end{bmatrix}
+$$
+
+$$
+\vec{b} =
+\begin{bmatrix}
+7 \cr
+9 \cr
+\end{bmatrix}
+$$
+
+To find the dot product, you need to multiply the corresponding elements, and then add the results together:
+
+$$
+3 * 7 + 2 * 9 = 39
+$$
+
+### Matrix multiplication
+
+Matrix multiplication is a little more elaborate than addition.
+
+Let's say we want to multiply matrices $A$ and $B$ to get the resulting matrix $C$.
+
+<div class="mathjax-align-left">
+$$
+A =
+\begin{bmatrix}
+\color{Lightseagreen}1 & \color{Lightseagreen}2 \cr
+\color{Purple}3 & \color{Purple}4 \cr
+\end{bmatrix}
+$$
+
+$$
+B =
+\begin{bmatrix}
+\color{#CD5F5F}5 & \color{Green}6 \cr
+\color{#CD5F5F}7 & \color{Green}8 \cr
+\end{bmatrix}
+$$
+
+$$
+C =
+\begin{bmatrix}
+c_{11} & c_{12} \cr
+c_{21} & c_{22} \cr
+\end{bmatrix}
+=
+?
+$$
+</div> <!-- End align -->
+
+To get the resulting elements of a matrix $C$ you need to find a dot product of a corresponding *row* from the matrix $A$ and the *column* from the matrix $B$.
+
+For example to find $c_{11}$, you calculate a dot product of the *first* row of a matrix $A$ and a *first* column of a matrix $B$.
+
+<div class="mathjax-align-left">
+$$
+c_{11} =
+\color{Lightseagreen}1 * \color{#CD5F5F}5 + \color{Lightseagreen}2 * \color{#CD5F5F}7
+= 19
+$$
+
+You can do the same for the rest of the elements:
+
+$$
+c_{12} =
+\color{Lightseagreen}1 * \color{Green}6 + \color{Lightseagreen}2 * \color{Green}8
+= 22
+$$
+
+$$
+c_{21} =
+\color{Purple}3 * \color{#CD5F5F}5 + \color{Purple}4 * \color{#CD5F5F}7 
+= 43
+$$
+
+$$
+c_{22} =
+\color{Purple}3 * \color{Green}6 + \color{Purple}4 * \color{Green}8
+= 50
+$$
+
+Now we put them together in a result:
+
+$$
+C =
+\begin{bmatrix}
+c_{11} & c_{12} \cr
+c_{21} & c_{22} \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+19 & 22 \cr
+43 & 50 \cr
+\end{bmatrix}
+$$
+
+Here it all together, for clarity:
+
+$$
+\begin{bmatrix}
+\color{Lightseagreen}1 & \color{Lightseagreen}2 \cr
+\color{Purple}3 & \color{Purple}4 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+\color{#CD5F5F}5 & \color{Green}6 \cr
+\color{#CD5F5F}7 & \color{Green}8 \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+(\color{Lightseagreen}1 * \color{#CD5F5F}5 + \color{Lightseagreen}2 * \color{#CD5F5F}7) & (\color{Lightseagreen}1 * \color{Green}6 + \color{Lightseagreen}2 * \color{Green}8) \cr
+(\color{Purple}3 * \color{#CD5F5F}5 + \color{Purple}4 * \color{#CD5F5F}7) & (\color{Purple}3 * \color{Green}6 + \color{Purple}4 * \color{Green}8) \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+19 & 22 \cr
+43 & 50 \cr
+\end{bmatrix}
+$$
+
+</div> <!-- end align -->
+
+Properties of matrix multiplication:
+
+- You can only multiply matrices when the number of columns of the first one equals the number of rows of the second one.
+
+- Multiplying m x n matrix (m rows, n columns) by n x o matrix(n rows, o columns) will result in m x o matrix.
+
+- Unlike with addition, $A * B != B * A$, multiplication order matters.
+
+<!-- unlike with addition, multiplication order matters. -->
+
+
+
+- **Exercise** multiply these 2 matrices:  
+  <div class="mathjax-align-left">
+	$$
+	A =
+	\begin{bmatrix}
+	2 & -3 \cr
+	7 & 5 \cr
+	\end{bmatrix}
+	$$
+	$$
+	B =
+	\begin{bmatrix}
+	10 & -8 \cr
+	12 & -2 \cr
+	\end{bmatrix}
+	$$
+	
+	<!-- $$ -->
+	<!-- C = -->
+	<!-- \begin{bmatrix} -->
+	<!-- c_{11} & c_{12} \cr -->
+	<!-- c_{21} & c_{22} \cr -->
+	<!-- \end{bmatrix} -->
+	<!-- = -->
+	<!-- ? -->
+	<!-- $$ -->
+	</div> <!-- end align -->
+
+<span class="expand">[Show the Answer]</span>  
+<div class="description">
+<div class="mathjax-align-left">
+$$
+c_{11} =
+\begin{bmatrix}
+2 & -3 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+10 \cr
+12 \cr
+\end{bmatrix}
+=
+(2 * 10) + (-3 * 12)
+=
+20 - 36
+=
+-16
+$$
+
+$$
+c_{12} =
+\begin{bmatrix}
+2 & -3 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+-8 \cr
+-2 \cr
+\end{bmatrix}
+=
+(2 * -8) + (-3 * -2)
+=
+-16 + 6 
+=
+-10
+$$
+
+$$
+c_{21} =
+\begin{bmatrix}
+7 & 5 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+10 \cr
+12 \cr
+\end{bmatrix}
+=
+(7 * 10) + (5 * 12)
+=
+70 + 60
+=
+130
+$$
+
+$$
+c_{22} =
+\begin{bmatrix}
+7 & 5 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+-8 \cr
+-2 \cr
+\end{bmatrix}
+=
+(7 * -8) + (5 * -2)
+=
+-56 -10
+=
+-66
+$$
+$$
+C =
+\begin{bmatrix}
+c_{11} & c_{12} \cr
+c_{21} & c_{22} \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+-16 & -10 \cr
+130 & -66 \cr
+\end{bmatrix}
+$$
+</div> <!-- End align -->
+</div> <!-- End description -->
+
+<!-- End Exercise  -->
+
+<!--
 ## Matrix vector multiplication
 
 Multiplying matrix by a vector is a little more elaborate.
@@ -175,7 +479,8 @@ A * \vec{x} = \vec{y}
 $$
 
 To get $\vec{y}_{i}$, you multiply $A$'s $i^{th}$ row with elements of vector x, and add them up.
-
+-->
+<!--
 ## Applying function to several features
 
 Features:  
@@ -258,8 +563,8 @@ $$
 0 & 0 & 1 
 \end{bmatrix}
 $$
-
-
+-->
+<!--
 ## Inverting matrices
 
 1 = "Identity" for real numbers.
@@ -294,8 +599,70 @@ c d
 
 ### Adjegate
 flip accross the diagonal
-
+-->
 
 <!-- matrix -->
 $$ \matrix{1&2\cr
          3&4} $$
+
+
+<!-- <style> -->
+<!-- img { -->
+<!-- width: 100%; -->
+<!-- padding: 40px; -->
+<!-- height: 40px; -->
+<!-- background: url("/theme/img/bg.png"); -->
+<!-- background-size:100%; -->
+<!-- } -->
+<!-- </style> -->
+
+
+<!-- Scripts -->
+<!-- Expanding List -->
+<script>
+function prepareList() {
+  $('body').find('li:has(ul)')
+  	.click( function(event) {
+  		if (this == event.target) {
+  			$(this).toggleClass('expanded');
+  			$(this).children('ul').toggle('medium');
+  		}
+  		return false;
+  	})
+  	.addClass('collapsed');
+	//.children('ul').hide();
+  };
+
+function prepareExpand() {
+  $('.expand').click( function(event) {
+  		if (this == event.target) {
+			$(this).parent().parent().find('.description').toggle('fast');
+  		}
+  		return false;
+  	}).parent().parent().find('.description').hide();
+  	//.addClass('collapsed');
+	//.children('ul').hide();
+};
+
+$(document).ready( function() {
+  //prepareList();
+  prepareExpand();
+  });
+</script>
+
+<style>
+.expand {
+color: gray;
+cursor: pointer;
+}
+<!-- font-size: 12px;-->
+</style>
+
+
+
+<!-- Align mathjax to the left -->
+<style>
+.mathjax-align-left .MathJax_Display {
+  text-align: left !important;
+}
+</style>
