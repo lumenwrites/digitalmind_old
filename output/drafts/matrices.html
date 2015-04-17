@@ -1761,6 +1761,22 @@ jQuery(document).ready(function($) {
           <hr />
 	  <p>This is an introduction to matrices and vectors and basic operations on them.
 <!-- If you wanted to read about the enslavement of a human race by the malevolent machines - wait 20-30 years and read /r/worldnews. --></p>
+<div class="panel">
+<ul>
+    <li><a href="#matrices"> Matrices</a></li>
+    <li><a href="#vectors"> Vectors</a></li>
+    <li><a href="#addition-and-subtraction"> Addition and subtraction </a></li>
+    <li><a href="#scalar-multiplication-and-division"> Scalar multiplication and division </a></li>
+    <li><a href="#dot-product"> Dot product </a></li>
+    <li><a href="#matrix-multiplication"> Matrix multiplication </a></li>
+    <li><a href="#inversion"> Inversion </a></li>
+    <li><a href="#identity-matrix"> Identity matrix </a></li>
+    <li><a href="#transpose"> Transpose </a></li>       
+    <!-- <li><a href="#resources"> Other Resources</a></li>  -->
+</ul>
+</div>
+
+<p><span id="matrices"></p>
 <h3>Matrices</h3>
 <p><strong>Matrix</strong> is just a convention for representing the data that is very useful for solving all kinds of problems. Yes, just that. If you wanted to read about the virtual reality built by the malevolent machines for the purposes of enslaving the human race - wait 20-30 years and read /r/worldnews.</p>
 <!-- **Matrices** are just a convention for representing the data that is very useful for solving all kinds of problems. -->
@@ -1793,6 +1809,7 @@ The number of rows/columns a matrix as is called it's "<strong>dimensions</stron
 A_{3,2} = 8
 $$</p>
 <p>$ A_{ij} $ is an element of a matrix , in the $ i^{th} $ row, $ j^{th} $ column.</p>
+<p><span id="vectors"></p>
 <h3>Vectors</h3>
 <p>Vector is a special case of a matrix, a matrix that has only one row or one column(nx1, or 1xn matrix).
 <!-- vector is one-dimensional matrix --></p>
@@ -1837,6 +1854,7 @@ In my math articles I'll use 1-indexed vectors.
 
 <p>By convention, capital letters usually refer to matrices, and lowercase letters are used for vectors.</p>
 <h2>Basic operations  <!-- on matrices --></h2>
+<p><span id="addition-and-subtraction"></p>
 <h3>Addition and subtraction</h3>
 <p>To add matrices together you simply add up the corresponding elements one at a time.</p>
 <!-- <div class="bg-no-frame"> -->
@@ -1872,6 +1890,7 @@ $$
 <p>You can only add/subtract matrices of the same dimension.</p>
 <!-- Just like with numbers, matrix addition/subtraction has the property of /??, A+B = B+A -->
 
+<p><span id="scalar-multiplication-and-division"></p>
 <h3>Scalar multiplication and division</h3>
 <p>To multiply a matrix by a number(scalar) you multiply each of it's elements by that number.</p>
 <p>$$
@@ -1902,6 +1921,7 @@ $$
 \end{bmatrix}
 $$</p>
 <p>(because dividing by a number is the same as multiplying by 1 divided by a number.)</p>
+<p><span id="dot-product"></p>
 <h3>Dot product</h3>
 <p>Let's say we have 2 vectors:</p>
 <p>$$
@@ -1921,6 +1941,7 @@ $$</p>
 <p>$$
 3 * 7 + 2 * 9 = 39
 $$</p>
+<p><span id="matrix-multiplication"></p>
 <h3>Matrix multiplication</h3>
 <p>Matrix multiplication is a little more elaborate than addition.</p>
 <p>Let's say we want to multiply matrices $A$ and $B$ to get the resulting matrix $C$.</p>
@@ -2157,6 +2178,100 @@ $$
 </div> <!-- End description --></p>
 <!-- End Exercise  -->
 
+<p><span id="inversion"></p>
+<h3>Inversion</h3>
+<p>Now that we know how to add, subtract and multiply matrices, it's time to learn about the inversion, which is analogous to division. To learn that you will first need to understand a couple of concepts.</p>
+<p>When you multiply a number $x$ by $1$, you get the number $x$ itself. So here, $1$ is called the <strong>identity of x.</strong></p>
+<p><strong>Inverse of x</strong> is a number which, when multiplied by $x$, produces identity.
+For example ${1\over2}$ is an inverse of $2$, beause  ${1\over2} * 2 = 1$</p>
+<p>When you divide a real number by $x$, it is the same as multiplying it by  ${1\over x}$</p>
+<p>$$
+3 / 2 = 3 * {1\over2}
+$$</p>
+<p>In other words, dividing by a number is the same as multiplying by the inverse of it.</p>
+<p>So to "divide" by a matrix you need to multiply by it's inverse. </p>
+<p><span id="identity-matrix"></p>
+<h3>Identity matrix</h3>
+<p>Identity matrix ($I$), is a matrix such that:</p>
+<p>$$
+I*A = A
+$$</p>
+<p>Unlike other matrices, in the case of identity matrix the order of multiplication doesn't matter:</p>
+<p>$$
+I * A = A * I
+$$</p>
+<p>Identity matrix is analogous to 1 for real numbers.</p>
+<p>Identity matrix for any 3 by 3 matrix looks like so:</p>
+<p>$$
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \cr
+0 &amp; 1 &amp; 0 \cr
+0 &amp; 0 &amp; 1 \cr
+\end{bmatrix}
+$$</p>
+<p>Identity matrix for any 4 by 4 matrix looks like so:</p>
+<p>$$
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 \cr
+0 &amp; 1 &amp; 0 &amp; 0 \cr
+0 &amp; 0 &amp; 1 &amp; 0 \cr
+0 &amp; 0 &amp; 0 &amp; 1 \cr
+\end{bmatrix}
+$$</p>
+<p>Etcetera, you get the pattern. Onces in a diagonal from top left to bottom right, and the rest are zeros. That works for any n x n matrix.</p>
+<p>Here's an example for a general 2 x 2 matrix:</p>
+<p>$$
+\begin{bmatrix}
+1 &amp; 0 \cr
+0 &amp; 1 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+a &amp; b \cr
+c &amp; d \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+(1 * a + 0 * c) &amp; (1 * b + 0 * d) \cr
+(0 * a + 1 * c) &amp; (0 * b + 1 * d) \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+a &amp; b \cr
+c &amp; d \cr
+\end{bmatrix}
+$$</p>
+<h3>Inverse matrix</h3>
+<p>Inverse matrix ($A^{-1}$), is a matrix such that:</p>
+<p>$$
+A^{-1}*A = I
+$$</p>
+<p>Calculating the inverse is a pretty long and messy process, it's easy enough to do for 2 x 2 matrix, but when dimensions get bigger, like 5 x 5, it becomes very hard for a human to do, so in practice you will end up using libraries that make computer to calculate it automatically for you.</p>
+<p>Only square matrices (m x m) have inverses.</p>
+<p><span id="transpose"></p>
+<h3>Transpose</h3>
+<p>Transpose is another type of matrix operations.</p>
+<p>Transpose is essentially "flipping" the matrix across it's diagnoal. To compute a transpose you take the rows of a matrix, and turn them into columns.</p>
+<p>$$
+A =
+\begin{bmatrix}
+1 &amp; 2 &amp; 3 \cr
+4 &amp; 5 &amp; 6 \cr
+7 &amp; 8 &amp; 9 \cr
+\end{bmatrix}
+$$</p>
+<p>$$
+A^{T} =
+\begin{bmatrix}
+1 &amp; 4 &amp; 7 \cr
+2 &amp; 5 &amp; 8 \cr
+3 &amp; 6 &amp; 9 \cr
+\end{bmatrix}
+$$</p>
+<p>The other way to put it is that to get an element i,j of a transposed matrix, you take the element j,i from an original matrix:</p>
+<p>$$
+A^{T}_{ij} = Aji
+$$</p>
 <!--
 ## Matrix vector multiplication
 
@@ -2194,9 +2309,7 @@ A * \vec{x} = \vec{y}
 $$
 
 To get $\vec{y}_{i}$, you multiply $A$'s $i^{th}$ row with elements of vector x, and add them up.
--->
 
-<!--
 ## Applying function to several features
 
 Features:  
@@ -2318,10 +2431,6 @@ c d
 flip accross the diagonal
 -->
 
-<!-- matrix -->
-
-<p>$$ \matrix{1&amp;2\cr
-         3&amp;4} $$</p>
 <!-- <style> -->
 
 <!-- img { -->

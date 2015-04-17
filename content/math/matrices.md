@@ -1,13 +1,27 @@
 Title: Matrices and vectors
 Date: 2015-02-13
-Slug: matrices
+Slug: matrices-and-vectors
 Category: math
-Status: draft
 
 This is an introduction to matrices and vectors and basic operations on them.
 <!-- If you wanted to read about the enslavement of a human race by the malevolent machines - wait 20-30 years and read /r/worldnews. -->
 
+<div class="panel">
+<ul>
+	<li><a href="#matrices"> Matrices</a></li>
+	<li><a href="#vectors"> Vectors</a></li>
+	<li><a href="#addition-and-subtraction"> Addition and subtraction </a></li>
+	<li><a href="#scalar-multiplication-and-division"> Scalar multiplication and division </a></li>
+	<li><a href="#dot-product"> Dot product </a></li>
+	<li><a href="#matrix-multiplication"> Matrix multiplication </a></li>
+	<li><a href="#inversion"> Inversion </a></li>
+	<li><a href="#identity-matrix"> Identity matrix </a></li>
+	<li><a href="#transpose"> Transpose </a></li>		
+	<!-- <li><a href="#resources"> Other Resources</a></li>	 -->
+</ul>
+</div>
 
+<span id="matrices">
 ### Matrices
 **Matrix** is just a convention for representing the data that is very useful for solving all kinds of problems. Yes, just that. If you wanted to read about the virtual reality built by the malevolent machines for the purposes of enslaving the human race - wait 20-30 years and read /r/worldnews.
 
@@ -48,6 +62,7 @@ $$
 $ A_{ij} $ is an element of a matrix , in the $ i^{th} $ row, $ j^{th} $ column.
 
 
+<span id="vectors">
 ### Vectors
 
 Vector is a special case of a matrix, a matrix that has only one row or one column(nx1, or 1xn matrix).
@@ -103,6 +118,7 @@ By convention, capital letters usually refer to matrices, and lowercase letters 
 
 ## Basic operations  <!-- on matrices -->
 
+<span id="addition-and-subtraction">
 ### Addition and subtraction
 
 To add matrices together you simply add up the corresponding elements one at a time.
@@ -144,7 +160,7 @@ You can only add/subtract matrices of the same dimension.
 
 <!-- Just like with numbers, matrix addition/subtraction has the property of /??, A+B = B+A -->
 
-
+<span id="scalar-multiplication-and-division">
 ### Scalar multiplication and division
 
 To multiply a matrix by a number(scalar) you multiply each of it's elements by that number.
@@ -180,6 +196,7 @@ $$
 
 (because dividing by a number is the same as multiplying by 1 divided by a number.)
 
+<span id="dot-product">
 ### Dot product
 
 Let's say we have 2 vectors:
@@ -205,6 +222,7 @@ $$
 3 * 7 + 2 * 9 = 39
 $$
 
+<span id="matrix-multiplication">
 ### Matrix multiplication
 
 Matrix multiplication is a little more elaborate than addition.
@@ -442,6 +460,149 @@ $$
 
 <!-- End Exercise  -->
 
+<span id="inversion">
+### Inversion
+
+Now that we know how to add, subtract and multiply matrices, it's time to learn about the inversion, which is analogous to division. To learn that you will first need to understand a couple of concepts.
+
+When you multiply a number $x$ by $1$, you get the number $x$ itself. So here, $1$ is called the **identity of x.**
+
+**Inverse of x** is a number which, when multiplied by $x$, produces identity.
+For example ${1\over2}$ is an inverse of $2$, beause  ${1\over2} * 2 = 1$
+
+
+When you divide a real number by $x$, it is the same as multiplying it by  ${1\over x}$
+
+$$
+3 / 2 = 3 * {1\over2}
+$$
+
+In other words, dividing by a number is the same as multiplying by the inverse of it.
+
+So to "divide" by a matrix you need to multiply by it's inverse. 
+
+<span id="identity-matrix">
+### Identity matrix
+
+Identity matrix ($I$), is a matrix such that:
+
+$$
+I*A = A
+$$
+
+Unlike other matrices, in the case of identity matrix the order of multiplication doesn't matter:
+
+$$
+I * A = A * I
+$$
+
+Identity matrix is analogous to 1 for real numbers.
+
+Identity matrix for any 3 by 3 matrix looks like so:
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 \cr
+0 & 1 & 0 \cr
+0 & 0 & 1 \cr
+\end{bmatrix}
+$$
+
+Identity matrix for any 4 by 4 matrix looks like so:
+
+$$
+\begin{bmatrix}
+1 & 0 & 0 & 0 \cr
+0 & 1 & 0 & 0 \cr
+0 & 0 & 1 & 0 \cr
+0 & 0 & 0 & 1 \cr
+\end{bmatrix}
+$$
+
+Etcetera, you get the pattern. Onces in a diagonal from top left to bottom right, and the rest are zeros. That works for any n x n matrix.
+
+Here's an example for a general 2 x 2 matrix:
+
+$$
+\begin{bmatrix}
+1 & 0 \cr
+0 & 1 \cr
+\end{bmatrix}
+*
+\begin{bmatrix}
+a & b \cr
+c & d \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+(1 * a + 0 * c) & (1 * b + 0 * d) \cr
+(0 * a + 1 * c) & (0 * b + 1 * d) \cr
+\end{bmatrix}
+=
+\begin{bmatrix}
+a & b \cr
+c & d \cr
+\end{bmatrix}
+$$
+
+### Inverse matrix
+
+Inverse matrix ($A^{-1}$), is a matrix such that:
+
+$$
+A^{-1}*A = I
+$$
+
+Calculating the inverse is a pretty long and messy process, it's easy enough to do for 2 x 2 matrix, but when dimensions get bigger, like 5 x 5, it becomes very hard for a human to do, so in practice you will end up using libraries that make computer to calculate it automatically for you.
+
+Only square matrices (m x m) have inverses.
+
+<span id="transpose">
+### Transpose
+
+Transpose is another type of matrix operations.
+
+Transpose is essentially "flipping" the matrix across it's diagnoal. To compute a transpose you take the rows of a matrix, and turn them into columns.
+
+$$
+A =
+\begin{bmatrix}
+1 & 2 & 3 \cr
+4 & 5 & 6 \cr
+7 & 8 & 9 \cr
+\end{bmatrix}
+$$
+
+
+$$
+A^{T} =
+\begin{bmatrix}
+1 & 4 & 7 \cr
+2 & 5 & 8 \cr
+3 & 6 & 9 \cr
+\end{bmatrix}
+$$
+
+The other way to put it is that to get an element i,j of a transposed matrix, you take the element j,i from an original matrix:
+
+$$
+A^{T}_{ij} = Aji
+$$
+
+<div id="article-info">
+<hr/>
+<!-- Author: <a href="http://rationalfiction.io/users/rayalez">Ray Alez</a> -->
+
+<a style="float:right;"
+href="https://github.com/raymestalez/dm/blob/master/content/math/matrices.md">Edit on GitHub</a>
+</div>
+
+
+
+
+
+
+
 <!--
 ## Matrix vector multiplication
 
@@ -479,8 +640,7 @@ A * \vec{x} = \vec{y}
 $$
 
 To get $\vec{y}_{i}$, you multiply $A$'s $i^{th}$ row with elements of vector x, and add them up.
--->
-<!--
+
 ## Applying function to several features
 
 Features:  
@@ -601,10 +761,6 @@ c d
 flip accross the diagonal
 -->
 
-<!-- matrix -->
-$$ \matrix{1&2\cr
-         3&4} $$
-
 
 <!-- <style> -->
 <!-- img { -->
@@ -615,6 +771,7 @@ $$ \matrix{1&2\cr
 <!-- background-size:100%; -->
 <!-- } -->
 <!-- </style> -->
+
 
 
 <!-- Scripts -->

@@ -45,6 +45,11 @@ List:
 
 This is a [link](#).
 
+Image:
+
+![my image](/images/math/limits-01.svg)
+
+
 ## Expanding list
 
 - **Permutation City** by Greg Egan  
@@ -63,7 +68,7 @@ That bit about Copies?  That's not the plot.  That's just the starting
 assumption.  The surprises this book delivers are unbelievable.  It
 shocked the living daylights out of me.
 But I wouldn't want to spoil it for you.  So if you want to know more,
-read the book  
+ read the book  
 	> - Eliezer Yudkowsky
 	</div>
 
@@ -94,9 +99,10 @@ Another graph notebook:
 # Ipython notebook 
 
 {% notebook vectors/vectors.ipynb %}
+
 # Mathjax
 
-
+1
 You can write vectors like this:
 $$\vec{v}_1 = (4,4)$$
 
