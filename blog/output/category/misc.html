@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Search2 - Digital Mind</title> <!-- digitalmind -->
+  <title>Digital Mind</title> <!-- digitalmind -->
 
   <!-- Extra header for ipython -->
   
@@ -1758,108 +1758,65 @@ jQuery(document).ready(function($) {
   </header>
 
 
-<style>
-  article {
-  
-  margin-top: 5px;
-  background: white;
-  padding: 40px;
-  background: rgba(255,255,255,0.8);
 
-  margin-bottom: 0;
-}  
+<style>
+  p {
+  margin-bottom:0;
+  }
+  .readmore {
+  display:none;
+  }
+
+  hr {
+    margin-bottom: 10px;
+  }
+  article h1 {
+    font-size: 32px;
+  }
 </style>
 
-
-<div id="page"  class="postPage">
+  
+<section id="content">
+  
+  <div id="page"  class="blogPage" style="padding-top: 0px;">
     <div class="row">
       <div class="large-12 columns">
-	<article>
-          <h1 id="blogTitle"> Search2 </h1>
-          <hr />
-	  <p>In the field of AI, searcb is about coming up with a sequence of actions that achieves your goal.</p>
-<p>A <strong>Search problem</strong> consists of:
-- A state space - ways the world can be inside a model.
-- A successor function(with actions, costs) - which actions are available for each state, and how will they change the world(to which state will I be taken to), and how much this action costs
-- A start state, and the goal test</p>
-<p>A <strong>solution</strong> is a sequence of actions(plan) which transforms the start state to a goal state.</p>
-<p>Model -</p>
-<p>Example: arad/bugharest.</p>
-<p>Types of search:
-Uninformed search
-- Depth-first search
-- Breadth-first search
-- Uniform-cost search
-Informed search.
-- Heuristics
-  - Admissibility
-    Heuristic has to be cheaper than the actual cost to the goal.
-  - Consistency
-    Every arc's heuristic cost should be cheaper than a real cost.
-    Change in a heuristic vs actual cost
-- Greedy search
-- A*
-Graph Search</p>
-<p>Pathing.</p>
-<p>State graphs and search trees.
-graphs witht infinite cycles. states occur only once.</p>
-<p>8 puzzle....</p>
-	</article>	
 
-	<!-- Follow -->
-	<div class="post-footer-signup panel" style="margin-top: 10px;">
-	  <span style="float:left"><p>Liked this post? Subscribe to updates!</p></span>
-	  <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
-	    <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <div class="mc-field-group">
-		<span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
-		<input class="small button"
-                       id="subscribeButton"
-                       name="subscribe"
-                       type="submit"
-                       value="Subscribe"
-		       style="border-radius: 0;"/>
-		<input class="required email"
-                       id="mce-EMAIL"
-                       name="EMAIL"
-                       placeholder="Enter your email"
-                       type="email"
-                       value=""
-		       style="border-radius: 0;"/>
-              </div>
+	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
+		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+		    border: 1px solid rgba(0,0,0,.09);
+		    border-radius: 3px;
+		    margin-bottom:0;">
+          <a href="/post/ai-writes-hpmor"><h1>Artificial Neural Network writes Harry Potter and the Methods of Rationality</h1></a>
+	  <hr/>
+	  <p>
+	    <p>I have trained an Artificial Neural Network on the full text of <a href="http://hpmor.com/">HPMOR</a>. This is the text it generated. (I have added formatting and removed the most incoherent sentences.)</p>
+<p>You can find the source code and an awesome, easy to follow tutorial <a href="https://medium.com/deep-writing/how-to-write-with-artificial-intelligence-45747ed073c#.9farmj44y">here</a>.</p>
+<hr />
+<p>Somewhere inside him all further. “You have ...</p>
+	  </p>
+          <!-- <a href="/post/ai-writes-hpmor" id="readmore">>>> readmore</span></a> -->
+	</article>
+	
 
-              <div class="clear" id="mce-responses">
-		<div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
-		<div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
-              </div>
-	    </form>
-	  </div>
-	</div>
-	<!-- End Follow -->
+<!-- Pagination -->
+<div class="pagination panel" style="margin-top: 20px;
+				     padding: 10px;
+				     text-align: center;" >
+  
+  <span class="step-links">
 
-      </div>
+    <span class="current">
+      Page 1
+    </span>
 
-
+  </span>
 </div>
 
-
-
-      <!-- Comments -->
-      <!-- 
-<div class="row">
-  <div class="large-12 columns">
-    <div class="comments">
-      <hr />
-      <script data-isso="//comments.digitalmind.io/dm/"
-	      data-isso-avatar="false"
-              src="//comments.digitalmind.io/dm/js/embed.dev.js"></script>
-      <section id="isso-thread"></section>
-      <hr />
+        </div>
     </div>
-  </div>
-  </div>
-</div>
- -->
+</section>
+
 
   <footer>
   </footer>
