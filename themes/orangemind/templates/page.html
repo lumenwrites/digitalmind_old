@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="page"  class="postPage">
+    <div class="row">
+      <div class="large-12 columns">
+	<article>
+	  <header>
+            <h1 id="blogTitle"> {{ page.title }} </h1>
+            <hr />
+	  </header>
+	  {{ page.content }}
+	</article>
+      </div>
+    </div>      
+</div>    
+{% endblock content %}

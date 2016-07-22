@@ -8,6 +8,7 @@ SITEURL = ''
 
 PATH = 'content'
 STATIC_PATHS = [
+    'static/portfolio.html',    
     'static/.htaccess',
     'static/CNAME',
     'images',
@@ -32,7 +33,11 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Menu
-MENUITEMS = [('Home', '/'), ('Articles', '/articles')]
+MENUITEMS = [# ('Browse', '/articles'),
+             # ('Projects', '/projects'),
+             ('About', '/about'),
+             # ('Portfolio', '/portfolio'),                          
+] # ('Portfolio', '/portfolio'),
 
 # Social widget
 SOCIAL = (('You can add links in your config file', '#'),
@@ -51,6 +56,8 @@ PAGE_SAVE_AS = '{slug}.html'
 # Looks like only index lists posts, so I need to save another template as index. Weird.
 # INDEX_SAVE_AS = 'posts.html'
 # HOME_SAVE_AS = 'index.html'
+# INDEX_SAVE_AS = 'blog/index.html'
+# INDEX_URL = 'blog/'
 
 # TAG_URL = 'tag/{slug}/'
 # TAG_SAVE_AS = 'tag/{slug}/index.html'
@@ -63,15 +70,16 @@ PAGE_SAVE_AS = '{slug}.html'
 #)
 
 # List a template here to generate it.
-DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives', ) #'about' #'home',
+DIRECT_TEMPLATES = ('index', 'tags', 'categories', 'archives','projects','art','portfolio','portfolio_back', 'home',) #'about' #'home',
 
 TAG_SAVE_AS = ''
 AUTHOR_SAVE_AS = ''
 
-THEME = "/home/ray/projects/digitalmind/themes/digitalmind"
+THEME = "/home/ray/projects/digitalmind/blog/themes/digitalmind"
+# THEME = "/home/ray/projects/digitalmind/themes/orangemind"
 
 # Plugins
-PLUGIN_PATHS = ['/home/ray/projects/digitalmind/pelican-plugins']
+PLUGIN_PATHS = ['/home/ray/projects/digitalmind/blog/pelican-plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook']
 

@@ -16,11 +16,11 @@
 }
 
 html {
-    font-size: 19px;
+    font-size: 21px;
 }
 
 .row {
-    max-width: 50em;
+    max-width: 45em;
 }
 
 a {
@@ -28,6 +28,7 @@ a {
 }
 
 p {
+    font-size: 21px;    
     margin-top: 19px!important;
 }
 
@@ -435,4 +436,12 @@ blockquote strong {
 /* <div class="mathjax-align-left"> */
 .mathjax-align-left .MathJax_Display {
   text-align: left !important;
+}
+
+
+
+/* Update */
+
+a:hover {
+    text-decoration: none!important;
 }

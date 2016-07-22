@@ -1,6 +1,7 @@
 Title: List of ML algorithms
 Slug: machine-learning-algorithms
 Date: 2014-12-22 07:00
+Status: Draft
 
 <!--
 [TODO] Add brief descriptions/classification to each of the algorithms.

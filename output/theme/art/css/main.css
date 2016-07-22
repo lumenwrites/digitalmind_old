@@ -1,0 +1,273 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family:'Open Sans';
+    font-style:normal;
+	
+}
+h1{
+	font: bold 20px sans-serif;
+	color: #d26723;
+
+}
+h2{
+	font: bold 14px sans-serif;
+	color: gray;
+}
+
+h4{
+	color: #d26723;
+	font-size: 150%;
+}
+
+h5 {
+	font-size: 16;
+	font-weight: normal;
+}
+p{
+	font: sans-serif;
+	color: white;
+}
+
+a{
+	color: white;
+	text-decoration: none;
+}
+
+header, section, footer, aside, nav, article, hgroup{
+	display: block; 
+}
+
+#headerContacts {
+	float: right;
+	text-align: left;
+	margin-top: 48px;
+	font-size: 80%;
+}
+#headerContacts p {
+	color: white;
+}
+body{
+	text-align: center; /*center website*/
+	background:-webkit-linear-gradient(#211e1e 0%, #494545 100%);
+	background-image: url(../img/orangepatternbg.png), url(../img/bgPattern.png);
+	background-repeat: no-repeat, repeat;
+	background-size: 100%, auto;
+	background-position-y: -140px;
+}
+
+#big_wrapper{
+	width:1030px;
+	min-height: 840px;
+	margin: 20px auto;
+	text-align: left;
+}
+#bigGallery {
+	padding: 60px;
+	padding-top: 5px;
+}
+
+#videoGallery {
+	width:1030px;
+	margin: auto;	
+	background-color: rgba(0, 0, 0, 0.8);
+}
+#galleryContainer {
+	width:1030px;
+	margin: auto;	
+	background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+#container {
+	background-color: rgba(0, 0, 0, 0.4);
+
+}
+
+header {
+	background: rgba(0, 0, 0, 0.64);
+	height: 111px;
+
+}
+
+
+#logo {
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	height: 111px;
+	width:1030px;
+	margin: 20px auto;
+	margin-top: 0;
+	
+}
+
+
+#top_header{
+	color: #f27223;
+}
+
+#top_menu{
+	color: white;
+	background: rgba(0, 0, 0, 0.8);
+
+}
+#navlinks {
+		width: 1030px; margin: auto;
+}
+#top_menu ul {
+	display: table;
+    width: 100%;
+   	border-left: 1px solid gray;
+}
+#top_menu li{
+	border-right: 1px solid gray;
+	padding: 10px;
+	list-style: none;
+	font: bold 14px Tahoma;
+	display: table-cell;
+    text-align: center;
+    white-space: nowrap;
+
+}
+
+
+#top_menu ul ul li{
+border: 0;
+width: 150px;
+background: rgba(0, 0, 0, 0.8);
+margin: 2px;
+display: none;
+}
+#top_menu ul{
+	position: relative;
+}
+#top_menu ul ul{
+	position: absolute;
+	border: 0;
+	width: 150px;
+	top: 37px;
+	padding-top: 2px;
+	margin-left: -45;
+}
+#top_menu li:hover ul li {
+	display: block;
+}
+#dropdown {
+	z-index: 1000;
+	width: 50px;
+}
+
+
+
+
+#slideshow {
+	background-image: url(../img/slideshow_05.jpg);
+	background-repeat: no-repeat;
+	margin-top: 20px;
+	margin-bottom: 20px;	
+	background-size: 100% auto;
+	height: 300px;
+}
+#vidDesc {
+	float: left;
+}
+#video_section{
+	width: 540px;
+	margin: 30px; /*720px,280left*/
+}
+#info_contacts{
+	margin: 10px 0px;
+	/*padding: 30px;*/
+}
+#galleries{
+	width: 360px;
+	float: right;
+}
+article{
+	border: 0px solid red;
+	height: 260px;
+	float: right;
+}
+article footer{
+	text-align: right;
+}
+#the_footer{
+	clear:both;
+	text-align: center;
+	padding: 20px;
+	border-top: 2px solid green;
+}
+footer {
+	background-image: url(../img/footer.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 104px;
+}
+
+#galleria{height:336px;margin-bottom: 20px; width:100%;}
+.galleria-stage { 
+position: absolute; 
+top: 0; 
+bottom: 0; 
+left: 0; 
+right: 0; 
+overflow:hidden; 
+} 
+.galleria-thumbnails {
+	visibility: hidden;
+}
+
+h1 {
+	font-weight: normal;
+}
+
+#buttonsArticle a, #buttonsArticle span {
+	background-color: rgba(255,255,255,0.1);
+	border: 1px solid gray;
+	display: inline-block;
+	width: 300;
+	font-family: "Titillium Web", sans-serif;
+	text-transform: uppercase;
+	color: white;
+	font-size: 16;
+	padding: 8;
+	margin-top: 10;
+}
+#buttonsArticle span {
+	cursor: pointer;
+	float: left; 
+}
+#contact input {
+	background-color: rgba(255,255,255,0.1);
+	border: 1px solid gray;
+	display: inline-block;
+	width: 200;
+	font-family: "Titillium Web", sans-serif;
+	color: white;
+	font-size: 16;
+	padding: 8;
+	margin: 10;
+	margin-left: 0;
+}
+#buttonsArticle {	
+	text-align: center;
+	margin: auto;
+
+}
+
+#contact textarea {
+	width: 600;
+	height: 400;
+	background-color: rgba(255,255,255,0.1);	background-color: rgba(255,255,255,0.1);
+	font-family: "Titillium Web", sans-serif;
+	color: white;
+	font-size: 16;
+}
+
+#projects h1 {
+	font-family: "Titillium Web", sans-serif;
+}
+
+#hireMe { 
+padding:10; font-weight:400; font-size: 17; text-decoration:underline; 
+background-image: url('img/buttonBG.jpg');}

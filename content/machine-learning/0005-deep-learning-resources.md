@@ -1,6 +1,7 @@
 Title: Getting Started with Deep Learning - resources and roadmap
 Slug: deep-learning
 Date: 2014-12-22 05:00
+Status: Draft
 
 This post is a collection of the best resources for getting into Deep Learning, <!-- Machine Learning (specifically - Deep Learning for Computer Vision) -->and the roadmap for studying it.
 

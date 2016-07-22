@@ -1,0 +1,146 @@
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:700');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:200');
+@import url('http://fonts.googleapis.com/css?family=Lato');
+@import url('http://fonts.googleapis.com/css?family=Lato:900');
+
+* {
+	margin: 0;
+	padding: 0;
+    border: 0;	
+	color: #bccbd6;
+	color: #a2a8ab;
+	font-size: 16px;
+	font-family: "Titillium Web";
+
+
+}
+body {
+	width: 60%;
+	margin: auto;
+    background: #272b2b;
+}
+h1, h1 span {
+	font-size: 32px
+}
+.orange {
+	color: #f26700;
+}
+
+/*.skills, .tools, .other {
+	float: left;
+	width: 33.3%
+}*/
+
+
+.description, .hire {
+	float: left;	
+	width: 100%;
+}
+
+.other {
+	width: 80%;
+	float: left;
+}
+
+.experience, .projects, .resume {
+	width: 100%;
+	margin: 20px 0;
+}
+
+.moreImportant {
+	font-size: 20px;
+	color: #9eb3c6;
+	float: left;
+	width: 35%;	
+}
+
+.lessImportant {
+	font-size: 18px;
+	color: #5d6c79;
+	float: left;
+	width: 50%;		
+	line-height: 29px;	
+}
+
+.project {
+	width: 49%;
+	float: left;
+}
+
+.clear { 
+    clear:both; 
+} 
+
+.right { 
+    float: right; 
+} 
+
+.left { 
+    float: left; 
+}
+
+.panel {
+    float: left;
+    padding: 20px;
+    border-right: 4px solid #202424;
+}
+
+.panel img {
+    border: 4px solid white;
+    border-radius: 4px;
+    background: url('/static/img/bg.png');
+    background: url('/static/img/planet2.png') left;    
+}
+.input {
+    float: left;
+    padding: 20px;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.header {
+    background: #2f3333;
+    width: 100%;
+    padding: 20px;
+}
+
+hr {
+    height: 1px;
+    background: #1a1c1c;
+    box-shadow: 1px 1px 1px #2e3333;
+    margin: 5px 0 15px 0;
+    margin-right: 10px;
+    width:100%;
+}
+
+input {
+    margin: 0 10px 10px 0;
+    background: #212424;
+    background: #1a1c1c;
+    border-radius: 2px;
+    box-shadow: 3px 3px 2px rgba(0,0,0,0.15) inset;
+    padding: 2px 4px 2px 4px;
+    padding: 2px;
+    width: 64px;
+    float:left;
+}
+
+button {
+    font-family: 'Lato';
+    
+    background: #f76300;
+    border-radius: 5px;
+    padding: 10px 20px 10px 20px;
+    margin: 5px 0;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hireButton {
+	margin: 15px 10px;
+}

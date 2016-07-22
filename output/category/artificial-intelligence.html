@@ -1713,6 +1713,9 @@ jQuery(document).ready(function($) {
   <!-- Import css and scripts  -->
   <link rel="stylesheet" href="/theme/css/foundation.css" />
   <link rel="stylesheet" href="/theme/css/foundation-icons/foundation-icons.css" />
+  <!-- fhi -->
+  <link rel="stylesheet" href="/theme/style.css" />
+
   <link rel="stylesheet" href="/theme/css/main.css" />
 
   <!-- jQuery -->
@@ -1732,34 +1735,58 @@ jQuery(document).ready(function($) {
   <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
 
   
+  
 </head>
 
 <body>
 <div id="orange-line"></div>
   <header>
       <div class="row" >
-        <div class="large-9 columns" >
+        <div class="large-6 small-6 columns" >
           <a href="/"><img src="/theme/img/logo_notagline.png" /></a>
+	  <!-- digital<span class="bold">verse</span> -->
+
         </div>
-        <div class="large-3 columns" id="mainMenu">
-	  <ul>
-	    <a href="/">Home</a>
-	  </ul>
-	  <ul>
-	    <a href="/articles">Articles</a>
-	  </ul>
+        <div class="large-6 small-6 columns" id="mainMenu">
+	  <div style="float:right;">
+	    <ul>
+	      <a href="/about">About</a>
+	    </ul>
+	  </div>
 	</div>
       </div>
   </header>
 
 
+
+<style>
+  p {
+  margin-bottom:0;
+  }
+  .readmore {
+  display:none;
+  }
+
+  hr {
+    margin-bottom: 10px;
+  }
+  article h1 {
+    font-size: 32px;
+  }
+</style>
+
+  
 <section id="content">
   
   <div id="page"  class="blogPage">
     <div class="row">
       <div class="large-12 columns">
 
-	<article>
+	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
+		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+		    border: 1px solid rgba(0,0,0,.09);
+		    border-radius: 3px;
+		    margin-bottom:0;">
           <a href="/post/artificial-intelligence-resources"><h1>List of the best resources to learn the foundations of Artificial Intelligence</h1></a>
 	  <hr/>
 	  <p>
@@ -1768,12 +1795,24 @@ It will be the most useful for beginners, people who want to learn this field, b
 know where to start.</p>
 <p>I have developed a strategy for myself, for learning the basics ...</p>
 	  </p>
-          <a href="/post/artificial-intelligence-resources" id="readmore">>>> readmore</span></a>
+          <!-- <a href="/post/artificial-intelligence-resources" id="readmore">>>> readmore</span></a> -->
 	</article>
 	
-<p class="paginator">
-    Page 1 / 1
-</p>
+
+<!-- Pagination -->
+<div class="pagination panel" style="margin-top: 20px;
+				     padding: 10px;
+				     text-align: center;" >
+  
+  <span class="step-links">
+
+    <span class="current">
+      Page 1
+    </span>
+
+  </span>
+</div>
+
         </div>
     </div>
 </section>

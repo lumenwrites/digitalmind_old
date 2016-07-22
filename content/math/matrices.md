@@ -2,6 +2,7 @@ Title: Matrices and vectors
 Date: 2015-02-13
 Slug: matrices-and-vectors
 Category: math
+Status: draft
 
 This is an introduction to matrices and vectors and basic operations on them.
 <!-- If you wanted to read about the enslavement of a human race by the malevolent machines - wait 20-30 years and read /r/worldnews. -->

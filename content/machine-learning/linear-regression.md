@@ -1,5 +1,5 @@
 Title: Linear regression
-Date: 2014-12-20 12:00
+Date: 2015-06-01 12:00
 Status: draft
 
 Linear regression.  
@@ -134,6 +134,7 @@ Boom. That's it.
 Then just:
 
 # Implementation in python
+
 
 
 

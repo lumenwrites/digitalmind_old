@@ -1671,7 +1671,6 @@ div.collapseheader {
 </style>
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML" type="text/javascript"></script>
-
 <script type="text/javascript">
 init_mathjax = function() {
     if (window.MathJax) {
@@ -1714,6 +1713,9 @@ jQuery(document).ready(function($) {
   <!-- Import css and scripts  -->
   <link rel="stylesheet" href="/theme/css/foundation.css" />
   <link rel="stylesheet" href="/theme/css/foundation-icons/foundation-icons.css" />
+  <!-- fhi -->
+  <link rel="stylesheet" href="/theme/style.css" />
+
   <link rel="stylesheet" href="/theme/css/main.css" />
 
   <!-- jQuery -->
@@ -1733,100 +1735,82 @@ jQuery(document).ready(function($) {
   <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
 
   
+  
 </head>
 
 <body>
 <div id="orange-line"></div>
   <header>
       <div class="row" >
-        <div class="large-9 columns" >
+        <div class="large-6 small-6 columns" >
           <a href="/"><img src="/theme/img/logo_notagline.png" /></a>
+	  <!-- digital<span class="bold">verse</span> -->
+
         </div>
-        <div class="large-3 columns" id="mainMenu">
-	  <ul>
-	    <a href="/">Home</a>
-	  </ul>
-	  <ul>
-	    <a href="/articles">Articles</a>
-	  </ul>
+        <div class="large-6 small-6 columns" id="mainMenu">
+	  <div style="float:right;">
+	    <ul>
+	      <a href="/about">About</a>
+	    </ul>
+	  </div>
 	</div>
       </div>
   </header>
 
 
 <!-- Orbit -->
+<!-- 
 <div id="featuredContent" data-orbit>
   <a href="#">
     <img width=100% src="/theme/img/neuron2.png" />
   </a>
-<!--<a href="/post/social-engineering-basics.html">
-    <img width=100% src="/theme/img/socialEngineering.png" />
-  </a>  -->
 </div>
+ -->
 
-<!-- Categories/Articles -->
-<div class="row" id="bestArticles">
-  <div class="large-12 columns">
-	<!-- <h3>Read my best articles:</h3> -->
-  </div>
-  <div class="large-4 columns">
-    
-	<a href="/post/achieving-flow-state">
-	  <img src="/theme/img/blog_header/startup-ideas.png" alt="Inventing Startup Ideas">
-	</a>
+
+
+  
+<section id="content">
+  
+  <div id="page"  class="blogPage">
+    <div class="row">
+      <div class="large-12 columns">
+
+	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
+		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+		    border: 1px solid rgba(0,0,0,.09);
+		    border-radius: 3px;
+		    margin-bottom:0;
+		    width: calc(50% - 40px);
+		    float:left;
+		    margin-right:40px;">
+          <a href="http://deepwriting.digitalmind.io"><h1>Deep Writing</h1></a>
+	  <hr/>
+	  <p>
+	    Deep Writing
+	  </p>
+	</article>
+
+
+	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
+		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+		    border: 1px solid rgba(0,0,0,.09);
+		    border-radius: 3px;
+		    margin-bottom:0;
+		    width: calc(50% - 40px);
+		    float:left;
+		    margin-right:40px;">
+          <a href="http://deepwriting.digitalmind.io"><h1>Deep Dreams</h1></a>
+	  <hr/>
+	  <p>
+	    Deep Writing
+	  </p>
+	</article>
 	
-	<a href="/post/achieving-flow-state">
-	  <h4> Math </h4>
-	</a>
-    
-	<p>Learn how to enter the state of flow - state of extreme productivity,
-      complete engagement, and full immersion into what you're doing.</p>
 
-	<span class="read-more">
-	  <a class="button small readMore"
-		 href="/post/inventing-startup-ideas">Read More</a>
-	</span>
-    
-  </div>
-  
-  <div class="large-4 columns">
-    
-	<a href="/post/thinking-tools-how-use-your-mind-solve-challenges">
-	  <img src="/theme/img/blog_header/creativeThinkingTools.jpg" alt="Creative thinking tools">
-	</a>
-    
-	<a href="/post/thinking-tools-how-use-your-mind-solve-challenges">
-	  <h4> Programming </h4>
-	</a>
-    
-	<p>Learn the creative thinking tools you need to use to invent ideas and solve challenges on your path to becoming a great entrepreneur</p>
-	<span class="read-more">
-	  <a class="button small readMore"
-		 href="/post/creative-thinking-tools">Read More</a>
-	</span>
-    
-  </div>
-  
-  <div class="large-4 columns">
-    
-	<a href="/post/best-startup-books">
-	  <img src="/theme/img/blog_header/rework.png" alt="Best startup books">
-	</a>
-    
-	<a href="/post/best-startup-books">
-	  <h4>Machine Learning</h4>
-	</a>
-    
-	<p>This is the collection of my top-favorite best startup books.
-      They're must read for everyone interested in entrepreneurship and business.</p>
-	<span class="read-more">
-	  <a class="button small readMore"
-		 href="/post/best-startup-books">Read More</a>
-	</span>
-    
-  </div>
-  
-</div>
+        </div>
+    </div>
+</section>
 
 
   <footer>

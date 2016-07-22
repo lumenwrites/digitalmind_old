@@ -2,6 +2,20 @@
 
 {% block title %}{{ article.title }} - Digital Mind{% endblock title %}
 {% block content %}
+
+<style>
+  article {
+  
+  margin-top: 5px;
+  background: white;
+  padding: 40px;
+  background: rgba(255,255,255,0.8);
+
+  margin-bottom: 0;
+}  
+</style>
+
+
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
@@ -9,42 +23,46 @@
           <h1 id="blogTitle"> {{ article.title }} </h1>
           <hr />
 	  {{ article.content }}
-	</article>
+	</article>	
       </div>
+
+    <!-- Follow -->
+    <div class="row">
+      <div class="large-12 columns">
+	<div class="post-footer-signup panel">
+	  <span style="float:left"><p>Liked this post? Subscribe to updates!</p></span>
+	  <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
+	    <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="mc-field-group">
+		<span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
+		<input class="small button"
+                       id="subscribeButton"
+                       name="subscribe"
+                       type="submit"
+                       value="Subscribe"/>
+		<input class="required email"
+                       id="mce-EMAIL"
+                       name="EMAIL"
+                       placeholder="Enter your email"
+                       type="email"
+                       value=""/>
+              </div>
+
+              <div class="clear" id="mce-responses">
+		<div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
+		<div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
+              </div>
+	    </form>
+	  </div>
+	</div>
+      </div>
+    </div>      
 </div>
 
-      <!-- Follow -->
-<div class="row">
-  <div class="large-12 columns">
-  <div class="post-footer-signup panel">
-    <span style="float:left"><p>Liked this post? Subscribe to updates!</p></span>
-    <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
-      <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div class="mc-field-group">
-	  <span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
-          <input class="small button"
-                 id="subscribeButton"
-                 name="subscribe"
-                 type="submit"
-                 value="Subscribe"/>
-          <input class="required email"
-                 id="mce-EMAIL"
-                 name="EMAIL"
-                 placeholder="Enter your email"
-                 type="email"
-                 value=""/>
-        </div>
 
-        <div class="clear" id="mce-responses">
-          <div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
-          <div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 
       <!-- Comments -->
+      <!-- 
 <div class="row">
   <div class="large-12 columns">
     <div class="comments">
@@ -58,4 +76,5 @@
   </div>
   </div>
 </div>
+ -->
 {% endblock content %}

@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block head_extra %}  
+<title>My Projectsx</title>
+<link rel="stylesheet" href="{{ SITEURL }}/theme/projects.css" />
+{% endblock %}    
+
+{% block content %}
+
+<!-- 
+<div class="about">
+  <div class="row">
+    <div class="large-12 columns">
+      <img src="/theme/portfolio/img/signature.png"/>
+      <h1>My Projects </h1>
+      <p>Hello! My name is Ray Alez. Welcome to my blog.</p>
+      <p>I love studying AI, ML, and cognitive science. I also love blogging and writing fiction.</p>
+      <p>If you are for the first time on my blog, make sure to visit articles page, it is a great place to start.</p>
+    </div>
+  </div>
+</div>
+
+-->
+
+<div id="projects">
+<div class="row">
+
+  <article>
+    <a href="http://digitalmind.io/">
+      <img src="/theme/portfolio/img/projects/fictionhub2.png" class="thumbnail"/></a>
+
+    <h2> fictionhub </h2>
+
+    <p><a href="http://fictionhub.io">fictionhub.io</a> is a place for writers to write, post and discuss their stories.</p>
+    <p>Stats(in the first 4 weeks since launch):</p>
+    <ul>
+      <li>100+ users</li>	
+      <li>8000+ unique visitors</li>	
+      <li>25000+ page views</li>
+      <li>100+ daily sessions</li>	
+    </ul>
+    <hr/>
+  </article>
+
+  <article>
+    <a href="http://digitalmind.io/">
+      <img src="/theme/portfolio/img/projects/4apps.jpg"  class="thumbnail"/></a>
+v    <h2> Ubuntu Touch Apps  </h2>
+    <p>My open source apps for Ubuntu Touch:</p>
+    <ul>
+      <li><a href="https://github.com/raymestalez/hackernews">Hacker News</a> client</li>	
+      <li><a href="https://github.com/raymestalez/mirage">Mirage</a> - painting app</li>	
+      <li><a href="https://github.com/raymestalez/VisionaryUT">Visionary</a> - mindmapping app</li>
+      <li><a href="">SlyGo - Go game client</li>	
+    </ul>
+    <p>Over the past few months they've gained many positive reviews and more than <b>800 users</b>.</p>
+    <hr/>
+  </article>
+
+  <article>
+    <a href="http://digitalmind.io/">
+      <img src="/theme/portfolio/img/projects/orangemind.png"  class="thumbnail"/></a>
+    <h2> Orange Mind  </h2>
+    <a href="href://orangemind.io">orangemind.io</a>
+    <p>My open source apps for Ubuntu Touch:</p>
+    <ul>
+    </ul>
+    <p>Over the past few months they've gained many positive reviews and more than 800 users!</p>
+    <hr/>
+  </article>
+  
+  <article>
+    <a href="http://digitalmind.io/">
+      <img src="/theme/portfolio/img/projects/01_dm640x360.png"  class="thumbnail"/></a>
+    <h2> Digital Mind  </h2>
+    <a href="href://digitalmind.io">digitalmind.io</a>
+    <p>My open source apps for Ubuntu Touch:</p>
+    <ul>
+      <li>Hacker News client</li>	
+      <li>Mirage - painting app</li>	
+      <li>Visionary - mindmapping app</li>
+      <li>SlyGo - Go game client</li>	
+    </ul>
+    <p>Over the past few months they've gained many positive reviews and more than 800 users!</p>
+    <hr/>
+  </article>
+
+  <article>
+    <iframe style="float:right;" width="500" height="281" src="https://www.youtube.com/embed/iFvu2f2vs1s" frameborder="0" allowfullscreen></iframe>
+    <h2> Video Tutorials  </h2>
+    <p>I have a <a href="https://www.youtube.com/user/raymestalez">youtube channel</a> with tutorials on LISP, linux, neuroscience, entrepreneurship.</p>
+    <p>Over the past few months they've gained many positive reviews and more than 800 users!</p>
+    <hr/>
+  </article>
+    
+
+  <article>
+    <a href="http://digitalmind.io/">
+      <img src="/theme/portfolio/img/projects/06_art640x360.png"  class="thumbnail"/></a>
+    <h2> My Digital Art Portfolio  </h2>
+    <p>My open source apps for Ubuntu Touch:</p>
+    <p>Over the past few months they've gained many positive reviews and more than <b>800 users</b>!</p>
+    <hr/>
+  </article>
+
+  <article>
+    <a href="http://digitalmind.io/">
+      <img src="/theme/portfolio/img/projects/rig.jpg"  class="thumbnail"/></a>
+    <h2> Generic Animation Rig  </h2>
+    <p><a href="https://www.orbolt.com/asset/lplvlsl::human_animation_rig">Rig for learning and teaching animation(for sidefx Houdini).</a> </p>
+    <p>Simple generic character rig, created for learning basics of animation, body mechanics. Slick and simple. Has controls for turning him into a man, woman, and cartoon character.</p>
+    <p>Over the past few months they've gained many positive reviews and more than <b>800 users</b>!</p>
+    <hr/>
+  </article>  
+    <!-- <img src="{{ SITEURL }}/theme/portfolio/img/projects/visionary.png"/> -->
+    <!-- <img src="{{ SITEURL }}/theme/portfolio/img/projects/03_ann640x360.png"/> -->
+    <!-- <h2> Human Animation Rig  </h2>		           -->
+  </div>
+</div>
+</div>
+
+
+<div id="lower-bg" >
+<!-- TESTIMONIALS -->
+<div id="testimonials" style="display:none;">
+<div class="row">
+	<div id="quote-icon">
+    	<img src="{{ SITEURL }}/theme/portfolio/img/quote-icon.png"/>
+	</div>
+	<p>Not all developers deeply passionate about their craft like Ray Alez. <br />
+	I have been working with many developers from all around the world, <br />
+	and I strongly believe that Ray Alez is one of the best of them.</p>
+	<hr id="testimonialsHr" />
+	<span id="author">Rommy Arella</span>
+	<span id="company">@Candeed Creatives</span>
+</div>
+</div>
+
+<div id="about" style="display:none;">
+<div class="row" >
+	<h2>About</h2>
+	<p>My name is Ray Alez. I am clever, motivated, creative,
+	obsessed with technology and just generally awesome =)</p>
+
+	<p>Besides programming I have passion for entreneurship, online business and blogging.<br />
+	I am constantly working on my own projects and developing a startup.<br/>
+	(hence I understand business, online marketing and SEO)<br/>
+	Whenever I have some free time I learn everything I can about AI, Machine learning and lisp.<br/>
+	</p>
+
+	<p>Let's discuss how I can help you with your project<br/>
+	- just <a href="#message">send me a message</a> and say hi!</p>
+
+	<div id="icons">
+		<a href="http://github.com/raymestalez">
+			<img src="{{ SITEURL }}/theme/portfolio/img/github-icon.png"/>
+		</a>
+	</div>
+</div>
+</div>
+
+<div id="message" style="display:none;"> <!-- style="display:none;" -->
+<div class="row" >
+    <div class="large-centered columns centered">
+	<h2>Send me a message</h2>
+	<form action="http://rayalez.com/contact.php" method="post">
+		<div id="email">
+			<input type="text" name="cf_email" placeholder="Your e-mail">
+		</div>
+		<div id="subject">
+		    <input type="text" name="cf_subject" placeholder="Subject">	    
+		</div>
+	    <textarea id="messageContent"name="cf_message"
+                  placeholder="Tell me about your project or ask a question..."></textarea>
+	    <input type="submit" class="button" value="Send" id="send">
+	</form>
+	</div>
+</div>
+</div>
+
+</div>
+{% endblock %}    
+
+

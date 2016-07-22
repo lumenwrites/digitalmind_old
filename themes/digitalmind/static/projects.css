@@ -1,0 +1,45 @@
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:700');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:200');
+@import url('http://fonts.googleapis.com/css?family=Lato');
+@import url('http://fonts.googleapis.com/css?family=Lato:900');
+
+h1 {
+    color: white;
+    margin: 0;
+    font-family: "Titillium Web";
+    font-weight: normal;
+}
+
+
+
+.about {
+    background-image: url("/theme/portfolio/img/code-lines.png");
+    padding: 20px 0 10px 0;
+}
+
+.about p {
+    font-size:20px;line-height:24px;color:#bbbbbb;    
+}
+
+.about img {
+    width:220px;float:right;
+}
+
+#projects {
+background-color: #f6f3ea;
+}
+
+article {
+    margin: 20px 0;
+}
+.thumbnail {
+    border: 4px solid white;
+    border-radius: 4px;
+    margin: 20px;
+    width: 500px;
+    padding:0;
+    margin: 0px 0 20px 20px;
+    float:right;
+}
+

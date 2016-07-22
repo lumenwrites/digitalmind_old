@@ -1713,6 +1713,9 @@ jQuery(document).ready(function($) {
   <!-- Import css and scripts  -->
   <link rel="stylesheet" href="/theme/css/foundation.css" />
   <link rel="stylesheet" href="/theme/css/foundation-icons/foundation-icons.css" />
+  <!-- fhi -->
+  <link rel="stylesheet" href="/theme/style.css" />
+
   <link rel="stylesheet" href="/theme/css/main.css" />
 
   <!-- jQuery -->
@@ -1732,25 +1735,41 @@ jQuery(document).ready(function($) {
   <script src="/theme/js/TeX-AMS_HTML.js" type="text/javascript"></script>
 
   
+  
 </head>
 
 <body>
 <div id="orange-line"></div>
   <header>
       <div class="row" >
-        <div class="large-9 columns" >
+        <div class="large-6 small-6 columns" >
           <a href="/"><img src="/theme/img/logo_notagline.png" /></a>
+	  <!-- digital<span class="bold">verse</span> -->
+
         </div>
-        <div class="large-3 columns" id="mainMenu">
-	  <ul>
-	    <a href="/">Home</a>
-	  </ul>
-	  <ul>
-	    <a href="/articles">Articles</a>
-	  </ul>
+        <div class="large-6 small-6 columns" id="mainMenu">
+	  <div style="float:right;">
+	    <ul>
+	      <a href="/about">About</a>
+	    </ul>
+	  </div>
 	</div>
       </div>
   </header>
+
+
+<style>
+  article {
+  
+  margin-top: 5px;
+  background: white;
+  padding: 40px;
+  background: rgba(255,255,255,0.8);
+
+  margin-bottom: 0;
+}  
+</style>
+
 
 <div id="page"  class="postPage">
     <div class="row">
@@ -1787,42 +1806,46 @@ supplemented with his <a href="http://openclassroom.stanford.edu/MainFolder/Cour
 <ul>
 <li>Understand autoencoders, Restricted Boltzmann machines, create Deep Belief nets.</li>
 </ul>
-	</article>
+	</article>	
       </div>
+
+    <!-- Follow -->
+    <div class="row">
+      <div class="large-12 columns">
+	<div class="post-footer-signup panel">
+	  <span style="float:left"><p>Liked this post? Subscribe to updates!</p></span>
+	  <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
+	    <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="mc-field-group">
+		<span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
+		<input class="small button"
+                       id="subscribeButton"
+                       name="subscribe"
+                       type="submit"
+                       value="Subscribe"/>
+		<input class="required email"
+                       id="mce-EMAIL"
+                       name="EMAIL"
+                       placeholder="Enter your email"
+                       type="email"
+                       value=""/>
+              </div>
+
+              <div class="clear" id="mce-responses">
+		<div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
+		<div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
+              </div>
+	    </form>
+	  </div>
+	</div>
+      </div>
+    </div>      
 </div>
 
-      <!-- Follow -->
-<div class="row">
-  <div class="large-12 columns">
-  <div class="post-footer-signup panel">
-    <span style="float:left"><p>Liked this post? Subscribe to updates!</p></span>
-    <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
-      <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div class="mc-field-group">
-	  <span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
-          <input class="small button"
-                 id="subscribeButton"
-                 name="subscribe"
-                 type="submit"
-                 value="Subscribe"/>
-          <input class="required email"
-                 id="mce-EMAIL"
-                 name="EMAIL"
-                 placeholder="Enter your email"
-                 type="email"
-                 value=""/>
-        </div>
 
-        <div class="clear" id="mce-responses">
-          <div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
-          <div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
 
       <!-- Comments -->
+      <!-- 
 <div class="row">
   <div class="large-12 columns">
     <div class="comments">
@@ -1836,6 +1859,7 @@ supplemented with his <a href="http://openclassroom.stanford.edu/MainFolder/Cour
   </div>
   </div>
 </div>
+ -->
 
   <footer>
   </footer>

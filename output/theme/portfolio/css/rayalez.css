@@ -1,0 +1,336 @@
+/*@import url('http://fonts.googleapis.com/css?family=Titillium+Web:700');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:400');
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:200');
+@import url('http://fonts.googleapis.com/css?family=Lato');
+@import url('http://fonts.googleapis.com/css?family=Lato:900');*/
+
+* {
+	margin: 0;
+	padding: 0;
+    border: 0;	
+	font-size: 14px;
+    font-family: "Titillium Web";
+    color: white;
+}
+
+h1, h2, h3, p, a {
+    color: white;
+    margin: 0;
+    font-family: "Titillium Web";        
+    font-weight: normal;
+}
+
+body {
+	margin: auto;
+    background: #272b2b;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    height: 40px;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 24px;
+    font-family: "Orbitron";            
+}
+
+/* HEADER*/
+#main-nav {
+    float: right;
+    margin: 10px;
+}
+
+#title {
+    background-color: #dd5b05;
+    /*border-radius: 0 0 20px;*/
+    height: 50px;
+    padding: 10px 10px;
+}
+
+#main-nav ul li {
+    list-style-type:none;
+    display: inline-block;
+    text-transform: uppercase;
+    margin: 0 10px;
+    font-weight: 200;
+}
+
+/* CONTACT */
+#upper-bg {
+    background-image: url("/static/landing/img/code-lines.png");
+}
+#contact {
+    /*background-color: #1a1e21;*/
+    padding: 80px 20px  20px  20px;
+}
+
+#contact h1 {
+    font-size: 28px;
+    font-weight: normal;
+    margin: 20px;
+}
+
+#contact h2 {
+    font-size: 16px;
+    color:  #ff6600;
+    margin: 10px 20px;
+}
+.button {
+    background-color: #f76301;
+    border: 0;
+    border-radius: 3px;
+    box-shadow: none;
+    font-weight: normal;
+    margin: 20px; 
+    font-size: 18px;
+}
+
+#contact p {
+    color: #bbbbbb;
+    font-size: 12px;
+    margin: 0 20px;    
+}
+
+
+/* SKILLS */
+#skills-arrow {
+    background-image: url("/static/landing/img/skills-bg.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    height:22px;
+}
+#skills {
+    background-color: #282f30;
+    padding: 40px;
+
+    background-image: url("/static/landing/img/skills-bg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+#main-skills li {
+    color: #ff6600;
+    list-style-type:none;
+    /*text-transform: uppercase;*/
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 28px;
+}
+#other-skills {
+    padding: 0 20px;
+}
+#skills h2 {
+    font-size: 16px;
+    font-weight: 400;
+}
+#skills p {
+    color: #dddddd;
+    font-weight: 200;    
+    line-height: 20px;    
+}
+
+/*PROJECTS*/
+#projects-arrow{
+    background-color: #ebead1;    
+    background-image: url("/static/landing/img/triangle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    /*background-size: 620%;    */
+    height: 24px;
+}
+#projects {
+    padding: 20px 0 0;            
+    background-color: #ebead1;
+}
+#projects h2 {
+    color: #f76300;
+    text-align: center;
+}
+#thumbnails {
+    text-align: center;
+    position: relative;
+}
+
+#container {
+}
+#carousel {
+    margin: auto;
+}
+#carousel-desc {
+    margin-left: -40px;
+
+}
+#thumbnails img {
+    border: 4px solid white;
+    border-radius: 4px;
+    margin: 20px;
+    width: 500px;
+}
+
+#orbit-projects {
+    margin: auto;
+    text-align: center;
+}
+#orbit-projects img {
+    float: left;
+    width: 397px;
+}
+
+#arrow-left, #arrow-right{
+    margin: 40px 0;
+}
+#arrow-left {
+    float: left;
+}
+#arrow-right {
+    float: right;
+}
+#description {
+    /*padding: 10px 40px 20px 30px;    */
+    padding: 40px;
+    text-align: center;
+    margin: auto;
+    width: 640px;    
+}
+
+#description-bg {
+    background-color: #ff6600;    
+}
+
+#description p {
+    margin-bottom: 0;
+}
+
+/* Testimonials */
+#lower-bg {
+    background-image: url("/static/landing/img/macbook.png");
+    background-repeat: no-repeat;    
+    background-position: top;
+    background-size: 120%;
+}
+#testimonials {
+    background-color: rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 40px;
+}
+
+#testimonials p {
+    font-size: 18px;
+}
+
+#quote-icon img {
+    margin-bottom: 20px;
+}
+
+#testimonialsHr {
+    width: 64px;
+    margin: 10px auto;
+}
+/* Testimonials END */
+
+/* About */
+#about {
+    text-align: center;
+    background-color: rgba(0,0,0,0.8);  
+    padding: 40px 40px 20px 40px;      
+}
+
+#about p {
+    margin: 16px;
+}
+
+#about a {
+    color: #ff6600;
+}
+
+/* About END */
+
+/* Message */
+#message {
+    padding: 40px;            
+    background-color: #ebead1;
+}
+
+#message h2 {
+    color: #ff6600;
+}
+#message .button {
+    margin: 0;
+}
+
+
+/* Message END */
+footer {
+    background:black;
+    text-align: center;
+    padding: 40px;
+}
+
+
+
+
+
+/* Carousel */
+		#ui-carousel-next, #ui-carousel-prev {
+			width: 37px;
+			height: 50px;
+			display: block;
+			position: absolute;
+			z-index: 100;
+			top: 140px;
+		}
+	
+		#ui-carousel-prev{
+			background: url("/static/landing/img/carousel/arrow-left.png") center center no-repeat;
+			left: 10px;				
+			float: left;
+		}
+		
+		#ui-carousel-next{
+			right: 10px;
+			background: url("/static/landing/img/carousel/arrow-right.png")center center no-repeat;
+			float: right;
+		}
+
+#email {
+    float:left;
+    margin-right:20px;
+}
+
+#email input, #subject input {
+    width: 180px;
+    box-shadow: none;
+    border-radius: 4;
+    background-color: rgb(245, 245, 245)!important;
+    height: 40px;
+    color: gray;
+    font-size: 16px;
+}
+
+#subject {
+    margin: 20px;    
+}
+
+#subject input {
+    width:240px;
+}
+
+#messageContent {
+    height:440px;
+    width:100%;
+	background-color: rgb(245, 245, 245);
+	resize: none;
+	border-radius:4;
+    font-size: 16px;    
+}
+
+#send {
+    float:right;
+    width:80;
+}
+        

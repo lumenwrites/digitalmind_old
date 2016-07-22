@@ -1,0 +1,36 @@
+
+#content {
+	margin: 20px;
+}
+
+
+#carousel,#carousel_2{
+	padding: 10px;
+	margin: auto;
+}
+
+
+#container {
+				width: 500px;
+				height: 150px;
+				position: relative;
+			}
+			
+			#carousel {
+				margin: 0 auto;
+			}
+			#carousel_2 {
+				margin: 0 auto;
+			}
+});
+
+			#carousel img {
+				border: 0;
+			}
+
+		
+
+			
+			#ui-carousel-next > span, #ui-carousel-prev > span {
+				display: none;
+			}
