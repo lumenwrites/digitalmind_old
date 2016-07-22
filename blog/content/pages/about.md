@@ -10,7 +10,7 @@ On this blog I write articles about programming, Computer Science, Artificial In
 
 <!-- You also might want to check out my [non-technical blog](http://orangemind.io), where I write essays about rationality, science, and startups, also comedy and science fiction. -->
 
-If you like this blog, you probably want to check out [other projects](http://rayalez.com/) that I have created.
+If you like this blog, you probably want to check out the [other projects](http://rayalez.com/) I have created.
 
 If you want to send me a message, my email is  
 **raymestalez@gmail.com**
