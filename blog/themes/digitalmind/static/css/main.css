@@ -76,6 +76,7 @@ li p {
 header {
 	height: 130;
 	padding: 40px;
+	padding-bottom: 30px;	
 }
 
 #mainMenu {

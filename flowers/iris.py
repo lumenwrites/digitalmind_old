@@ -34,8 +34,11 @@ def baseline_model():
     model.add(Dense(3, init='normal', activation='sigmoid'))
     # Compile model
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+    
     return model
     
 estimator = KerasClassifier(build_fn=baseline_model, nb_epoch=200, batch_size=5, verbose=0)
 kfold = KFold(n=len(X), n_folds=10, shuffle=True, random_state=seed)
 results = cross_val_score(estimator, X, dummy_y, cv=kfold)
+
+print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
