@@ -105,6 +105,5 @@ results = cross_val_score(estimator, X, dummy_y, cv=kfold)
 print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
 ```
 
-
 Completed the training, accuracy is this.
 You can see the [whole code on github](https://github.com/raymestalez/dm/blob/master/flowers/iris.py).

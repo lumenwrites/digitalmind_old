@@ -209,6 +209,10 @@ div.output_prompt {
     font-family: "Inconsolata";
 }
 
+.highlight {
+    margin-bottom: 10px;
+}
+
 /* Fix the list changes */
 
 ul, ol {
