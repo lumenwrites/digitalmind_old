@@ -1779,7 +1779,7 @@ jQuery(document).ready(function($) {
           <hr />
 	  <p>The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.</p>
 <h2>Iris Dataset</h2>
-<p>I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of the sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.</p>
+<p>I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of it's sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.</p>
 <p>The data looks like this:</p>
 <div class="highlight"><pre>5.1,3.5,1.4,0.2,Iris-setosa
 5.0,3.3,1.4,0.2,Iris-setosa
@@ -1795,6 +1795,8 @@ jQuery(document).ready(function($) {
 <p><img alt="Iris Scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/749px-Iris_dataset_scatterplot.svg.png" /></p>
 <p>To load the dataset download the csv file <a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.csv">here</a>, and then load it like this:</p>
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">pandas</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
 
 <span class="c"># load dataset</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&quot;iris.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
@@ -1804,41 +1806,87 @@ jQuery(document).ready(function($) {
 </pre></div>
 
 
-<h2>Importing tools</h2>
-<p>Let's import the tools that we're going to use:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span>
-<span class="kn">import</span> <span class="nn">pandas</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<p>'X' is a variable that contains the feautres that describe the lenghts of each of the flower parts:</p>
+<div class="highlight"><pre><span class="p">[[</span> <span class="mf">5.1</span>  <span class="mf">3.5</span>  <span class="mf">1.4</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">4.9</span>  <span class="mf">3.</span>   <span class="mf">1.4</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="p">[</span> <span class="mf">4.7</span>  <span class="mf">3.2</span>  <span class="mf">1.3</span>  <span class="mf">0.2</span><span class="p">]</span>
+ <span class="o">....</span>
+ <span class="p">[</span> <span class="mf">5.9</span>  <span class="mf">3.</span>   <span class="mf">5.1</span>  <span class="mf">1.8</span><span class="p">]]</span>
+</pre></div>
+
+
+<p>and 'Y' contains the corresponding labels that describe the species of the flower:</p>
+<div class="highlight"><pre>[&#39;Iris-setosa&#39;     &#39;Iris-setosa&#39;     ... &#39;Iris-setosa&#39;
+ ...
+ &#39;Iris-versicolor&#39; &#39;Iris-versicolor&#39; ... &#39;Iris-versicolor&#39; 
+ ...
+ &#39;Iris-virginica&#39;  &#39;Iris-virginica&#39;  ... &#39;Iris-virginica&#39;]
+</pre></div>
+
+
+<p>Now to be able to use these labels in our network, we want to represent each of them as vector of 3 <!-- boolean --> values that looks like this:</p>
+<div class="highlight"><pre>Iris-setosa Iris-versicolor Iris-virginica
+     1              0             0
+     0              1             0 
+     0              0             1
+</pre></div>
+
+
+<p>To do that, we will first use LabelEncoder(), that will turn the strings describing names of the plants into numerical values("Iris-setosa" will be represented by 0, "Iris-versicolor" by 1, and "Iris-virginica" by 2):</p>
+<div class="highlight"><pre><span class="c">#encode class values as integers</span>
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
+<span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+<span class="n">encoded_Y</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
+</pre></div>
+
+
+<p>So that our encoded list of labels (encoded_Y) now looks like this:</p>
+<div class="highlight"><pre><span class="p">[</span><span class="mi">0</span> <span class="mi">0</span> <span class="o">...</span> <span class="mi">0</span>
+ <span class="o">...</span>
+ <span class="mi">1</span> <span class="mi">1</span> <span class="o">...</span> <span class="mi">1</span>
+ <span class="o">...</span>
+ <span class="mi">2</span> <span class="mi">2</span> <span class="o">...</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+
+
+<p>And then we will use np_utils.to_categorical():</p>
+<div class="highlight"><pre><span class="c"># convert integers to dummy variables (hot encoded)</span>
+<span class="n">dummy_y</span> <span class="o">=</span> <span class="n">np_utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">encoded_Y</span><span class="p">)</span>
+</pre></div>
+
+
+<p>to convert it into a binary matrix that looks like this:</p>
+<div class="highlight"><pre><span class="p">[[</span> <span class="mf">1.</span>  <span class="mf">0.</span>  <span class="mf">0.</span><span class="p">]</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">0.</span>  <span class="mf">0.</span><span class="p">]</span> <span class="o">...</span> <span class="p">[</span> <span class="mf">1.</span>  <span class="mf">0.</span>  <span class="mf">0.</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">1.</span>  <span class="mf">0.</span><span class="p">]</span> <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">1.</span>  <span class="mf">0.</span><span class="p">]</span> <span class="o">...</span> <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">1.</span>  <span class="mf">0.</span><span class="p">]</span>
+ <span class="o">...</span>
+ <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">0.</span>  <span class="mf">1.</span><span class="p">]</span> <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">0.</span>  <span class="mf">1.</span><span class="p">]</span> <span class="o">...</span> <span class="p">[</span> <span class="mf">0.</span>  <span class="mf">0.</span>  <span class="mf">1.</span><span class="p">]]</span>
+</pre></div>
+
+
+<p>This process is called "one-hot encoding".</p>
+<p>Now we have the data we can use to train our neural network.</p>
+<h2>Defining the model</h2>
+<p>First let's import the tools that we're going to use:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 <span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
 <span class="kn">from</span> <span class="nn">keras.wrappers.scikit_learn</span> <span class="kn">import</span> <span class="n">KerasClassifier</span>
 <span class="kn">from</span> <span class="nn">keras.utils</span> <span class="kn">import</span> <span class="n">np_utils</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">KFold</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">KFold</span>
 <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 </pre></div>
 
 
-<!-- We will use numpy to ...,  keras to ..., and scikitlearn to ... -->
-
+<h1>Define the model</h1>
+<p>the next step is to define our model(shape of the neural network)</p>
 <h2>Initialize random seed</h2>
 <p>We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:</p>
 <div class="highlight"><pre><span class="c"># fix random seed for reproducibility</span>
 <span class="n">seed</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
-
-
-<h1>Encode the output variable</h1>
-<p>We are working on a multiclass classification problem, that is we are trying to predict to which class the flower belongs to. That means that we will have 3 output neurons, and only one of them will be activated, according to which class ANN thinks the flower belongs to.</p>
-<p>In these situations, it is a good practice to use <a href="http://stackoverflow.com/questions/17469835/one-hot-encoding-for-machine-learning">one-hot encoding</a> - transforming the variable from looking like this:</p>
-<p>to looking like this:</p>
-<div class="highlight"><pre><span class="c">#encode class values as integers</span>
-<span class="n">encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
-<span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
-<span class="n">encoded_Y</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
-
-<span class="c"># convert integers to dummy variables (hot encoded)</span>
-<span class="n">dummy_y</span> <span class="o">=</span> <span class="n">np_utils</span><span class="o">.</span><span class="n">to_categorical</span><span class="p">(</span><span class="n">encoded_Y</span><span class="p">)</span>
 </pre></div>
 
 

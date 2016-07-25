@@ -9,7 +9,7 @@ The purpose of this project is to learn the basics of training an ANN on a simpl
 
 ## Iris Dataset
 
-I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of the sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.
+I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of it's sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.
 
 The data looks like this:
 ```
@@ -29,6 +29,8 @@ To load the dataset download the csv file [here](https://github.com/raymestalez/
 
 ```python
 import pandas
+import numpy
+from sklearn.preprocessing import LabelEncoder
 
 # load dataset
 dataframe = pandas.read_csv("iris.csv", header=None)
@@ -37,24 +39,97 @@ X = dataset[:,0:4].astype(float)
 Y = dataset[:,4]
 ```
 
-
-## Importing tools
-Let's import the tools that we're going to use:
+'X' is a variable that contains the feautres that describe the lenghts of each of the flower parts:
 
 ```python
-import numpy
-import pandas
+[[ 5.1  3.5  1.4  0.2]
+ [ 4.9  3.   1.4  0.2]
+ [ 4.7  3.2  1.3  0.2]
+ ....
+ [ 5.9  3.   5.1  1.8]]
+```
+and 'Y' contains the corresponding labels that describe the species of the flower:
+
+```
+['Iris-setosa'     'Iris-setosa'     ... 'Iris-setosa'
+ ...
+ 'Iris-versicolor' 'Iris-versicolor' ... 'Iris-versicolor' 
+ ...
+ 'Iris-virginica'  'Iris-virginica'  ... 'Iris-virginica']
+```
+
+Now to be able to use these labels in our network, we want to represent each of them as vector of 3 <!-- boolean --> values that looks like this:
+
+
+```
+Iris-setosa Iris-versicolor Iris-virginica
+     1              0             0
+     0              1             0 
+     0              0             1
+```
+
+To do that, we will first use LabelEncoder(), that will turn the strings describing names of the plants into numerical values("Iris-setosa" will be represented by 0, "Iris-versicolor" by 1, and "Iris-virginica" by 2):
+
+
+```python
+#encode class values as integers
+encoder = LabelEncoder()
+encoder.fit(Y)
+encoded_Y = encoder.transform(Y)
+```
+
+So that our encoded list of labels (encoded_Y) now looks like this:
+
+```python
+[0 0 ... 0
+ ...
+ 1 1 ... 1
+ ...
+ 2 2 ... 2]
+```
+
+And then we will use np_utils.to_categorical():
+```python
+# convert integers to dummy variables (hot encoded)
+dummy_y = np_utils.to_categorical(encoded_Y)
+```
+
+to convert it into a binary matrix that looks like this:
+
+```python
+[[ 1.  0.  0.] [ 1.  0.  0.] ... [ 1.  0.  0.]
+ ...
+ [ 0.  1.  0.] [ 0.  1.  0.] ... [ 0.  1.  0.]
+ ...
+ [ 0.  0.  1.] [ 0.  0.  1.] ... [ 0.  0.  1.]]
+```
+
+This process is called "one-hot encoding".
+
+Now we have the data we can use to train our neural network.
+
+
+
+## Defining the model
+
+First let's import the tools that we're going to use:
+
+```python
 from keras.models import Sequential
 from keras.layers import Dense
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.utils import np_utils
+```
+
+
+```python
 from sklearn.cross_validation import cross_val_score, KFold
-from sklearn.preprocessing import LabelEncoder
 from sklearn.pipeline import Pipeline
 ```
 
-<!-- We will use numpy to ...,  keras to ..., and scikitlearn to ... -->
+# Define the model
 
+the next step is to define our model(shape of the neural network)
 
 ## Initialize random seed
 We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:
@@ -66,24 +141,6 @@ numpy.random.seed(seed)
 ```
 
 
-# Encode the output variable
-We are working on a multiclass classification problem, that is we are trying to predict to which class the flower belongs to. That means that we will have 3 output neurons, and only one of them will be activated, according to which class ANN thinks the flower belongs to.
-
-In these situations, it is a good practice to use [one-hot encoding](http://stackoverflow.com/questions/17469835/one-hot-encoding-for-machine-learning) - transforming the variable from looking like this:
-
-to looking like this:
-
-
-
-```python
-#encode class values as integers
-encoder = LabelEncoder()
-encoder.fit(Y)
-encoded_Y = encoder.transform(Y)
-
-# convert integers to dummy variables (hot encoded)
-dummy_y = np_utils.to_categorical(encoded_Y)
-```
 
 ## Defining our model
 
