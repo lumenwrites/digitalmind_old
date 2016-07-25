@@ -22,261 +22,82 @@
 &lt;p&gt;Fred and George raised the doorknob a perfect assertion and lowered a deep breath, meaning at she was coughing animals, it took a wretched metal rising step toward the edge from the emptiness of the planet.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;“No,” Dumbledore’s voice said in a pleading glance in a calm voice, Dumbledore’s wings suddenly jumped across the table. The conversation looked through. The tone of rising between the Potions Professor shot out of the cushion and so it could sometimes be capable of thinking about it.&lt;/p&gt;
-&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>List of the key terms and concepts of ML</title><link href="/post/machine-learning-key-concepts" rel="alternate"></link><updated>2014-12-22T04:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/machine-learning-key-concepts</id><summary type="html">&lt;p&gt;This is a list of the key terms and concepts in Machine Learning.&lt;/p&gt;
-&lt;h3&gt;Model&lt;/h3&gt;
-&lt;p&gt;Our goal in ML is to create a good model. You take the input data and try to find underlying patterns in it, and the model is the output of your learning algorithms, it represents the patterns in data that you could find.&lt;/p&gt;
-&lt;!-- TODO what is the difference between the model and a Target Variable/Function? --&gt;
+&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;style&gt;
+a {
+    color: #3d454b;
+    font-weight: bold;
+}
+&lt;/style&gt;
 
-&lt;h3&gt;Dataset&lt;/h3&gt;
-&lt;p&gt;When you start with a machine learning problem the first thing you need is data.
-All the data you have is your dataset.&lt;/p&gt;
-&lt;p&gt;Imagine it like a table with rows and columns.&lt;/p&gt;
-&lt;p&gt;Dataset contains &lt;strong&gt;instances&lt;/strong&gt;, also called &lt;strong&gt;vectors&lt;/strong&gt;, or &lt;strong&gt;training examples&lt;/strong&gt;.
-These are the specific entries in your data, &lt;em&gt;rows&lt;/em&gt; of your table.&lt;/p&gt;
-&lt;p&gt;And &lt;strong&gt;features&lt;/strong&gt; (also called &lt;strong&gt;attributes&lt;/strong&gt; of the instances) are the &lt;em&gt;columns&lt;/em&gt; of your table.&lt;/p&gt;
-&lt;p&gt;What you do is you split your data into 2 parts: a training set and a test set.&lt;br /&gt;
-&lt;strong&gt;Training set&lt;/strong&gt; you will use as an input, you will run learning algorithms on it to train your model.&lt;br /&gt;
-&lt;strong&gt;Test set&lt;/strong&gt; is the part of your dataset that you put aside, so that when your model is created you can test it and make sure that it predicts things correctly.&lt;/p&gt;
-&lt;h2&gt;Types of machine learning&lt;/h2&gt;
-&lt;h3&gt;Supervised Learning&lt;/h3&gt;
-&lt;p&gt;The goal of supervised learning is prediction.&lt;br /&gt;
-You are given a set of labeled data, that contains inputs and outputs, so you know what you are looking for, what the right answers are, and you are trying to understand the mapping between inputs and outputs.&lt;/p&gt;
-&lt;p&gt;Process:  &lt;/p&gt;
-&lt;p&gt;&lt;img alt="supervised learning" src="/images/machine-learning-intro/supervised-learning.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Model here is a mapping between inputs and outputs.&lt;br /&gt;
-You run learning algorithms on the data to find a model, and once we have that model, we can feed it new inputs, and it will correctly predict new outputs. So now we can make new predictions on data that wasn't in the dataset.&lt;/p&gt;
-&lt;p&gt;Types:&lt;/p&gt;
-&lt;h3&gt;Regression&lt;/h3&gt;
-&lt;p&gt;The output is continuous, it can be any real number.  &lt;/p&gt;
-&lt;p&gt;Example: predicting house prices based on house size.&lt;/p&gt;
-&lt;h3&gt;Classification&lt;/h3&gt;
-&lt;p&gt;The output is discrete. Yes/no,  or red/blue/green. You are taking the input and trying to classify it into groups.&lt;/p&gt;
-&lt;p&gt;Example: Classify emails as spam or not spam.&lt;/p&gt;
-&lt;!-- Example:  
-Housing prices.
-price/size in feet.
-fit a straight line through the data. or a quadratic/polynomial functio
-prive/size in feet - graph in matplotlib!!
-(regression - fitting a line) --&gt;
-
-&lt;h2&gt;Unsupervised Learning&lt;/h2&gt;
-&lt;p&gt;In unsupervised learning you don't know what you're looking for, you're just trying to find patterns in the unlabeled data, and group this data according to it.&lt;/p&gt;
-&lt;p&gt;Process:&lt;br /&gt;
-&lt;img alt="unsupervised learning clustering" src="/images/machine-learning-intro/unsupervised-learning-clustering.png" /&gt;&lt;/p&gt;
-&lt;p&gt;Types: Clustering and Association.&lt;/p&gt;
-&lt;p&gt;Example: Figure out types of items that are frequently bought together.&lt;/p&gt;
-&lt;h2&gt;Overfitting. Approximation vs Generalization&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Approximation&lt;/strong&gt; is how well your model fits into the training data, &lt;strong&gt;generalization&lt;/strong&gt; is how well your model can make predictions about new data that isn't in the training set.&lt;/p&gt;
-&lt;p&gt;There is a fundamental tradeoff in machine learning, between how well the training data can be approximated, and how well model generalizes to new data.&lt;/p&gt;
-&lt;!-- Example: [Graph. Linear function vs parabola] --&gt;
-
-&lt;p&gt;&lt;strong&gt;Overfitting&lt;/strong&gt; is too much approximation with bad generalization.
-It happens  when the function we've predicted fits great with a training set, but can't generalize and predict the actual new inpits.&lt;/p&gt;
-&lt;p&gt;&lt;img style="width:320px; float:right;" src="/images/machine-learning-intro/overfitting.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;For example in the graph to the right the green line represents the actual underlying function that created the data, and blue line represents the model made by a machine learning algorithm that suffers from overfitting. &lt;/p&gt;
-&lt;p&gt;So it is always important to remember that the goal is not to fit the training data, but to fit the underlying model that created the data, and make the best predictions on new examples.&lt;/p&gt;
-&lt;!--
-### Classification
-//clustering
-Breast cancer malignant/benign.
-Estimate probability of that.
-
-Features/attributes.
-
-Examples
-
-## Unsupervised learning
-Unlabeled data, without knowing what data means, find the patterns.
-Find some structure in data.
-CLustering.
-Example - google news.
-
-Group peoply by genes. find structure in genes.
-social vetwork analysis
-market segmentation
-astronomical data analysis
-
-coctail party problem.
-
-- definition
-- examples
-
-## Other
-Reinforcement learning, recommender systems
-
-## Cross-validation
-## Generalization
-## Dimensionality
-the curse of dimensionality
-
---&gt;</summary></entry><entry><title>Introduction to Machine Learning</title><link href="/post/introduction-to-machine-learning" rel="alternate"></link><updated>2014-12-22T01:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-22:post/introduction-to-machine-learning</id><summary type="html">&lt;p&gt;This article is a general overview of Machine Learning and the surrounding fields.&lt;/p&gt;
-&lt;h2&gt;What is Machine Learning?&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;The field of study that gives computers the ability to &lt;strong&gt;learn&lt;/strong&gt; without being explicitly programmed.&lt;br /&gt;
-- Arthur Samuel.&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Machine Learbing is a field that studies algorithms that can learn from data. These algorithms take a dataset as an input, and build a &lt;strong&gt;model&lt;/strong&gt; based on it. And then they make predictions or decisions based on that model, as opposed to following explicit instructions, like the usual programs do.&lt;/p&gt;
-&lt;p&gt;Often it is impossible to create programms just by writing the code, becaue that would take too long, or you just don't know how to do that.
-For example you can not write millions of programs for every one of amazon users that would suggest books this particular person would like, because it would just take too much effort, and you couldn't program a quadcopter to do some complex trick while it's flying, because you don't know how to express the commands it would need as a series of if-else statements.&lt;/p&gt;
-&lt;p&gt;That is where ML comes in. With ML you can analyze a lot of data, find patterns in it, and use these patterns to allow computer to "learn" to perform certain tasks.&lt;/p&gt;
-&lt;p&gt;Especially now, as more data becomes available, you can solve more and more complex problems by using ML, and now ML is used in &lt;a href="/post/practical-applications-of-machine-learning"&gt;a lot of fields&lt;/a&gt;. Availability of Big Data made machine learning much more valuavle.&lt;/p&gt;
-&lt;p&gt;So Machine Learning analyzes the data, finds patterns in it, extracts knowledge from it, and uses it to predicts the output.&lt;/p&gt;
-&lt;p&gt;It also allows us to discover new relationships and connections in the large sets of data, it allows us to "predict the future", and it allows computers to program themselves.&lt;/p&gt;
-&lt;h2&gt;Machine Learning process&lt;/h2&gt;
-&lt;div class="mermaid"&gt;
-graph LR;
-    UR(Unknown Relatioinship &lt;br/&gt;Target Function)--&gt;D(Data);
-    D --&gt; LA(Learning Algorithm &lt;br/&gt;&lt;br/&gt; Model &gt; Evaluate &gt; Results &gt; &lt;br/&gt; &gt; Optimize &gt; New Model &gt; Repeat);
-    M(Models) --&gt; LA;
-    LA --&gt; FM(Final Model);
-&lt;/div&gt;
-
-&lt;p&gt;ML process begins with data(also called "training examples"), data contains examples of how some system operates, inputs and outputs. This data was produced by some process(also called "target function"), unknown to us, some pattern which we are trying to find out.&lt;/p&gt;
-&lt;p&gt;We create models(representations) that present mappings from inputs to outputs, possible functions that produce this model. And then we will use our learning algorithm to find the final model(hypothesis) that represents the target function as close as possible. The best model will be the one that best explains the underlying pattern of data, that is most accurate at mapping inputs to the outputs.&lt;/p&gt;
-&lt;p&gt;Learning algorithm is usuall y an iterative process, that takes a model evaluates it to find out how good the model is(how much errors doe it have), uses these results to  optimize the model to get a new one, that produces better results. It repeats until we get a final model that is good enough for our purposes.&lt;/p&gt;
-&lt;p&gt;This means that for Machine Learning it requires data with a predictable underlying pattern, usually it works best when this pattern is complex, otherwise we could use simpler algorithms.&lt;/p&gt;
-&lt;h2&gt;Components of machine learning&lt;/h2&gt;
-&lt;p&gt;These are the 3 main components of machine learning:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Representation&lt;br /&gt;
-  This is how we mathimatically/algorithmically represent our model.&lt;br /&gt;
-  Examples:  &lt;ul&gt;
-&lt;li&gt;K-Nearest Neighbor&lt;/li&gt;
-&lt;li&gt;Decision Trees&lt;/li&gt;
-&lt;li&gt;Naive Bayes&lt;/li&gt;
-&lt;li&gt;Linear Regression&lt;/li&gt;
-&lt;li&gt;Neural Networks&lt;/li&gt;
-&lt;li&gt;Support Vector Machines &lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Evaluation  n
-    This is how we find the errors in our model and decide how good it is.&lt;br /&gt;
-    Examples:  &lt;ul&gt;
-&lt;li&gt;Accuracy&lt;/li&gt;
-&lt;li&gt;Error Rate&lt;/li&gt;
-&lt;li&gt;Squared Error&lt;/li&gt;
-&lt;li&gt;Info Gain&lt;/li&gt;
-&lt;li&gt;Cost&lt;/li&gt;
-&lt;li&gt;Margin&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Optimization
-  It is a way to search among many models and choose the one that's best.&lt;br /&gt;
-  Examples:  &lt;ul&gt;
-&lt;li&gt;Greedy Search&lt;/li&gt;
-&lt;li&gt;Gradient Descent&lt;/li&gt;
-&lt;li&gt;Newton's Method&lt;/li&gt;
-&lt;li&gt;Linear Programming&lt;/li&gt;
-&lt;li&gt;Quadratic Programming&lt;/li&gt;
-&lt;li&gt;Evolutionary Computation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!--
-### Relationship between deep learning and other fields
-[![ai-ml-dl](/images/deep-learning/ai-ml-dl.png)](/images/deep-learning/ai-ml-dl.png)
-
-So Deep Learning(DL) is a subfield of Machine Learning(ML) which is a subfield Artificial Intelligence which is a subfield Computer Science.
-
-## Deep Learning
-&lt;img src="/images/deep-learning/artificial_neural_network.png"
-style="width: 300px; float: right;"/&gt;
-
-&gt; "Deep learning" is the new big trend in Machine Learning. It promises general, powerful, and fast machine learning, moving us one step closer to AI.
-
-Deep Learning is a part of Machine Learning that focuses on creating multilayer Artificial Neural Networks(ANN). "Deep" means that the algorithm has several hidden layers of "neurons".
-
-ANNs are inspired by the theories of how biologial brain works, which in itself is awesome, and turns out that DL algorithms are extremely good at performing a lot of tasks, and in the past years they are making huge improvements upon other ML algorithms.
-
-DL allows to find patterns in unlabeled data, for example it can look at a lot of youtube videos, extract concepts from them, and to learn to recognize a cat, without initially knowing what it is.
-
-In the following years DL will be a huge driver of innovation, because it can be applied almost everywhere, and it can change the way we do things dramatically.
-
-At this point a lot of [resources](/post/deep-learning-resources/) are available on the subject, so it's a grat time to get into this awesome field.
---&gt;
-
-&lt;h3&gt;Related Posts:&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="/post/machine-learning-key-concepts"&gt;Key Concepts in Machine Learning&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>List of the best resources to learn the foundations of Artificial Intelligence</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;This is a list of the best resources about AI that I could find on the web.
-It will be the most useful for beginners, people who want to learn this field, but don't
-know where to start.&lt;/p&gt;
-&lt;p&gt;I have developed a strategy for myself, for learning the basics of AI in the
-fastest and most practical way, and I'm sure it will be useful to you as well.&lt;/p&gt;
-&lt;p&gt;Here's the list of the best resources to begin learning AI with:&lt;/p&gt;
-&lt;h2&gt;Prerequisites&lt;/h2&gt;
-&lt;h3&gt;Lisp and Python - best programming languages for AI:&lt;/h3&gt;
-&lt;p&gt;Of all the programming languages you can choose to practice AI there are 2 best
-options: Lisp and Python. Lisp was created specifically for creating AI, and it
-is widely considered to be the most elegant and brilliant programming language
-ever.  &lt;/p&gt;
-&lt;p&gt;Here's the best way to learn it:  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="" src="/images/digital-brain-header.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This is a list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.&lt;/p&gt;
+&lt;h2&gt;Machine Learning&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Land-Lisp-Learn-Program-Game/dp/1593272812/"&gt;Land of Lisp&lt;/a&gt;"
-  (Book about lisp with some AI algorithms)&lt;br /&gt;
-  This is an excellent and very fun introduction to lisp, makes learning very
-  enjoyable, understandable, and includes a lot of algorithms and basic principles
-  that will be very useful when you will be going throuhg AIMA.  &lt;/p&gt;
+&lt;p&gt;For the best introduction into Machine Learning field, watch Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt; on Coursera. It explains the basic concepts and gives you a good understanding of most important algorithms.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Paul Graham &lt;a href="http://www.amazon.com/ANSI-Common-LISP-Paul-Graham/dp/0133708756"&gt;ANSI Common Lisp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For a short, high level overview of ML algorithms, check out a great TutsPlus course “&lt;a href="http://code.tutsplus.com/courses/machine-learning-distilled"&gt;Machine Learning Distilled&lt;/a&gt;”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A book “&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325"&gt;Programming Collective Intelligence&lt;/a&gt;” is an excellent resource to learn the practical implementation of ML algorithms in python. It takes you through a lot of practical projects, covering all of the necessary fundamentals.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;And here's my favorite book on python:  &lt;/p&gt;
+&lt;p&gt;Other great resources you might want to check out are:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://class.coursera.org/machlearning-001/lecture/preview"&gt;Pedro Domingos ML course&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.udacity.com/course/cs271"&gt;Udacity Course on ML&lt;/a&gt; by Perer Norvig&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.cs.cmu.edu/%7Etom/10701_sp11/lectures.shtml"&gt;Another course on ML&lt;/a&gt; taught at Carnegie Mellon University by Tom Mitchell.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;General Coputer Science&lt;/h3&gt;
-&lt;p&gt;(algorithms, data structures, complexity)&lt;/p&gt;
+&lt;h2&gt;Deep Learning&lt;/h2&gt;
+&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. This book gives you a quick, practical introduction into the field.&lt;/p&gt;
+&lt;p&gt;Google DL course
+https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&lt;/p&gt;
+&lt;p&gt;After that, to get more in depth, here are some interesting resources:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;
-(based on &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;SICP book&lt;/a&gt;)&lt;br /&gt;
-  This is a course on lisp and basics of computer science, based on one of the most influential and seminal books in CS - "Structure and Interpretation of Computer Programs".&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Geoffrey Hinton’s coursera course “&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/%7Ebengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/tutorial/"&gt;deeplearning.net tutorials&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NYU Course on &lt;a href="http://techtalks.tv/deep_learning_nyu_spring_2014/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book “&lt;a href="http://neuralnetworksanddeeplearning.com/"&gt;Neural Networks and Deep Learning&lt;/a&gt;” by Michael Nielsen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book Neural “&lt;a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392"&gt;Networks and Learning Machines&lt;/a&gt;” by Simon O. Haykin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/reading-list/"&gt;deeplearning.net reading list&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Math&lt;/h3&gt;
-&lt;p&gt;My favorite resource for learning the basics of math is Khan Academy.
-Here's the very basics of math that you need to begin learning AI:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.khanacademy.org/math/algebra2"&gt;Algebra 2&lt;/a&gt;(logarithms, complex numbers)  &lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD6DA74C1DBF770E7"&gt;Trigonometry&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Calculus&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Linear Algebra&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt;
-&amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;Introductory logic&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;General overview of the field, most important topics:&lt;/h3&gt;
+&lt;h2&gt;Artificial Intelligence&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Book "&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;"&lt;br /&gt;
-  This is the best book about AI, and one of the best books written on any topic. Ever. It may be challenging for a complete beginner, but it covers most of the topics and fields of AI, and if you will read it - you will have a very solid foundations of the field. This is definitely a best place to start.&lt;/p&gt;
+  This is the best book about the "old school" AI, it covers most of the topics and fields of AI, and if you will read it - you will have a very solid foundations of the field. This is definitely the best place to start.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course&lt;/a&gt; from UC Berkeley(CS 188)&lt;br /&gt;
-  (link above leads to the youtube channel with my favorite version of the course, here's the &lt;a href="http://www.cs.berkeley.edu/~russell/classes/cs188/f14/lecture_videos.html"&gt;alternative list of lectures&lt;/a&gt;, which is the official course page that lists all the recordings of this course)&lt;br /&gt;
   This is an excellent course from Berkeley, series of video lectures, a lot of them are based on AIMA, it is a perfect complement to the book, it will make it much more understandable and enjoyable to read. Plus there's great practical projects.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Machine Learning.:&lt;/h3&gt;
-&lt;p&gt;Machine learning is the most "practical" and immediately useful subfield of AI,
-which is great because focusing on learning it will allow you immediately
-benefit from, and apply your knowledge on practical projects.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Andrew Ng:&lt;/strong&gt;&lt;br /&gt;
-&lt;a href="https://www.coursera.org/course/"&gt;https://www.coursera.org/course/&lt;/a&gt;  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Pedro Domingos:&lt;/strong&gt;&lt;br /&gt;
-&lt;a href="https://www.coursera.org/course/machlearning"&gt;https://www.coursera.org/course/machlearning&lt;/a&gt;  &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Programming Collective Intelligence&lt;/strong&gt;&lt;br /&gt;
-&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/05965293"&gt;http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/05965293&lt;/a&gt;  &lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;How mind works:&lt;/h3&gt;
+&lt;h2&gt;How mind works:&lt;/h2&gt;
 &lt;p&gt;On the opposite end of a spectrum - here's some fantastic(and very entertaining)
 books about how human mind works. It is not necessary very practical, but they
 are very exciting and fun to read, and obviously understanding of human brain
@@ -298,7 +119,93 @@ them a lot.&lt;/p&gt;
 &lt;a href="http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901"&gt;http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901&lt;/a&gt;&lt;br /&gt;
     This is the best book I could find that goes in depth into NS. 2 books above presented the general theories how mind works, this one talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
+&lt;li&gt;
+&lt;p&gt;GEB&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;General Coputer Science&lt;/h3&gt;
+&lt;p&gt;(algorithms, data structures, complexity)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;
+(based on &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;SICP book&lt;/a&gt;)&lt;br /&gt;
+  This is a course on lisp and basics of computer science, based on one of the most influential and seminal books in CS - "Structure and Interpretation of Computer Programs".&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Math&lt;/h2&gt;
+&lt;p&gt;Here's the very basics of math that you need to begin learning AI:&lt;/p&gt;
+&lt;h3&gt;Calculus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Khan Academy Calculus videos&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.coursera.org/course/m2o2c2"&gt;Coursera Calculus course&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT lectures on &lt;a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm"&gt;Multivariable Calculus&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Linear Algebra&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Khan Academy Linear Algebra videos&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/"&gt;MIT linear algebra videos&lt;/a&gt; by Gilbert Strang&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2"&gt;Coding the Matrix&lt;/a&gt; — Brown University course on Linear Algebra for CS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Probability and statistics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt; videos&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.edx.org/course/introduction-probability-science-mitx-6-041x#.VJfS2LQAKc"&gt;edx probability course&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;  &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.metacademy.org/"&gt;Metacademy&lt;/a&gt; — “package manager” for Machine Learning knowledge&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.kaggle.com/"&gt;kaggle&lt;/a&gt; — Machine Learning competitions&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;mathematicalmonk&lt;/a&gt; — Machine Learning youtube tutorials&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!--
+
+## Programming
+## Prerequisites
+
+### Lisp and Python - best programming languages for AI:
+Of all the programming languages you can choose to practice AI there are 2 best
+options: Lisp and Python. Lisp was created specifically for creating AI, and it
+is widely considered to be the most elegant and brilliant programming language
+ever.  
+
+Here's the best way to learn it:  
+
+- Book "[Land of Lisp](http://www.amazon.com/Land-Lisp-Learn-Program-Game/dp/1593272812/)"
+  (Book about lisp with some AI algorithms)  
+  This is an excellent and very fun introduction to lisp, makes learning very
+  enjoyable, understandable, and includes a lot of algorithms and basic principles
+  that will be very useful when you will be going throuhg AIMA.  
+
+
+- Paul Graham [ANSI Common Lisp](http://www.amazon.com/ANSI-Common-LISP-Paul-Graham/dp/0133708756)
+
+And here's my favorite book on python:  
+
+- [Dive Into Python 3](http://www.diveintopython3.net/)
+ --&gt;</summary></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Where did you learn web development? What is the best way to get started in web development?&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -339,15 +246,4 @@ Again, not free, but they have my favorite introductory course to django. You wi
 Or you can star with the official documentation - it is written extremely well, and contains a great tutorial for beginners (docs.djangoproject.com)
 After that you can read a great book "2 Scoops of Django".&lt;/p&gt;
 &lt;p&gt;That's pretty much it) This is the best way(that I'm aware of) for going from absolute zero to a solid intermediate(of course if you will practice and gain experience by making your own projects in the process).&lt;/p&gt;
-&lt;p&gt;I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)&lt;/p&gt;</summary></entry><entry><title>Great books</title><link href="/post/great-books" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/great-books</id><summary type="html">&lt;h3&gt;Catch Me If You Can by Frank Abagnale&lt;/h3&gt;
-&lt;p&gt;I remember disliking the movie, but the book is brilliant and hilarious. Autobiography of one of the boldest, horniest, and most brilliant con artists.&lt;/p&gt;
-&lt;h3&gt;Ghost In The Wires by Kevin Mitnick&lt;/h3&gt;
-&lt;p&gt;On the same topic, autobiography of a great hacker. Extremely clever and awesome. I bet people here will love it.&lt;/p&gt;
-&lt;h3&gt;Zero to One by Peter Thiel&lt;/h3&gt;
-&lt;p&gt;Very intelligent and inspiring book about startups and new technologies. A lot of new and great ideas, I've enjoyed it a lot.&lt;/p&gt;
-&lt;h3&gt;iWoz&lt;/h3&gt;
-&lt;p&gt;Autobiography of Steve Wozniak. Also wonderful and super positive and inspiring story.&lt;/p&gt;
-&lt;h3&gt;Trust me, I'm lying.&lt;/h3&gt;
-&lt;p&gt;Book about how modern social media is being manipulated. Short and interesting. Makes you think differently about what you read on the internet.&lt;/p&gt;
-&lt;h3&gt;On Intelligence by Jeff Hawkins&lt;/h3&gt;
-&lt;p&gt;Theory of how human mind works. Must read for everyone who is into AI, but also a great book for everyone else.&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)&lt;/p&gt;</summary></entry></feed>

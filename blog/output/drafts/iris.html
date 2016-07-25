@@ -1818,15 +1818,20 @@ jQuery(document).ready(function($) {
 </pre></div>
 
 
-<p>We will use numpy to ...,  keras to ..., and scikitlearn to ...</p>
-<h2>Initialize seed, encode output variable.</h2>
+<!-- We will use numpy to ...,  keras to ..., and scikitlearn to ... -->
+
+<h2>Initialize random seed</h2>
+<p>We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:</p>
 <div class="highlight"><pre><span class="c"># fix random seed for reproducibility</span>
 <span class="n">seed</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
 </pre></div>
 
 
-<h1>encode class values as integers</h1>
+<h1>Encode the output variable</h1>
+<p>We are working on a multiclass classification problem, that is we are trying to predict to which class the flower belongs to. That means that we will have 3 output neurons, and only one of them will be activated, according to which class ANN thinks the flower belongs to.</p>
+<p>In these situations, it is a good practice to use <a href="http://stackoverflow.com/questions/17469835/one-hot-encoding-for-machine-learning">one-hot encoding</a> - transforming the variable from looking like this:</p>
+<p>to looking like this:</p>
 <div class="highlight"><pre><span class="c">#encode class values as integers</span>
 <span class="n">encoder</span> <span class="o">=</span> <span class="n">LabelEncoder</span><span class="p">()</span>
 <span class="n">encoder</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>

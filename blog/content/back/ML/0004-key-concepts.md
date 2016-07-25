@@ -1,6 +1,7 @@
 Title: List of the key terms and concepts of ML
 Slug: machine-learning-key-concepts
 Date: 2014-12-22 04:00
+Status: Draft
 
 This is a list of the key terms and concepts in Machine Learning.
 

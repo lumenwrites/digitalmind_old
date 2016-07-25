@@ -53,10 +53,11 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.pipeline import Pipeline
 ```
 
-We will use numpy to ...,  keras to ..., and scikitlearn to ...
+<!-- We will use numpy to ...,  keras to ..., and scikitlearn to ... -->
 
 
-## Initialize seed, encode output variable.
+## Initialize random seed
+We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:
 
 ```python
 # fix random seed for reproducibility
@@ -65,7 +66,15 @@ numpy.random.seed(seed)
 ```
 
 
-#encode class values as integers 
+# Encode the output variable
+We are working on a multiclass classification problem, that is we are trying to predict to which class the flower belongs to. That means that we will have 3 output neurons, and only one of them will be activated, according to which class ANN thinks the flower belongs to.
+
+In these situations, it is a good practice to use [one-hot encoding](http://stackoverflow.com/questions/17469835/one-hot-encoding-for-machine-learning) - transforming the variable from looking like this:
+
+to looking like this:
+
+
+
 ```python
 #encode class values as integers
 encoder = LabelEncoder()

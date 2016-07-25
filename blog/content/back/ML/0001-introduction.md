@@ -1,6 +1,7 @@
 Title: Introduction to Machine Learning
 Slug: introduction-to-machine-learning
 Date: 2014-12-22 01:00
+Status: Draft
 
 This article is a general overview of Machine Learning and the surrounding fields.
 
