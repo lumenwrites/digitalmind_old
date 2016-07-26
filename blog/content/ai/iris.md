@@ -120,7 +120,7 @@ from keras.layers import Dense
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.utils import np_utils
 ```
-
+ 
 
 ```python
 from sklearn.cross_validation import cross_val_score, KFold
