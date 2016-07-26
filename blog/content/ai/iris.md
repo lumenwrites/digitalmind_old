@@ -158,8 +158,6 @@ from sklearn.pipeline import Pipeline
 
 
 
-
-
 ## Evaluating our model
 
 ```python
