@@ -112,7 +112,7 @@ Now we have the data we can use to train our neural network.
 
 ## Defining the model
 
-First let's import the tools that we're going to use:
+The next step is to define our model(shape of the neural network). First let's import the tools that we're going to use:
 
 ```python
 from keras.models import Sequential
@@ -120,18 +120,10 @@ from keras.layers import Dense
 from keras.wrappers.scikit_learn import KerasClassifier
 from keras.utils import np_utils
 ```
- 
 
-```python
-from sklearn.cross_validation import cross_val_score, KFold
-from sklearn.pipeline import Pipeline
-```
 
-# Define the model
 
-the next step is to define our model(shape of the neural network)
-
-## Initialize random seed
+Initialize random seed
 We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:
 
 ```python
@@ -141,8 +133,6 @@ numpy.random.seed(seed)
 ```
 
 
-
-## Defining our model
 
 ```python
 # define baseline model
@@ -156,6 +146,19 @@ def baseline_model():
     
     return model
 ```
+
+
+
+
+```python
+from sklearn.cross_validation import cross_val_score, KFold
+from sklearn.pipeline import Pipeline
+```
+
+
+
+
+
 
 ## Evaluating our model
 

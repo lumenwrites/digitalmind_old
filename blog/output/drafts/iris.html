@@ -1867,7 +1867,7 @@ jQuery(document).ready(function($) {
 <p>This process is called "one-hot encoding".</p>
 <p>Now we have the data we can use to train our neural network.</p>
 <h2>Defining the model</h2>
-<p>First let's import the tools that we're going to use:</p>
+<p>The next step is to define our model(shape of the neural network). First let's import the tools that we're going to use:</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 <span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
 <span class="kn">from</span> <span class="nn">keras.wrappers.scikit_learn</span> <span class="kn">import</span> <span class="n">KerasClassifier</span>
@@ -1875,22 +1875,14 @@ jQuery(document).ready(function($) {
 </pre></div>
 
 
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">KFold</span>
-<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-</pre></div>
-
-
-<h1>Define the model</h1>
-<p>the next step is to define our model(shape of the neural network)</p>
-<h2>Initialize random seed</h2>
-<p>We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:</p>
+<p>Initialize random seed
+We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:</p>
 <div class="highlight"><pre><span class="c"># fix random seed for reproducibility</span>
 <span class="n">seed</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
 </pre></div>
 
 
-<h2>Defining our model</h2>
 <div class="highlight"><pre><span class="c"># define baseline model</span>
 <span class="k">def</span> <span class="nf">baseline_model</span><span class="p">():</span>
     <span class="c"># create model</span>
@@ -1901,6 +1893,11 @@ jQuery(document).ready(function($) {
     <span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span><span class="s">&#39;categorical_crossentropy&#39;</span><span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span><span class="s">&#39;adam&#39;</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;accuracy&#39;</span><span class="p">])</span>
 
     <span class="k">return</span> <span class="n">model</span>
+</pre></div>
+
+
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">KFold</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
 </pre></div>
 
 
