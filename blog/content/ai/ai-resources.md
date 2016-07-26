@@ -2,13 +2,6 @@ Title: Artificial Intelligence resources
 Date: 2014-12-01
 Slug: artificial-intelligence-resources
 
-<style>
-a {
-    color: #3d454b;
-    font-weight: bold;
-}
-</style>
-
 ![](/images/digital-brain-header.png)
 
 This is a list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.
@@ -157,3 +150,11 @@ And here's my favorite book on python:
 
 - [Dive Into Python 3](http://www.diveintopython3.net/)
  -->
+
+
+<style>
+a {
+    color: #3d454b;
+    font-weight: bold;
+}
+</style>
