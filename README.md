@@ -4,4 +4,4 @@ Blog where I'm writing articles about programmming, Computer Science, Artificial
 
 http://digitalmind.io
 
-![](http://blog.digitalmind.io/static/img/dm-screenshot.png)
+![](http://blog.digitalmind.io/theme/img/dm-screenshot.png)
