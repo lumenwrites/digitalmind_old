@@ -170,6 +170,7 @@ article a {
     color: #3d454b;
     font-weight: bold;
 }
+
 &lt;/style&gt;</summary></entry><entry><title>Multiclass Classification of Flower Species</title><link href="/post/iris" rel="alternate"></link><updated>2016-07-23T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-23:post/iris</id><summary type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
 &lt;h2&gt;Iris Dataset&lt;/h2&gt;
 &lt;p&gt;I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of it's sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.&lt;/p&gt;

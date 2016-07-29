@@ -124,6 +124,10 @@ article {
 	margin-bottom: 80px;
 }
 
+article img {
+    margin:auto;
+}
+
 #readmore {
     float:right;
     font-style: italic;
