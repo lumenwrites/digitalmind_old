@@ -4,7 +4,7 @@ Slug: artificial-intelligence-resources
 
 ![](http://digitalmind.io/images/digital-brain-header.png)
 
-This is a list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.
+This is the list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.
 
 ## Machine Learning
 
