@@ -173,7 +173,7 @@ We initialize the random number generator with a specific value, so that we coul
 &lt;p&gt;Fred and George raised the doorknob a perfect assertion and lowered a deep breath, meaning at she was coughing animals, it took a wretched metal rising step toward the edge from the emptiness of the planet.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;“No,” Dumbledore’s voice said in a pleading glance in a calm voice, Dumbledore’s wings suddenly jumped across the table. The conversation looked through. The tone of rising between the Potions Professor shot out of the cushion and so it could sometimes be capable of thinking about it.&lt;/p&gt;
-&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;&lt;img alt="" src="/images/digital-brain-header.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://digitalmind.io/images/digital-brain-header.png" /&gt;&lt;/p&gt;
 &lt;p&gt;This is a list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.&lt;/p&gt;
 &lt;h2&gt;Machine Learning&lt;/h2&gt;
 &lt;ul&gt;
@@ -203,13 +203,12 @@ We initialize the random number generator with a specific value, so that we coul
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Deep Learning&lt;/h2&gt;
-&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. This book gives you a quick, practical introduction into the field. It does not have a long list of prerequisites, it introduces you to the most advanced tools(Keras, TensorFlow), and describes how to use them through anseries of practical projects. after that, [reddit post].&lt;/p&gt;
-&lt;p&gt;Google DL course
-https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&lt;/p&gt;
+&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. It doesn't go deeply into difficult math and does not have a long list of prerequisites, instead it describes an easy way to get started with DL, explains how to quickly start building stuff and learn everything else on practice. It explains the most advanced tools(Keras, TensorFlow), and takes you through the several practical projects, explaining how to achieve state of the art results in all of the coolest DL applications.&lt;/p&gt;
+&lt;p&gt;Also there's a &lt;a href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal"&gt;great introductory DL course&lt;/a&gt; from google, and a &lt;a href="http://lumiverse.io/series/neural-networks-demystified"&gt;great explanation of neural networks&lt;/a&gt; by Sephen Welch.&lt;/p&gt;
 &lt;p&gt;After that, to get more in depth, here are some interesting resources:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Geoffrey Hinton’s coursera course “&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;”&lt;/p&gt;
+&lt;p&gt;Geoffrey Hinton’s coursera course “&lt;a href="https://class.coursera.org/neuralnets-2012-001/lecture"&gt;Neural Networks for Machine Learning&lt;/a&gt;”. It will take you through the process of training ANN on the classic problem - MNIST character recognition, and will explain everything in depth.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/%7Ebengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
@@ -236,42 +235,34 @@ https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&lt;/p&g
 &lt;h2&gt;Artificial Intelligence&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Book "&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;"&lt;br /&gt;
-  This is the best book about the "old school" AI, it covers most of the topics and fields of AI, and if you will read it - you will have a very solid foundations of the field. This is definitely the best place to start.&lt;/p&gt;
+&lt;p&gt;"&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;" the best book about the "old school" AI. It gives you a general overview of the field, and explains all of the fundamental concepts that you need to know. &lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course&lt;/a&gt; from UC Berkeley(CS 188)&lt;br /&gt;
-  This is an excellent course from Berkeley, series of video lectures, a lot of them are based on AIMA, it is a perfect complement to the book, it will make it much more understandable and enjoyable to read. Plus there's great practical projects.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course from UC Berkeley&lt;/a&gt; is an excellent series of video lectures, explaining you the basics of AI on a really fun practical project(training AI to play the pacman game). I recommend to watch it along with reading AIMA, because it is based on this book, and explains a lot of the similar concepts from different angles, making them easier to understand. It goes quite in depth, and it's a fantastic way to get started.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;How mind works:&lt;/h2&gt;
-&lt;p&gt;On the opposite end of a spectrum - here's some fantastic(and very entertaining)
-books about how human mind works. It is not necessary very practical, but they
-are very exciting and fun to read, and obviously understanding of human brain
-can be very useful. At the very least - you will be inspired and enjoy reading
-them a lot.&lt;/p&gt;
+&lt;h2&gt;How mind works&lt;/h2&gt;
+&lt;p&gt;If you're interested in AI, you probably want to have a good intuition about how human mind works, and the following books will explain the best modern theories in a fun, intuitive way.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;Jeff Hawkins - On Intelligence&lt;br /&gt;
-&lt;a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533"&gt;http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533&lt;/a&gt;&lt;br /&gt;
-  Audiobook: &lt;a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK"&gt;http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533"&gt;On Intelligence&lt;/a&gt; by Jeff Hawkins (&lt;a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK"&gt;audiobook&lt;/a&gt;)&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Ray Kurzweil - How to Create a Mind:&lt;br /&gt;
-&lt;a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/"&gt;http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/&lt;/a&gt;&lt;br /&gt;
-  Audiobook: &lt;a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJ"&gt;http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJ&lt;/a&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567"&gt;Gödel, Escher, Bach&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I would recommend starting with these two, they will give you an excellent introduction into general theories of how mind works.&lt;/p&gt;
+&lt;p&gt;Other resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/"&gt;How to Create a Mind&lt;/a&gt; by Ray Kurzweil(&lt;a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJS/ref=a_search_c4_1_1_srTtl?qid=1469788482&amp;amp;sr=1-1"&gt;audiobook&lt;/a&gt;).&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Principles of Neural Science&lt;br /&gt;
-&lt;a href="http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901"&gt;http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901&lt;/a&gt;&lt;br /&gt;
-    This is the best book I could find that goes in depth into NS. 2 books above presented the general theories how mind works, this one talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;GEB&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901"&gt;Principles of Neural Science&lt;/a&gt; This is the best book I could find that goes in depth into NS. It talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Math&lt;/h2&gt;
-&lt;p&gt;Here's the very basics of math that you need to begin learning AI:&lt;/p&gt;
+&lt;p&gt;Here are the very basic math concepts that you need to begin learning AI:&lt;/p&gt;
 &lt;h3&gt;Calculus&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -308,12 +299,13 @@ them a lot.&lt;/p&gt;
 &lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;  &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;Coputer Science&lt;/h3&gt;
-&lt;p&gt;To be good at AI it's best to be comfortable with the general concepts of computer science and programming. &lt;/p&gt;
-&lt;p&gt;If you are just starting out, I recommend to read &lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt; - an amazing book that will teach you most of the important things that you need to be able to use python.&lt;/p&gt;
+&lt;h2&gt;Coputer Science&lt;/h2&gt;
+&lt;p&gt;To be good at AI you want to be comfortable with the general concepts of computer science and programming. &lt;/p&gt;
+&lt;p&gt;If you are just starting out, I recommend to read &lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt; - an amazing book that will teach you most of the important things that you need to be able to program in python.&lt;/p&gt;
 &lt;p&gt;To understand the nature of computer programming more in depth - watch this classic &lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;. This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;).&lt;/p&gt;
-&lt;p&gt;(algorithms, data structures, complexity)&lt;/p&gt;
-&lt;h2&gt;Other&lt;/h2&gt;
+&lt;!-- (algorithms, data structures, complexity) --&gt;
+
+&lt;h2&gt;Other Resources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.metacademy.org/"&gt;Metacademy&lt;/a&gt; - a "package manager" for your knowledge. You can use this great tool to understand all the prerequisites you need to learn different ML subjects.&lt;/p&gt;
@@ -321,10 +313,12 @@ them a lot.&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.kaggle.com/"&gt;kaggle&lt;/a&gt; — Machine Learning competitions&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Github/my post on datasets&lt;/p&gt;
-&lt;/li&gt;
 &lt;/ul&gt;
+&lt;!-- - Github/my post on datasets --&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;As I'm learning more about AI and ML, I will be improving and expanding this list. If you have some good suggestions, you can submit a commit &lt;a href="https://github.com/raymestalez/digitalmind/blob/master/blog/content/ai/ai-resources.md"&gt;over here&lt;/a&gt;, or send me an email to raymestalez@gmail.com&lt;/p&gt;
+&lt;p&gt;Also if you are interested in learning about Artificial Intelligence and Deep Learning - subscribe to this blog, I am posting all the most interesting things I know about the subject here.&lt;/p&gt;
 &lt;!--
 
 ## Programming
