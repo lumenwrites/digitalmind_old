@@ -8,15 +8,15 @@ This is a list of the best resources to learn the foundations of Artificial Inte
 
 ## Machine Learning
 
-- For the best introduction into Machine Learning field, watch Andrew Ng [Machine Learning course](https://www.coursera.org/course/ml) on Coursera. It explains the basic concepts and gives you a good understanding of most important algorithms.
+- For the best introduction to the Machine Learning field, watch Andrew Ng [Machine Learning course](https://www.coursera.org/course/ml) on Coursera. It explains the basic concepts and gives you a good understanding of most important algorithms.
 
-- For a short, high level overview of ML algorithms, check out a great TutsPlus course “[Machine Learning Distilled](http://code.tutsplus.com/courses/machine-learning-distilled)”.
+- For a short, high level overview of ML algorithms, check out this great TutsPlus course “[Machine Learning Distilled](http://code.tutsplus.com/courses/machine-learning-distilled)”.
 
 - A book “[Programming Collective Intelligence](http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325)” is an excellent resource to learn the practical implementation of ML algorithms in python. It takes you through a lot of practical projects, covering all of the necessary fundamentals.
 
 Other great resources you might want to check out are:
 
-- [Pedro Domingos ML course](https://class.coursera.org/machlearning-001/lecture/preview)
+<!-- - [Pedro Domingos ML course](https://class.coursera.org/machlearning-001/lecture/preview) -->
 
 - [Udacity Course on ML](https://www.udacity.com/course/cs271) by Perer Norvig
 
@@ -26,14 +26,14 @@ Other great resources you might want to check out are:
 
 ## Deep Learning
 
-The best introduction to Deep Learning that I have encountered is [Deep Learning With Python](https://machinelearningmastery.com/deep-learning-with-python/). It doesn't go deeply into difficult math and does not have a long list of prerequisites, instead it describes an easy way to get started with DL, explains how to quickly start building stuff and learn everything else on practice. It explains the most advanced tools(Keras, TensorFlow), and takes you through the several practical projects, explaining how to achieve state of the art results in all of the coolest DL applications.
+The best introduction to Deep Learning that I have encountered is [Deep Learning With Python](https://machinelearningmastery.com/deep-learning-with-python/). It doesn't go deeply into difficult math and does not have a long list of prerequisites, instead it describes an easy way to get started with DL, explains how to quickly start building stuff and learn everything else on practice. It explains the most advanced tools(Keras, TensorFlow), and takes you through the several practical projects, explaining how to achieve the state of the art results in all of the coolest DL applications.
 
 Also there's a [great introductory DL course](https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal) from google, and a [great explanation of neural networks](http://lumiverse.io/series/neural-networks-demystified) by Sephen Welch.
 
 
 After that, to get more in depth, here are some interesting resources:
 
-- Geoffrey Hinton’s coursera course “[Neural Networks for Machine Learning](https://class.coursera.org/neuralnets-2012-001/lecture)”. It will take you through the process of training ANN on the classic problem - MNIST character recognition, and will explain everything in depth.
+- Geoffrey Hinton’s coursera course “[Neural Networks for Machine Learning](https://www.coursera.org/learn/neural-networks)”. It will take you through the process of training ANN on a classic problem - MNIST character recognition, and will explain everything in depth.
 
 - MIT Book on [Deep Learning](http://www.iro.umontreal.ca/%7Ebengioy/dlbook/)
 
@@ -41,13 +41,13 @@ After that, to get more in depth, here are some interesting resources:
 
 - [deeplearning.net tutorials](http://deeplearning.net/tutorial/)
 
-- NYU Course on [Deep Learning](http://techtalks.tv/deep_learning_nyu_spring_2014/)
+<!-- - NYU Course on [Deep Learning](http://techtalks.tv/deep_learning_nyu_spring_2014/) -->
 
 - Book “[Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/)” by Michael Nielsen
 
 - Book Neural “[Networks and Learning Machines](http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392)” by Simon O. Haykin
 
-- [deeplearning.net reading list](http://deeplearning.net/reading-list/)
+<!-- - [deeplearning.net reading list](http://deeplearning.net/reading-list/) -->
 
 ## Artificial Intelligence
 - "[Artificial Intelligence: A Modern Approach (AIMA)](http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597)" the best book about the "old school" AI. It gives you a general overview of the field, and explains all of the fundamental concepts that you need to know. 
@@ -58,7 +58,7 @@ After that, to get more in depth, here are some interesting resources:
 
 If you're interested in AI, you probably want to have a good intuition about how human mind works, and the following books will explain the best modern theories in a fun, intuitive way.
 
-- [On Intelligence](http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533) by Jeff Hawkins ([audiobook](http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LK))
+- [On Intelligence](http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533) by Jeff Hawkins ([audiobook](http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LKTE/ref=a_search_c4_1_1_srTtl?qid=1469789110&sr=1-1))
 
 
 - [Gödel, Escher, Bach](https://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567)
@@ -71,7 +71,7 @@ Other resources:
 - [How to Create a Mind](http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/) by Ray Kurzweil([audiobook](http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJS/ref=a_search_c4_1_1_srTtl?qid=1469788482&sr=1-1)).
 
 
-- [Principles of Neural Science](http://www.amazon.com/Principles-Neural-Science-Edition-Kandel/dp/00713901) This is the best book I could find that goes in depth into NS. It talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.
+- [Principles of Neural Science](https://www.amazon.com/Principles-Neural-Science-Fifth-Kandel/dp/0071390111/ref=sr_1_1?ie=UTF8&qid=1469789160&sr=8-1&keywords=principles+of+neural+science) This is the best book I could find that goes in depth into NS. It talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.
 
 
 
@@ -83,7 +83,7 @@ Here are the very basic math concepts that you need to begin learning AI:
 
 * [Khan Academy Calculus videos](http://www.youtube.com/playlist?list=PL19E79A0638C8D449)
 
-* [Coursera Calculus course](https://www.coursera.org/course/m2o2c2)
+<!-- * [Coursera Calculus course](https://www.coursera.org/course/m2o2c2) -->
 
 * MIT lectures on [Multivariable Calculus](http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm)
 
@@ -101,15 +101,14 @@ Here are the very basic math concepts that you need to begin learning AI:
 
 * [edx probability course](https://www.edx.org/course/introduction-probability-science-mitx-6-041x#.VJfS2LQAKc)
 
-- Khan Academy [Statistics](http://www.youtube.com/playlist?list=PL1328115D3D8A2566)  
 
 
 ## Coputer Science
 To be good at AI you want to be comfortable with the general concepts of computer science and programming. 
 
-If you are just starting out, I recommend to read [Dive Into Python 3](http://www.diveintopython3.net/) - an amazing book that will teach you most of the important things that you need to be able to program in python.
+If you are just starting out, I recommend to read [Dive Into Python 3](http://www.diveintopython3.net/) - an amazing book that will teach you most of the important things that you need to know to be able to program in python.
 
-To understand the nature of computer programming more in depth - watch this classic [MIT course](https://www.youtube.com/watch?v=2Op3QLzMgSY&list=PLE18841CABEA24090#t=253). This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - [Structure and Interpretation of Computer Programs](http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871)).
+To understand the nature of computer programming in more depth - watch this classic [MIT course](https://www.youtube.com/watch?v=2Op3QLzMgSY&list=PLE18841CABEA24090#t=253). This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - [Structure and Interpretation of Computer Programs](http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871).
 
 <!-- (algorithms, data structures, complexity) -->
 
