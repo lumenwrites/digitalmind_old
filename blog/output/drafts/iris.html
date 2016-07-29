@@ -1797,6 +1797,7 @@ jQuery(document).ready(function($) {
 <div class="highlight"><pre><span class="kn">import</span> <span class="nn">pandas</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
+<span class="kn">from</span> <span class="nn">keras.utils</span> <span class="kn">import</span> <span class="n">np_utils</span>
 
 <span class="c"># load dataset</span>
 <span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&quot;iris.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
@@ -1867,14 +1868,7 @@ jQuery(document).ready(function($) {
 <p>This process is called "one-hot encoding".</p>
 <p>Now we have the data we can use to train our neural network.</p>
 <h2>Defining the model</h2>
-<p>The next step is to define our model(shape of the neural network). First let's import the tools that we're going to use:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
-<span class="kn">from</span> <span class="nn">keras.wrappers.scikit_learn</span> <span class="kn">import</span> <span class="n">KerasClassifier</span>
-<span class="kn">from</span> <span class="nn">keras.utils</span> <span class="kn">import</span> <span class="n">np_utils</span>
-</pre></div>
-
-
+<p>The next step is to define our model(the shape of the neural network). </p>
 <p>Initialize random seed
 We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:</p>
 <div class="highlight"><pre><span class="c"># fix random seed for reproducibility</span>
@@ -1883,7 +1877,12 @@ We initialize the random number generator with a specific value, so that we coul
 </pre></div>
 
 
-<div class="highlight"><pre><span class="c"># define baseline model</span>
+<p>We want to create a simple fully connected neural network. It will have 4 inputs(one for each feature describing the property of the flower), one hidden layer with 4 neurons, and an output layer with 3 values(one for each class of the flower).</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">from</span> <span class="nn">keras.wrappers.scikit_learn</span> <span class="kn">import</span> <span class="n">KerasClassifier</span>
+
+<span class="c"># define baseline model</span>
 <span class="k">def</span> <span class="nf">baseline_model</span><span class="p">():</span>
     <span class="c"># create model</span>
     <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
@@ -1896,25 +1895,40 @@ We initialize the random number generator with a specific value, so that we coul
 </pre></div>
 
 
+<p>We create a Seuential model, add two layers to it, and specify their paramteters.</p>
+<ul>
+<li>Dense class creates a fully connected layer</li>
+<li>The first parameter describes the number of neurons in the layer</li>
+<li><code>input_dim</code>(on the first layer) specifies the number of inputs</li>
+<li><code>init</code> specifies the way we set the initial weights. ("normal" means that we want to intialize them to small random numbers.) <!-- from a Gaussian distribution. --></li>
+<li><code>activation</code> determines the activation function for every neuron.</li>
+</ul>
+<p>After the model is defined, we can compile it.   <!-- ? --> To do that we need to set a few additional parameters required for training the network. Our goal is to find the best set of weights to make predictions for this problem.</p>
+<ul>
+<li>Loss function is used to determine how inaccurate the current prediction is and evaluate the set of weights.</li>
+<li>Optimizer is used to search through different weights for the network and minimize the error.</li>
+</ul>
+<p>Finally, we pass our model to the KerasClassifier function, which allows us to wrap the model built with Keras to use in scikit learn:</p>
+<div class="highlight"><pre><span class="n">estimator</span> <span class="o">=</span> <span class="n">KerasClassifier</span><span class="p">(</span><span class="n">build_fn</span><span class="o">=</span><span class="n">baseline_model</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+
+
+<p>We pass the model we have created to it's build_fn parameter, which specifies a name of a function used to create the model. We also specify the number of epochs and the batch size parameters, which will be automatically passed to the fit() function. </p>
+<h2>Evaluating the model using scikit</h2>
+<p>Now we want to train and evaluate our model on the training data.</p>
 <div class="highlight"><pre><span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">cross_val_score</span><span class="p">,</span> <span class="n">KFold</span>
 <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-</pre></div>
 
-
-<h2>Evaluating our model</h2>
-<div class="highlight"><pre><span class="n">estimator</span> <span class="o">=</span> <span class="n">KerasClassifier</span><span class="p">(</span><span class="n">build_fn</span><span class="o">=</span><span class="n">baseline_model</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 <span class="n">kfold</span> <span class="o">=</span> <span class="n">KFold</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">),</span> <span class="n">n_folds</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
+<span class="n">results</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">dummy_y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">)</span>
 
-
-<h2>Training, complete</h2>
-<div class="highlight"><pre><span class="n">results</span> <span class="o">=</span> <span class="n">cross_val_score</span><span class="p">(</span><span class="n">estimator</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">dummy_y</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">kfold</span><span class="p">)</span>
 <span class="k">print</span><span class="p">(</span><span class="s">&quot;Accuracy: </span><span class="si">%.2f%%</span><span class="s"> (</span><span class="si">%.2f%%</span><span class="s">)&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">,</span> <span class="n">results</span><span class="o">.</span><span class="n">std</span><span class="p">()</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
 
 
-<p>Completed the training, accuracy is this.
-You can see the <a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.py">whole code on github</a>.</p>
+<p>We use KFold to define the model evaluation procedure,  <!-- ? --> and then use the cross_val_score function that evaluates our model(estimator), on our dataset(X and dummy_y), using the 10-fold cross validation procedure(kfold).</p>
+<p>Finally, we have completed our training and can print the accuracy results.</p>
+<p>You can see the <a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.py">whole code on github</a>.</p>
 	</article>	
 
 	<!-- Follow -->

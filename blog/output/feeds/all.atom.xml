@@ -1,5 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-07-22T00:00:00+02:00</updated><entry><title>Artificial Neural Network writes Harry Potter and the Methods of Rationality</title><link href="/post/ai-writes-hpmor" rel="alternate"></link><updated>2016-07-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-22:post/ai-writes-hpmor</id><summary type="html">&lt;p&gt;I have trained an Artificial Neural Network on the full text of &lt;a href="http://hpmor.com/"&gt;HPMOR&lt;/a&gt;. This is the text it generated. (I have added formatting and removed the most incoherent sentences.)&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-07-23T00:00:00+02:00</updated><entry><title>Multiclass Classification of Flower Species</title><link href="/post/iris" rel="alternate"></link><updated>2016-07-23T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-23:post/iris</id><summary type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
+&lt;h2&gt;Iris Dataset&lt;/h2&gt;
+&lt;p&gt;I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of it's sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.&lt;/p&gt;
+&lt;p&gt;The data looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;5.1,3.5,1.4,0.2,Iris-setosa
+5.0,3.3,1.4,0.2,Iris-setosa
+....
+7.0,3.2,4.7,1.4,Iris-versicolor
+6.4,3.2,4.5,1.5,Iris-versicolor
+....
+6.3,3.3,6.0,2.5,Iris-virginica
+5.8,2.7,5.1,1.9,Iris-virginica
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Iris Scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/749px-Iris_dataset_scatterplot.svg.png" /&gt;&lt;/p&gt;
+&lt;p&gt;To load the dataset download the csv file &lt;a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.csv"&gt;here&lt;/a&gt;, and then load it like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LabelEncoder&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.utils&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;np_utils&lt;/span&gt;
+
+&lt;span class="c"&gt;# load dataset&lt;/span&gt;
+&lt;span class="n"&gt;dataframe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;iris.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;dataset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;
+&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;'X' is a variable that contains the feautres that describe the lenghts of each of the flower parts:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;5.1&lt;/span&gt;  &lt;span class="mf"&gt;3.5&lt;/span&gt;  &lt;span class="mf"&gt;1.4&lt;/span&gt;  &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;4.9&lt;/span&gt;  &lt;span class="mf"&gt;3.&lt;/span&gt;   &lt;span class="mf"&gt;1.4&lt;/span&gt;  &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;4.7&lt;/span&gt;  &lt;span class="mf"&gt;3.2&lt;/span&gt;  &lt;span class="mf"&gt;1.3&lt;/span&gt;  &lt;span class="mf"&gt;0.2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="o"&gt;....&lt;/span&gt;
+ &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;5.9&lt;/span&gt;  &lt;span class="mf"&gt;3.&lt;/span&gt;   &lt;span class="mf"&gt;5.1&lt;/span&gt;  &lt;span class="mf"&gt;1.8&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;and 'Y' contains the corresponding labels that describe the species of the flower:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;[&amp;#39;Iris-setosa&amp;#39;     &amp;#39;Iris-setosa&amp;#39;     ... &amp;#39;Iris-setosa&amp;#39;
+ ...
+ &amp;#39;Iris-versicolor&amp;#39; &amp;#39;Iris-versicolor&amp;#39; ... &amp;#39;Iris-versicolor&amp;#39; 
+ ...
+ &amp;#39;Iris-virginica&amp;#39;  &amp;#39;Iris-virginica&amp;#39;  ... &amp;#39;Iris-virginica&amp;#39;]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now to be able to use these labels in our network, we want to represent each of them as vector of 3 &lt;!-- boolean --&gt; values that looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Iris-setosa Iris-versicolor Iris-virginica
+     1              0             0
+     0              1             0 
+     0              0             1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;To do that, we will first use LabelEncoder(), that will turn the strings describing names of the plants into numerical values("Iris-setosa" will be represented by 0, "Iris-versicolor" by 1, and "Iris-virginica" by 2):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#encode class values as integers&lt;/span&gt;
+&lt;span class="n"&gt;encoder&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LabelEncoder&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;encoder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;encoded_Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;encoder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;So that our encoded list of labels (encoded_Y) now looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+ &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+ &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And then we will use np_utils.to_categorical():&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# convert integers to dummy variables (hot encoded)&lt;/span&gt;
+&lt;span class="n"&gt;dummy_y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;np_utils&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_categorical&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;encoded_Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;to convert it into a binary matrix that looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="p"&gt;[[&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;1.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;1.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;1.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;1.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+ &lt;span class="o"&gt;...&lt;/span&gt;
+ &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;...&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;0.&lt;/span&gt;  &lt;span class="mf"&gt;1.&lt;/span&gt;&lt;span class="p"&gt;]]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;This process is called "one-hot encoding".&lt;/p&gt;
+&lt;p&gt;Now we have the data we can use to train our neural network.&lt;/p&gt;
+&lt;h2&gt;Defining the model&lt;/h2&gt;
+&lt;p&gt;The next step is to define our model(the shape of the neural network). &lt;/p&gt;
+&lt;p&gt;Initialize random seed
+We initialize the random number generator with a specific value, so that we could reproduce the same results in the future:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# fix random seed for reproducibility&lt;/span&gt;
+&lt;span class="n"&gt;seed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
+&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We want to create a simple fully connected neural network. It will have 4 inputs(one for each feature describing the property of the flower), one hidden layer with 4 neurons, and an output layer with 3 values(one for each class of the flower).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.layers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.wrappers.scikit_learn&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;KerasClassifier&lt;/span&gt;
+
+&lt;span class="c"&gt;# define baseline model&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;baseline_model&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="c"&gt;# create model&lt;/span&gt;
+    &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;input_dim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;normal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;relu&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;normal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;sigmoid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    &lt;span class="c"&gt;# Compile model&lt;/span&gt;
+    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;categorical_crossentropy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;adam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;metrics&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;accuracy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We create a Seuential model, add two layers to it, and specify their paramteters.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Dense class creates a fully connected layer&lt;/li&gt;
+&lt;li&gt;The first parameter describes the number of neurons in the layer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;input_dim&lt;/code&gt;(on the first layer) specifies the number of inputs&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;init&lt;/code&gt; specifies the way we set the initial weights. ("normal" means that we want to intialize them to small random numbers.) &lt;!-- from a Gaussian distribution. --&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;activation&lt;/code&gt; determines the activation function for every neuron.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After the model is defined, we can compile it.   &lt;!-- ? --&gt; To do that we need to set a few additional parameters required for training the network. Our goal is to find the best set of weights to make predictions for this problem.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Loss function is used to determine how inaccurate the current prediction is and evaluate the set of weights.&lt;/li&gt;
+&lt;li&gt;Optimizer is used to search through different weights for the network and minimize the error.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, we pass our model to the KerasClassifier function, which allows us to wrap the model built with Keras to use in scikit learn:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;estimator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KerasClassifier&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;build_fn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;baseline_model&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nb_epoch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We pass the model we have created to it's build_fn parameter, which specifies a name of a function used to create the model. We also specify the number of epochs and the batch size parameters, which will be automatically passed to the fit() function. &lt;/p&gt;
+&lt;h2&gt;Evaluating the model using scikit&lt;/h2&gt;
+&lt;p&gt;Now we want to train and evaluate our model on the training data.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.cross_validation&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cross_val_score&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;KFold&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.pipeline&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Pipeline&lt;/span&gt;
+
+&lt;span class="n"&gt;kfold&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KFold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;n_folds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shuffle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random_state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;results&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross_val_score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;estimator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;dummy_y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cv&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;kfold&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Accuracy: &lt;/span&gt;&lt;span class="si"&gt;%.2f%%&lt;/span&gt;&lt;span class="s"&gt; (&lt;/span&gt;&lt;span class="si"&gt;%.2f%%&lt;/span&gt;&lt;span class="s"&gt;)&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;We use KFold to define the model evaluation procedure,  &lt;!-- ? --&gt; and then use the cross_val_score function that evaluates our model(estimator), on our dataset(X and dummy_y), using the 10-fold cross validation procedure(kfold).&lt;/p&gt;
+&lt;p&gt;Finally, we have completed our training and can print the accuracy results.&lt;/p&gt;
+&lt;p&gt;You can see the &lt;a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.py"&gt;whole code on github&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Artificial Neural Network writes Harry Potter and the Methods of Rationality</title><link href="/post/ai-writes-hpmor" rel="alternate"></link><updated>2016-07-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-22:post/ai-writes-hpmor</id><summary type="html">&lt;p&gt;I have trained an Artificial Neural Network on the full text of &lt;a href="http://hpmor.com/"&gt;HPMOR&lt;/a&gt;. This is the text it generated. (I have added formatting and removed the most incoherent sentences.)&lt;/p&gt;
 &lt;p&gt;You can find the source code and an awesome, easy to follow tutorial &lt;a href="https://medium.com/deep-writing/how-to-write-with-artificial-intelligence-45747ed073c#.9farmj44y"&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;Somewhere inside him all further. “You have to do science with Professor McGonagall? Say with Fiendfyre?” “Ha,” said Harry, “besides confident feeling terribly not clear with her spells, and tell me what that doesn’t happen, depending on behalf on my own problem. “That sounds like a couple of their brain’s shock, she is going to tell them.”&lt;/p&gt;
@@ -47,9 +198,12 @@
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.cs.cmu.edu/%7Etom/10701_sp11/lectures.shtml"&gt;Another course on ML&lt;/a&gt; taught at Carnegie Mellon University by Tom Mitchell.&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;mathematicalmonk&lt;/a&gt; — Machine Learning youtube tutorials&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Deep Learning&lt;/h2&gt;
-&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. This book gives you a quick, practical introduction into the field.&lt;/p&gt;
+&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. This book gives you a quick, practical introduction into the field. It does not have a long list of prerequisites, it introduces you to the most advanced tools(Keras, TensorFlow), and describes how to use them through anseries of practical projects. after that, [reddit post].&lt;/p&gt;
 &lt;p&gt;Google DL course
 https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal&lt;/p&gt;
 &lt;p&gt;After that, to get more in depth, here are some interesting resources:&lt;/p&gt;
@@ -116,13 +270,6 @@ them a lot.&lt;/p&gt;
 &lt;p&gt;GEB&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3&gt;General Coputer Science&lt;/h3&gt;
-&lt;p&gt;(algorithms, data structures, complexity)&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;
-(based on &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;SICP book&lt;/a&gt;)&lt;br /&gt;
-  This is a course on lisp and basics of computer science, based on one of the most influential and seminal books in CS - "Structure and Interpretation of Computer Programs".&lt;/li&gt;
-&lt;/ul&gt;
 &lt;h2&gt;Math&lt;/h2&gt;
 &lt;p&gt;Here's the very basics of math that you need to begin learning AI:&lt;/p&gt;
 &lt;h3&gt;Calculus&lt;/h3&gt;
@@ -161,16 +308,21 @@ them a lot.&lt;/p&gt;
 &lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt;  &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;Coputer Science&lt;/h3&gt;
+&lt;p&gt;To be good at AI it's best to be comfortable with the general concepts of computer science and programming. &lt;/p&gt;
+&lt;p&gt;If you are just starting out, I recommend to read &lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt; - an amazing book that will teach you most of the important things that you need to be able to use python.&lt;/p&gt;
+&lt;p&gt;To understand the nature of computer programming more in depth - watch this classic &lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;. This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;(algorithms, data structures, complexity)&lt;/p&gt;
 &lt;h2&gt;Other&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.metacademy.org/"&gt;Metacademy&lt;/a&gt; — “package manager” for Machine Learning knowledge&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.metacademy.org/"&gt;Metacademy&lt;/a&gt; - a "package manager" for your knowledge. You can use this great tool to understand all the prerequisites you need to learn different ML subjects.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;a href="http://www.kaggle.com/"&gt;kaggle&lt;/a&gt; — Machine Learning competitions&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;mathematicalmonk&lt;/a&gt; — Machine Learning youtube tutorials&lt;/p&gt;
+&lt;p&gt;Github/my post on datasets&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;!--
@@ -197,7 +349,7 @@ Here's the best way to learn it:
 
 And here's my favorite book on python:  
 
-- [Dive Into Python 3](http://www.diveintopython3.net/)
+
  --&gt;
 
 &lt;style&gt;

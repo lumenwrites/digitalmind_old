@@ -28,18 +28,18 @@ dummy_y = np_utils.to_categorical(encoded_Y)
 
 
 # define baseline model
-# def baseline_model():
-#     # create model
-#     model = Sequential()
-#     model.add(Dense(4, input_dim=4, init='normal', activation='relu'))
-#     model.add(Dense(3, init='normal', activation='sigmoid'))
-#     # Compile model
-#     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+def baseline_model():
+    # create model
+    model = Sequential()
+    model.add(Dense(4, input_dim=4, init='normal', activation='relu'))
+    model.add(Dense(3, init='normal', activation='sigmoid'))
+    # Compile model
+    model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     
-#     return model
+    return model
     
-# estimator = KerasClassifier(build_fn=baseline_model, nb_epoch=200, batch_size=5, verbose=0)
-# kfold = KFold(n=len(X), n_folds=10, shuffle=True, random_state=seed)
-# results = cross_val_score(estimator, X, dummy_y, cv=kfold)
+estimator = KerasClassifier(build_fn=baseline_model, nb_epoch=200, batch_size=5, verbose=0)
+kfold = KFold(n=len(X), n_folds=10, shuffle=True, random_state=seed)
+results = cross_val_score(estimator, X, dummy_y, cv=kfold)
 
-# print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))
+print("Accuracy: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))

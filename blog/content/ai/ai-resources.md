@@ -22,9 +22,11 @@ Other great resources you might want to check out are:
 
 - [Another course on ML](http://www.cs.cmu.edu/%7Etom/10701_sp11/lectures.shtml) taught at Carnegie Mellon University by Tom Mitchell.
 
+- [mathematicalmonk](http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA) — Machine Learning youtube tutorials
+
 ## Deep Learning
 
-The best introduction to Deep Learning that I have encountered is [Deep Learning With Python](https://machinelearningmastery.com/deep-learning-with-python/). This book gives you a quick, practical introduction into the field.
+The best introduction to Deep Learning that I have encountered is [Deep Learning With Python](https://machinelearningmastery.com/deep-learning-with-python/). This book gives you a quick, practical introduction into the field. It does not have a long list of prerequisites, it introduces you to the most advanced tools(Keras, TensorFlow), and describes how to use them through anseries of practical projects. after that, [reddit post].
 
 Google DL course
 https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal
@@ -77,12 +79,6 @@ them a lot.
 - GEB
 
 
-### General Coputer Science
-(algorithms, data structures, complexity)
-
-- [MIT course](https://www.youtube.com/watch?v=2Op3QLzMgSY&list=PLE18841CABEA24090#t=253)
-(based on [SICP book](http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871))  
-  This is a course on lisp and basics of computer science, based on one of the most influential and seminal books in CS - "Structure and Interpretation of Computer Programs".
 
 ## Math
 
@@ -113,14 +109,22 @@ Here's the very basics of math that you need to begin learning AI:
 - Khan Academy [Statistics](http://www.youtube.com/playlist?list=PL1328115D3D8A2566)  
 
 
+###  Coputer Science
+To be good at AI it's best to be comfortable with the general concepts of computer science and programming. 
+
+If you are just starting out, I recommend to read [Dive Into Python 3](http://www.diveintopython3.net/) - an amazing book that will teach you most of the important things that you need to be able to use python.
+
+To understand the nature of computer programming more in depth - watch this classic [MIT course](https://www.youtube.com/watch?v=2Op3QLzMgSY&list=PLE18841CABEA24090#t=253). This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - [Structure and Interpretation of Computer Programs](http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871)).
+
+(algorithms, data structures, complexity)
 
 ##Other
 
-* [Metacademy](http://www.metacademy.org/) — “package manager” for Machine Learning knowledge
+- [Metacademy](http://www.metacademy.org/) - a "package manager" for your knowledge. You can use this great tool to understand all the prerequisites you need to learn different ML subjects.
 
-* [kaggle](http://www.kaggle.com/) — Machine Learning competitions
+- [kaggle](http://www.kaggle.com/) — Machine Learning competitions
 
-* [mathematicalmonk](http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA) — Machine Learning youtube tutorials
+- Github/my post on datasets
 
 
 
@@ -148,7 +152,7 @@ Here's the best way to learn it:
 
 And here's my favorite book on python:  
 
-- [Dive Into Python 3](http://www.diveintopython3.net/)
+
  -->
 
 
@@ -158,3 +162,5 @@ a {
     font-weight: bold;
 }
 </style>
+
+
