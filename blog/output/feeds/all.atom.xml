@@ -340,7 +340,7 @@ And here's my favorite book on python:
  --&gt;
 
 &lt;style&gt;
-a {
+article a {
     color: #3d454b;
     font-weight: bold;
 }

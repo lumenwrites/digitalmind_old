@@ -157,7 +157,7 @@ And here's my favorite book on python:
 
 
 <style>
-a {
+article a {
     color: #3d454b;
     font-weight: bold;
 }
