@@ -1,5 +1,5 @@
 Title: Artificial Intelligence resources
-Date: 2014-12-01
+Date: 2016-07-29
 Slug: artificial-intelligence-resources
 
 ![](http://digitalmind.io/images/digital-brain-header.png)

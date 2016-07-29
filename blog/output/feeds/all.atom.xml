@@ -1,5 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-07-23T00:00:00+02:00</updated><entry><title>Multiclass Classification of Flower Species</title><link href="/post/iris" rel="alternate"></link><updated>2016-07-23T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-23:post/iris</id><summary type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>digitalmind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-07-29T00:00:00+02:00</updated><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2016-07-29T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-29:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://digitalmind.io/images/digital-brain-header.png" /&gt;&lt;/p&gt;
+&lt;p&gt;This is the list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.&lt;/p&gt;
+&lt;h2&gt;Machine Learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For the best introduction to the Machine Learning field, watch Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt; on Coursera. It explains the basic concepts and gives you a good understanding of most important algorithms.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;For a short, high level overview of ML algorithms, check out this great TutsPlus course “&lt;a href="http://code.tutsplus.com/courses/machine-learning-distilled"&gt;Machine Learning Distilled&lt;/a&gt;”.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;A book “&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325"&gt;Programming Collective Intelligence&lt;/a&gt;” is an excellent resource to learn the practical implementation of ML algorithms in python. It takes you through a lot of practical projects, covering all of the necessary fundamentals.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Other great resources you might want to check out are:&lt;/p&gt;
+&lt;!-- - [Pedro Domingos ML course](https://class.coursera.org/machlearning-001/lecture/preview) --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.udacity.com/course/cs271"&gt;Udacity Course on ML&lt;/a&gt; by Perer Norvig&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.cs.cmu.edu/%7Etom/10701_sp11/lectures.shtml"&gt;Another course on ML&lt;/a&gt; taught at Carnegie Mellon University by Tom Mitchell.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;mathematicalmonk&lt;/a&gt; — Machine Learning youtube tutorials&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Deep Learning&lt;/h2&gt;
+&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. It doesn't go deeply into difficult math and does not have a long list of prerequisites, instead it describes an easy way to get started with DL, explains how to quickly start building stuff and learn everything else on practice. It explains the most advanced tools(Keras, TensorFlow), and takes you through the several practical projects, explaining how to achieve the state of the art results in all of the coolest DL applications.&lt;/p&gt;
+&lt;p&gt;Also there's a &lt;a href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal"&gt;great introductory DL course&lt;/a&gt; from google, and a &lt;a href="http://lumiverse.io/series/neural-networks-demystified"&gt;great explanation of neural networks&lt;/a&gt; by Sephen Welch.&lt;/p&gt;
+&lt;p&gt;After that, to get more in depth, here are some interesting resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Geoffrey Hinton’s coursera course “&lt;a href="https://www.coursera.org/learn/neural-networks"&gt;Neural Networks for Machine Learning&lt;/a&gt;”. It will take you through the process of training ANN on a classic problem - MNIST character recognition, and will explain everything in depth.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/%7Ebengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://deeplearning.net/tutorial/"&gt;deeplearning.net tutorials&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- - NYU Course on [Deep Learning](http://techtalks.tv/deep_learning_nyu_spring_2014/) --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Book “&lt;a href="http://neuralnetworksanddeeplearning.com/"&gt;Neural Networks and Deep Learning&lt;/a&gt;” by Michael Nielsen&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Book Neural “&lt;a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392"&gt;Networks and Learning Machines&lt;/a&gt;” by Simon O. Haykin&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- - [deeplearning.net reading list](http://deeplearning.net/reading-list/) --&gt;
+
+&lt;h2&gt;Artificial Intelligence&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;"&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;" the best book about the "old school" AI. It gives you a general overview of the field, and explains all of the fundamental concepts that you need to know. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course from UC Berkeley&lt;/a&gt; is an excellent series of video lectures, explaining you the basics of AI on a really fun practical project(training AI to play the pacman game). I recommend to watch it along with reading AIMA, because it is based on this book, and explains a lot of the similar concepts from different angles, making them easier to understand. It goes quite in depth, and it's a fantastic way to get started.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;How mind works&lt;/h2&gt;
+&lt;p&gt;If you're interested in AI, you probably want to have a good intuition about how human mind works, and the following books will explain the best modern theories in a fun, intuitive way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533"&gt;On Intelligence&lt;/a&gt; by Jeff Hawkins (&lt;a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LKTE/ref=a_search_c4_1_1_srTtl?qid=1469789110&amp;amp;sr=1-1"&gt;audiobook&lt;/a&gt;)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567"&gt;Gödel, Escher, Bach&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I would recommend starting with these two, they will give you an excellent introduction into general theories of how mind works.&lt;/p&gt;
+&lt;p&gt;Other resources:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/"&gt;How to Create a Mind&lt;/a&gt; by Ray Kurzweil(&lt;a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJS/ref=a_search_c4_1_1_srTtl?qid=1469788482&amp;amp;sr=1-1"&gt;audiobook&lt;/a&gt;).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.amazon.com/Principles-Neural-Science-Fifth-Kandel/dp/0071390111/ref=sr_1_1?ie=UTF8&amp;amp;qid=1469789160&amp;amp;sr=8-1&amp;amp;keywords=principles+of+neural+science"&gt;Principles of Neural Science&lt;/a&gt; This is the best book I could find that goes in depth into NS. It talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Math&lt;/h2&gt;
+&lt;p&gt;Here are the very basic math concepts that you need to begin learning AI:&lt;/p&gt;
+&lt;h3&gt;Calculus&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Khan Academy Calculus videos&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- * [Coursera Calculus course](https://www.coursera.org/course/m2o2c2) --&gt;
+
+&lt;ul&gt;
+&lt;li&gt;MIT lectures on &lt;a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm"&gt;Multivariable Calculus&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Linear Algebra&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Khan Academy Linear Algebra videos&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/"&gt;MIT linear algebra videos&lt;/a&gt; by Gilbert Strang&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2"&gt;Coding the Matrix&lt;/a&gt; — Brown University course on Linear Algebra for CS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Probability and statistics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt; videos&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.edx.org/course/introduction-probability-science-mitx-6-041x#.VJfS2LQAKc"&gt;edx probability course&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Coputer Science&lt;/h2&gt;
+&lt;p&gt;To be good at AI you want to be comfortable with the general concepts of computer science and programming. &lt;/p&gt;
+&lt;p&gt;If you are just starting out, I recommend to read &lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt; - an amazing book that will teach you most of the important things that you need to know to be able to program in python.&lt;/p&gt;
+&lt;p&gt;To understand the nature of computer programming in more depth - watch this classic &lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;. This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- (algorithms, data structures, complexity) --&gt;
+
+&lt;h2&gt;Other Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.metacademy.org/"&gt;Metacademy&lt;/a&gt; - a "package manager" for your knowledge. You can use this great tool to understand all the prerequisites you need to learn different ML subjects.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://www.kaggle.com/"&gt;kaggle&lt;/a&gt; — Machine Learning competitions&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- - Github/my post on datasets --&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;As I'm learning more about AI and ML, I will be improving and expanding this list. If you have some good suggestions, you can submit a commit &lt;a href="https://github.com/raymestalez/digitalmind/blob/master/blog/content/ai/ai-resources.md"&gt;over here&lt;/a&gt;, or send me an email to raymestalez@gmail.com&lt;/p&gt;
+&lt;p&gt;Also if you are interested in learning about Artificial Intelligence and Deep Learning - subscribe to this blog, I am posting all the most interesting things I know about the subject here.&lt;/p&gt;
+&lt;!--
+
+## Programming
+## Prerequisites
+
+### Lisp and Python - best programming languages for AI:
+Of all the programming languages you can choose to practice AI there are 2 best
+options: Lisp and Python. Lisp was created specifically for creating AI, and it
+is widely considered to be the most elegant and brilliant programming language
+ever.  
+
+Here's the best way to learn it:  
+
+- Book "[Land of Lisp](http://www.amazon.com/Land-Lisp-Learn-Program-Game/dp/1593272812/)"
+  (Book about lisp with some AI algorithms)  
+  This is an excellent and very fun introduction to lisp, makes learning very
+  enjoyable, understandable, and includes a lot of algorithms and basic principles
+  that will be very useful when you will be going throuhg AIMA.  
+
+
+- Paul Graham [ANSI Common Lisp](http://www.amazon.com/ANSI-Common-LISP-Paul-Graham/dp/0133708756)
+
+And here's my favorite book on python:  
+
+
+ --&gt;
+
+&lt;style&gt;
+article a {
+    color: #3d454b;
+    font-weight: bold;
+}
+&lt;/style&gt;</summary></entry><entry><title>Multiclass Classification of Flower Species</title><link href="/post/iris" rel="alternate"></link><updated>2016-07-23T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-23:post/iris</id><summary type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
 &lt;h2&gt;Iris Dataset&lt;/h2&gt;
 &lt;p&gt;I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of it's sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.&lt;/p&gt;
 &lt;p&gt;The data looks like this:&lt;/p&gt;
@@ -173,178 +344,7 @@ We initialize the random number generator with a specific value, so that we coul
 &lt;p&gt;Fred and George raised the doorknob a perfect assertion and lowered a deep breath, meaning at she was coughing animals, it took a wretched metal rising step toward the edge from the emptiness of the planet.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;p&gt;“No,” Dumbledore’s voice said in a pleading glance in a calm voice, Dumbledore’s wings suddenly jumped across the table. The conversation looked through. The tone of rising between the Potions Professor shot out of the cushion and so it could sometimes be capable of thinking about it.&lt;/p&gt;
-&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2014-12-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-12-01:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://digitalmind.io/images/digital-brain-header.png" /&gt;&lt;/p&gt;
-&lt;p&gt;This is the list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.&lt;/p&gt;
-&lt;h2&gt;Machine Learning&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;For the best introduction to the Machine Learning field, watch Andrew Ng &lt;a href="https://www.coursera.org/course/ml"&gt;Machine Learning course&lt;/a&gt; on Coursera. It explains the basic concepts and gives you a good understanding of most important algorithms.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;For a short, high level overview of ML algorithms, check out this great TutsPlus course “&lt;a href="http://code.tutsplus.com/courses/machine-learning-distilled"&gt;Machine Learning Distilled&lt;/a&gt;”.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;A book “&lt;a href="http://www.amazon.com/Programming-Collective-Intelligence-Building-Applications/dp/0596529325"&gt;Programming Collective Intelligence&lt;/a&gt;” is an excellent resource to learn the practical implementation of ML algorithms in python. It takes you through a lot of practical projects, covering all of the necessary fundamentals.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Other great resources you might want to check out are:&lt;/p&gt;
-&lt;!-- - [Pedro Domingos ML course](https://class.coursera.org/machlearning-001/lecture/preview) --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.udacity.com/course/cs271"&gt;Udacity Course on ML&lt;/a&gt; by Perer Norvig&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.cs.cmu.edu/%7Etom/10701_sp11/lectures.shtml"&gt;Another course on ML&lt;/a&gt; taught at Carnegie Mellon University by Tom Mitchell.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLD0F06AA0D2E8FFBA"&gt;mathematicalmonk&lt;/a&gt; — Machine Learning youtube tutorials&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Deep Learning&lt;/h2&gt;
-&lt;p&gt;The best introduction to Deep Learning that I have encountered is &lt;a href="https://machinelearningmastery.com/deep-learning-with-python/"&gt;Deep Learning With Python&lt;/a&gt;. It doesn't go deeply into difficult math and does not have a long list of prerequisites, instead it describes an easy way to get started with DL, explains how to quickly start building stuff and learn everything else on practice. It explains the most advanced tools(Keras, TensorFlow), and takes you through the several practical projects, explaining how to achieve the state of the art results in all of the coolest DL applications.&lt;/p&gt;
-&lt;p&gt;Also there's a &lt;a href="https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal"&gt;great introductory DL course&lt;/a&gt; from google, and a &lt;a href="http://lumiverse.io/series/neural-networks-demystified"&gt;great explanation of neural networks&lt;/a&gt; by Sephen Welch.&lt;/p&gt;
-&lt;p&gt;After that, to get more in depth, here are some interesting resources:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Geoffrey Hinton’s coursera course “&lt;a href="https://www.coursera.org/learn/neural-networks"&gt;Neural Networks for Machine Learning&lt;/a&gt;”. It will take you through the process of training ANN on a classic problem - MNIST character recognition, and will explain everything in depth.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;MIT Book on &lt;a href="http://www.iro.umontreal.ca/%7Ebengioy/dlbook/"&gt;Deep Learning&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://deeplearning.stanford.edu/wiki/index.php/UFLDL_Tutorial"&gt;UFLDL tutorial by Stanford&lt;/a&gt; (alternative &lt;a href="http://deeplearning.stanford.edu/tutorial/"&gt;link&lt;/a&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://deeplearning.net/tutorial/"&gt;deeplearning.net tutorials&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- - NYU Course on [Deep Learning](http://techtalks.tv/deep_learning_nyu_spring_2014/) --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Book “&lt;a href="http://neuralnetworksanddeeplearning.com/"&gt;Neural Networks and Deep Learning&lt;/a&gt;” by Michael Nielsen&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Book Neural “&lt;a href="http://www.amazon.com/Neural-Networks-Learning-Machines-Edition/dp/0131471392"&gt;Networks and Learning Machines&lt;/a&gt;” by Simon O. Haykin&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- - [deeplearning.net reading list](http://deeplearning.net/reading-list/) --&gt;
-
-&lt;h2&gt;Artificial Intelligence&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;"&lt;a href="http://www.amazon.com/Artificial-Intelligence-Modern-Approach-Edition/dp/0136042597"&gt;Artificial Intelligence: A Modern Approach (AIMA)&lt;/a&gt;" the best book about the "old school" AI. It gives you a general overview of the field, and explains all of the fundamental concepts that you need to know. &lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.youtube.com/channel/UCshmLD2MsyqAKBx8ctivb5Q/videos"&gt;Artificial Intelligence course from UC Berkeley&lt;/a&gt; is an excellent series of video lectures, explaining you the basics of AI on a really fun practical project(training AI to play the pacman game). I recommend to watch it along with reading AIMA, because it is based on this book, and explains a lot of the similar concepts from different angles, making them easier to understand. It goes quite in depth, and it's a fantastic way to get started.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;How mind works&lt;/h2&gt;
-&lt;p&gt;If you're interested in AI, you probably want to have a good intuition about how human mind works, and the following books will explain the best modern theories in a fun, intuitive way.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.amazon.com/On-Intelligence-Jeff-Hawkins/dp/0805078533"&gt;On Intelligence&lt;/a&gt; by Jeff Hawkins (&lt;a href="http://www.audible.com/pd/Science-Technology/On-Intelligence-Audiobook/B002V8LKTE/ref=a_search_c4_1_1_srTtl?qid=1469789110&amp;amp;sr=1-1"&gt;audiobook&lt;/a&gt;)&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/G%C3%B6del-Escher-Bach-Eternal-Golden/dp/0465026567"&gt;Gödel, Escher, Bach&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;I would recommend starting with these two, they will give you an excellent introduction into general theories of how mind works.&lt;/p&gt;
-&lt;p&gt;Other resources:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/"&gt;How to Create a Mind&lt;/a&gt; by Ray Kurzweil(&lt;a href="http://www.audible.com/pd/Science-Technology/How-to-Create-a-Mind-Audiobook/B009S7OKJS/ref=a_search_c4_1_1_srTtl?qid=1469788482&amp;amp;sr=1-1"&gt;audiobook&lt;/a&gt;).&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.amazon.com/Principles-Neural-Science-Fifth-Kandel/dp/0071390111/ref=sr_1_1?ie=UTF8&amp;amp;qid=1469789160&amp;amp;sr=8-1&amp;amp;keywords=principles+of+neural+science"&gt;Principles of Neural Science&lt;/a&gt; This is the best book I could find that goes in depth into NS. It talks about hardcore science, neuro-anatomy and such. Very interesting, but also very long - I'm still reading it.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Math&lt;/h2&gt;
-&lt;p&gt;Here are the very basic math concepts that you need to begin learning AI:&lt;/p&gt;
-&lt;h3&gt;Calculus&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href="http://www.youtube.com/playlist?list=PL19E79A0638C8D449"&gt;Khan Academy Calculus videos&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- * [Coursera Calculus course](https://www.coursera.org/course/m2o2c2) --&gt;
-
-&lt;ul&gt;
-&lt;li&gt;MIT lectures on &lt;a href="http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/index.htm"&gt;Multivariable Calculus&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Linear Algebra&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.youtube.com/playlist?list=PLFD0EB975BA0CC1E0"&gt;Khan Academy Linear Algebra videos&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://ocw.mit.edu/courses/mathematics/18-06-linear-algebra-spring-2010/video-lectures/"&gt;MIT linear algebra videos&lt;/a&gt; by Gilbert Strang&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://cs.brown.edu/video/channels/coding-matrix-fall-2014/?page=2"&gt;Coding the Matrix&lt;/a&gt; — Brown University course on Linear Algebra for CS.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3&gt;Probability and statistics&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;Khan Academy &lt;a href="http://www.youtube.com/playlist?list=PLC58778F28211FA19"&gt;Probability&lt;/a&gt; &amp;amp; &lt;a href="http://www.youtube.com/playlist?list=PL1328115D3D8A2566"&gt;Statistics&lt;/a&gt; videos&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="https://www.edx.org/course/introduction-probability-science-mitx-6-041x#.VJfS2LQAKc"&gt;edx probability course&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2&gt;Coputer Science&lt;/h2&gt;
-&lt;p&gt;To be good at AI you want to be comfortable with the general concepts of computer science and programming. &lt;/p&gt;
-&lt;p&gt;If you are just starting out, I recommend to read &lt;a href="http://www.diveintopython3.net/"&gt;Dive Into Python 3&lt;/a&gt; - an amazing book that will teach you most of the important things that you need to know to be able to program in python.&lt;/p&gt;
-&lt;p&gt;To understand the nature of computer programming in more depth - watch this classic &lt;a href="https://www.youtube.com/watch?v=2Op3QLzMgSY&amp;amp;list=PLE18841CABEA24090#t=253"&gt;MIT course&lt;/a&gt;. This is a course about lisp and the basics of computer science, based on one of the most influential books in CS - &lt;a href="http://www.amazon.com/Structure-Interpretation-Computer-Programs-Engineering/dp/0262510871"&gt;Structure and Interpretation of Computer Programs&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- (algorithms, data structures, complexity) --&gt;
-
-&lt;h2&gt;Other Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.metacademy.org/"&gt;Metacademy&lt;/a&gt; - a "package manager" for your knowledge. You can use this great tool to understand all the prerequisites you need to learn different ML subjects.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;a href="http://www.kaggle.com/"&gt;kaggle&lt;/a&gt; — Machine Learning competitions&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;!-- - Github/my post on datasets --&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;As I'm learning more about AI and ML, I will be improving and expanding this list. If you have some good suggestions, you can submit a commit &lt;a href="https://github.com/raymestalez/digitalmind/blob/master/blog/content/ai/ai-resources.md"&gt;over here&lt;/a&gt;, or send me an email to raymestalez@gmail.com&lt;/p&gt;
-&lt;p&gt;Also if you are interested in learning about Artificial Intelligence and Deep Learning - subscribe to this blog, I am posting all the most interesting things I know about the subject here.&lt;/p&gt;
-&lt;!--
-
-## Programming
-## Prerequisites
-
-### Lisp and Python - best programming languages for AI:
-Of all the programming languages you can choose to practice AI there are 2 best
-options: Lisp and Python. Lisp was created specifically for creating AI, and it
-is widely considered to be the most elegant and brilliant programming language
-ever.  
-
-Here's the best way to learn it:  
-
-- Book "[Land of Lisp](http://www.amazon.com/Land-Lisp-Learn-Program-Game/dp/1593272812/)"
-  (Book about lisp with some AI algorithms)  
-  This is an excellent and very fun introduction to lisp, makes learning very
-  enjoyable, understandable, and includes a lot of algorithms and basic principles
-  that will be very useful when you will be going throuhg AIMA.  
-
-
-- Paul Graham [ANSI Common Lisp](http://www.amazon.com/ANSI-Common-LISP-Paul-Graham/dp/0133708756)
-
-And here's my favorite book on python:  
-
-
- --&gt;
-
-&lt;style&gt;
-article a {
-    color: #3d454b;
-    font-weight: bold;
-}
-&lt;/style&gt;</summary></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
+&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Where did you learn web development? What is the best way to get started in web development?&lt;/p&gt;
 &lt;/blockquote&gt;
