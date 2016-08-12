@@ -1,17 +1,59 @@
+import numpy
+import pandas
+from sklearn.preprocessing import LabelEncoder
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.cross_validation import cross_val_score
+
+from sklearn.cross_validation import StratifiedKFold
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+
+
+
 # from keras.models import Sequential
 # from keras.layers import Dense
-import numpy
+
 
 # fix random seed for reproducibility
-# seed = 7
-# numpy.random.seed(seed)
+seed = 7
+numpy.random.seed(seed)
 
 
 # load the dataset
-dataset = numpy.loadtxt("titanic.csv", delimiter=",")
+dataframe = pandas.read_csv("titanic.csv", header=None)
+dataset = dataframe.values
 
-# print(dataset)
+# Selecting features.
+# "1:" to select all the lines except the first one(that contains feature labels)
+# (2,4,5) to select 2,4 and 5th columns(passenger class, gender, age)
+X = dataset[1:,(2,4,5)]
 
-# # split into input (X) and output (Y) variables
-# X = dataset[:,0:8]
-# Y = dataset[:,8]
+# Encode gender values as integers. Turn it from "male" and "female" to 1 and 0.
+encoder = LabelEncoder()
+encoder.fit(X[:,(1)])
+encoded_Gender = encoder.transform(X[:,(1)])
+X[:,(1)] = encoded_Gender
+
+# Selecting labels. (survived or not)
+Y = dataset[:,(1)]
+
+
+# baseline model
+def create_baseline():
+    # create model
+    model = Sequential()
+    model.add(Dense(3, input_dim=3, init='normal', activation='relu')) 
+    model.add(Dense(1, init='normal', activation='sigmoid'))
+    # Compile model
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy']) 
+    return model
+
+
+# evaluate model with standardized dataset
+estimator = KerasClassifier(build_fn=create_baseline, nb_epoch=100, batch_size=5)
+kfold = StratifiedKFold(y=Y, n_folds=10, shuffle=True, random_state=seed)
+# results = cross_val_score(estimator, X, Y, cv=kfold)
+# print("Baseline: %.2f%% (%.2f%%)" % (results.mean()*100, results.std()*100))

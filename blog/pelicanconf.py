@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'Ray Alez'
 SITENAME = 'Digital Mind'
-SITEURL = 'http://blog.digitalmind.io'
+SITEURL = '' # 'http://blog.digitalmind.io'
 
 PATH = 'content'
 STATIC_PATHS = [
@@ -83,4 +83,5 @@ PLUGIN_PATHS = ['/home/ray/projects/digitalmind/blog/pelican-plugins']
 PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook']
 
-# EXTRA_HEADER = open('_nb_header.html').read() #.encode('utf-8')
+# for syntax highlighting
+EXTRA_HEADER = open('_nb_header.html').read() #.encode('utf-8')
