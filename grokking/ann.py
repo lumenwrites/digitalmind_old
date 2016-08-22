@@ -18,27 +18,14 @@ def compute_error(input, weight, goal_prediction):
 def fit(input, weight, goal_prediction, learning_rate):
     # Try using model to predict stuff
     prediction = model(input, weight)
-    print("Prediction: " + str(round(prediction, 8)))
-
     error = compute_error(input, weight, goal_prediction)
+
+    print("Prediction: " + str(round(prediction, 8)))
     print("Error: " + str(round(error, 8)))
 
-
-    # Try increasing weight a bit, compute the error
-    up_weight = weight + learning_rate
-    up_error = compute_error(input, up_weight, goal_prediction)    
-
-    # Try decreasing weight a bit, compute the error    
-    down_weight = weight - learning_rate    
-    down_error = compute_error(input, down_weight, goal_prediction)    
-
-    # If decreasing weight minimizes the error decrease the weight
-    if down_error < up_error:
-        weight = down_weight
-
-    # If increasing weight minimizes the error then increase it
-    if up_error < down_error:
-        weight = up_weight
+    # Gradient descent
+    derivative = input * (prediction - goal_prediction)
+    weight = weight - derivative    
 
     return weight
 
@@ -61,3 +48,21 @@ def train():
 
 
 train()        
+
+
+    # # Hot cold
+    # # Try increasing weight a bit, compute the error
+    # up_weight = weight + learning_rate
+    # up_error = compute_error(input, up_weight, goal_prediction)    
+
+    # # Try decreasing weight a bit, compute the error    
+    # down_weight = weight - learning_rate    
+    # down_error = compute_error(input, down_weight, goal_prediction)    
+
+    # # If decreasing weight minimizes the error decrease the weight
+    # if down_error < up_error:
+    #     weight = down_weight
+
+    # # If increasing weight minimizes the error then increase it
+    # if up_error < down_error:
+    #     weight = up_weight
