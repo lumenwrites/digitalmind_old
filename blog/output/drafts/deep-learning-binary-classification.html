@@ -1799,40 +1799,7 @@ jQuery(document).ready(function($) {
 	<article>
           <h1 id="blogTitle"> Using ANN for Binary Classification </h1>
           <hr />
-	  <p>The goal of this project is to train an ANN that will be able to perform binary classification.</p>
-<p>For this example we will use a <a href="">Titanic passengers dataset</a>. It includes list of Titanic passengers and some information about them. We will try to predict whether or not the passenger will survive the catastrophe based on his class, age, and gender. </p>
-<h1>Initial setup</h1>
-<p>First let's import the tools and libraries that we'll need:</p>
-<div class="highlight"><pre><span class="kn">import</span> <span class="nn">numpy</span>
-<span class="kn">import</span> <span class="nn">pandas</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
-<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
-<span class="kn">from</span> <span class="nn">keras.wrappers.scikit_learn</span> <span class="kn">import</span> <span class="n">KerasClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">LabelEncoder</span>
-<span class="kn">from</span> <span class="nn">sklearn.cross_validation</span> <span class="kn">import</span> <span class="n">StratifiedKFold</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-</pre></div>
-
-
-<p>and initialize the random seed so that we could consistently reproduce our results:</p>
-<div class="highlight"><pre><span class="c"># Initialzie random seed for reproducibility</span>
-<span class="n">seed</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-</pre></div>
-
-
-<p>.</p>
-<h1>Loading the dataset</h1>
-<p>We begin by using pandas to load the dataset:</p>
-<div class="highlight"><pre><span class="c"># load dataset</span>
-<span class="n">dataframe</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">&quot;titanic.csv&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="bp">None</span><span class="p">)</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">dataframe</span><span class="o">.</span><span class="n">values</span>
-</pre></div>
-
-
-<p>Next we need to split the dataset into inputs(features) and outputs(labels). Inputs will be the columns x, y, and z, that represent passenger's class, gender, and age respectively. Outputs consit of one value representing whether or not the passenger has survived. </p>
+	  <p>Next we need to split the dataset into inputs(features) and outputs(labels). Inputs will be the columns x, y, and z, that represent passenger's class, gender, and age respectively. Outputs consit of one value representing whether or not the passenger has survived. </p>
 <div class="highlight"><pre><span class="c"># split into input (X) and output (Y) variables</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">60</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">60</span><span class="p">]</span>

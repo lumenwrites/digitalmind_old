@@ -23,6 +23,7 @@ encoder = LabelEncoder()
 encoder.fit(Y)
 encoded_Y = encoder.transform(Y)
 
+
 # convert integers to dummy variables (hot encoded)
 dummy_y = np_utils.to_categorical(encoded_Y)
 

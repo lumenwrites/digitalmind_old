@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Digital Mind</title> <!-- Digital Mind -->
+  <title>Developing a simple Neural Network with Keras - Digital Mind</title> <!-- Digital Mind -->
 
   <!-- Extra header for ipython -->
   <!-- For syntax highlighting -->
@@ -1779,20 +1779,120 @@ jQuery(document).ready(function($) {
       </div>
   </header>
 
-<h1>Archives for Digital Mind</h1>
 
-<dl>
-    <dt>Sun 14 August 2016</dt>
-    <dd><a href="/post/hello-world">Developing a simple Neural Network with Keras</a></dd>
-    <dt>Fri 29 July 2016</dt>
-    <dd><a href="/post/artificial-intelligence-resources">Artificial Intelligence resources</a></dd>
-    <dt>Sat 23 July 2016</dt>
-    <dd><a href="/post/iris">Multiclass Classification of Flower Species</a></dd>
-    <dt>Fri 22 July 2016</dt>
-    <dd><a href="/post/ai-writes-hpmor">Artificial Neural Network writes Harry Potter and the Methods of Rationality</a></dd>
-    <dt>Sat 01 November 2014</dt>
-    <dd><a href="/post/getting-started-with-web-development">Getting started with Web Development</a></dd>
-</dl>
+<style>
+  article {
+  
+  margin-top: 5px;
+  background: white;
+  padding: 40px;
+  background: rgba(255,255,255,0.8);
+
+  margin-bottom: 0;
+}  
+</style>
+
+
+<div id="page"  class="postPage">
+    <div class="row">
+      <div class="large-12 columns">
+	<article>
+          <h1 id="blogTitle"> Developing a simple Neural Network with Keras </h1>
+          <hr />
+	  <p>This is a very simple introduction to deep learning. The goals of this tutorial is to develop a very simple ANN in Keras
+This is the introduction to deep learning
+simplest way to develop a neural network.</p>
+<h1>Load Data</h1>
+<p>This is the dataset we will use</p>
+<p>Here's how it looks like:</p>
+<p>Download it here</p>
+<h1>Define Model</h1>
+<h1>Compile Model</h1>
+<h1>Fit Model</h1>
+<h1>Evaluate Model</h1>
+<h1>Tie It All Together</h1>
+<h1>Complete code</h1>
+<div class="highlight"><pre><span class="c"># Create your first MLP in Keras</span>
+<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
+<span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
+<span class="kn">import</span> <span class="nn">numpy</span>
+<span class="c"># fix random seed for reproducibility</span>
+<span class="n">seed</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
+<span class="c"># load pima indians dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s">&quot;pima-indians-diabetes.csv&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
+<span class="c"># split into input (X) and output (Y) variables</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">Y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">8</span><span class="p">]</span>
+<span class="c"># create model</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s">&#39; relu &#39;</span> <span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s">&#39; relu &#39;</span> <span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s">&#39; sigmoid &#39;</span> <span class="p">))</span>
+<span class="c"># Compile model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span> <span class="s">&#39; binary_crossentropy &#39;</span> <span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span> <span class="s">&#39; adam &#39;</span> <span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span> <span class="s">&#39; accuracy &#39;</span> <span class="p">])</span>
+<span class="c"># Fit the model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="c"># evaluate the model</span>
+<span class="n">scores</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">: </span><span class="si">%.2f%%</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">metrics_names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+</pre></div>
+	</article>	
+
+	<!-- Follow -->
+	<div class="post-footer-signup panel" style="margin-top: 10px;">
+	  <span style="float:left"><p>Liked this post? Subscribe to the updates!</p></span>
+	  <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
+	    <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="mc-field-group">
+		<span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
+		<input class="small button"
+                       id="subscribeButton"
+                       name="subscribe"
+                       type="submit"
+                       value="Subscribe"
+		       style="border-radius: 0;"/>
+		<input class="required email"
+                       id="mce-EMAIL"
+                       name="EMAIL"
+                       placeholder="Enter your email"
+                       type="email"
+                       value=""
+		       style="border-radius: 0;"/>
+              </div>
+
+              <div class="clear" id="mce-responses">
+		<div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
+		<div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
+              </div>
+	    </form>
+	  </div>
+	</div>
+	<!-- End Follow -->
+
+      </div>
+
+
+</div>
+
+
+
+      <!-- Comments -->
+      <!-- 
+<div class="row">
+  <div class="large-12 columns">
+    <div class="comments">
+      <hr />
+      <script data-isso="//comments.digitalmind.io/dm/"
+	      data-isso-avatar="false"
+              src="//comments.digitalmind.io/dm/js/embed.dev.js"></script>
+      <section id="isso-thread"></section>
+      <hr />
+    </div>
+  </div>
+  </div>
+</div>
+ -->
 
   <footer>
   </footer>
