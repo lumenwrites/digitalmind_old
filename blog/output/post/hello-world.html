@@ -1812,30 +1812,30 @@ simplest way to develop a neural network.</p>
 <h1>Evaluate Model</h1>
 <h1>Tie It All Together</h1>
 <h1>Complete code</h1>
-<div class="highlight"><pre><span class="c"># Create your first MLP in Keras</span>
+<div class="highlight"><pre><span></span><span class="c1"># Create your first MLP in Keras</span>
 <span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 <span class="kn">from</span> <span class="nn">keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
 <span class="kn">import</span> <span class="nn">numpy</span>
-<span class="c"># fix random seed for reproducibility</span>
+<span class="c1"># fix random seed for reproducibility</span>
 <span class="n">seed</span> <span class="o">=</span> <span class="mi">7</span>
 <span class="n">numpy</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">seed</span><span class="p">)</span>
-<span class="c"># load pima indians dataset</span>
-<span class="n">dataset</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s">&quot;pima-indians-diabetes.csv&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
-<span class="c"># split into input (X) and output (Y) variables</span>
+<span class="c1"># load pima indians dataset</span>
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">numpy</span><span class="o">.</span><span class="n">loadtxt</span><span class="p">(</span><span class="s2">&quot;pima-indians-diabetes.csv&quot;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="c1"># split into input (X) and output (Y) variables</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">8</span><span class="p">]</span>
 <span class="n">Y</span> <span class="o">=</span> <span class="n">dataset</span><span class="p">[:,</span><span class="mi">8</span><span class="p">]</span>
-<span class="c"># create model</span>
+<span class="c1"># create model</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">()</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s">&#39; relu &#39;</span> <span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s">&#39; relu &#39;</span> <span class="p">))</span>
-<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s">&#39; sigmoid &#39;</span> <span class="p">))</span>
-<span class="c"># Compile model</span>
-<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span> <span class="s">&#39; binary_crossentropy &#39;</span> <span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span> <span class="s">&#39; adam &#39;</span> <span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span> <span class="s">&#39; accuracy &#39;</span> <span class="p">])</span>
-<span class="c"># Fit the model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="n">input_dim</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s1">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s1">&#39; relu &#39;</span> <span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s1">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s1">&#39; relu &#39;</span> <span class="p">))</span>
+<span class="n">model</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">Dense</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">init</span><span class="o">=</span> <span class="s1">&#39; uniform &#39;</span> <span class="p">,</span> <span class="n">activation</span><span class="o">=</span> <span class="s1">&#39; sigmoid &#39;</span> <span class="p">))</span>
+<span class="c1"># Compile model</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">loss</span><span class="o">=</span> <span class="s1">&#39; binary_crossentropy &#39;</span> <span class="p">,</span> <span class="n">optimizer</span><span class="o">=</span> <span class="s1">&#39; adam &#39;</span> <span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="p">[</span> <span class="s1">&#39; accuracy &#39;</span> <span class="p">])</span>
+<span class="c1"># Fit the model</span>
 <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">nb_epoch</span><span class="o">=</span><span class="mi">150</span><span class="p">,</span> <span class="n">batch_size</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
-<span class="c"># evaluate the model</span>
+<span class="c1"># evaluate the model</span>
 <span class="n">scores</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">: </span><span class="si">%.2f%%</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">metrics_names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2">: </span><span class="si">%.2f%%</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">metrics_names</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
 </pre></div>
 	</article>	
 

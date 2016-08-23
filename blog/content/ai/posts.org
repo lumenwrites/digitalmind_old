@@ -1,0 +1,55 @@
+> Projects:
+- Sonar titanic(binary classification)
+- Regression (house or something else)
+- Serialization and checkpointing
+- //Plotting, dropout, rate schedules
+- Convolutional introduction
+- MNIST
+
+ > Intro OM-style posts:
+- Intro to DL. Fields. 
+- Terminology
+- Tools
+
+- Evaluating models
+- ANN introduction
+
+ > Algorithmia articles. 
+Medium-book style. First on platform, great niche, same TA.
+
+ > Other
+- How to participate in kaggle competitions.
+
+
+- Tools
+- ANN introduction
+- Sonar titanic
+- Regression (house or something else)
+- Serialization and checkpointing
+- //Plotting, dropout, rate schedules
+- Convolutional introduction
+- MNIST
+
+- DL book
+- Grokking book
+- CI book
+  - Search
+- Ng notes
+- AIMA/edx
+
+//
+- tutsplus
+- How to create mind
+
+//programming
+- Daily RSS script.
+- Writing prompts stories.
+- docker? Pelican?
+Just have programming/webdev category.
+
+# More
+- //evaluating models
+
+# Done
+- AI resources
+- Tensorflow Hello World. Iris (multiclass classification)

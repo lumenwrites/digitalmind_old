@@ -39,12 +39,18 @@ encoder = LabelEncoder()
 encoder.fit(X[:,(1)])
 encoded_Gender = encoder.transform(X[:,(1)])
 X[:,(1)] = encoded_Gender
-X = X
+X = X.astype(np.float32, copy=False)
+
 
 # Selecting labels. (survived or not)
 Y = dataset[:,(1)]
 # Y = Y.astype(np.float32)
 Y = Y.astype(np.float32, copy=False)
+where_are_NaNs = np.isnan(Y)
+Y[where_are_NaNs] = 0
+
+tf.cast(X, tf.float32)
+tf.cast(Y, tf.float32)
 
 print(X)
 print(Y)

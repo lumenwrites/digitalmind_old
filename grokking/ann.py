@@ -25,7 +25,7 @@ def fit(input, weight, goal_prediction, learning_rate):
 
     # Gradient descent
     derivative = input * (prediction - goal_prediction)
-    weight = weight - derivative    
+    weight = weight - (learning_rate * derivative)
 
     return weight
 
@@ -37,10 +37,10 @@ def train():
     # Initialize default random weight
     weight = 0.5
     # How much we're moving our weights each iteration
-    learning_rate = 0.01
+    learning_rate = 0.1
 
     # How many times to repeat learning
-    epochs = 1101
+    epochs = 500
 
     for iteration in range(epochs):
         # Improve the weight over a bunch of iterations.

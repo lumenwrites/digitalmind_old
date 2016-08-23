@@ -1,7 +1,45 @@
-Title: Using ANN for Binary Classification
-Date: 2016-08-12
-Slug: deep-learning-binary-classification
-Status: draft
+Title: Titanic
+Date: 2016-08-22
+
+
+In this project we will build an ANN that can perform binary classification and train it on the Titanic passengers dataset.  It will be able to predict whether the passenger has survived the catastrophe based on his class, age, and gender. 
+
+
+# Initial setup
+First let's import the tools and libraries that we'll need:
+
+```python
+import numpy
+import pandas
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.cross_validation import cross_val_score
+from sklearn.preprocessing import LabelEncoder
+from sklearn.cross_validation import StratifiedKFold
+from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
+```
+
+and initialize the random seed so that we could consistently reproduce our results:
+
+```python
+# Initialzie random seed for reproducibility
+seed = 7
+numpy.random.seed(seed)
+```
+
+.
+
+# Loading the dataset
+We begin by using pandas to load the dataset:
+
+```python
+# load dataset
+dataframe = pandas.read_csv("titanic.csv", header=None)
+dataset = dataframe.values
+```
+
 Next we need to split the dataset into inputs(features) and outputs(labels). Inputs will be the columns x, y, and z, that represent passenger's class, gender, and age respectively. Outputs consit of one value representing whether or not the passenger has survived. 
 
 ```python

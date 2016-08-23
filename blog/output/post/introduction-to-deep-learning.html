@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
 
-  <title>Digital Mind</title> <!-- Digital Mind -->
+  <title>Introduction to Deep Learning - Digital Mind</title> <!-- Digital Mind -->
 
   <!-- Extra header for ipython -->
   <!-- For syntax highlighting -->
@@ -1780,177 +1780,82 @@ jQuery(document).ready(function($) {
   </header>
 
 
-
 <style>
-  p {
-  margin-bottom:0;
-  }
-  .readmore {
-  display:none;
-  }
+  article {
+  
+  margin-top: 5px;
+  background: white;
+  padding: 40px;
+  background: rgba(255,255,255,0.8);
 
-  hr {
-    margin-bottom: 10px;
-  }
-  article h1 {
-    font-size: 32px;
-  }
+  margin-bottom: 0;
+}  
 </style>
 
-  
-<section id="content">
-  
-  <div id="page"  class="blogPage" style="padding-top: 0px;">
+
+<div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
+	<article>
+          <h1 id="blogTitle"> Introduction to Deep Learning </h1>
+          <hr />
+	  
+	</article>	
 
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/convoluional-dl-with-mnist"><h1>Convoluional Dl with MNIST</h1></a>
-	  <hr/>
-	  <p>
-	    <p>MNIST is a hello world for object recognition and deep learning</p>
-	  </p>
-          <!-- <a href="/post/convoluional-dl-with-mnist" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/gradient-descent-perceptron"><h1>Gradient Descent. Perceptron.</h1></a>
-	  <hr/>
-	  <p>
-	    <h1>Why do we need it?</h1>
-<p>The goal of ML/DL is to make accurate predictions.
-A more convenient way of looking at it, is minimizing the error.
-Gradient descent gives us an optimal way to minimize the error.
-Plot error and weight, it looks like this.
-We need to figure ...</p>
-	  </p>
-          <!-- <a href="/post/gradient-descent-perceptron" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/introduction-to-deep-learning"><h1>Introduction to Deep Learning</h1></a>
-	  <hr/>
-	  <p>
-	    
-	  </p>
-          <!-- <a href="/post/introduction-to-deep-learning" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/learning-rate-schedule"><h1>Learning rate schedule</h1></a>
-	  <hr/>
-	  <p>
-	    <p>So you can gradually decrease your learning rate. Learning rate schedule.</p>
-<p>Can decrease gradually based ln epoch, or in big drops at specific epochs.</p>
-<p>decay</p>
-<p>calculated with this formula</p>
-<p>drop based</p>
-<p>Dropping by half every specific number of epochs.</p>
-<p>you write a step_decay function and then just pass it to ...</p>
-	  </p>
-          <!-- <a href="/post/learning-rate-schedule" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/plotting-training-history"><h1>Plotting training history</h1></a>
-	  <hr/>
-	  <p>
-	    <h1>Plotting training history</h1>
-<p>Ability to plot the traini history is very useful for understanding the model perfomance during training.</p>
-<h1>Accessing history</h1>
-<p>fit() function returns the history object which can be used to access metrics that are saved with each training epoch.</p>
-<h1>Visualizing history</h1>
-<p>We can plot the collected training history ...</p>
-	  </p>
-          <!-- <a href="/post/plotting-training-history" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/recommendations"><h1>Recommendations</h1></a>
-	  <hr/>
-	  <p>
-	    <p>Building a simple recommendation engine</p>
-<p>In this tutorial we will build a simple recommendation engine in python.</p>
-<p>To create a recommendation engine we will use collaborative filtering - we will search for users who have similar likes/votes/reccomendations as you are, and then combine them to create a ranked list ...</p>
-	  </p>
-          <!-- <a href="/post/recommendations" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/regression-keras"><h1>Regression Keras</h1></a>
-	  <hr/>
-	  <p>
-	    <p>The goal of this project is to learn how to use Keras to train ANN for a regression problem.</p>
-<h1>Dataset</h1>
-<p>The dataset we will use for this problem is</p>
-<h1>Loading dataset</h1>
-<h1>Creating baseline ANN</h1>
-<p>Full code:</p>
-<div class="highlight"><pre><span></span><span class="c1"># Regression Example With Boston Dataset: Baseline</span>
-<span class="kn">import</span> <span class="nn">numpy</span>
-<span class="kn">import</span> <span class="nn">pandas</span>
-<span class="kn">from</span> <span class="nn">keras.models</span> <span class="kn">import ...</span></pre></div>
-	  </p>
-          <!-- <a href="/post/regression-keras" id="readmore">>>> readmore</span></a> -->
-	</article>
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
-          <a href="/post/serialization-and-checkpointing"><h1>Serialization and Checkpointing</h1></a>
-	  <hr/>
-	  <p>
-	    <p>Because deep learni models take a long time to train, we need to be able to be able to save our progress. This article is about serialization(saving the models on disk) and checkpointing(saving the best versions of our models.</p>
-<p>we will learn it on the basis of the ...</p>
-	  </p>
-          <!-- <a href="/post/serialization-and-checkpointing" id="readmore">>>> readmore</span></a> -->
-	</article>
-	
+	<!-- Follow -->
+	<div class="post-footer-signup panel" style="margin-top: 10px;">
+	  <span style="float:left"><p>Liked this post? Subscribe to the updates!</p></span>
+	  <div id="mc_embed_signup" style="/* margin-left:60; float: right;*/">
+	    <form action="//digital-mind.us7.list-manage.com/subscribe/post?u=0f23c7984541d915d1108a16e&amp;id=22f619e538" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div class="mc-field-group">
+		<span id="rss-icon"><a href="/feeds/all.atom.xml"><i class="fi-rss large"></i></a></span>
+		<input class="small button"
+                       id="subscribeButton"
+                       name="subscribe"
+                       type="submit"
+                       value="Subscribe"
+		       style="border-radius: 0;"/>
+		<input class="required email"
+                       id="mce-EMAIL"
+                       name="EMAIL"
+                       placeholder="Enter your email"
+                       type="email"
+                       value=""
+		       style="border-radius: 0;"/>
+              </div>
 
-<!-- Pagination -->
-<div class="pagination panel" style="margin-top: 20px;
-				     padding: 10px;
-				     text-align: center;" >
-  
-  <span class="step-links">
+              <div class="clear" id="mce-responses">
+		<div class="response" id="mce-error-response" style="display:none">&nbsp;</div>
+		<div class="response" id="mce-success-response" style="display:none">&nbsp;</div>
+              </div>
+	    </form>
+	  </div>
+	</div>
+	<!-- End Follow -->
 
-    <span class="current">
-      Page 1
-    </span>
+      </div>
 
-      <a href="/category/ai2.html"
-      <i class="fa fa-chevron-right right" style="margin: 5px 0;"></i>    
-    </a>
-  </span>
+
 </div>
 
-        </div>
-    </div>
-</section>
 
+
+      <!-- Comments -->
+      <!-- 
+<div class="row">
+  <div class="large-12 columns">
+    <div class="comments">
+      <hr />
+      <script data-isso="//comments.digitalmind.io/dm/"
+	      data-isso-avatar="false"
+              src="//comments.digitalmind.io/dm/js/embed.dev.js"></script>
+      <section id="isso-thread"></section>
+      <hr />
+    </div>
+  </div>
+  </div>
+</div>
+ -->
 
   <footer>
   </footer>
