@@ -69,10 +69,19 @@
   <header>
       <div class="row" >
         <div class="large-6 small-6 columns" >
-          <a href="{{ SITEURL }}/"><img src="{{ SITEURL }}/theme/img/logo_notagline.png" /></a>
-	  <!-- digital<span class="bold">verse</span> -->
+	    <a href="{{ SITEURL }}/">
+	    <div style="float:left;font-size:32px;margin-top: 5px;">
+	      digital<span class="bold">mind</span>
+	    </div>
+	      <img src="{{ SITEURL }}/theme/img/logo2.png"
+		   style="float: left;
+			  width: 40px;
+			  width: 50px;
+			  margin-left: 5px;
+			  margin-top: -4px;"/>
+	    </a>	    	    
+	</div>
 
-        </div>
         <div class="large-6 small-6 columns" id="mainMenu">
 	  <div style="float:right;">
 	    {% for title, link in MENUITEMS %}

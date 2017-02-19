@@ -1,6 +1,6 @@
 Title: Gradient Descent. Perceptron.
 Date: 2016-08-22
-
+Status: Draft
 
 # Why do we need it?
 The goal of ML/DL is to make accurate predictions.

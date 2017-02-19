@@ -1,6 +1,6 @@
 Title: Titanic
 Date: 2016-08-22
-
+Status: Draft
 
 In this project we will build an ANN that can perform binary classification and train it on the Titanic passengers dataset.  It will be able to predict whether the passenger has survived the catastrophe based on his class, age, and gender. 
 

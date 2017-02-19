@@ -1,228 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Mind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-08-22T00:00:00+02:00</updated><entry><title>Convoluional Dl with MNIST</title><link href="/post/convoluional-dl-with-mnist" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/convoluional-dl-with-mnist</id><summary type="html">&lt;p&gt;MNIST is a hello world for object recognition and deep learning&lt;/p&gt;</summary></entry><entry><title>Gradient Descent. Perceptron.</title><link href="/post/gradient-descent-perceptron" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/gradient-descent-perceptron</id><summary type="html">&lt;h1&gt;Why do we need it?&lt;/h1&gt;
-&lt;p&gt;The goal of ML/DL is to make accurate predictions.
-A more convenient way of looking at it, is minimizing the error.
-Gradient descent gives us an optimal way to minimize the error.
-Plot error and weight, it looks like this.
-We need to figure out the direction and amount in which to move.
-(negative)Derivative/slope points us to where the error is smaller, and tells by how much we need to change.&lt;/p&gt;
-&lt;p&gt;We move in the knob_weight value opposite the gradient value, which descends our error to 0. &lt;/p&gt;</summary></entry><entry><title>Introduction to Deep Learning</title><link href="/post/introduction-to-deep-learning" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/introduction-to-deep-learning</id><summary type="html"></summary></entry><entry><title>Learning rate schedule</title><link href="/post/learning-rate-schedule" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/learning-rate-schedule</id><summary type="html">&lt;p&gt;So you can gradually decrease your learning rate. Learning rate schedule.&lt;/p&gt;
-&lt;p&gt;Can decrease gradually based ln epoch, or in big drops at specific epochs.&lt;/p&gt;
-&lt;p&gt;decay&lt;/p&gt;
-&lt;p&gt;calculated with this formula&lt;/p&gt;
-&lt;p&gt;drop based&lt;/p&gt;
-&lt;p&gt;Dropping by half every specific number of epochs.&lt;/p&gt;
-&lt;p&gt;you write a step_decay function and then just pass it to the thing.&lt;/p&gt;
-&lt;p&gt;tips&lt;/p&gt;
-&lt;p&gt;increase initial learning rate(coz it decays start with a large number)
- use large momentum(helps to make updates in the right direction when learning rate is small)
- experiment with different schedules. You dont know which one is the best one. Try ones that change exponentially or respond to accuracy of the model. Experiment to pick the best one.&lt;/p&gt;</summary></entry><entry><title>Plotting training history</title><link href="/post/plotting-training-history" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/plotting-training-history</id><summary type="html">&lt;h1&gt;Plotting training history&lt;/h1&gt;
-&lt;p&gt;Ability to plot the traini history is very useful for understanding the model perfomance during training.&lt;/p&gt;
-&lt;h1&gt;Accessing history&lt;/h1&gt;
-&lt;p&gt;fit() function returns the history object which can be used to access metrics that are saved with each training epoch.&lt;/p&gt;
-&lt;h1&gt;Visualizing history&lt;/h1&gt;
-&lt;p&gt;We can plot the collected training history data by using matplotlib.&lt;/p&gt;</summary></entry><entry><title>Recommendations</title><link href="/post/recommendations" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/recommendations</id><summary type="html">&lt;p&gt;Building a simple recommendation engine&lt;/p&gt;
-&lt;p&gt;In this tutorial we will build a simple recommendation engine in python.&lt;/p&gt;
-&lt;p&gt;To create a recommendation engine we will use collaborative filtering - we will search for users who have similar likes/votes/reccomendations as you are, and then combine them to create a ranked list of suggestions.&lt;/p&gt;
-&lt;h1&gt;Dataset&lt;/h1&gt;
-&lt;p&gt;https://gist.github.com/entaroadun/1653794
-Books recommendation dataset&lt;/p&gt;
-&lt;h1&gt;Finding similarity score&lt;/h1&gt;
-&lt;p&gt;euclidean distance score.
-pearson correlatio  score(more sophisticated)&lt;/p&gt;
-&lt;h1&gt;Ranking users&lt;/h1&gt;
-&lt;h1&gt;Recommending items&lt;/h1&gt;
-&lt;h1&gt;Matching similar items&lt;/h1&gt;</summary></entry><entry><title>Regression Keras</title><link href="/post/regression-keras" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/regression-keras</id><summary type="html">&lt;p&gt;The goal of this project is to learn how to use Keras to train ANN for a regression problem.&lt;/p&gt;
-&lt;h1&gt;Dataset&lt;/h1&gt;
-&lt;p&gt;The dataset we will use for this problem is&lt;/p&gt;
-&lt;h1&gt;Loading dataset&lt;/h1&gt;
-&lt;h1&gt;Creating baseline ANN&lt;/h1&gt;
-&lt;p&gt;Full code:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Regression Example With Boston Dataset: Baseline&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.layers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.wrappers.scikit_learn&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;KerasRegressor&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.cross_validation&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cross_val_score&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.cross_validation&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;KFold&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;StandardScaler&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.pipeline&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Pipeline&lt;/span&gt;
-
-
-&lt;span class="c1"&gt;# fix random seed for reproducibility&lt;/span&gt;
-&lt;span class="n"&gt;seed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
-&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-
-&lt;span class="c1"&gt;# load dataset&lt;/span&gt;
-&lt;span class="n"&gt;dataframe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;housing.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delim_whitespace&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;dataset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;
-&lt;span class="c1"&gt;# split into input (X) and output (Y) variables&lt;/span&gt;
-&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-
-&lt;span class="c1"&gt;# define base model&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;baseline_model&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="c1"&gt;# create model&lt;/span&gt;
-    &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;input_dim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;13&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;normal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;relu&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;normal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-    &lt;span class="c1"&gt;# Compile model&lt;/span&gt;
-    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;mean_squared_error&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;adam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;
-
-&lt;span class="c1"&gt;# evaluate model with standardized dataset&lt;/span&gt;
-&lt;span class="n"&gt;estimator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KerasRegressor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;build_fn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;baseline_model&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nb_epoch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;kfold&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KFold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;n_folds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random_state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;results&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross_val_score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;estimator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cv&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;kfold&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Baseline: &lt;/span&gt;&lt;span class="si"&gt;%.2f&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;%.2f&lt;/span&gt;&lt;span class="s2"&gt;) MSE&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;()))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h1&gt;Improving perfomance by standardizing the dataset&lt;/h1&gt;
-&lt;p&gt;Next we will modify our data to improve the perfomance&lt;/p&gt;
-&lt;h1&gt;Tuning the network topology&lt;/h1&gt;
-&lt;p&gt;Now we will try to make it wider&lt;/p&gt;
-&lt;p&gt;Now we will try to make it deeper&lt;/p&gt;
-&lt;p&gt;And conpare the results&lt;/p&gt;
-&lt;h1&gt;Conclusion&lt;/h1&gt;
-&lt;p&gt;I have achieved an accuracy rate of x%.
-You can experiment with this other housing prices dataset.&lt;/p&gt;
-&lt;p&gt;Final code:&lt;/p&gt;</summary></entry><entry><title>Serialization and Checkpointing</title><link href="/post/serialization-and-checkpointing" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/serialization-and-checkpointing</id><summary type="html">&lt;p&gt;Because deep learni models take a long time to train, we need to be able to be able to save our progress. This article is about serialization(saving the models on disk) and checkpointing(saving the best versions of our models.&lt;/p&gt;
-&lt;p&gt;we will learn it on the basis of the code from hello world tutorial.&lt;/p&gt;
-&lt;h1&gt;Saving the model&lt;/h1&gt;
-&lt;p&gt;Saving models, and loading them to make predctions&lt;/p&gt;
-&lt;p&gt;Keras separates saving the model architecture and saving the weights.&lt;/p&gt;
-&lt;p&gt;Models can be saved as json, weights can be saved as hd5.&lt;/p&gt;
-&lt;h1&gt;Loading the model&lt;/h1&gt;
-&lt;h1&gt;Checkpointing&lt;/h1&gt;
-&lt;p&gt;Checkpointing is a fault tolerance technique for long running processes. You are regularly taking the model snapshots in case of failure, so that if there's a problem not everythig is lost.&lt;/p&gt;
-&lt;p&gt;Checkpoint can be used directly, lr as a starting point for a new run to pick up where it left off. Checkpointing captures the weights of the model.&lt;/p&gt;
-&lt;p&gt;Keras checkpointing api allows you to choose when to do the checkpoints. It is a good idea to save checkpoints every time the model improves. You can monitor various metrics. We will set it up so that it saves the weighhts every time there's an improvement in  classification accuracy.&lt;/p&gt;
-&lt;p&gt;'''&lt;/p&gt;
-&lt;p&gt;Saving the best weights&lt;/p&gt;
-&lt;h1&gt;Loadig a saved model&lt;/h1&gt;</summary></entry><entry><title>Titanic</title><link href="/post/titanic" rel="alternate"></link><updated>2016-08-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-22:post/titanic</id><summary type="html">&lt;p&gt;In this project we will build an ANN that can perform binary classification and train it on the Titanic passengers dataset.  It will be able to predict whether the passenger has survived the catastrophe based on his class, age, and gender. &lt;/p&gt;
-&lt;h1&gt;Initial setup&lt;/h1&gt;
-&lt;p&gt;First let's import the tools and libraries that we'll need:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.layers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.wrappers.scikit_learn&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;KerasClassifier&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.cross_validation&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;cross_val_score&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;LabelEncoder&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.cross_validation&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;StratifiedKFold&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.preprocessing&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;StandardScaler&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;sklearn.pipeline&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Pipeline&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;and initialize the random seed so that we could consistently reproduce our results:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Initialzie random seed for reproducibility&lt;/span&gt;
-&lt;span class="n"&gt;seed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
-&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;.&lt;/p&gt;
-&lt;h1&gt;Loading the dataset&lt;/h1&gt;
-&lt;p&gt;We begin by using pandas to load the dataset:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# load dataset&lt;/span&gt;
-&lt;span class="n"&gt;dataframe&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pandas&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;read_csv&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;titanic.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;header&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;dataset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataframe&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Next we need to split the dataset into inputs(features) and outputs(labels). Inputs will be the columns x, y, and z, that represent passenger's class, gender, and age respectively. Outputs consit of one value representing whether or not the passenger has survived. &lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# split into input (X) and output (Y) variables&lt;/span&gt;
-&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;astype&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Because [] is string, we want to encode it as integer&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# encode class values as integers&lt;/span&gt;
-&lt;span class="n"&gt;encoder&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LabelEncoder&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;encoder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;encoded_Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;encoder&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;transform&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h1&gt;building a model&lt;/h1&gt;
-&lt;p&gt;Now we build our model.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# baseline model&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;create_baseline&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
-    &lt;span class="c1"&gt;# create model&lt;/span&gt;
-    &lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;input_dim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;60&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;normal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;relu&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; 
-    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;normal&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;sigmoid&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-    &lt;span class="c1"&gt;# Compile model&lt;/span&gt;
-    &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;binary_crossentropy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;adam&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;metrics&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;accuracy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;We create a model with 4 inputs(one for each parameter) and two layers.&lt;/p&gt;
-&lt;h1&gt;Evaluating a model&lt;/h1&gt;
-&lt;p&gt;Next we can evaluate our model:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# evaluate model with standardized dataset&lt;/span&gt;
-&lt;span class="n"&gt;estimator&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;KerasClassifier&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;build_fn&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;create_baseline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nb_epoch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;verbose&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;kfold&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;StratifiedKFold&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;encoded_Y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;n_folds&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;shuffle&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;random_state&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="n"&gt;results&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;cross_val_score&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;estimator&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;encoded_Y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cv&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;kfold&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Baseline: &lt;/span&gt;&lt;span class="si"&gt;%.2f%%&lt;/span&gt;&lt;span class="s2"&gt; (&lt;/span&gt;&lt;span class="si"&gt;%.2f%%&lt;/span&gt;&lt;span class="s2"&gt;)&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;mean&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;results&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;We pass our model to the KerasClassifier, with other parameters such as nb_epoch and batch_size.&lt;/p&gt;
-&lt;p&gt;Then we use StratifiedKFold function to  train it and estimate it's perfomance.&lt;/p&gt;
-&lt;p&gt;This basic model returns the result of 81%&lt;/p&gt;
-&lt;h1&gt;Improving the model with data preparation&lt;/h1&gt;
-&lt;p&gt;scaling the inputs&lt;/p&gt;
-&lt;h1&gt;Tuning network topology&lt;/h1&gt;
-&lt;p&gt;Nany things to tune: initial weights, activation function, optimization procedure, etc. Experiment with making it smaller and larger.&lt;/p&gt;
-&lt;p&gt;Reduce hidden layer by half, 60&amp;gt;30
-because This will put pressure on the network during training to pick out the most important structure in the input data to model.&lt;/p&gt;
-&lt;p&gt;Add one layer
-because network is given the opportunity to model all input variables before being bottlenecked and forced to halve the representational capacity, much like we did in the experiment above with the smaller network. Instead of squeezing the representation of the inputs themselves, we have an additional hidden layer to aid in the process.&lt;/p&gt;
-&lt;h1&gt;Summary&lt;/h1&gt;
-&lt;p&gt;With these improvements, our ann now has 86% accuracy
-You can find the code [here]. &lt;/p&gt;</summary></entry><entry><title>Developing a simple Neural Network with Keras</title><link href="/post/hello-world" rel="alternate"></link><updated>2016-08-14T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-08-14:post/hello-world</id><summary type="html">&lt;p&gt;This is a very simple introduction to deep learning. The goals of this tutorial is to develop a very simple ANN in Keras
-This is the introduction to deep learning
-simplest way to develop a neural network.&lt;/p&gt;
-&lt;h1&gt;Load Data&lt;/h1&gt;
-&lt;p&gt;This is the dataset we will use&lt;/p&gt;
-&lt;p&gt;Here's how it looks like:&lt;/p&gt;
-&lt;p&gt;Download it here&lt;/p&gt;
-&lt;h1&gt;Define Model&lt;/h1&gt;
-&lt;h1&gt;Compile Model&lt;/h1&gt;
-&lt;h1&gt;Fit Model&lt;/h1&gt;
-&lt;h1&gt;Evaluate Model&lt;/h1&gt;
-&lt;h1&gt;Tie It All Together&lt;/h1&gt;
-&lt;h1&gt;Complete code&lt;/h1&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# Create your first MLP in Keras&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.models&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;
-&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;keras.layers&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Dense&lt;/span&gt;
-&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
-&lt;span class="c1"&gt;# fix random seed for reproducibility&lt;/span&gt;
-&lt;span class="n"&gt;seed&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;
-&lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;random&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;seed&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;# load pima indians dataset&lt;/span&gt;
-&lt;span class="n"&gt;dataset&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;numpy&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loadtxt&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;pima-indians-diabetes.csv&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;delimiter&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;,&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;# split into input (X) and output (Y) variables&lt;/span&gt;
-&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="n"&gt;Y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;dataset&lt;/span&gt;&lt;span class="p"&gt;[:,&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;span class="c1"&gt;# create model&lt;/span&gt;
-&lt;span class="n"&gt;model&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Sequential&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;input_dim&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; uniform &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; relu &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;8&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; uniform &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; relu &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Dense&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;init&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; uniform &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;activation&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; sigmoid &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;))&lt;/span&gt;
-&lt;span class="c1"&gt;# Compile model&lt;/span&gt;
-&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;loss&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; binary_crossentropy &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;optimizer&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; adam &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;metrics&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39; accuracy &amp;#39;&lt;/span&gt; &lt;span class="p"&gt;])&lt;/span&gt;
-&lt;span class="c1"&gt;# Fit the model&lt;/span&gt;
-&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;fit&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;nb_epoch&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;150&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;batch_size&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="c1"&gt;# evaluate the model&lt;/span&gt;
-&lt;span class="n"&gt;scores&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;evaluate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;X&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;Y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s2"&gt;: &lt;/span&gt;&lt;span class="si"&gt;%.2f%%&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;model&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;metrics_names&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;scores&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><updated>2016-07-29T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-29:post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://digitalmind.io/images/digital-brain-header.png" /&gt;&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Digital Mind</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2016-07-29T00:00:00+02:00</updated><entry><title>Artificial Intelligence resources</title><link href="/post/artificial-intelligence-resources" rel="alternate"></link><published>2016-07-29T00:00:00+02:00</published><updated>2016-07-29T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:None,2016-07-29:/post/artificial-intelligence-resources</id><summary type="html">&lt;p&gt;&lt;img alt="" src="http://digitalmind.io/images/digital-brain-header.png"&gt;&lt;/p&gt;
+&lt;p&gt;This is the list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.&lt;/p&gt;
+&lt;h2&gt;Machine Learning&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;For the best introduction to the Machine Learning …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="" src="http://digitalmind.io/images/digital-brain-header.png"&gt;&lt;/p&gt;
 &lt;p&gt;This is the list of the best resources to learn the foundations of Artificial Intelligence and Deep Learning. It will be the most useful for beginners, people who want to get into this field, but don't know where to start.&lt;/p&gt;
 &lt;h2&gt;Machine Learning&lt;/h2&gt;
 &lt;ul&gt;
@@ -358,7 +140,7 @@ simplest way to develop a neural network.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;!-- - Github/my post on datasets --&gt;
 
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;As I'm learning more about AI and ML, I will be improving and expanding this list. If you have some good suggestions, you can submit a commit &lt;a href="https://github.com/raymestalez/digitalmind/blob/master/blog/content/ai/ai-resources.md"&gt;over here&lt;/a&gt;, or send me an email to raymestalez@gmail.com&lt;/p&gt;
 &lt;p&gt;Also if you are interested in learning about Artificial Intelligence and Deep Learning - subscribe to this blog, I am posting all the most interesting things I know about the subject here.&lt;/p&gt;
 &lt;!--
@@ -394,7 +176,9 @@ article a {
     font-weight: bold;
 }
 
-&lt;/style&gt;</summary></entry><entry><title>Multiclass Classification of Flower Species</title><link href="/post/iris" rel="alternate"></link><updated>2016-07-23T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-23:post/iris</id><summary type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
+&lt;/style&gt;</content></entry><entry><title>Multiclass Classification of Flower Species</title><link href="/post/iris" rel="alternate"></link><published>2016-07-23T00:00:00+02:00</published><updated>2016-07-23T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:None,2016-07-23:/post/iris</id><summary type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
+&lt;h2&gt;Iris Dataset&lt;/h2&gt;
+&lt;p&gt;I will use a simple dataset that describes different …&lt;/p&gt;</summary><content type="html">&lt;p&gt;The purpose of this project is to learn the basics of training an ANN on a simple example. I will use Keras, TensorFlow, and scikit-learn to train ANN that will classify flower species based on a few basic parameters.&lt;/p&gt;
 &lt;h2&gt;Iris Dataset&lt;/h2&gt;
 &lt;p&gt;I will use a simple dataset that describes different species of flowers and their properties. There are 3 species of iris flowers(Iris setosa, Iris virginica and Iris versicolor), and the dataset contains examples describing 4 properties of each flower (the length and the width of it's sepals and petals), and the species it belongs to. The goal is to predict the species of a flower based on these parameters.&lt;/p&gt;
 &lt;p&gt;The data looks like this:&lt;/p&gt;
@@ -409,7 +193,7 @@ article a {
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;&lt;img alt="Iris Scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/749px-Iris_dataset_scatterplot.svg.png" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Iris Scatterplot" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Iris_dataset_scatterplot.svg/749px-Iris_dataset_scatterplot.svg.png"&gt;&lt;/p&gt;
 &lt;p&gt;To load the dataset download the csv file &lt;a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.csv"&gt;here&lt;/a&gt;, and then load it like this:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pandas&lt;/span&gt;
 &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;numpy&lt;/span&gt;
@@ -545,13 +329,16 @@ We initialize the random number generator with a specific value, so that we coul
 
 &lt;p&gt;We use KFold to define the model evaluation procedure,  &lt;!-- ? --&gt; and then use the cross_val_score function that evaluates our model(estimator), on our dataset(X and dummy_y), using the 10-fold cross validation procedure(kfold).&lt;/p&gt;
 &lt;p&gt;Finally, we have completed our training and can print the accuracy results.&lt;/p&gt;
-&lt;p&gt;You can see the &lt;a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.py"&gt;whole code on github&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Artificial Neural Network writes Harry Potter and the Methods of Rationality</title><link href="/post/ai-writes-hpmor" rel="alternate"></link><updated>2016-07-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:,2016-07-22:post/ai-writes-hpmor</id><summary type="html">&lt;p&gt;I have trained an Artificial Neural Network on the full text of &lt;a href="http://hpmor.com/"&gt;HPMOR&lt;/a&gt;. This is the text it generated. (I have added formatting and removed the most incoherent sentences.)&lt;/p&gt;
+&lt;p&gt;You can see the &lt;a href="https://github.com/raymestalez/dm/blob/master/flowers/iris.py"&gt;whole code on github&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Artificial Neural Network writes Harry Potter and the Methods of Rationality</title><link href="/post/ai-writes-hpmor" rel="alternate"></link><published>2016-07-22T00:00:00+02:00</published><updated>2016-07-22T00:00:00+02:00</updated><author><name>Ray Alez</name></author><id>tag:None,2016-07-22:/post/ai-writes-hpmor</id><summary type="html">&lt;p&gt;I have trained an Artificial Neural Network on the full text of &lt;a href="http://hpmor.com/"&gt;HPMOR&lt;/a&gt;. This is the text it generated. (I have added formatting and removed the most incoherent sentences.)&lt;/p&gt;
 &lt;p&gt;You can find the source code and an awesome, easy to follow tutorial &lt;a href="https://medium.com/deep-writing/how-to-write-with-artificial-intelligence-45747ed073c#.9farmj44y"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
+&lt;p&gt;Somewhere inside him all further. “You have …&lt;/p&gt;</summary><content type="html">&lt;p&gt;I have trained an Artificial Neural Network on the full text of &lt;a href="http://hpmor.com/"&gt;HPMOR&lt;/a&gt;. This is the text it generated. (I have added formatting and removed the most incoherent sentences.)&lt;/p&gt;
+&lt;p&gt;You can find the source code and an awesome, easy to follow tutorial &lt;a href="https://medium.com/deep-writing/how-to-write-with-artificial-intelligence-45747ed073c#.9farmj44y"&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
 &lt;p&gt;Somewhere inside him all further. “You have to do science with Professor McGonagall? Say with Fiendfyre?” “Ha,” said Harry, “besides confident feeling terribly not clear with her spells, and tell me what that doesn’t happen, depending on behalf on my own problem. “That sounds like a couple of their brain’s shock, she is going to tell them.”&lt;/p&gt;
 &lt;p&gt;“Professor asked me in a plausible-sounding excuse to tell anyone that I’m doing,” Harry said incredulously. Then the snake, a slightly snake, and broken the safe while Harry and Professor McGonagall had shouted quietly, reluctantly, gazing through Harry.&lt;/p&gt;
 &lt;p&gt;Harry swallowed hard, for a polite breath that she could probably see how, in a tiny crawling sensation or repair casting surprise off the Cloak. She turned his hand as his office left. He looked down from the stairs. His first hand stood up across the graveyard. So then it was his.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;Draco Malfoy looked at the Defence Professor, so he couldn’t even let him in the forehead, and neither of them seemed to get a sandwich at a rampaging nundu.&lt;/p&gt;
 &lt;p&gt;“Do not say you joining your enemies.” said the Defence Professor. “No,” said the boy feeling sick in the stomach.&lt;/p&gt;
 &lt;p&gt;The awful war was almost unfrozen, there was terror from.&lt;/p&gt;
@@ -560,15 +347,21 @@ We initialize the random number generator with a specific value, so that we coul
 &lt;p&gt;And that Professor Quirrell would be hard for anything like galaxies everything we’re easy and every sort. The glance would not be over. Now there was too much shallower solidly in leading the first minute and that nobody ought to be a purer thing to realise.&lt;/p&gt;
 &lt;p&gt;“Could not rissk battle is an Unbreakable Vow to make angry? Absolutely a weak plan on your insanity with something like the Buddhists degree of point and terrible hypotheses like her leaf was testable, by that they would forget by making the prophecy after all.”&lt;/p&gt;
 &lt;p&gt;“Will lose no other to finish my hands and you felt so cunning as blink to make sure what any of your forces move longer than me, so just in fact you truly destroying a lesson to live, but they might set from this country — you, it works so boy?”&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;Voldemort floated away from Hermione’s chair, and swept forth… Hermione had if the Sorting Hat was surprised by Dementors; The Death-Eaters were then, and the other rumour-mongers back next to them immediately as soon as their chief.&lt;/p&gt;
 &lt;p&gt;Hermione Granger didn’t take information up with the monocles of the night of a gold coins from that man’s Legion were only a story, which it was like an adequate rules of common healing.&lt;/p&gt;
 &lt;p&gt;As a larger mental hospital felt old and that Hermione Granger would probably try to blush, if the true part. Voldemort didn’t work.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;Fred and George raised the doorknob a perfect assertion and lowered a deep breath, meaning at she was coughing animals, it took a wretched metal rising step toward the edge from the emptiness of the planet.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr&gt;
 &lt;p&gt;“No,” Dumbledore’s voice said in a pleading glance in a calm voice, Dumbledore’s wings suddenly jumped across the table. The conversation looked through. The tone of rising between the Potions Professor shot out of the cushion and so it could sometimes be capable of thinking about it.&lt;/p&gt;
-&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</summary></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:,2014-11-01:post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
+&lt;p&gt;Dumbledore had to Apparate the path to some that he remembered things about how to choose wrongly, never say you would be made. Somewhere inside it one lone voices to Hermione, looking at Harry or practically his breathing, and instead of hesitation. “Sorry, Creative. Unpredictable. Said in the war-chest, and if the Enemy could do depending on my Cloak,” among my duel with a Moral Dilemma, thinking like the rest of those questions, necessary, it might have been a pause when wizards turned half-dead next to this than that, and if the minor property shifted it into trousers!&lt;/p&gt;</content></entry><entry><title>Getting started with Web Development</title><link href="/post/getting-started-with-web-development" rel="alternate"></link><published>2014-11-01T00:00:00+01:00</published><updated>2014-11-01T00:00:00+01:00</updated><author><name>Ray Alez</name></author><id>tag:None,2014-11-01:/post/getting-started-with-web-development</id><summary type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Where did you learn web development? What is the best way to get started in web development?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Here's my response:&lt;/p&gt;
+&lt;p&gt;I've learned everything from books, video courses and by creating my own projects.
+And I think that it is the absolutely best way to go …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Recently I've got a question:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Where did you learn web development? What is the best way to get started in web development?&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -609,4 +402,4 @@ Again, not free, but they have my favorite introductory course to django. You wi
 Or you can star with the official documentation - it is written extremely well, and contains a great tutorial for beginners (docs.djangoproject.com)
 After that you can read a great book "2 Scoops of Django".&lt;/p&gt;
 &lt;p&gt;That's pretty much it) This is the best way(that I'm aware of) for going from absolute zero to a solid intermediate(of course if you will practice and gain experience by making your own projects in the process).&lt;/p&gt;
-&lt;p&gt;I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;I hope that gives you the general idea. At least this is the kind of post I would like to read 2-3 years ago. If anything is confusing or you have more questions - please ask, I will be happy to answer =)&lt;/p&gt;</content></entry></feed>

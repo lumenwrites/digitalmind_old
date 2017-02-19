@@ -1,6 +1,6 @@
 Title: Learning rate schedule
 Date: 2016-08-22
-
+Status: Draft
 
 So you can gradually decrease your learning rate. Learning rate schedule.
  

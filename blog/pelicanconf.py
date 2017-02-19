@@ -35,6 +35,8 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 # Menu
 MENUITEMS = [# ('Browse', '/articles'),
              # ('Projects', '/projects'),
+             ('Resources', 'http://webacademy.io'),
+             ('Community', 'http://hackertribe.io'),
              ('About', '/about'),
              # ('Portfolio', '/portfolio'),                          
 ] # ('Portfolio', '/portfolio'),
@@ -80,8 +82,8 @@ THEME = "/home/ray/projects/digitalmind/blog/themes/digitalmind"
 
 # Plugins
 PLUGIN_PATHS = ['/home/ray/projects/digitalmind/blog/pelican-plugins']
-PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.include_code', 'liquid_tags.notebook']
+# PLUGINS = ['liquid_tags.img', 'liquid_tags.video',
+#            'liquid_tags.include_code', 'liquid_tags.notebook']
 
 # for syntax highlighting
 EXTRA_HEADER = open('_nb_header.html').read() #.encode('utf-8')

@@ -1,6 +1,6 @@
 Title: Regression Keras
 Date: 2016-08-22
-
+Status: Draft
 
 The goal of this project is to learn how to use Keras to train ANN for a regression problem.
 

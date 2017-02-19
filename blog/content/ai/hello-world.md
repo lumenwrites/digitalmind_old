@@ -1,7 +1,7 @@
 Title: Developing a simple Neural Network with Keras
 Date: 2016-08-14
 Slug: hello-world
-
+Status: Draft
 
 
 This is a very simple introduction to deep learning. The goals of this tutorial is to develop a very simple ANN in Keras

@@ -1765,12 +1765,27 @@ jQuery(document).ready(function($) {
   <header>
       <div class="row" >
         <div class="large-6 small-6 columns" >
-          <a href="/"><img src="/theme/img/logo_notagline.png" /></a>
-	  <!-- digital<span class="bold">verse</span> -->
+	    <a href="/">
+	    <div style="float:left;font-size:32px;margin-top: 5px;">
+	      digital<span class="bold">mind</span>
+	    </div>
+	      <img src="/theme/img/logo2.png"
+		   style="float: left;
+			  width: 40px;
+			  width: 50px;
+			  margin-left: 5px;
+			  margin-top: -4px;"/>
+	    </a>	    	    
+	</div>
 
-        </div>
         <div class="large-6 small-6 columns" id="mainMenu">
 	  <div style="float:right;">
+	    <ul>
+	      <a href="http://webacademy.io">Resources</a>
+	    </ul>
+	    <ul>
+	      <a href="http://hackertribe.io">Community</a>
+	    </ul>
 	    <ul>
 	      <a href="/about">About</a>
 	    </ul>
@@ -1782,9 +1797,10 @@ jQuery(document).ready(function($) {
 <div id="page"  class="postPage">
     <div class="row">
       <div class="large-12 columns">
-        <h1 id="blogTitle"> List of articles </h1>
-        <hr />
-	<p><em>[bullet points without links are the articles not written yet, coming soon]</em></p>
+	<article>
+          <h1 id="blogTitle"> List of articles </h1>
+          <hr />
+	  <p><em>[bullet points without links are the articles not written yet, coming soon]</em></p>
 <h2>Machine Learning</h2>
 <h3>General ideas and introduction</h3>
 <ul>
@@ -1801,7 +1817,7 @@ jQuery(document).ready(function($) {
 <p><a href="/post/machine-learning-key-concepts">Key concepts in Machine Learning</a></p>
 </li>
 <li>
-<p><a href="/post/deep-learning-resources">Deep Learning- Best Resources</a><br />
+<p><a href="/post/deep-learning-resources">Deep Learning- Best Resources</a><br>
   Best resources for studying Deep Learning</p>
 </li>
 <li>
@@ -1837,7 +1853,7 @@ jQuery(document).ready(function($) {
 </ul>
 <h3>Computer Science</h3>
 <ul>
-<li>Calculating derivatives in Lisp<br />
+<li>Calculating derivatives in Lisp<br>
   SICP [cs, programming]</li>
 </ul>
 <h2>Artificial Intelligence</h2>
@@ -1852,7 +1868,9 @@ jQuery(document).ready(function($) {
 <li>
 <p><a href="/post/great-books">Great books</a></p>
 </li>
-</ul>	
+</ul>
+	</article>
+	<br/>
       </div>
     </div>      
 </div>    

@@ -2,22 +2,6 @@
 {% block content %}
 
 
-<style>
-  p {
-  margin-bottom:0;
-  }
-  .readmore {
-  display:none;
-  }
-
-  hr {
-    margin-bottom: 10px;
-  }
-  article h1 {
-    font-size: 32px;
-  }
-</style>
-
   
 <section id="content">
   
@@ -26,11 +10,7 @@
       <div class="large-12 columns">
 
 	{% for article in articles_page.object_list %}
-	<article  style="padding:20px;    background: rgba(255,255,255,0.5);//#fff;
-		    box-shadow: 0 1px 4px rgba(0,0,0,.04);
-		    border: 1px solid rgba(0,0,0,.09);
-		    border-radius: 3px;
-		    margin-bottom:0;">
+	<article  style="">
           <a href="{{ SITEURL }}/{{ article.url }}"><h1>{{ article.title }}</h1></a>
 	  <hr/>
 	  <p>

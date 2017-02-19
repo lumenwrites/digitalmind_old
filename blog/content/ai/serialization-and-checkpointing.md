@@ -1,6 +1,6 @@
 Title: Serialization and Checkpointing
 Date: 2016-08-22
-
+Status: Draft
 
 Because deep learni models take a long time to train, we need to be able to be able to save our progress. This article is about serialization(saving the models on disk) and checkpointing(saving the best versions of our models.
 

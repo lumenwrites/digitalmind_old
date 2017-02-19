@@ -1,6 +1,6 @@
 Title: Recommendations
 Date: 2016-08-22
-
+Status: Draft
 
 Building a simple recommendation engine
 

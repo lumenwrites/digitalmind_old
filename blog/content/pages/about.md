@@ -6,7 +6,10 @@ Slug: about
 
 Hi! My name is Ray Alez.
 
-On this blog I write articles about programming, Computer Science, Artificial Intelligence, Machine Learning, and math. <!-- links -->
+On this blog I write articles about Web Development, AI, and other CS and programming-related topics.
+
+
+<!-- I also collect my notes on linux, devops, etc. here. Basically all of my technical posts. -->
 
 <!-- You also might want to check out my [non-technical blog](http://orangemind.io), where I write essays about rationality, science, and startups, also comedy and science fiction. -->
 
